@@ -28,14 +28,18 @@ const PricingSection = () => {
     {
       name: 'AIO Track',
       subtitle: 'AI Oversight Certification',
-      price: '€5,400',
-      hours: '360 hours',
+      tiers: [
+        { name: 'Safety/Risk', price: '€2,400', hours: '120 hours' },
+        { name: 'Ethical Oversight', price: '€2,400', hours: '120 hours' },
+        { name: 'Legal Compliance', price: '€2,400', hours: '120 hours' },
+        { name: 'Digital Transformation', price: '€600', hours: '40 hours' },
+      ],
       duration: '6 months',
       icon: Shield,
       featured: true,
       badge: 'Governance Focus',
       features: [
-        '4 Domains: Safety, Ethics, Legal, Crisis',
+        '4 Domains: Safety, Ethics, Legal, Transformation',
         'Compliance portfolio ready',
         'Post-nominal: AIO Certified',
         'EU AI Act high-risk expertise',

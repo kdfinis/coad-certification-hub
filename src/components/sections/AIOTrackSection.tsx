@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check, Shield, Clock, AlertTriangle, Scale, FileCheck, Siren, Leaf, Users, Award, Quote } from 'lucide-react';
+import { ArrowRight, Check, Shield, Clock, AlertTriangle, Scale, FileCheck, Building2, Leaf, Users, Award, Quote } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const AIOTrackSection = () => {
@@ -11,6 +11,8 @@ const AIOTrackSection = () => {
       id: 'safety',
       label: 'Safety/Risk',
       icon: AlertTriangle,
+      price: '€2,400',
+      hours: '120 hours',
       description: 'Master risk assessment and safety protocols for AI systems in high-risk environments',
       competencies: ['Risk identification', 'Impact assessment', 'Mitigation strategies', 'Monitoring frameworks'],
       useCases: ['High-risk AI deployment', 'Safety audits', 'Compliance reviews'],
@@ -19,6 +21,8 @@ const AIOTrackSection = () => {
       id: 'ethical',
       label: 'Ethical Oversight',
       icon: Scale,
+      price: '€2,400',
+      hours: '120 hours',
       description: 'Ensure ethical AI practices, bias prevention, and human rights protection',
       competencies: ['Bias detection', 'Fairness metrics', 'Ethical frameworks', 'Stakeholder impact'],
       useCases: ['AI ethics boards', 'Fairness audits', 'Policy development'],
@@ -27,17 +31,21 @@ const AIOTrackSection = () => {
       id: 'legal',
       label: 'Legal Compliance',
       icon: FileCheck,
+      price: '€2,400',
+      hours: '120 hours',
       description: 'Navigate EU AI Act requirements and regulatory frameworks with confidence',
       competencies: ['EU AI Act', 'GDPR compliance', 'Documentation', 'Audit trails'],
       useCases: ['Regulatory compliance', 'Legal reviews', 'Documentation'],
     },
     {
-      id: 'crisis',
-      label: 'Crisis Response',
-      icon: Siren,
-      description: 'Develop crisis management and incident response capabilities for AI systems',
-      competencies: ['Incident detection', 'Response protocols', 'Communication', 'Recovery planning'],
-      useCases: ['Incident management', 'Crisis communication', 'Recovery'],
+      id: 'transformation',
+      label: 'Digital & AI Transformation',
+      icon: Building2,
+      price: '€600',
+      hours: '40 hours',
+      description: 'Lead corporate digital transformation initiatives with AI-first strategies',
+      competencies: ['Change management', 'AI adoption', 'Process redesign', 'Stakeholder alignment'],
+      useCases: ['Digital strategy', 'AI roadmaps', 'Organizational change'],
     },
   ];
 
@@ -176,13 +184,18 @@ const AIOTrackSection = () => {
             </ul>
 
             {/* Duration Info */}
-            <div className="flex flex-wrap gap-4 p-4 bg-card rounded-xl border border-border">
-              <div className="flex items-center gap-2">
+            <div className="p-4 bg-card rounded-xl border border-border">
+              <div className="flex items-center gap-2 mb-3">
                 <Clock className="w-5 h-5 text-teal" />
-                <span className="text-foreground font-medium">6 months • 360 hours</span>
+                <span className="text-foreground font-medium">6 months • 400 hours total</span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="text-2xl font-bold text-teal">€5,400</span>
+              <div className="space-y-2 text-sm">
+                {domains.map((domain) => (
+                  <div key={domain.id} className="flex justify-between items-center">
+                    <span className="text-muted-foreground">{domain.label}</span>
+                    <span className="font-semibold text-foreground">{domain.price}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
