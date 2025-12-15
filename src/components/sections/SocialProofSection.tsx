@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Shield, Award, Link as LinkIcon, GraduationCap } from 'lucide-react';
+import { Shield, Award, Link as LinkIcon, GraduationCap, MapPin, Users, Sparkles } from 'lucide-react';
 
 const SocialProofSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,10 +23,16 @@ const SocialProofSection = () => {
   }, []);
 
   const badges = [
-    { icon: Shield, label: 'EU AI Act Compliant', description: 'Full compliance with European AI regulations' },
-    { icon: Award, label: 'ESG 2015 Certified', description: 'Meeting sustainability standards' },
-    { icon: LinkIcon, label: 'Blockchain Verified', description: 'Tamper-proof credential verification' },
-    { icon: GraduationCap, label: 'ECTS Compatible', description: 'Recognized academic credit system' },
+    { icon: Shield, label: 'EU AI Act Compliant', description: 'Full compliance with European AI regulations and high-risk system requirements' },
+    { icon: Award, label: 'ESG 2015 Certified', description: 'Meeting environmental, social, and governance sustainability standards' },
+    { icon: LinkIcon, label: 'Blockchain Verified', description: 'Tamper-proof credential verification for permanent authenticity' },
+    { icon: GraduationCap, label: 'Academic Compatible', description: 'Recognized study hours aligned with professional development standards' },
+  ];
+
+  const highlights = [
+    { icon: MapPin, label: 'Luxembourg Based', value: 'European AI Hub' },
+    { icon: Users, label: 'Benelux Network', value: 'Growing Community' },
+    { icon: Sparkles, label: 'Career Boost', value: '20-30% Employability' },
   ];
 
   return (
@@ -35,14 +41,27 @@ const SocialProofSection = () => {
         {/* Heading */}
         <div className="text-center mb-16">
           <h2 className={`heading-3 text-foreground mb-4 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            Trusted Standards for AI Excellence
+            Join Luxembourg's AI Leaders
           </h2>
           <p className={`body-large text-muted-foreground max-w-2xl mx-auto transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            Our certifications meet the highest international standards for AI governance and compliance
+            Our certifications meet the highest international standards for AI governance and compliance – built for Benelux professionals, recognized across Europe.
           </p>
         </div>
 
-        {/* Badges Grid - Better integrated with content */}
+        {/* Highlights Row */}
+        <div className={`flex flex-wrap justify-center gap-8 mb-12 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          {highlights.map((highlight) => (
+            <div key={highlight.label} className="flex items-center gap-3 px-6 py-3 bg-card rounded-full border border-border">
+              <highlight.icon className="w-5 h-5 text-primary" />
+              <div>
+                <p className="text-sm font-medium text-foreground">{highlight.value}</p>
+                <p className="text-xs text-muted-foreground">{highlight.label}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Badges Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {badges.map((badge, index) => (
             <div 
@@ -53,8 +72,7 @@ const SocialProofSection = () => {
                 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
               `}
               style={{ 
-                transitionDelay: `${index * 100}ms`,
-                animationDelay: `${index * 100}ms` 
+                transitionDelay: `${300 + index * 100}ms`,
               }}
             >
               {/* Icon Container */}

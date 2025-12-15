@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Shield, Award, Globe } from 'lucide-react';
+import { ArrowRight, Shield, Award, Globe, Sparkles } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -22,26 +22,54 @@ const HeroSection = () => {
           <div className="space-y-8">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm font-medium text-primary animate-fade-in">
-              <Shield className="w-4 h-4" />
-              EU AI Act Compliant Certifications
+              <Sparkles className="w-4 h-4" />
+              Luxembourg's Premier AI Training Platform
             </div>
 
             {/* Headline */}
             <h1 className="heading-1 text-foreground animate-fade-in-up stagger-1">
-              Master AI Competency<br />
-              <span className="gradient-text">& Oversight</span>
+              Master AI Governance<br />
+              <span className="gradient-text">& Competence</span>
             </h1>
 
             {/* Subheadline */}
             <p className="body-large text-muted-foreground max-w-xl animate-fade-in-up stagger-2">
-              Earn recognized AI certifications that prove your skills through rigorous testing and ESG 2015-aligned standards. Our certificates of competency are blockchain-verified, Act-compliant, and designed for career advancement in the AI era.
+              From Luxembourg to Europe, gain Act-compliant skills for career revamp or leadership solidification. Hands-on modules, blockchain certificates, and local prestige for professionals ready to embrace AI as a core competency.
             </p>
 
+            {/* Key Benefits */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 animate-fade-in-up stagger-3">
+              <div className="flex items-center gap-2 text-sm text-foreground">
+                <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center">
+                  <div className="w-2 h-2 rounded-full bg-success" />
+                </div>
+                No coding background required
+              </div>
+              <div className="flex items-center gap-2 text-sm text-foreground">
+                <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center">
+                  <div className="w-2 h-2 rounded-full bg-success" />
+                </div>
+                EU AI Act compliant
+              </div>
+              <div className="flex items-center gap-2 text-sm text-foreground">
+                <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center">
+                  <div className="w-2 h-2 rounded-full bg-success" />
+                </div>
+                Blockchain-verified credentials
+              </div>
+              <div className="flex items-center gap-2 text-sm text-foreground">
+                <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center">
+                  <div className="w-2 h-2 rounded-full bg-success" />
+                </div>
+                20-30% employability boost
+              </div>
+            </div>
+
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up stagger-3">
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up stagger-4">
               <Button variant="hero" size="xl" asChild>
-                <a href="#certifications" className="group">
-                  Explore Certification Tracks
+                <a href="https://app.coad.ai/signup" className="group">
+                  Start Free Module Trial
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
@@ -51,7 +79,7 @@ const HeroSection = () => {
             </div>
 
             {/* Trust Badges */}
-            <div className="flex flex-wrap items-center gap-6 pt-4 animate-fade-in-up stagger-4">
+            <div className="flex flex-wrap items-center gap-6 pt-4 animate-fade-in-up stagger-5">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <div className="w-10 h-10 rounded-full bg-success/10 flex items-center justify-center">
                   <Shield className="w-5 h-5 text-success" />
@@ -68,7 +96,7 @@ const HeroSection = () => {
                 <div className="w-10 h-10 rounded-full bg-teal/10 flex items-center justify-center">
                   <Globe className="w-5 h-5 text-teal" />
                 </div>
-                <span>ECTS<br />Compatible</span>
+                <span>Luxembourg<br />Based</span>
               </div>
             </div>
           </div>
@@ -108,8 +136,8 @@ const HeroSection = () => {
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <p className="text-xs text-muted-foreground uppercase tracking-wide">ECTS Credits</p>
-                        <p className="font-semibold text-foreground">12 Credits</p>
+                        <p className="text-xs text-muted-foreground uppercase tracking-wide">Study Hours</p>
+                        <p className="font-semibold text-foreground">360 Hours</p>
                       </div>
                       <div>
                         <p className="text-xs text-muted-foreground uppercase tracking-wide">Duration</p>
