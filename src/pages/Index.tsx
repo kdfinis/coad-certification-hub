@@ -1,7 +1,6 @@
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/sections/HeroSection';
-import SocialProofSection from '@/components/sections/SocialProofSection';
 import AICTrackSection from '@/components/sections/AICTrackSection';
 import AIOTrackSection from '@/components/sections/AIOTrackSection';
 import ModulesSection from '@/components/sections/ModulesSection';
@@ -31,7 +30,6 @@ const Index = () => {
         
         <main>
           <HeroSection />
-          <SocialProofSection />
           <AICTrackSection />
           <AIOTrackSection />
           <ModulesSection />
