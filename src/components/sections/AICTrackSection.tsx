@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check, Award, Clock, GraduationCap, Target, Zap, Crown } from 'lucide-react';
+import { ArrowRight, Check, Award, Clock, Target, Zap, Crown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const AICTrackSection = () => {
@@ -13,6 +13,8 @@ const AICTrackSection = () => {
       subtitle: 'Tier 1',
       fullName: 'Qualified AI Practitioner',
       duration: '3 months',
+      hours: '180 hours',
+      price: '€1,800',
       meaning: "You're certified to structure AI-assisted processes without supervision",
       recognition: 'Digital badge with verifiable skills; employer-trusted for entry jobs',
       Icon: Target,
@@ -25,6 +27,8 @@ const AICTrackSection = () => {
       subtitle: 'Tier 2',
       fullName: 'Advanced AI Practitioner',
       duration: '4 months',
+      hours: '270 hours',
+      price: '€2,200',
       meaning: "You're certified to design multi-tool workflows and coordinate AI across functions",
       recognition: 'Enhanced badge with stats; valued for promotions',
       Icon: Zap,
@@ -37,6 +41,8 @@ const AICTrackSection = () => {
       subtitle: 'Tier 3',
       fullName: 'Master AI Practitioner',
       duration: '6 months',
+      hours: '360 hours',
+      price: '€2,200',
       meaning: "You're certified to oversee organization-wide AI, integrating governance and efficiency",
       recognition: 'Premium badge with portfolio; industry-endorsed for career advancement',
       Icon: Crown,
@@ -48,7 +54,7 @@ const AICTrackSection = () => {
   const bullets = [
     'Blockchain-verified badge, shareable on LinkedIn',
     'EU AI Act-compliant for low/moderate-risk AI use',
-    'ECTS credits for career mobility',
+    'ESG 2015 aligned study hours',
     'Post-nominal designations: QAP, AAP, MAP',
   ];
 
@@ -137,11 +143,7 @@ const AICTrackSection = () => {
                       <div className="flex flex-wrap gap-4">
                         <div className="flex items-center gap-2 text-sm text-muted-foreground">
                           <Clock className="w-4 h-4" />
-                          {tab.duration}
-                        </div>
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <GraduationCap className="w-4 h-4" />
-                          ECTS Compatible
+                          {tab.duration} • {tab.hours}
                         </div>
                       </div>
 
@@ -210,13 +212,15 @@ const AICTrackSection = () => {
                           <p className="text-sm text-muted-foreground mt-0.5">{tab.fullName}</p>
                         </div>
                         <div className={cn(
-                          'flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300',
-                          activeTab === index
-                            ? 'bg-success/10 text-success'
-                            : 'bg-muted text-muted-foreground'
+                          'text-right transition-all duration-300',
                         )}>
-                          <GraduationCap className="w-3.5 h-3.5" />
-                          ECTS
+                          <p className={cn(
+                            'text-lg font-bold',
+                            activeTab === index ? 'text-primary' : 'text-foreground/60'
+                          )}>
+                            {tab.price}
+                          </p>
+                          <p className="text-xs text-muted-foreground">{tab.hours}</p>
                         </div>
                       </div>
                     </div>
