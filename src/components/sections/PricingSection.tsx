@@ -1,23 +1,25 @@
 import { Button } from '@/components/ui/button';
-import { Check, ArrowRight, Award, Shield, Layers, Building2 } from 'lucide-react';
+import { Check, ArrowRight, Award, Shield, Layers, Building2, Clock, Percent } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const PricingSection = () => {
   const plans = [
     {
-      name: 'AIC Track - Complete',
-      subtitle: 'All 3 Tiers (QAP, AAP, MAP)',
-      price: '€3,000 - €5,000',
+      name: 'AIC Track',
+      subtitle: 'AI Competence Certification',
+      tiers: [
+        { name: 'Tier 1 (QAP)', price: '€1,800', hours: '180 hours', duration: '3 months' },
+        { name: 'Tier 2 (AAP)', price: '€2,200', hours: '270 hours', duration: '4 months' },
+        { name: 'Tier 3 (MAP)', price: '€2,200', hours: '360 hours', duration: '6 months' },
+      ],
       icon: Award,
       featured: false,
       features: [
-        'QAP Certification (Tier 1)',
-        'AAP Certification (Tier 2)',
-        'MAP Certification (Tier 3)',
-        '27 ECTS credits total',
+        'Entry to enterprise-level skills',
         'Blockchain-verified badges',
-        'LinkedIn shareable',
+        'LinkedIn shareable credentials',
         'Post-nominal designations',
+        'EU AI Act compliant',
       ],
       cta: 'View AIC Track',
       href: '#aic-track',
@@ -25,19 +27,19 @@ const PricingSection = () => {
     },
     {
       name: 'AIO Track',
-      subtitle: 'Certified AI Oversight Professional',
-      price: '€4,500',
+      subtitle: 'AI Oversight Certification',
+      price: '€5,400',
+      hours: '360 hours',
+      duration: '6 months',
       icon: Shield,
       featured: true,
-      badge: 'Most Popular',
+      badge: 'Governance Focus',
       features: [
-        '4 Domain Certifications',
-        '12 ECTS credits',
-        'Blockchain-verified badge',
+        '4 Domains: Safety, Ethics, Legal, Crisis',
         'Compliance portfolio ready',
         'Post-nominal: AIO Certified',
-        'EU AI Act focused',
-        'High-risk AI expertise',
+        'EU AI Act high-risk expertise',
+        'Blockchain-verified badge',
       ],
       cta: 'View AIO Track',
       href: '#aio-track',
@@ -45,17 +47,17 @@ const PricingSection = () => {
     },
     {
       name: 'Competency Modules',
-      subtitle: 'Per Module',
-      price: '€1,800 - €2,200',
+      subtitle: 'Standalone Certifications',
+      priceRange: '€800 - €2,100',
+      hours: '90 hours each',
       icon: Layers,
       featured: false,
       features: [
-        'Standalone certification',
-        '3-6 ECTS credits',
-        'Can feed into tracks',
-        'Flexible learning',
+        '18 specialized modules available',
+        'AIC & AIO aligned options',
+        'Feed into full track (20% credit)',
+        'Flexible self-paced learning',
         'Blockchain-verified',
-        'Self-paced options',
       ],
       cta: 'Browse Modules',
       href: '#modules',
@@ -64,16 +66,15 @@ const PricingSection = () => {
     {
       name: 'Corporate Training',
       subtitle: 'Enterprise Solutions',
-      price: 'Custom Pricing',
+      price: 'From €20,000',
       icon: Building2,
       featured: false,
       features: [
-        'Customized programs',
-        'Team certifications',
-        'On-site or online',
+        'Customized team programs',
+        'Cohort certifications',
+        'On-site or online delivery',
         'Compliance reporting',
-        'Dedicated support',
-        'Volume discounts',
+        'Dedicated account manager',
       ],
       cta: 'Contact Sales',
       href: 'mailto:contact@coad.ai',
@@ -91,7 +92,7 @@ const PricingSection = () => {
             <span className="gradient-text">Certification Path</span>
           </h2>
           <p className="body-large text-muted-foreground">
-            Select the track or module that fits your career goals and compliance needs.
+            All prices VAT-inclusive (17% Luxembourg). Pay monthly or upfront with 10% discount.
           </p>
         </div>
 
@@ -131,14 +132,34 @@ const PricingSection = () => {
               <h3 className="text-xl font-semibold text-foreground mb-1">{plan.name}</h3>
               <p className="text-sm text-muted-foreground mb-4">{plan.subtitle}</p>
 
-              {/* Price */}
+              {/* Price - Handle tiered pricing for AIC */}
               <div className="mb-6">
-                <span className={cn(
-                  'text-3xl font-bold',
-                  plan.color === 'teal' ? 'text-teal' : 'text-primary'
-                )}>
-                  {plan.price}
-                </span>
+                {plan.tiers ? (
+                  <div className="space-y-2">
+                    {plan.tiers.map((tier) => (
+                      <div key={tier.name} className="flex justify-between items-center text-sm">
+                        <span className="text-muted-foreground">{tier.name}</span>
+                        <span className="font-semibold text-foreground">{tier.price}</span>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <>
+                    <span className={cn(
+                      'text-3xl font-bold',
+                      plan.color === 'teal' ? 'text-teal' : 'text-primary'
+                    )}>
+                      {plan.price || plan.priceRange}
+                    </span>
+                    {plan.hours && (
+                      <div className="flex items-center gap-1 mt-2 text-sm text-muted-foreground">
+                        <Clock className="w-4 h-4" />
+                        {plan.hours}
+                        {plan.duration && ` • ${plan.duration}`}
+                      </div>
+                    )}
+                  </>
+                )}
               </div>
 
               {/* Features */}
@@ -174,10 +195,17 @@ const PricingSection = () => {
           ))}
         </div>
 
-        {/* Comparison Note */}
-        <p className="text-center text-muted-foreground mt-10">
-          All certifications include blockchain verification, EU AI Act alignment, and ECTS credit compatibility.
-        </p>
+        {/* Discount Note */}
+        <div className="flex flex-wrap justify-center gap-6 mt-10 text-sm text-muted-foreground">
+          <div className="flex items-center gap-2">
+            <Percent className="w-4 h-4 text-primary" />
+            <span>10% discount for full upfront payment</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Layers className="w-4 h-4 text-primary" />
+            <span>Module credits apply 20% toward full tracks</span>
+          </div>
+        </div>
       </div>
     </section>
   );

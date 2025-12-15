@@ -1,33 +1,33 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Clock, GraduationCap, Layers, Shield, Brain, Workflow, Users, Zap, Leaf, AlertCircle, DollarSign, Building, Lock, FileSearch, Landmark } from 'lucide-react';
+import { ArrowRight, Clock, Layers, Shield, Brain, Workflow, Users, Zap, Leaf, AlertCircle, DollarSign, Building, Lock, FileSearch, Landmark } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const ModulesSection = () => {
   const [filter, setFilter] = useState<'all' | 'aic' | 'aio'>('all');
 
   const aicModules = [
-    { name: 'Task Decomposition', icon: Layers, hours: 30, ects: 1, description: 'Break complex tasks into AI-manageable components' },
-    { name: 'Multi-Agent Systems', icon: Users, hours: 45, ects: 1.5, description: 'Coordinate multiple AI agents effectively' },
-    { name: 'Performance Optimization', icon: Zap, hours: 30, ects: 1, description: 'Optimize AI system performance and efficiency' },
-    { name: 'Human-AI Design', icon: Workflow, hours: 45, ects: 1.5, description: 'Design effective human-AI collaboration workflows' },
-    { name: 'Restricted Methods', icon: Lock, hours: 30, ects: 1, description: 'Navigate restricted AI methods responsibly' },
-    { name: 'Latest in AI 2025', icon: Brain, hours: 30, ects: 1, description: 'Stay current with cutting-edge AI developments' },
+    { name: 'Task Decomposition', icon: Layers, hours: 90, price: '€800', description: 'Break complex tasks into AI-manageable components' },
+    { name: 'Multi-Agent Systems', icon: Users, hours: 90, price: '€1,200', description: 'Coordinate multiple AI agents effectively' },
+    { name: 'Performance Optimization', icon: Zap, hours: 90, price: '€1,750', description: 'Optimize AI system performance and efficiency' },
+    { name: 'Human-AI Design', icon: Workflow, hours: 90, price: '€1,000', description: 'Design effective human-AI collaboration workflows' },
+    { name: 'Restricted Methods', icon: Lock, hours: 90, price: '€1,500', description: 'Navigate restricted AI methods responsibly' },
+    { name: 'Latest in AI 2025', icon: Brain, hours: 90, price: '€800', description: 'Stay current with cutting-edge AI developments' },
   ];
 
   const aioModules = [
-    { name: 'Ethical Data Use', icon: Shield, hours: 30, ects: 1, description: 'Ensure ethical data practices in AI systems' },
-    { name: 'Privacy Auditor', icon: Lock, hours: 45, ects: 1.5, description: 'Conduct comprehensive privacy audits' },
-    { name: 'Legal Auditor', icon: FileSearch, hours: 45, ects: 1.5, description: 'Perform legal compliance assessments' },
-    { name: 'Resource Management', icon: DollarSign, hours: 30, ects: 1, description: 'Optimize AI resource allocation' },
-    { name: 'Process Optimization', icon: Workflow, hours: 30, ects: 1, description: 'Streamline AI-driven processes' },
-    { name: 'Sustainability & AI', icon: Leaf, hours: 30, ects: 1, description: 'Implement sustainable AI practices' },
-    { name: 'Crisis Prevention', icon: AlertCircle, hours: 45, ects: 1.5, description: 'Prevent and mitigate AI-related crises' },
-    { name: 'Financial Evaluations', icon: DollarSign, hours: 45, ects: 1.5, description: 'Evaluate AI investments and ROI' },
-    { name: 'AI for Government', icon: Landmark, hours: 45, ects: 1.5, description: 'Deploy AI in public sector contexts' },
-    { name: 'AI for Security', icon: Shield, hours: 45, ects: 1.5, description: 'Apply AI in security operations' },
-    { name: 'Cybersecurity Auditing', icon: Lock, hours: 45, ects: 1.5, description: 'Audit AI cybersecurity measures' },
-    { name: 'AI-Enhanced AML/KYC', icon: Building, hours: 45, ects: 1.5, description: 'Implement AI in compliance processes' },
+    { name: 'Ethical Data Use', icon: Shield, hours: 90, price: '€960', description: 'Ensure ethical data practices in AI systems' },
+    { name: 'Privacy Auditor', icon: Lock, hours: 90, price: '€1,440', description: 'Conduct comprehensive privacy audits' },
+    { name: 'Legal Auditor', icon: FileSearch, hours: 90, price: '€1,800', description: 'Perform legal compliance assessments' },
+    { name: 'Resource Management', icon: DollarSign, hours: 90, price: '€1,200', description: 'Optimize AI resource allocation' },
+    { name: 'Process Optimization', icon: Workflow, hours: 90, price: '€1,800', description: 'Streamline AI-driven processes' },
+    { name: 'Sustainability & AI', icon: Leaf, hours: 90, price: '€1,440', description: 'Implement sustainable AI practices' },
+    { name: 'Crisis Prevention', icon: AlertCircle, hours: 90, price: '€2,100', description: 'Prevent and mitigate AI-related crises' },
+    { name: 'Financial Evaluations', icon: DollarSign, hours: 90, price: '€1,440', description: 'Evaluate AI investments and ROI' },
+    { name: 'AI for Government', icon: Landmark, hours: 90, price: '€1,200', description: 'Deploy AI in public sector contexts' },
+    { name: 'AI for Security', icon: Shield, hours: 90, price: '€1,800', description: 'Apply AI in security operations' },
+    { name: 'Cybersecurity Auditing', icon: Lock, hours: 90, price: '€2,100', description: 'Audit AI cybersecurity measures' },
+    { name: 'AI-Enhanced AML/KYC', icon: Building, hours: 90, price: '€1,800', description: 'Implement AI in compliance processes' },
   ];
 
   const allModules = [
@@ -115,15 +115,17 @@ const ModulesSection = () => {
               </p>
 
               {/* Meta */}
-              <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                <div className="flex items-center gap-1">
+              <div className="flex items-center justify-between text-sm">
+                <div className="flex items-center gap-1 text-muted-foreground">
                   <Clock className="w-3.5 h-3.5" />
                   {module.hours} hours
                 </div>
-                <div className="flex items-center gap-1">
-                  <GraduationCap className="w-3.5 h-3.5" />
-                  {module.ects} ECTS
-                </div>
+                <span className={cn(
+                  'font-semibold',
+                  module.track === 'aic' ? 'text-primary' : 'text-teal'
+                )}>
+                  {module.price}
+                </span>
               </div>
 
               {/* Hover Action */}

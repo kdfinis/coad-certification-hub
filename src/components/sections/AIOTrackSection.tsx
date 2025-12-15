@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check, Shield, Clock, GraduationCap, AlertTriangle, Scale, FileCheck, Siren } from 'lucide-react';
+import { ArrowRight, Check, Shield, Clock, AlertTriangle, Scale, FileCheck, Siren } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const AIOTrackSection = () => {
@@ -44,7 +44,7 @@ const AIOTrackSection = () => {
   const bullets = [
     'Blockchain-verified badge, shareable for compliance portfolios',
     'EU AI Act-compliant for high-risk AI',
-    'ECTS credits for professional development',
+    'ESG 2015 aligned study hours',
     'Post-nominal: Certified AI Oversight Professional (AIO)',
   ];
 
@@ -87,11 +87,10 @@ const AIOTrackSection = () => {
             <div className="flex flex-wrap gap-4 p-4 bg-card rounded-xl border border-border">
               <div className="flex items-center gap-2">
                 <Clock className="w-5 h-5 text-teal" />
-                <span className="text-foreground font-medium">6 months total</span>
+                <span className="text-foreground font-medium">6 months • 360 hours</span>
               </div>
               <div className="flex items-center gap-2">
-                <GraduationCap className="w-5 h-5 text-teal" />
-                <span className="text-foreground font-medium">12 ECTS (360 hours)</span>
+                <span className="text-2xl font-bold text-teal">€5,400</span>
               </div>
             </div>
 
