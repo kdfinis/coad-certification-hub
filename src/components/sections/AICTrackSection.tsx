@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check, Award, Clock, Target, Zap, Crown } from 'lucide-react';
+import { ArrowRight, Check, Award, Clock, Target, Zap, Crown, Briefcase, Code, Lightbulb, Users, Quote } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const AICTrackSection = () => {
@@ -15,7 +15,7 @@ const AICTrackSection = () => {
       duration: '3 months',
       hours: '180 hours',
       price: '€1,800',
-      meaning: "You're certified to structure AI-assisted processes without supervision",
+      meaning: "You're certified to structure AI-assisted processes without supervision – entry-level workflow optimization and basic AI application.",
       recognition: 'Digital badge with verifiable skills; employer-trusted for entry jobs',
       Icon: Target,
       color: 'text-primary',
@@ -29,8 +29,8 @@ const AICTrackSection = () => {
       duration: '4 months',
       hours: '270 hours',
       price: '€2,200',
-      meaning: "You're certified to design multi-tool workflows and coordinate AI across functions",
-      recognition: 'Enhanced badge with stats; valued for promotions',
+      meaning: "You're certified to design multi-tool workflows and coordinate AI across functions with Act-compliant safeguards.",
+      recognition: 'Enhanced badge with stats; valued for promotions and complex integration roles',
       Icon: Zap,
       color: 'text-teal',
       bgColor: 'bg-teal/10',
@@ -43,7 +43,7 @@ const AICTrackSection = () => {
       duration: '6 months',
       hours: '360 hours',
       price: '€2,200',
-      meaning: "You're certified to oversee organization-wide AI, integrating governance and efficiency",
+      meaning: "You're certified to oversee organization-wide AI, integrating governance and efficiency – full Act readiness for enterprise-level AI design.",
       recognition: 'Premium badge with portfolio; industry-endorsed for career advancement',
       Icon: Crown,
       color: 'text-amber-500',
@@ -51,55 +51,160 @@ const AICTrackSection = () => {
     },
   ];
 
-  const bullets = [
-    'Blockchain-verified badge, shareable on LinkedIn',
-    'EU AI Act-compliant for low/moderate-risk AI use',
-    'ESG 2015 aligned study hours',
-    'Post-nominal designations: QAP, AAP, MAP',
+  const usps = [
+    {
+      icon: Award,
+      title: 'Act-Compliant Skill Mastery',
+      description: "Gain hands-on AI competence with built-in EU AI Act safeguards, ensuring your skills are legally compliant from day one.",
+    },
+    {
+      icon: Code,
+      title: 'No Coding Background Required',
+      description: "Designed for non-programmers (engineers, analysts) to enrich existing knowledge with AI – open to programmers for latest tools/certification.",
+    },
+    {
+      icon: Briefcase,
+      title: 'Blockchain-Verified Credentials',
+      description: "Earn verifiable certificates that boost resumes and LinkedIn profiles, with Luxembourg-based prestige for local and global markets.",
+    },
+    {
+      icon: Lightbulb,
+      title: 'Entrepreneurial Focus',
+      description: "Real-world projects to apply AI for business innovation, helping you start or scale ventures in Luxembourg's startup ecosystem.",
+    },
+    {
+      icon: Users,
+      title: 'Flexible, Career-Accelerating Tiers',
+      description: "Progress from basic workflows to enterprise mastery, with 20-30% employability boost – tailored for multicultural professionals.",
+    },
   ];
 
   return (
     <section className="section-padding bg-background" id="aic-track">
       <div className="container-coad">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        {/* Section Header */}
+        <div className="text-center max-w-4xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm font-medium text-primary mb-6">
+            <Award className="w-4 h-4" />
+            Professional Institute Program
+          </div>
+          
+          <h2 className="heading-2 text-foreground mb-6">
+            Revamp Your Career with AIC:<br />
+            <span className="gradient-text">From AI Novice to Competence Master</span>
+          </h2>
+          
+          <p className="body-large text-muted-foreground">
+            Designed for scientifically minded experts and career changers, the AIC Track equips you with practical AI development skills to enrich your expertise and launch into high-demand roles. No coding background required—open to programmers for cutting-edge updates.
+          </p>
+        </div>
+
+        {/* Who It's For */}
+        <div className="bg-muted/30 rounded-3xl p-8 md:p-12 mb-16">
+          <h3 className="heading-4 text-foreground mb-6 text-center">Who is AIC for?</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-card rounded-xl p-6 border border-border">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                <Briefcase className="w-6 h-6 text-primary" />
+              </div>
+              <h4 className="font-semibold text-foreground mb-2">Mid-Career Professionals</h4>
+              <p className="text-sm text-muted-foreground">Looking to revamp your life by transitioning into AI or enriching existing expertise</p>
+            </div>
+            <div className="bg-card rounded-xl p-6 border border-border">
+              <div className="w-12 h-12 rounded-xl bg-teal/10 flex items-center justify-center mb-4">
+                <Target className="w-6 h-6 text-teal" />
+              </div>
+              <h4 className="font-semibold text-foreground mb-2">Engineers & Scientists</h4>
+              <p className="text-sm text-muted-foreground">Scientifically minded experts who want to integrate AI into their domain</p>
+            </div>
+            <div className="bg-card rounded-xl p-6 border border-border">
+              <div className="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center mb-4">
+                <Users className="w-6 h-6 text-amber-500" />
+              </div>
+              <h4 className="font-semibold text-foreground mb-2">Recent Graduates</h4>
+              <p className="text-sm text-muted-foreground">Eager to build a future-proof skill set and stand out in the job market</p>
+            </div>
+            <div className="bg-card rounded-xl p-6 border border-border">
+              <div className="w-12 h-12 rounded-xl bg-success/10 flex items-center justify-center mb-4">
+                <Code className="w-6 h-6 text-success" />
+              </div>
+              <h4 className="font-semibold text-foreground mb-2">Programmers</h4>
+              <p className="text-sm text-muted-foreground">Stay ahead with the latest tools, techniques, and industry practices</p>
+            </div>
+          </div>
+        </div>
+
+        {/* USPs Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {usps.map((usp, index) => (
+            <div 
+              key={usp.title}
+              className="p-6 bg-card rounded-2xl border border-border hover:border-primary/40 hover:shadow-lg transition-all duration-300"
+            >
+              <div className={cn(
+                'w-12 h-12 rounded-xl flex items-center justify-center mb-4',
+                index % 2 === 0 ? 'bg-primary/10' : 'bg-teal/10'
+              )}>
+                <usp.icon className={cn(
+                  'w-6 h-6',
+                  index % 2 === 0 ? 'text-primary' : 'text-teal'
+                )} />
+              </div>
+              <h4 className="font-semibold text-foreground mb-2">{usp.title}</h4>
+              <p className="text-sm text-muted-foreground">{usp.description}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Tiers Section */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start mb-16">
           {/* Left Column - Content */}
           <div className="space-y-8">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm font-medium text-primary">
-              <Award className="w-4 h-4" />
-              Professional Institute Program
-            </div>
+            <h3 className="heading-3 text-foreground">
+              Three Tiers to Mastery
+            </h3>
 
-            {/* Heading */}
-            <h2 className="heading-2 text-foreground">
-              AIC Track: AI Competence<br />
-              <span className="gradient-text">Certification</span>
-            </h2>
-
-            {/* Description */}
-            <p className="body-large text-muted-foreground">
-              The AIC Track focuses on building practical AI skills for implementation and development, aligning with Mastery and Efficacy directions. It's a tiered ladder designed as a professional institute program, with each tier culminating in a certificate of competency tested via rubrics (80% pass required) and real-world simulations.
+            <p className="text-muted-foreground">
+              Each tier culminating in a certificate of competency tested via rubrics (80% pass required) and real-world simulations. ESG 2015 compliance is embedded throughout.
             </p>
 
             {/* Bullet Points */}
             <ul className="space-y-3">
-              {bullets.map((bullet, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-success" />
-                  </div>
-                  <span className="text-foreground">{bullet}</span>
-                </li>
-              ))}
+              <li className="flex items-start gap-3">
+                <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="w-3 h-3 text-success" />
+                </div>
+                <span className="text-foreground">Blockchain-verified badge, shareable on LinkedIn</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="w-3 h-3 text-success" />
+                </div>
+                <span className="text-foreground">EU AI Act-compliant for low/moderate-risk AI use</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="w-3 h-3 text-success" />
+                </div>
+                <span className="text-foreground">Post-nominal designations: QAP, AAP, MAP</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="w-3 h-3 text-success" />
+                </div>
+                <span className="text-foreground">Hands-on learning with real-world projects</span>
+              </li>
             </ul>
 
             {/* CTA */}
-            <Button variant="hero" size="lg" asChild>
-              <a href="#pricing" className="group">
-                Explore AIC Track
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button variant="hero" size="lg" asChild>
+                <a href="https://app.coad.ai/signup" className="group">
+                  Enroll in AIC Tier 1 – Start Your Revamp
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </Button>
+            </div>
 
             {/* Tabs */}
             <div className="pt-8">
@@ -211,9 +316,7 @@ const AICTrackSection = () => {
                           </div>
                           <p className="text-sm text-muted-foreground mt-0.5">{tab.fullName}</p>
                         </div>
-                        <div className={cn(
-                          'text-right transition-all duration-300',
-                        )}>
+                        <div className="text-right">
                           <p className={cn(
                             'text-lg font-bold',
                             activeTab === index ? 'text-primary' : 'text-foreground/60'
@@ -231,6 +334,21 @@ const AICTrackSection = () => {
               {/* Decorative Elements */}
               <div className="absolute -top-8 -right-8 w-40 h-40 bg-gradient-to-br from-primary/20 to-teal/20 rounded-full blur-3xl -z-10 animate-pulse" />
               <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-gradient-to-br from-teal/20 to-primary/20 rounded-full blur-3xl -z-10 animate-pulse" style={{ animationDelay: '1s' }} />
+            </div>
+          </div>
+        </div>
+
+        {/* Testimonial */}
+        <div className="bg-gradient-to-br from-primary/5 to-teal/5 rounded-3xl p-8 md:p-12">
+          <div className="flex items-start gap-4 max-w-3xl mx-auto">
+            <Quote className="w-12 h-12 text-primary/30 shrink-0" />
+            <div>
+              <p className="text-lg md:text-xl text-foreground italic mb-4">
+                "As a biologist, AIC allowed me to blend my expertise with AI for groundbreaking research—it's completely revamped my career trajectory."
+              </p>
+              <p className="text-muted-foreground font-medium">
+                — Dr. Elena R., AI Researcher
+              </p>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles, Shield, Award } from 'lucide-react';
 
 const FinalCTASection = () => {
   return (
@@ -24,29 +24,29 @@ const FinalCTASection = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-white/90 mb-8">
             <Sparkles className="w-4 h-4" />
-            Start Your Journey
+            Luxembourg's AI Training Innovator
           </div>
 
           {/* Heading */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Start Your AI Certification<br />
-            Journey Today
+            Start Free Luxembourg AI<br />
+            Module Trial Today
           </h2>
 
           {/* Description */}
           <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-            Join 10,000+ professionals who have advanced their careers with COAD certifications. Get started with a free preview or explore our corporate training options.
+            From Luxembourg to Europe, gain Act-compliant skills for career revamp or leadership solidification. Hands-on modules, blockchain certificates, and local prestige for professionals.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <Button 
               size="xl" 
               className="bg-white text-navy hover:bg-white/90 hover:scale-[1.02] font-semibold shadow-lg"
               asChild
             >
               <a href="https://app.coad.ai/signup" className="group">
-                Get Started Free
+                Start Free Module Trial – Act-Compliant Today
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
@@ -60,10 +60,32 @@ const FinalCTASection = () => {
             </Button>
           </div>
 
-          {/* Trust Line */}
-          <p className="mt-10 text-sm text-white/60">
-            No credit card required • 14-day free trial • Cancel anytime
-          </p>
+          {/* Secondary CTAs */}
+          <div className="flex flex-wrap justify-center gap-4 text-white/70 text-sm">
+            <a href="#aic-track" className="hover:text-white transition-colors underline underline-offset-4">
+              Revamp Your Career with AIC
+            </a>
+            <span>•</span>
+            <a href="#aio-track" className="hover:text-white transition-colors underline underline-offset-4">
+              Solidify Leadership with AIO
+            </a>
+          </div>
+
+          {/* Trust Badges */}
+          <div className="flex flex-wrap justify-center gap-6 mt-12 pt-8 border-t border-white/10">
+            <div className="flex items-center gap-2 text-white/60">
+              <Shield className="w-5 h-5" />
+              <span className="text-sm">EU AI Act Aligned</span>
+            </div>
+            <div className="flex items-center gap-2 text-white/60">
+              <Award className="w-5 h-5" />
+              <span className="text-sm">ESG 2015 Compliant</span>
+            </div>
+            <div className="flex items-center gap-2 text-white/60">
+              <Sparkles className="w-5 h-5" />
+              <span className="text-sm">20% Career Boost</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
