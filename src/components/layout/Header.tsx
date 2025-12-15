@@ -45,11 +45,30 @@ const Header = () => {
       <div className="container-coad">
         <nav className="flex items-center justify-between h-18 py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg bg-gradient-cta flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">C</span>
+          <Link to="/" className="flex items-center gap-2 group">
+            <div className="relative w-10 h-10">
+              {/* Neural network inspired logo */}
+              <svg viewBox="0 0 40 40" className="w-full h-full">
+                <defs>
+                  <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="hsl(var(--primary))" />
+                    <stop offset="100%" stopColor="hsl(var(--teal))" />
+                  </linearGradient>
+                </defs>
+                {/* Outer ring */}
+                <circle cx="20" cy="20" r="18" fill="none" stroke="url(#logoGradient)" strokeWidth="2" className="group-hover:animate-pulse" />
+                {/* Inner nodes */}
+                <circle cx="20" cy="10" r="3" fill="url(#logoGradient)" />
+                <circle cx="10" cy="25" r="3" fill="url(#logoGradient)" />
+                <circle cx="30" cy="25" r="3" fill="url(#logoGradient)" />
+                <circle cx="20" cy="20" r="4" fill="url(#logoGradient)" />
+                {/* Connecting lines */}
+                <line x1="20" y1="10" x2="20" y2="20" stroke="url(#logoGradient)" strokeWidth="1.5" />
+                <line x1="10" y1="25" x2="20" y2="20" stroke="url(#logoGradient)" strokeWidth="1.5" />
+                <line x1="30" y1="25" x2="20" y2="20" stroke="url(#logoGradient)" strokeWidth="1.5" />
+              </svg>
             </div>
-            <span className="text-xl font-bold text-foreground">COAD</span>
+            <span className="text-xl font-bold text-foreground tracking-tight">COAD</span>
           </Link>
 
           {/* Desktop Navigation */}

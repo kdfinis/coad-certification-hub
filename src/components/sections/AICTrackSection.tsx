@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check, Award, Clock, GraduationCap } from 'lucide-react';
+import { ArrowRight, Check, Award, Clock, GraduationCap, Target, Zap, Crown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const AICTrackSection = () => {
@@ -13,10 +13,11 @@ const AICTrackSection = () => {
       subtitle: 'Tier 1',
       fullName: 'Qualified AI Practitioner',
       duration: '3 months',
-      ects: '6 ECTS (180 hours)',
       meaning: "You're certified to structure AI-assisted processes without supervision",
       recognition: 'Digital badge with verifiable skills; employer-trusted for entry jobs',
-      icon: '🎯',
+      Icon: Target,
+      color: 'text-primary',
+      bgColor: 'bg-primary/10',
     },
     {
       id: 'aap',
@@ -24,10 +25,11 @@ const AICTrackSection = () => {
       subtitle: 'Tier 2',
       fullName: 'Advanced AI Practitioner',
       duration: '4 months',
-      ects: '9 ECTS (270 hours)',
       meaning: "You're certified to design multi-tool workflows and coordinate AI across functions",
       recognition: 'Enhanced badge with stats; valued for promotions',
-      icon: '⚡',
+      Icon: Zap,
+      color: 'text-teal',
+      bgColor: 'bg-teal/10',
     },
     {
       id: 'map',
@@ -35,10 +37,11 @@ const AICTrackSection = () => {
       subtitle: 'Tier 3',
       fullName: 'Master AI Practitioner',
       duration: '6 months',
-      ects: '12 ECTS (360 hours)',
       meaning: "You're certified to oversee organization-wide AI, integrating governance and efficiency",
       recognition: 'Premium badge with portfolio; industry-endorsed for career advancement',
-      icon: '👑',
+      Icon: Crown,
+      color: 'text-amber-500',
+      bgColor: 'bg-amber-500/10',
     },
   ];
 
@@ -122,8 +125,10 @@ const AICTrackSection = () => {
                   <div
                     key={tab.id}
                     className={cn(
-                      'transition-all duration-300',
-                      activeTab === index ? 'opacity-100 visible' : 'opacity-0 hidden'
+                      'transition-all duration-500 transform',
+                      activeTab === index 
+                        ? 'opacity-100 visible translate-y-0' 
+                        : 'opacity-0 hidden translate-y-2'
                     )}
                   >
                     <div className="space-y-4">
@@ -136,7 +141,7 @@ const AICTrackSection = () => {
                         </div>
                         <div className="flex items-center gap-2 text-sm text-muted-foreground">
                           <GraduationCap className="w-4 h-4" />
-                          {tab.ects}
+                          ECTS Compatible
                         </div>
                       </div>
 
@@ -162,45 +167,66 @@ const AICTrackSection = () => {
             <div className="relative">
               {/* Tier Cards Stack */}
               <div className="space-y-4">
-                {tabs.map((tab, index) => (
-                  <div
-                    key={tab.id}
-                    onClick={() => setActiveTab(index)}
-                    className={cn(
-                      'p-6 rounded-xl border-2 cursor-pointer transition-all duration-300',
-                      activeTab === index
-                        ? 'bg-card border-primary shadow-lg scale-[1.02]'
-                        : 'bg-muted/50 border-transparent hover:border-primary/30'
-                    )}
-                  >
-                    <div className="flex items-center gap-4">
-                      <div className={cn(
-                        'w-14 h-14 rounded-xl flex items-center justify-center text-2xl',
-                        activeTab === index ? 'bg-primary/10' : 'bg-muted'
-                      )}>
-                        {tab.icon}
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2">
-                          <h4 className="font-semibold text-foreground">{tab.label}</h4>
-                          <span className="px-2 py-0.5 bg-muted rounded text-xs text-muted-foreground">
-                            {tab.subtitle}
-                          </span>
+                {tabs.map((tab, index) => {
+                  const IconComponent = tab.Icon;
+                  return (
+                    <div
+                      key={tab.id}
+                      onClick={() => setActiveTab(index)}
+                      className={cn(
+                        'p-6 rounded-2xl border-2 cursor-pointer transition-all duration-500 transform',
+                        activeTab === index
+                          ? 'bg-card border-primary shadow-xl scale-[1.02] -translate-x-2'
+                          : 'bg-muted/30 border-border/50 hover:border-primary/40 hover:bg-card/50'
+                      )}
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className={cn(
+                          'w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-500',
+                          activeTab === index ? tab.bgColor : 'bg-muted'
+                        )}>
+                          <IconComponent className={cn(
+                            'w-7 h-7 transition-all duration-500',
+                            activeTab === index ? tab.color : 'text-muted-foreground'
+                          )} />
                         </div>
-                        <p className="text-sm text-muted-foreground">{tab.fullName}</p>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-sm font-medium text-foreground">{tab.ects.split(' ')[0]}</p>
-                        <p className="text-xs text-muted-foreground">Credits</p>
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2">
+                            <h4 className={cn(
+                              'font-bold text-lg transition-colors duration-300',
+                              activeTab === index ? 'text-foreground' : 'text-foreground/70'
+                            )}>
+                              {tab.label}
+                            </h4>
+                            <span className={cn(
+                              'px-2.5 py-1 rounded-full text-xs font-medium transition-all duration-300',
+                              activeTab === index 
+                                ? 'bg-primary/10 text-primary' 
+                                : 'bg-muted text-muted-foreground'
+                            )}>
+                              {tab.subtitle}
+                            </span>
+                          </div>
+                          <p className="text-sm text-muted-foreground mt-0.5">{tab.fullName}</p>
+                        </div>
+                        <div className={cn(
+                          'flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300',
+                          activeTab === index
+                            ? 'bg-success/10 text-success'
+                            : 'bg-muted text-muted-foreground'
+                        )}>
+                          <GraduationCap className="w-3.5 h-3.5" />
+                          ECTS
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
 
               {/* Decorative Elements */}
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-primary/20 to-teal/20 rounded-full blur-2xl -z-10" />
-              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-br from-teal/20 to-primary/20 rounded-full blur-2xl -z-10" />
+              <div className="absolute -top-8 -right-8 w-40 h-40 bg-gradient-to-br from-primary/20 to-teal/20 rounded-full blur-3xl -z-10 animate-pulse" />
+              <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-gradient-to-br from-teal/20 to-primary/20 rounded-full blur-3xl -z-10 animate-pulse" style={{ animationDelay: '1s' }} />
             </div>
           </div>
         </div>
