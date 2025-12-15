@@ -53,29 +53,29 @@ const AICTrackSection = () => {
 
   const usps = [
     {
-      icon: Award,
-      title: 'Act-Compliant Skill Mastery',
-      description: "Gain hands-on AI competence with built-in EU AI Act safeguards, ensuring your skills are legally compliant from day one.",
-    },
-    {
       icon: Code,
       title: 'No Coding Background Required',
-      description: "Designed for non-programmers (engineers, analysts) to enrich existing knowledge with AI – open to programmers for latest tools/certification.",
-    },
-    {
-      icon: Briefcase,
-      title: 'Blockchain-Verified Credentials',
-      description: "Earn verifiable certificates that boost resumes and LinkedIn profiles, with Luxembourg-based prestige for local and global markets.",
+      description: "Designed for non-programmers (engineers, analysts) to enrich existing knowledge with AI – open to programmers for latest tools.",
     },
     {
       icon: Lightbulb,
+      title: 'Hands-On Project Learning',
+      description: "Build real-world AI solutions through practical labs and capstone projects that translate directly to workplace applications.",
+    },
+    {
+      icon: Briefcase,
       title: 'Entrepreneurial Focus',
-      description: "Real-world projects to apply AI for business innovation, helping you start or scale ventures in Luxembourg's startup ecosystem.",
+      description: "Apply AI skills to your own business ideas or startup ventures, with mentorship from Luxembourg's innovation ecosystem.",
     },
     {
       icon: Users,
-      title: 'Flexible, Career-Accelerating Tiers',
-      description: "Progress from basic workflows to enterprise mastery, with 20-30% employability boost – tailored for multicultural professionals.",
+      title: 'Flexible Self-Paced Tiers',
+      description: "Progress from foundational workflows to enterprise mastery at your own pace – designed for busy professionals.",
+    },
+    {
+      icon: Award,
+      title: 'Industry-Recognized Credentials',
+      description: "Earn certificates valued by employers across Europe, with post-nominal designations that validate your expertise.",
     },
   ];
 
@@ -165,7 +165,7 @@ const AICTrackSection = () => {
             </h3>
 
             <p className="text-muted-foreground">
-              Each tier culminating in a certificate of competency tested via rubrics (80% pass required) and real-world simulations. ESG 2015 compliance is embedded throughout.
+              Each tier culminates in a certificate of competency tested via rubrics (80% pass required) and real-world simulations.
             </p>
 
             {/* Bullet Points */}
@@ -174,13 +174,7 @@ const AICTrackSection = () => {
                 <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center shrink-0 mt-0.5">
                   <Check className="w-3 h-3 text-success" />
                 </div>
-                <span className="text-foreground">Blockchain-verified badge, shareable on LinkedIn</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-success" />
-                </div>
-                <span className="text-foreground">EU AI Act-compliant for low/moderate-risk AI use</span>
+                <span className="text-foreground">Verifiable digital badges, shareable on LinkedIn</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center shrink-0 mt-0.5">
@@ -193,6 +187,12 @@ const AICTrackSection = () => {
                   <Check className="w-3 h-3 text-success" />
                 </div>
                 <span className="text-foreground">Hands-on learning with real-world projects</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="w-3 h-3 text-success" />
+                </div>
+                <span className="text-foreground">ECTS-compatible for academic credit transfer</span>
               </li>
             </ul>
 

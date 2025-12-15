@@ -3,30 +3,6 @@ import { Leaf, Link as LinkIcon, GraduationCap, Check } from 'lucide-react';
 const BenefitsSection = () => {
   const benefits = [
     {
-      icon: Leaf,
-      title: 'ESG 2015 Compliant',
-      description: 'All programs are ESG 2015 compliant, emphasizing environmental sustainability, social responsibility, and governance standards.',
-      points: [
-        'Environmental: Energy-efficient AI practices',
-        'Social: Ethical oversight and inclusion',
-        'Governance: Transparent testing and assessment',
-      ],
-      color: 'success',
-      imagePosition: 'right',
-    },
-    {
-      icon: LinkIcon,
-      title: 'Blockchain-Verified Certificates',
-      description: 'All certificates are blockchain-verified for authenticity, ensuring your credentials are tamper-proof and permanently verifiable.',
-      points: [
-        'Immutable credential records',
-        'Instant verification for employers',
-        'Shareable on LinkedIn and portfolios',
-      ],
-      color: 'primary',
-      imagePosition: 'left',
-    },
-    {
       icon: GraduationCap,
       title: 'ECTS Compatible',
       description: 'All certifications are convertible to ECTS credits (30 hours per ECTS) for Bologna Process mobility and academic recognition.',
@@ -36,6 +12,30 @@ const BenefitsSection = () => {
         'Academic credit transfer',
       ],
       color: 'teal',
+      imagePosition: 'right',
+    },
+    {
+      icon: LinkIcon,
+      title: 'Verifiable Digital Credentials',
+      description: 'All certificates are digitally verified for authenticity, ensuring your credentials are secure and easily shareable.',
+      points: [
+        'Secure credential records',
+        'Instant verification for employers',
+        'Shareable on LinkedIn and portfolios',
+      ],
+      color: 'primary',
+      imagePosition: 'left',
+    },
+    {
+      icon: Leaf,
+      title: 'Sustainability-Focused',
+      description: 'Programs incorporate responsible AI practices with attention to environmental impact and ethical considerations.',
+      points: [
+        'Energy-efficient AI practices',
+        'Ethical oversight principles',
+        'Transparent assessment standards',
+      ],
+      color: 'success',
       imagePosition: 'right',
     },
   ];
