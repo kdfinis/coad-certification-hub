@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Users, Building2, CheckCircle2, Star, Shield, Award, Link as LinkIcon, GraduationCap } from 'lucide-react';
+import { Shield, Award, Link as LinkIcon, GraduationCap } from 'lucide-react';
 
 const SocialProofSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -12,7 +12,7 @@ const SocialProofSection = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
 
     if (sectionRef.current) {
@@ -22,87 +22,56 @@ const SocialProofSection = () => {
     return () => observer.disconnect();
   }, []);
 
-  const stats = [
-    { 
-      icon: Users, 
-      number: '10,000+', 
-      label: 'Certified Professionals',
-      color: 'text-primary'
-    },
-    { 
-      icon: Building2, 
-      number: '500+', 
-      label: 'Corporate Clients',
-      color: 'text-teal'
-    },
-    { 
-      icon: CheckCircle2, 
-      number: '95%', 
-      label: 'Pass Rate',
-      color: 'text-success'
-    },
-    { 
-      icon: Star, 
-      number: '4.8/5', 
-      label: 'Average Rating',
-      color: 'text-primary'
-    },
-  ];
-
   const badges = [
-    { icon: Shield, label: 'EU AI Act Compliant' },
-    { icon: Award, label: 'ESG 2015 Certified' },
-    { icon: LinkIcon, label: 'Blockchain Verified' },
-    { icon: GraduationCap, label: 'ECTS Compatible' },
+    { icon: Shield, label: 'EU AI Act Compliant', description: 'Full compliance with European AI regulations' },
+    { icon: Award, label: 'ESG 2015 Certified', description: 'Meeting sustainability standards' },
+    { icon: LinkIcon, label: 'Blockchain Verified', description: 'Tamper-proof credential verification' },
+    { icon: GraduationCap, label: 'ECTS Compatible', description: 'Recognized academic credit system' },
   ];
 
   return (
-    <section ref={sectionRef} className="section-padding bg-muted/50" id="about">
+    <section ref={sectionRef} className="section-padding bg-gradient-to-b from-background to-muted/30" id="about">
       <div className="container-coad">
         {/* Heading */}
-        <h2 className="heading-3 text-center text-foreground mb-12">
-          Join professionals worldwide advancing their AI competency
-        </h2>
-
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {stats.map((stat, index) => (
-            <div 
-              key={stat.label}
-              className={`
-                bg-card rounded-xl p-6 shadow-sm border border-border
-                card-hover
-                ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}
-              `}
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4`}>
-                <stat.icon className={`w-6 h-6 ${stat.color}`} />
-              </div>
-              <p className="text-3xl md:text-4xl font-bold text-foreground mb-1">
-                {stat.number}
-              </p>
-              <p className="text-sm text-muted-foreground">
-                {stat.label}
-              </p>
-            </div>
-          ))}
+        <div className="text-center mb-16">
+          <h2 className={`heading-3 text-foreground mb-4 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            Trusted Standards for AI Excellence
+          </h2>
+          <p className={`body-large text-muted-foreground max-w-2xl mx-auto transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            Our certifications meet the highest international standards for AI governance and compliance
+          </p>
         </div>
 
-        {/* Badges Row */}
-        <div className="flex flex-wrap justify-center gap-6 md:gap-12">
+        {/* Badges Grid - Better integrated with content */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {badges.map((badge, index) => (
             <div 
               key={badge.label}
               className={`
-                flex items-center gap-3 px-6 py-3 bg-card rounded-full border border-border
-                hover:border-primary/30 hover:shadow-md transition-all duration-300
-                ${isVisible ? 'animate-fade-in' : 'opacity-0'}
+                group relative p-6 bg-card rounded-2xl border border-border
+                hover:border-primary/40 hover:shadow-xl transition-all duration-500
+                ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
               `}
-              style={{ animationDelay: `${400 + index * 100}ms` }}
+              style={{ 
+                transitionDelay: `${index * 100}ms`,
+                animationDelay: `${index * 100}ms` 
+              }}
             >
-              <badge.icon className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium text-foreground">{badge.label}</span>
+              {/* Icon Container */}
+              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                <badge.icon className="w-7 h-7 text-primary" />
+              </div>
+              
+              {/* Content */}
+              <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                {badge.label}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {badge.description}
+              </p>
+
+              {/* Decorative gradient on hover */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-teal/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
             </div>
           ))}
         </div>
