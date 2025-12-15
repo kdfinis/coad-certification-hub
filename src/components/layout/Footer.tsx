@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Linkedin, Twitter, Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Linkedin, Twitter, Facebook, Instagram, Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
+import CoadLogo from '@/components/ui/coad-logo';
 
 const Footer = () => {
   const footerLinks = {
@@ -18,10 +19,9 @@ const Footer = () => {
       { label: 'Blog', href: '#' },
     ],
     compliance: [
-      { label: 'EU AI Act Compliance', href: '#compliance' },
-      { label: 'ESG 2015 Standards', href: '#benefits' },
+      { label: 'EU AI Act', href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689', external: true },
+      { label: 'ESG 2015 Standards', href: 'https://www.iso.org/standard/63787.html', external: true },
       { label: 'Blockchain Verification', href: '#benefits' },
-      { label: 'ECTS Credits', href: '#benefits' },
       { label: 'Accreditation', href: '#' },
     ],
     company: [
@@ -54,11 +54,8 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-12">
           {/* Logo & Contact */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
-            <Link to="/" className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-gradient-cta flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">C</span>
-              </div>
-              <span className="text-xl font-bold text-gray-50">COAD</span>
+            <Link to="/" className="inline-block mb-6">
+              <CoadLogo size="md" textClassName="text-gray-50" />
             </Link>
             
             <div className="space-y-3 text-sm text-gray-400">
@@ -79,6 +76,11 @@ const Footer = () => {
                 </a>
               </div>
             </div>
+            
+            {/* VAT Note */}
+            <p className="mt-4 text-xs text-gray-500">
+              All prices VAT-inclusive (17% Luxembourg)
+            </p>
           </div>
 
           {/* Link Columns */}
@@ -120,10 +122,13 @@ const Footer = () => {
               {footerLinks.compliance.map((link) => (
                 <li key={link.label}>
                   <a 
-                    href={link.href} 
-                    className="text-sm text-gray-400 hover:text-gray-50 transition-colors"
+                    href={link.href}
+                    target={link.external ? '_blank' : undefined}
+                    rel={link.external ? 'noopener noreferrer' : undefined}
+                    className="text-sm text-gray-400 hover:text-gray-50 transition-colors inline-flex items-center gap-1"
                   >
                     {link.label}
+                    {link.external && <ExternalLink className="w-3 h-3" />}
                   </a>
                 </li>
               ))}
