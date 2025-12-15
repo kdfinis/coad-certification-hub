@@ -51,29 +51,29 @@ const AIOTrackSection = () => {
 
   const usps = [
     {
-      icon: Shield,
-      title: 'EU AI Act Leadership',
-      description: "Solidify your position with Act-aligned oversight skills, focusing on security, privacy, and sustainability – essential for managers in finance/tech sectors.",
+      icon: Building2,
+      title: 'Digital Transformation Leadership',
+      description: "Guide organization-wide AI adoption with strategic roadmaps and change management expertise for lasting impact.",
     },
     {
       icon: AlertTriangle,
-      title: 'Safety-Minded Professional Edge',
-      description: "Tailored for experienced managers to master crisis prevention and ethical AI, ensuring safe digital transformations in high-risk environments.",
+      title: 'Risk Assessment Expertise',
+      description: "Master AI risk identification and mitigation strategies to protect your organization while enabling innovation.",
     },
     {
-      icon: Leaf,
-      title: 'Sustainability & Efficiency Tools',
-      description: "Learn green AI practices and resource management, adding ESG excellence for eco-conscious corporates.",
+      icon: Scale,
+      title: 'Ethical AI Governance',
+      description: "Implement fairness frameworks and bias detection to ensure responsible AI deployment across your organization.",
     },
     {
       icon: Users,
-      title: 'Oversight for Career Solidification',
-      description: "Strengthen your role as a compliance leader with certificates that validate expertise – 85% graduates report enhanced leadership positions.",
+      title: 'Executive-Level Positioning',
+      description: "Strengthen your leadership role with credentials that validate your expertise in AI governance and oversight.",
     },
     {
       icon: Award,
       title: 'Practical Audits & Simulations',
-      description: "Hands-on tools for real-world oversight, helping safety-minded pros protect organizations from AI risks while driving transformation.",
+      description: "Hands-on tools for real-world oversight scenarios, preparing you to lead AI initiatives with confidence.",
     },
   ];
 
@@ -169,10 +169,10 @@ const AIOTrackSection = () => {
             {/* Bullet Points */}
             <ul className="space-y-3">
               {[
-                'Blockchain-verified badge, shareable for compliance portfolios',
-                'EU AI Act-compliant for high-risk AI systems',
+                'Verifiable digital credentials for professional portfolios',
                 'Post-nominal: Certified AI Oversight Professional (AIO)',
-                'Digital transformation leadership skills',
+                'Strategic leadership for AI-driven organizations',
+                'ECTS-compatible for academic recognition',
               ].map((bullet, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <div className="w-5 h-5 rounded-full bg-teal/10 flex items-center justify-center shrink-0 mt-0.5">
