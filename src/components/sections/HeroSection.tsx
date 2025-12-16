@@ -23,7 +23,7 @@ const HeroSection = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm font-medium text-primary animate-fade-in">
               <Sparkles className="w-4 h-4" />
-              Luxembourg's Premier AI Training Platform
+              Europe's Leading AI Certification Platform
             </div>
 
             {/* Headline */}
@@ -61,7 +61,7 @@ const HeroSection = () => {
                 <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center">
                   <div className="w-2 h-2 rounded-full bg-success" />
                 </div>
-                Luxembourg-based certification
+                EU-recognized certification
               </div>
             </div>
 
@@ -96,7 +96,7 @@ const HeroSection = () => {
                 <div className="w-10 h-10 rounded-full bg-teal/10 flex items-center justify-center">
                   <Globe className="w-5 h-5 text-teal" />
                 </div>
-                <span>Luxembourg<br />Based</span>
+                <span>EU<br />Recognized</span>
               </div>
             </div>
           </div>

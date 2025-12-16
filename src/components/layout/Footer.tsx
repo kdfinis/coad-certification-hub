@@ -79,7 +79,7 @@ const Footer = () => {
             
             {/* VAT Note */}
             <p className="mt-4 text-xs text-gray-500">
-              All prices VAT-inclusive (17% Luxembourg)
+              All prices VAT-inclusive
             </p>
           </div>
 
