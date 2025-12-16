@@ -1,52 +1,52 @@
 import { Button } from '@/components/ui/button';
-import { Check, ArrowRight, Award, Shield, Layers, Building2, Clock, Percent } from 'lucide-react';
+import { Check, ArrowRight, Award, Shield, Layers, Building2, Clock, Percent, Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const PricingSection = () => {
   const plans = [
     {
-      name: 'AIC Track',
-      subtitle: 'AI Competence Certification',
+      name: 'ADC Track',
+      subtitle: 'AI Development Certified',
       tiers: [
-        { name: 'Tier 1 (QAP)', price: '€1,800', hours: '180 hours', duration: '3 months' },
-        { name: 'Tier 2 (AAP)', price: '€2,200', hours: '270 hours', duration: '4 months' },
-        { name: 'Tier 3 (MAP)', price: '€2,200', hours: '360 hours', duration: '6 months' },
+        { name: 'Level 1 (Professional)', price: '€1,800', hours: '180 hours', duration: '3 months' },
+        { name: 'Level 2 (Advanced Expert)', price: '€2,200', hours: '270 hours', duration: '4 months' },
+        { name: 'Level 3 (Master)', price: '€2,200', hours: '360 hours', duration: '6 months' },
       ],
       icon: Award,
       featured: false,
       features: [
-        'Entry to enterprise-level skills',
-        'Blockchain-verified badges',
+        'Progressive 3-level certification',
+        'ADC Charterholder upon Level 3',
+        'Priority directory placement',
         'LinkedIn shareable credentials',
-        'Post-nominal designations',
-        'EU AI Act compliant',
+        'Hands-on project learning',
       ],
-      cta: 'View AIC Track',
-      href: '#aic-track',
+      cta: 'View ADC Track',
+      href: '#adc-track',
       color: 'primary',
     },
     {
-      name: 'AIO Track',
-      subtitle: 'AI Oversight Certification',
+      name: 'ACOS Track',
+      subtitle: 'AI Controlling & Oversight Certified',
       tiers: [
-        { name: 'Digital & AI Transformation', price: '€2,880', hours: '150 hours' },
-        { name: 'Safety/Risk', price: '€1,640', hours: '90 hours' },
-        { name: 'Ethical Oversight', price: '€1,640', hours: '90 hours' },
-        { name: 'Legal Compliance', price: '€1,640', hours: '90 hours' },
+        { name: 'Transformation Controller', price: '€2,880', hours: '150 hours' },
+        { name: 'Safety & Risk Controller', price: '€1,640', hours: '90 hours' },
+        { name: 'Ethics Controller', price: '€1,640', hours: '90 hours' },
+        { name: 'Legal & Compliance Controller', price: '€1,640', hours: '90 hours' },
       ],
       duration: '6 months',
       icon: Shield,
       featured: true,
-      badge: 'Governance Focus',
+      badge: 'Charterholder Track',
       features: [
-        '4 Domains: Transformation, Safety, Ethics, Legal',
-        'Compliance portfolio ready',
-        'Post-nominal: AIO Certified',
-        'EU AI Act high-risk expertise',
-        'Blockchain-verified badge',
+        '4 Controller Pillars',
+        'ACOS Charterholder upon completion',
+        'Priority directory placement',
+        'Executive-level credentials',
+        'Strategic leadership focus',
       ],
-      cta: 'View AIO Track',
-      href: '#aio-track',
+      cta: 'View ACOS Track',
+      href: '#acos-track',
       color: 'teal',
     },
     {
@@ -58,10 +58,10 @@ const PricingSection = () => {
       featured: false,
       features: [
         '18 specialized modules available',
-        'AIC & AIO aligned options',
+        'ADC & ACOS aligned options',
         'Feed into full track (20% credit)',
         'Flexible self-paced learning',
-        'Blockchain-verified',
+        'Verifiable credentials',
       ],
       cta: 'Browse Modules',
       href: '#modules',
@@ -115,7 +115,8 @@ const PricingSection = () => {
               {/* Featured Badge */}
               {plan.badge && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="px-4 py-1.5 bg-gradient-cta text-white text-sm font-medium rounded-full shadow-lg">
+                  <span className="inline-flex items-center gap-1 px-4 py-1.5 bg-gradient-cta text-white text-sm font-medium rounded-full shadow-lg">
+                    <Star className="w-3 h-3" />
                     {plan.badge}
                   </span>
                 </div>
@@ -136,7 +137,7 @@ const PricingSection = () => {
               <h3 className="text-xl font-semibold text-foreground mb-1">{plan.name}</h3>
               <p className="text-sm text-muted-foreground mb-4">{plan.subtitle}</p>
 
-              {/* Price - Handle tiered pricing for AIC */}
+              {/* Price - Handle tiered pricing */}
               <div className="mb-6">
                 {plan.tiers ? (
                   <div className="space-y-2">
