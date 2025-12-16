@@ -65,7 +65,7 @@ const AICTrackSection = () => {
     {
       icon: Briefcase,
       title: 'Entrepreneurial Focus',
-      description: "Apply AI skills to your own business ideas or startup ventures, with mentorship from Luxembourg's innovation ecosystem.",
+      description: "Apply AI skills to your own business ideas or startup ventures, with mentorship from Europe's top innovation networks.",
     },
     {
       icon: Users,
