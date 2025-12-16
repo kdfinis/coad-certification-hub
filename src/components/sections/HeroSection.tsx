@@ -34,7 +34,7 @@ const HeroSection = () => {
 
             {/* Subheadline */}
             <p className="body-large text-muted-foreground max-w-xl animate-fade-in-up stagger-2">
-              From Luxembourg to Europe, gain Act-compliant skills for career revamp or leadership solidification. Hands-on modules, blockchain certificates, and local prestige for professionals ready to embrace AI as a core competency.
+              From Luxembourg to Europe, earn your ADC or ACOS Charterholder status. Join our Accredited Experts Directory with priority placement and exclusive recognition for professionals mastering AI.
             </p>
 
             {/* Key Benefits */}
@@ -49,19 +49,19 @@ const HeroSection = () => {
                 <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center">
                   <div className="w-2 h-2 rounded-full bg-success" />
                 </div>
-                EU AI Act compliant
+                Charterholder prestige & directory
               </div>
               <div className="flex items-center gap-2 text-sm text-foreground">
                 <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center">
                   <div className="w-2 h-2 rounded-full bg-success" />
                 </div>
-                Blockchain-verified credentials
+                CFA-style progression model
               </div>
               <div className="flex items-center gap-2 text-sm text-foreground">
                 <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center">
                   <div className="w-2 h-2 rounded-full bg-success" />
                 </div>
-                20-30% employability boost
+                Luxembourg-based certification
               </div>
             </div>
 
@@ -132,7 +132,7 @@ const HeroSection = () => {
                   <div className="space-y-4">
                     <div>
                       <p className="text-xs text-muted-foreground uppercase tracking-wide">Certification</p>
-                      <p className="font-semibold text-foreground">Master AI Practitioner (MAP)</p>
+                      <p className="font-semibold text-foreground">ADC Charterholder</p>
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
