@@ -8,6 +8,12 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Auth from "./pages/Auth";
 import Certifications from "./pages/Certifications";
+import ADCProfessional from "./pages/certifications/ADCProfessional";
+import ADCAdvanced from "./pages/certifications/ADCAdvanced";
+import ADCMaster from "./pages/certifications/ADCMaster";
+import ACOSProfessional from "./pages/certifications/ACOSProfessional";
+import ACOSAdvanced from "./pages/certifications/ACOSAdvanced";
+import ACOSMaster from "./pages/certifications/ACOSMaster";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +30,12 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/certifications" element={<Certifications />} />
+            <Route path="/certifications/adc-professional" element={<ADCProfessional />} />
+            <Route path="/certifications/adc-advanced" element={<ADCAdvanced />} />
+            <Route path="/certifications/adc-master" element={<ADCMaster />} />
+            <Route path="/certifications/acos-professional" element={<ACOSProfessional />} />
+            <Route path="/certifications/acos-advanced" element={<ACOSAdvanced />} />
+            <Route path="/certifications/acos-master" element={<ACOSMaster />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
