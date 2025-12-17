@@ -1,7 +1,20 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check, Award, Clock, Target, Zap, Crown, Briefcase, Code, Lightbulb, Users, Quote } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import {
+  AwardMedalIcon,
+  ClockNodeIcon,
+  TargetNodeIcon,
+  EnergyNodeIcon,
+  CrownNodeIcon,
+  BriefcaseNodeIcon,
+  CodeNodeIcon,
+  LightbulbNodeIcon,
+  NetworkNodesIcon,
+  QuoteNodeIcon,
+  CheckNodeIcon,
+  ArrowNodeIcon
+} from '@/components/ui/custom-icons';
 
 const AICTrackSection = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -17,8 +30,8 @@ const AICTrackSection = () => {
       price: '€1,800',
       meaning: "You're certified to structure AI-assisted processes without supervision – entry-level workflow optimization and basic AI application.",
       recognition: 'Digital badge with verifiable skills; employer-trusted for entry jobs',
-      Icon: Target,
-      color: 'text-primary',
+      Icon: TargetNodeIcon,
+      color: 'primary' as const,
       bgColor: 'bg-primary/10',
     },
     {
@@ -31,8 +44,8 @@ const AICTrackSection = () => {
       price: '€2,200',
       meaning: "You're certified to design multi-tool workflows and coordinate AI across functions with Act-compliant safeguards.",
       recognition: 'Enhanced badge with stats; valued for promotions and complex integration roles',
-      Icon: Zap,
-      color: 'text-teal',
+      Icon: EnergyNodeIcon,
+      color: 'teal' as const,
       bgColor: 'bg-teal/10',
     },
     {
@@ -45,35 +58,35 @@ const AICTrackSection = () => {
       price: '€2,200',
       meaning: "You're certified to oversee organization-wide AI, integrating governance and efficiency – full Act readiness for enterprise-level AI design.",
       recognition: 'Premium badge with portfolio; industry-endorsed for career advancement',
-      Icon: Crown,
-      color: 'text-amber-500',
+      Icon: CrownNodeIcon,
+      color: 'amber' as const,
       bgColor: 'bg-amber-500/10',
     },
   ];
 
   const usps = [
     {
-      icon: Code,
+      Icon: CodeNodeIcon,
       title: 'No Coding Background Required',
       description: "Designed for non-programmers (engineers, analysts) to enrich existing knowledge with AI – open to programmers for latest tools.",
     },
     {
-      icon: Lightbulb,
+      Icon: LightbulbNodeIcon,
       title: 'Hands-On Project Learning',
       description: "Build real-world AI solutions through practical labs and capstone projects that translate directly to workplace applications.",
     },
     {
-      icon: Briefcase,
+      Icon: BriefcaseNodeIcon,
       title: 'Entrepreneurial Focus',
       description: "Apply AI skills to your own business ideas or startup ventures, with mentorship from Europe's top innovation networks.",
     },
     {
-      icon: Users,
+      Icon: NetworkNodesIcon,
       title: 'Flexible Self-Paced Tiers',
       description: "Progress from foundational workflows to enterprise mastery at your own pace – designed for busy professionals.",
     },
     {
-      icon: Award,
+      Icon: AwardMedalIcon,
       title: 'Industry-Recognized Credentials',
       description: "Earn certificates valued by employers across Europe, with post-nominal designations that validate your expertise.",
     },
@@ -85,7 +98,7 @@ const AICTrackSection = () => {
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm font-medium text-primary mb-6">
-            <Award className="w-4 h-4" />
+            <AwardMedalIcon className="w-5 h-5" color="primary" />
             Professional Institute Program
           </div>
           
@@ -105,28 +118,28 @@ const AICTrackSection = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-card rounded-xl p-6 border border-border">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                <Briefcase className="w-6 h-6 text-primary" />
+                <BriefcaseNodeIcon className="w-7 h-7" color="primary" />
               </div>
               <h4 className="font-semibold text-foreground mb-2">Mid-Career Professionals</h4>
               <p className="text-sm text-muted-foreground">Looking to revamp your life by transitioning into AI or enriching existing expertise</p>
             </div>
             <div className="bg-card rounded-xl p-6 border border-border">
               <div className="w-12 h-12 rounded-xl bg-teal/10 flex items-center justify-center mb-4">
-                <Target className="w-6 h-6 text-teal" />
+                <TargetNodeIcon className="w-7 h-7" color="teal" />
               </div>
               <h4 className="font-semibold text-foreground mb-2">Engineers & Scientists</h4>
               <p className="text-sm text-muted-foreground">Scientifically minded experts who want to integrate AI into their domain</p>
             </div>
             <div className="bg-card rounded-xl p-6 border border-border">
               <div className="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center mb-4">
-                <Users className="w-6 h-6 text-amber-500" />
+                <NetworkNodesIcon className="w-7 h-7" color="amber" />
               </div>
               <h4 className="font-semibold text-foreground mb-2">Recent Graduates</h4>
               <p className="text-sm text-muted-foreground">Eager to build a future-proof skill set and stand out in the job market</p>
             </div>
             <div className="bg-card rounded-xl p-6 border border-border">
               <div className="w-12 h-12 rounded-xl bg-success/10 flex items-center justify-center mb-4">
-                <Code className="w-6 h-6 text-success" />
+                <CodeNodeIcon className="w-7 h-7" color="success" />
               </div>
               <h4 className="font-semibold text-foreground mb-2">Programmers</h4>
               <p className="text-sm text-muted-foreground">Stay ahead with the latest tools, techniques, and industry practices</p>
@@ -145,10 +158,7 @@ const AICTrackSection = () => {
                 'w-12 h-12 rounded-xl flex items-center justify-center mb-4',
                 index % 2 === 0 ? 'bg-primary/10' : 'bg-teal/10'
               )}>
-                <usp.icon className={cn(
-                  'w-6 h-6',
-                  index % 2 === 0 ? 'text-primary' : 'text-teal'
-                )} />
+                <usp.Icon className="w-7 h-7" color={index % 2 === 0 ? 'primary' : 'teal'} />
               </div>
               <h4 className="font-semibold text-foreground mb-2">{usp.title}</h4>
               <p className="text-sm text-muted-foreground">{usp.description}</p>
@@ -172,25 +182,25 @@ const AICTrackSection = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-success" />
+                  <CheckNodeIcon className="w-4 h-4" color="success" />
                 </div>
                 <span className="text-foreground">Verifiable digital badges, shareable on LinkedIn</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-success" />
+                  <CheckNodeIcon className="w-4 h-4" color="success" />
                 </div>
                 <span className="text-foreground">Post-nominal designations: QAP, AAP, MAP</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-success" />
+                  <CheckNodeIcon className="w-4 h-4" color="success" />
                 </div>
                 <span className="text-foreground">Hands-on learning with real-world projects</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-success" />
+                  <CheckNodeIcon className="w-4 h-4" color="success" />
                 </div>
                 <span className="text-foreground">ECTS-compatible for academic credit transfer</span>
               </li>
@@ -201,7 +211,7 @@ const AICTrackSection = () => {
               <Button variant="hero" size="lg" asChild>
                 <a href="https://app.coad.ai/signup" className="group">
                   Enroll in AIC Tier 1 – Start Your Revamp
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowNodeIcon className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
             </div>
@@ -247,7 +257,7 @@ const AICTrackSection = () => {
                       
                       <div className="flex flex-wrap gap-4">
                         <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <Clock className="w-4 h-4" />
+                          <ClockNodeIcon className="w-5 h-5" color="primary" />
                           {tab.duration} • {tab.hours}
                         </div>
                       </div>
@@ -292,10 +302,7 @@ const AICTrackSection = () => {
                           'w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-500',
                           activeTab === index ? tab.bgColor : 'bg-muted'
                         )}>
-                          <IconComponent className={cn(
-                            'w-7 h-7 transition-all duration-500',
-                            activeTab === index ? tab.color : 'text-muted-foreground'
-                          )} />
+                          <IconComponent className="w-8 h-8" color={activeTab === index ? tab.color : 'primary'} />
                         </div>
                         <div className="flex-1">
                           <div className="flex items-center gap-2">
@@ -341,7 +348,7 @@ const AICTrackSection = () => {
         {/* Testimonial */}
         <div className="bg-gradient-to-br from-primary/5 to-teal/5 rounded-3xl p-8 md:p-12">
           <div className="flex items-start gap-4 max-w-3xl mx-auto">
-            <Quote className="w-12 h-12 text-primary/30 shrink-0" />
+            <QuoteNodeIcon className="w-12 h-12 shrink-0" color="primary" />
             <div>
               <p className="text-lg md:text-xl text-foreground italic mb-4">
                 "As a biologist, AIC allowed me to blend my expertise with AI for groundbreaking research—it's completely revamped my career trajectory."

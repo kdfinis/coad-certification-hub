@@ -1,6 +1,11 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sparkles, Shield, ExternalLink } from 'lucide-react';
 import CoadLogo from '@/components/ui/coad-logo';
+import { 
+  ArrowNodeIcon, 
+  SparkleNodeIcon, 
+  ShieldNodeIcon, 
+  LinkNodeIcon 
+} from '@/components/ui/custom-icons';
 
 const FinalCTASection = () => {
   return (
@@ -29,13 +34,13 @@ const FinalCTASection = () => {
 
           {/* Heading */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Start Free Luxembourg AI<br />
+            Start Free EU AI<br />
             Module Trial Today
           </h2>
 
           {/* Description */}
           <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-            From Luxembourg to Europe, gain Act-compliant skills for career revamp or leadership solidification. Hands-on modules, blockchain certificates, and local prestige for professionals.
+            Gain Act-compliant skills for career revamp or leadership solidification. Hands-on modules, blockchain certificates, and EU-recognized prestige for professionals.
           </p>
 
           {/* CTA Buttons */}
@@ -45,9 +50,9 @@ const FinalCTASection = () => {
               className="bg-white text-navy hover:bg-white/90 hover:scale-[1.02] font-semibold shadow-lg"
               asChild
             >
-              <a href="https://app.coad.ai/signup" className="group">
+              <a href="https://app.coad.ai/signup" className="group flex items-center gap-2">
                 Start Free Module Trial
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowNodeIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" color="primary" />
               </a>
             </Button>
             <Button 
@@ -79,9 +84,9 @@ const FinalCTASection = () => {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-white/60 hover:text-white transition-colors"
             >
-              <Shield className="w-5 h-5" />
+              <ShieldNodeIcon className="w-5 h-5" color="white" />
               <span className="text-sm">EU AI Act</span>
-              <ExternalLink className="w-3 h-3" />
+              <LinkNodeIcon className="w-4 h-4" color="white" />
             </a>
             <a 
               href="https://www.iso.org/standard/63787.html" 
@@ -89,9 +94,9 @@ const FinalCTASection = () => {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-white/60 hover:text-white transition-colors"
             >
-              <Sparkles className="w-5 h-5" />
+              <SparkleNodeIcon className="w-5 h-5" color="white" />
               <span className="text-sm">ESG 2015 Standards</span>
-              <ExternalLink className="w-3 h-3" />
+              <LinkNodeIcon className="w-4 h-4" color="white" />
             </a>
           </div>
         </div>

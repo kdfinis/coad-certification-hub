@@ -1,7 +1,19 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check, Shield, Clock, AlertTriangle, Scale, FileCheck, Building2, Leaf, Users, Award, Quote } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { 
+  ShieldNodeIcon, 
+  ClockNodeIcon, 
+  RiskAlertIcon, 
+  BalanceScaleIcon, 
+  FileCheckIcon, 
+  CorporateBuildingIcon, 
+  NetworkNodesIcon, 
+  AwardMedalIcon, 
+  QuoteNodeIcon,
+  CheckNodeIcon,
+  ArrowNodeIcon
+} from '@/components/ui/custom-icons';
 
 const AIOTrackSection = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -10,7 +22,7 @@ const AIOTrackSection = () => {
     {
       id: 'transformation',
       label: 'Digital & AI Transformation',
-      icon: Building2,
+      Icon: CorporateBuildingIcon,
       price: '€2,880',
       hours: '150 hours',
       description: 'Lead corporate digital transformation initiatives with AI-first strategies and organizational change management',
@@ -20,7 +32,7 @@ const AIOTrackSection = () => {
     {
       id: 'safety',
       label: 'Safety/Risk',
-      icon: AlertTriangle,
+      Icon: RiskAlertIcon,
       price: '€1,640',
       hours: '90 hours',
       description: 'Master risk assessment and safety protocols for AI systems in high-risk environments',
@@ -30,7 +42,7 @@ const AIOTrackSection = () => {
     {
       id: 'ethical',
       label: 'Ethical Oversight',
-      icon: Scale,
+      Icon: BalanceScaleIcon,
       price: '€1,640',
       hours: '90 hours',
       description: 'Ensure ethical AI practices, bias prevention, and human rights protection',
@@ -40,7 +52,7 @@ const AIOTrackSection = () => {
     {
       id: 'legal',
       label: 'Legal Compliance',
-      icon: FileCheck,
+      Icon: FileCheckIcon,
       price: '€1,640',
       hours: '90 hours',
       description: 'Navigate EU AI Act requirements and regulatory frameworks with confidence',
@@ -51,27 +63,27 @@ const AIOTrackSection = () => {
 
   const usps = [
     {
-      icon: Building2,
+      Icon: CorporateBuildingIcon,
       title: 'Digital Transformation Leadership',
       description: "Guide organization-wide AI adoption with strategic roadmaps and change management expertise for lasting impact.",
     },
     {
-      icon: AlertTriangle,
+      Icon: RiskAlertIcon,
       title: 'Risk Assessment Expertise',
       description: "Master AI risk identification and mitigation strategies to protect your organization while enabling innovation.",
     },
     {
-      icon: Scale,
+      Icon: BalanceScaleIcon,
       title: 'Ethical AI Governance',
       description: "Implement fairness frameworks and bias detection to ensure responsible AI deployment across your organization.",
     },
     {
-      icon: Users,
+      Icon: NetworkNodesIcon,
       title: 'Executive-Level Positioning',
       description: "Strengthen your leadership role with credentials that validate your expertise in AI governance and oversight.",
     },
     {
-      icon: Award,
+      Icon: AwardMedalIcon,
       title: 'Practical Audits & Simulations',
       description: "Hands-on tools for real-world oversight scenarios, preparing you to lead AI initiatives with confidence.",
     },
@@ -83,7 +95,7 @@ const AIOTrackSection = () => {
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal/10 rounded-full text-sm font-medium text-teal mb-6">
-            <Shield className="w-4 h-4" />
+            <ShieldNodeIcon className="w-5 h-5" color="teal" />
             Governance & Oversight Program
           </div>
           
@@ -103,28 +115,28 @@ const AIOTrackSection = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-muted/30 rounded-xl p-6">
               <div className="w-12 h-12 rounded-xl bg-teal/10 flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-teal" />
+                <ShieldNodeIcon className="w-7 h-7" color="teal" />
               </div>
               <h4 className="font-semibold text-foreground mb-2">Compliance Officers</h4>
               <p className="text-sm text-muted-foreground">Looking to enhance your role with Act-aligned expertise</p>
             </div>
             <div className="bg-muted/30 rounded-xl p-6">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                <Users className="w-6 h-6 text-primary" />
+                <NetworkNodesIcon className="w-7 h-7" color="primary" />
               </div>
               <h4 className="font-semibold text-foreground mb-2">Experienced Managers</h4>
               <p className="text-sm text-muted-foreground">Seeking to introduce AI responsibly into organizations</p>
             </div>
             <div className="bg-muted/30 rounded-xl p-6">
               <div className="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center mb-4">
-                <AlertTriangle className="w-6 h-6 text-amber-500" />
+                <RiskAlertIcon className="w-7 h-7" color="amber" />
               </div>
               <h4 className="font-semibold text-foreground mb-2">Risk Professionals</h4>
               <p className="text-sm text-muted-foreground">Wanting to protect teams from AI risks while enabling innovation</p>
             </div>
             <div className="bg-muted/30 rounded-xl p-6">
               <div className="w-12 h-12 rounded-xl bg-success/10 flex items-center justify-center mb-4">
-                <Scale className="w-6 h-6 text-success" />
+                <BalanceScaleIcon className="w-7 h-7" color="success" />
               </div>
               <h4 className="font-semibold text-foreground mb-2">Executives</h4>
               <p className="text-sm text-muted-foreground">Aiming to lead with confidence in AI-driven environments</p>
@@ -143,10 +155,7 @@ const AIOTrackSection = () => {
                 'w-12 h-12 rounded-xl flex items-center justify-center mb-4',
                 index % 2 === 0 ? 'bg-teal/10' : 'bg-primary/10'
               )}>
-                <usp.icon className={cn(
-                  'w-6 h-6',
-                  index % 2 === 0 ? 'text-teal' : 'text-primary'
-                )} />
+                <usp.Icon className="w-7 h-7" color={index % 2 === 0 ? 'teal' : 'primary'} />
               </div>
               <h4 className="font-semibold text-foreground mb-2">{usp.title}</h4>
               <p className="text-sm text-muted-foreground">{usp.description}</p>
@@ -176,7 +185,7 @@ const AIOTrackSection = () => {
               ].map((bullet, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <div className="w-5 h-5 rounded-full bg-teal/10 flex items-center justify-center shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-teal" />
+                    <CheckNodeIcon className="w-4 h-4" color="teal" />
                   </div>
                   <span className="text-foreground">{bullet}</span>
                 </li>
@@ -186,7 +195,7 @@ const AIOTrackSection = () => {
             {/* Duration Info */}
             <div className="p-4 bg-card rounded-xl border border-border">
               <div className="flex items-center gap-2 mb-3">
-                <Clock className="w-5 h-5 text-teal" />
+                <ClockNodeIcon className="w-5 h-5" color="teal" />
                 <span className="text-foreground font-medium">6 months • 400 hours total</span>
               </div>
               <div className="space-y-2 text-sm">
@@ -204,7 +213,7 @@ const AIOTrackSection = () => {
               <Button variant="hero" size="lg" asChild>
                 <a href="https://app.coad.ai/signup" className="group">
                   Enroll in AIO Core – Solidify Your Leadership
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowNodeIcon className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
             </div>
@@ -229,10 +238,7 @@ const AIOTrackSection = () => {
                     'w-10 h-10 rounded-lg flex items-center justify-center mb-3 transition-colors',
                     activeTab === index ? 'bg-teal/10' : 'bg-muted'
                   )}>
-                    <domain.icon className={cn(
-                      'w-5 h-5 transition-colors',
-                      activeTab === index ? 'text-teal' : 'text-muted-foreground'
-                    )} />
+                    <domain.Icon className="w-6 h-6" color={activeTab === index ? 'teal' : 'primary'} />
                   </div>
                   <p className={cn(
                     'font-medium transition-colors',
@@ -257,7 +263,7 @@ const AIOTrackSection = () => {
                   <div className="space-y-6">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 rounded-xl bg-teal/10 flex items-center justify-center">
-                        <domain.icon className="w-6 h-6 text-teal" />
+                        <domain.Icon className="w-7 h-7" color="teal" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground">{domain.label}</h4>
@@ -305,7 +311,7 @@ const AIOTrackSection = () => {
         {/* Testimonial */}
         <div className="bg-gradient-to-br from-teal/5 to-primary/5 rounded-3xl p-8 md:p-12">
           <div className="flex items-start gap-4 max-w-3xl mx-auto">
-            <Quote className="w-12 h-12 text-teal/30 shrink-0" />
+            <QuoteNodeIcon className="w-12 h-12 shrink-0" color="teal" />
             <div>
               <p className="text-lg md:text-xl text-foreground italic mb-4">
                 "As a compliance manager, AIO gave me the confidence to lead our AI transformation safely – it's solidified my position and our organization's Act readiness."
