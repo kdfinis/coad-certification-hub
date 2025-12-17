@@ -19,19 +19,19 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { label: 'Certifications', href: '#certifications' },
+    { label: 'Certifications', href: '/certifications', isRoute: true },
     { 
       label: 'Tracks', 
       href: '#tracks',
       dropdown: [
-        { label: 'ADC Track', href: '#adc-track' },
-        { label: 'ACOS Track', href: '#acos-track' },
-        { label: 'Compare Tracks', href: '#pricing' },
+        { label: 'ADC Track', href: '/certifications?track=adc', isRoute: true },
+        { label: 'ACOS Track', href: '/certifications?track=acos', isRoute: true },
+        { label: 'Compare Tracks', href: '/#pricing' },
       ]
     },
-    { label: 'Modules', href: '#modules' },
-    { label: 'Corporate', href: '#pricing' },
-    { label: 'About', href: '#about' },
+    { label: 'Modules', href: '/#modules' },
+    { label: 'Corporate', href: '/#pricing' },
+    { label: 'About', href: '/about', isRoute: true },
   ];
 
   return (
@@ -63,6 +63,13 @@ const Header = () => {
                     {link.label}
                     <ChevronNodeIcon className="w-4 h-4 transition-transform group-hover:rotate-180" />
                   </button>
+                ) : 'isRoute' in link && link.isRoute ? (
+                  <Link 
+                    to={link.href}
+                    className="px-4 py-2 text-foreground/80 hover:text-foreground transition-colors font-medium"
+                  >
+                    {link.label}
+                  </Link>
                 ) : (
                   <a 
                     href={link.href}
@@ -83,13 +90,23 @@ const Header = () => {
                     onMouseLeave={() => setIsTracksOpen(false)}
                   >
                     {link.dropdown.map((item) => (
-                      <a
-                        key={item.label}
-                        href={item.href}
-                        className="block px-4 py-2 text-foreground/80 hover:text-foreground hover:bg-muted transition-colors"
-                      >
-                        {item.label}
-                      </a>
+                      'isRoute' in item && item.isRoute ? (
+                        <Link
+                          key={item.label}
+                          to={item.href}
+                          className="block px-4 py-2 text-foreground/80 hover:text-foreground hover:bg-muted transition-colors"
+                        >
+                          {item.label}
+                        </Link>
+                      ) : (
+                        <a
+                          key={item.label}
+                          href={item.href}
+                          className="block px-4 py-2 text-foreground/80 hover:text-foreground hover:bg-muted transition-colors"
+                        >
+                          {item.label}
+                        </a>
+                      )
                     ))}
                   </div>
                 )}
@@ -100,10 +117,10 @@ const Header = () => {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <Button variant="ghost" asChild>
-              <a href="https://app.coad.ai/login">Log in</a>
+              <Link to="/auth">Log in</Link>
             </Button>
             <Button variant="hero" asChild>
-              <a href="https://app.coad.ai/signup">Get Started</a>
+              <Link to="/auth">Get Started</Link>
             </Button>
           </div>
 
@@ -133,17 +150,36 @@ const Header = () => {
                   <span className="text-foreground font-medium">{link.label}</span>
                   <div className="mt-2 pl-4 space-y-2">
                     {link.dropdown.map((item) => (
-                      <a
-                        key={item.label}
-                        href={item.href}
-                        className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        {item.label}
-                      </a>
+                      'isRoute' in item && item.isRoute ? (
+                        <Link
+                          key={item.label}
+                          to={item.href}
+                          className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {item.label}
+                        </Link>
+                      ) : (
+                        <a
+                          key={item.label}
+                          href={item.href}
+                          className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {item.label}
+                        </a>
+                      )
                     ))}
                   </div>
                 </div>
+              ) : 'isRoute' in link && link.isRoute ? (
+                <Link
+                  to={link.href}
+                  className="block py-3 text-foreground font-medium hover:text-primary transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
               ) : (
                 <a
                   href={link.href}
@@ -158,10 +194,10 @@ const Header = () => {
           
           <div className="mt-6 flex flex-col gap-3">
             <Button variant="outline" className="w-full" asChild>
-              <a href="https://app.coad.ai/login">Log in</a>
+              <Link to="/auth">Log in</Link>
             </Button>
             <Button variant="hero" className="w-full" asChild>
-              <a href="https://app.coad.ai/signup">Get Started</a>
+              <Link to="/auth">Get Started</Link>
             </Button>
           </div>
         </div>
