@@ -1,9 +1,13 @@
-import { Leaf, Link as LinkIcon, GraduationCap, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { GraduationNodeIcon, CredentialIcon, SustainabilityIcon } from '@/components/ui/custom-icons';
+import benefitEducation from '@/assets/benefit-education.png';
+import benefitCredentials from '@/assets/benefit-credentials.png';
+import benefitSustainability from '@/assets/benefit-sustainability.png';
 
 const BenefitsSection = () => {
   const benefits = [
     {
-      icon: GraduationCap,
+      icon: GraduationNodeIcon,
       title: 'ECTS Compatible',
       description: 'All certifications are convertible to ECTS credits (30 hours per ECTS) for Bologna Process mobility and academic recognition.',
       points: [
@@ -11,11 +15,12 @@ const BenefitsSection = () => {
         'Supports career mobility',
         'Academic credit transfer',
       ],
-      color: 'teal',
+      color: 'teal' as const,
       imagePosition: 'right',
+      image: benefitEducation,
     },
     {
-      icon: LinkIcon,
+      icon: CredentialIcon,
       title: 'Verifiable Digital Credentials',
       description: 'All certificates are digitally verified for authenticity, ensuring your credentials are secure and easily shareable.',
       points: [
@@ -23,11 +28,12 @@ const BenefitsSection = () => {
         'Instant verification for employers',
         'Shareable on LinkedIn and portfolios',
       ],
-      color: 'primary',
+      color: 'primary' as const,
       imagePosition: 'left',
+      image: benefitCredentials,
     },
     {
-      icon: Leaf,
+      icon: SustainabilityIcon,
       title: 'Sustainability-Focused',
       description: 'Programs incorporate responsible AI practices with attention to environmental impact and ethical considerations.',
       points: [
@@ -35,8 +41,9 @@ const BenefitsSection = () => {
         'Ethical oversight principles',
         'Transparent assessment standards',
       ],
-      color: 'success',
+      color: 'success' as const,
       imagePosition: 'right',
+      image: benefitSustainability,
     },
   ];
 
@@ -61,7 +68,7 @@ const BenefitsSection = () => {
   return (
     <section className="bg-background" id="benefits">
       {benefits.map((benefit, index) => {
-        const colors = colorClasses[benefit.color as keyof typeof colorClasses];
+        const colors = colorClasses[benefit.color];
         const isReversed = benefit.imagePosition === 'left';
         
         return (
@@ -74,7 +81,7 @@ const BenefitsSection = () => {
                 {/* Content */}
                 <div className={`space-y-6 ${isReversed ? 'lg:order-2' : ''}`}>
                   <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium ${colors.bg} ${colors.text}`}>
-                    <benefit.icon className="w-4 h-4" />
+                    <benefit.icon className="w-5 h-5" color={benefit.color} />
                     {benefit.title}
                   </div>
                   
@@ -98,23 +105,14 @@ const BenefitsSection = () => {
                   </ul>
                 </div>
 
-                {/* Visual */}
+                {/* Visual - Now with generated images */}
                 <div className={`relative ${isReversed ? 'lg:order-1' : ''}`}>
-                  <div className={`aspect-square max-w-md mx-auto rounded-2xl ${colors.bg} ${colors.border} border-2 flex items-center justify-center`}>
-                    <div className="relative">
-                      {/* Icon Container */}
-                      <div className="w-32 h-32 rounded-2xl bg-card shadow-lg flex items-center justify-center animate-float">
-                        <benefit.icon className={`w-16 h-16 ${colors.text}`} />
-                      </div>
-                      
-                      {/* Floating Elements */}
-                      <div className="absolute -top-4 -right-4 w-8 h-8 rounded-full bg-card shadow-md flex items-center justify-center">
-                        <Check className="w-4 h-4 text-success" />
-                      </div>
-                      <div className="absolute -bottom-4 -left-4 w-10 h-10 rounded-full bg-card shadow-md flex items-center justify-center">
-                        <span className="text-lg">✓</span>
-                      </div>
-                    </div>
+                  <div className={`aspect-square max-w-md mx-auto rounded-2xl ${colors.bg} ${colors.border} border-2 flex items-center justify-center overflow-hidden`}>
+                    <img 
+                      src={benefit.image} 
+                      alt={benefit.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
 
                   {/* Decorative */}

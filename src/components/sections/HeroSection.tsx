@@ -34,7 +34,7 @@ const HeroSection = () => {
 
             {/* Subheadline */}
             <p className="body-large text-muted-foreground max-w-xl animate-fade-in-up stagger-2">
-              From Luxembourg to Europe, earn your ADC or ACOS Charterholder status. Join our Accredited Experts Directory with priority placement and exclusive recognition for professionals mastering AI.
+              Earn your ADC or ACOS Charterholder status with EU-recognized credentials. Join our Accredited Experts Directory with priority placement and exclusive recognition for professionals mastering AI.
             </p>
 
             {/* Key Benefits */}
