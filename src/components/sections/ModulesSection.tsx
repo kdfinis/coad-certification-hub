@@ -1,33 +1,45 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Clock, Layers, Shield, Brain, Workflow, Users, Zap, Leaf, AlertCircle, DollarSign, Building, Lock, FileSearch, Landmark } from 'lucide-react';
+import { ArrowRight, Clock } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { 
+  CircuitLayersIcon, 
+  NetworkNodesIcon, 
+  EnergyNodeIcon, 
+  DataFlowIcon, 
+  CircuitLockIcon, 
+  NeuralBrainIcon,
+  ShieldNodeIcon,
+  SustainabilityIcon,
+  RiskAlertIcon,
+  DataNodeIcon
+} from '@/components/ui/custom-icons';
 
 const ModulesSection = () => {
   const [filter, setFilter] = useState<'all' | 'aic' | 'aio'>('all');
 
   const aicModules = [
-    { name: 'Task Decomposition', icon: Layers, hours: 90, price: '€800', description: 'Break complex tasks into AI-manageable components' },
-    { name: 'Multi-Agent Systems', icon: Users, hours: 90, price: '€1,200', description: 'Coordinate multiple AI agents effectively' },
-    { name: 'Performance Optimization', icon: Zap, hours: 90, price: '€1,750', description: 'Optimize AI system performance and efficiency' },
-    { name: 'Human-AI Design', icon: Workflow, hours: 90, price: '€1,000', description: 'Design effective human-AI collaboration workflows' },
-    { name: 'Restricted Methods', icon: Lock, hours: 90, price: '€1,500', description: 'Navigate restricted AI methods responsibly' },
-    { name: 'Latest in AI 2025', icon: Brain, hours: 90, price: '€800', description: 'Stay current with cutting-edge AI developments' },
+    { name: 'Task Decomposition', Icon: CircuitLayersIcon, hours: 90, price: '€800', description: 'Break complex tasks into AI-manageable components' },
+    { name: 'Multi-Agent Systems', Icon: NetworkNodesIcon, hours: 90, price: '€1,200', description: 'Coordinate multiple AI agents effectively' },
+    { name: 'Performance Optimization', Icon: EnergyNodeIcon, hours: 90, price: '€1,750', description: 'Optimize AI system performance and efficiency' },
+    { name: 'Human-AI Design', Icon: DataFlowIcon, hours: 90, price: '€1,000', description: 'Design effective human-AI collaboration workflows' },
+    { name: 'Restricted Methods', Icon: CircuitLockIcon, hours: 90, price: '€1,500', description: 'Navigate restricted AI methods responsibly' },
+    { name: 'Latest in AI 2025', Icon: NeuralBrainIcon, hours: 90, price: '€800', description: 'Stay current with cutting-edge AI developments' },
   ];
 
   const aioModules = [
-    { name: 'Ethical Data Use', icon: Shield, hours: 90, price: '€960', description: 'Ensure ethical data practices in AI systems' },
-    { name: 'Privacy Auditor', icon: Lock, hours: 90, price: '€1,440', description: 'Conduct comprehensive privacy audits' },
-    { name: 'Legal Auditor', icon: FileSearch, hours: 90, price: '€1,800', description: 'Perform legal compliance assessments' },
-    { name: 'Resource Management', icon: DollarSign, hours: 90, price: '€1,200', description: 'Optimize AI resource allocation' },
-    { name: 'Process Optimization', icon: Workflow, hours: 90, price: '€1,800', description: 'Streamline AI-driven processes' },
-    { name: 'Sustainability & AI', icon: Leaf, hours: 90, price: '€1,440', description: 'Implement sustainable AI practices' },
-    { name: 'Crisis Prevention', icon: AlertCircle, hours: 90, price: '€2,100', description: 'Prevent and mitigate AI-related crises' },
-    { name: 'Financial Evaluations', icon: DollarSign, hours: 90, price: '€1,440', description: 'Evaluate AI investments and ROI' },
-    { name: 'AI for Government', icon: Landmark, hours: 90, price: '€1,200', description: 'Deploy AI in public sector contexts' },
-    { name: 'AI for Security', icon: Shield, hours: 90, price: '€1,800', description: 'Apply AI in security operations' },
-    { name: 'Cybersecurity Auditing', icon: Lock, hours: 90, price: '€2,100', description: 'Audit AI cybersecurity measures' },
-    { name: 'AI-Enhanced AML/KYC', icon: Building, hours: 90, price: '€1,800', description: 'Implement AI in compliance processes' },
+    { name: 'Ethical Data Use', Icon: ShieldNodeIcon, hours: 90, price: '€960', description: 'Ensure ethical data practices in AI systems' },
+    { name: 'Privacy Auditor', Icon: CircuitLockIcon, hours: 90, price: '€1,440', description: 'Conduct comprehensive privacy audits' },
+    { name: 'Legal Auditor', Icon: DataNodeIcon, hours: 90, price: '€1,800', description: 'Perform legal compliance assessments' },
+    { name: 'Resource Management', Icon: DataFlowIcon, hours: 90, price: '€1,200', description: 'Optimize AI resource allocation' },
+    { name: 'Process Optimization', Icon: NetworkNodesIcon, hours: 90, price: '€1,800', description: 'Streamline AI-driven processes' },
+    { name: 'Sustainability & AI', Icon: SustainabilityIcon, hours: 90, price: '€1,440', description: 'Implement sustainable AI practices' },
+    { name: 'Crisis Prevention', Icon: RiskAlertIcon, hours: 90, price: '€2,100', description: 'Prevent and mitigate AI-related crises' },
+    { name: 'Financial Evaluations', Icon: EnergyNodeIcon, hours: 90, price: '€1,440', description: 'Evaluate AI investments and ROI' },
+    { name: 'AI for Government', Icon: DataNodeIcon, hours: 90, price: '€1,200', description: 'Deploy AI in public sector contexts' },
+    { name: 'AI for Security', Icon: ShieldNodeIcon, hours: 90, price: '€1,800', description: 'Apply AI in security operations' },
+    { name: 'Cybersecurity Auditing', Icon: CircuitLockIcon, hours: 90, price: '€2,100', description: 'Audit AI cybersecurity measures' },
+    { name: 'AI-Enhanced AML/KYC', Icon: NeuralBrainIcon, hours: 90, price: '€1,800', description: 'Implement AI in compliance processes' },
   ];
 
   const allModules = [
@@ -91,10 +103,10 @@ const ModulesSection = () => {
                   'w-12 h-12 rounded-xl flex items-center justify-center',
                   module.track === 'aic' ? 'bg-primary/10' : 'bg-teal/10'
                 )}>
-                  <module.icon className={cn(
-                    'w-6 h-6',
-                    module.track === 'aic' ? 'text-primary' : 'text-teal'
-                  )} />
+                  <module.Icon 
+                    className="w-7 h-7"
+                    color={module.track === 'aic' ? 'primary' : 'teal'}
+                  />
                 </div>
                 <span className={cn(
                   'px-2 py-1 rounded-full text-xs font-medium',

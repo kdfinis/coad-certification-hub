@@ -1,28 +1,28 @@
-import { Eye, Database, FileText, AlertTriangle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { OversightEyeIcon, DataNodeIcon, CredentialIcon, RiskAlertIcon, ShieldNodeIcon } from '@/components/ui/custom-icons';
 
 const ComplianceSection = () => {
   const features = [
     {
-      icon: Eye,
+      Icon: OversightEyeIcon,
       title: 'Human Oversight Training',
       description: 'Learn to implement effective human oversight mechanisms for AI systems as required by Article 13',
       article: 'Article 13',
     },
     {
-      icon: Database,
+      Icon: DataNodeIcon,
       title: 'Data Governance Standards',
       description: 'Master data governance requirements for AI system compliance under Article 15',
       article: 'Article 15',
     },
     {
-      icon: FileText,
+      Icon: CredentialIcon,
       title: 'Transparency & Disclosure',
       description: 'Understand transparency obligations and disclosure requirements for AI systems',
       article: 'Transparency',
     },
     {
-      icon: AlertTriangle,
+      Icon: RiskAlertIcon,
       title: 'Risk Assessment Methods',
       description: 'Learn systematic risk assessment approaches for AI systems classification',
       article: 'Risk-Based',
@@ -35,7 +35,7 @@ const ComplianceSection = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm font-medium text-primary mb-6">
-            <FileText className="w-4 h-4" />
+            <ShieldNodeIcon className="w-5 h-5" />
             Regulatory Compliance
           </div>
           <h2 className="heading-2 text-foreground mb-4">
@@ -49,14 +49,14 @@ const ComplianceSection = () => {
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
-          {features.map((feature, index) => (
+          {features.map((feature) => (
             <div
               key={feature.title}
               className="group bg-card rounded-xl border border-border p-8 card-hover"
             >
               <div className="flex items-start gap-4">
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                  <feature.icon className="w-7 h-7 text-primary" />
+                  <feature.Icon className="w-8 h-8" />
                 </div>
                 <div>
                   <div className="flex items-center gap-2 mb-2">
