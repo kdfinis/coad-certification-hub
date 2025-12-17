@@ -1,12 +1,21 @@
 import { Link } from 'react-router-dom';
-import { Linkedin, Twitter, Facebook, Instagram, Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
+import { 
+  LinkedInNodeIcon, 
+  TwitterNodeIcon, 
+  FacebookNodeIcon, 
+  InstagramNodeIcon, 
+  MailNodeIcon, 
+  PhoneNodeIcon, 
+  MapPinNodeIcon, 
+  ExternalLinkNodeIcon 
+} from '@/components/ui/custom-icons';
 import CoadLogo from '@/components/ui/coad-logo';
 
 const Footer = () => {
   const footerLinks = {
     certifications: [
-      { label: 'AIC Track', href: '#aic-track' },
-      { label: 'AIO Track', href: '#aio-track' },
+      { label: 'ADC Track', href: '#adc-track' },
+      { label: 'ACOS Track', href: '#acos-track' },
       { label: 'Compare Tracks', href: '#pricing' },
       { label: 'All Modules', href: '#modules' },
       { label: 'Corporate Training', href: '#pricing' },
@@ -41,10 +50,10 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Linkedin, href: 'https://linkedin.com/company/coad', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com/coad_ai', label: 'Twitter' },
-    { icon: Facebook, href: 'https://facebook.com/coad.ai', label: 'Facebook' },
-    { icon: Instagram, href: 'https://instagram.com/coad.ai', label: 'Instagram' },
+    { Icon: LinkedInNodeIcon, href: 'https://linkedin.com/company/coad', label: 'LinkedIn' },
+    { Icon: TwitterNodeIcon, href: 'https://twitter.com/coad_ai', label: 'Twitter' },
+    { Icon: FacebookNodeIcon, href: 'https://facebook.com/coad.ai', label: 'Facebook' },
+    { Icon: InstagramNodeIcon, href: 'https://instagram.com/coad.ai', label: 'Instagram' },
   ];
 
   return (
@@ -60,17 +69,17 @@ const Footer = () => {
             
             <div className="space-y-3 text-sm text-gray-400">
               <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                <span>6 Rue Leonardo da Vinci,<br />L-1946 Luxembourg</span>
+                <MapPinNodeIcon className="w-4 h-4 mt-0.5 shrink-0" />
+                <span>European Union</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 shrink-0" />
+                <MailNodeIcon className="w-4 h-4 shrink-0" />
                 <a href="mailto:contact@coad.ai" className="hover:text-gray-50 transition-colors">
                   contact@coad.ai
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 shrink-0" />
+                <PhoneNodeIcon className="w-4 h-4 shrink-0" />
                 <a href="tel:+352621815753" className="hover:text-gray-50 transition-colors">
                   +352 621 815 753
                 </a>
@@ -128,7 +137,7 @@ const Footer = () => {
                     className="text-sm text-gray-400 hover:text-gray-50 transition-colors inline-flex items-center gap-1"
                   >
                     {link.label}
-                    {link.external && <ExternalLink className="w-3 h-3" />}
+                    {link.external && <ExternalLinkNodeIcon className="w-3 h-3" />}
                   </a>
                 </li>
               ))}
@@ -174,7 +183,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-400">
-            © 2025 COAD SARL-S. All rights reserved.
+            © 2025 COAD. All rights reserved.
           </p>
 
           {/* Social Links */}
@@ -188,7 +197,7 @@ const Footer = () => {
                 className="w-10 h-10 rounded-full bg-gray-600/20 flex items-center justify-center text-gray-400 hover:text-gray-50 hover:bg-primary/20 transition-all"
                 aria-label={social.label}
               >
-                <social.icon className="w-5 h-5" />
+                <social.Icon className="w-5 h-5" />
               </a>
             ))}
           </div>

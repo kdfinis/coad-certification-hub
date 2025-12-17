@@ -1,5 +1,11 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Shield, Award, Globe, Sparkles } from 'lucide-react';
+import { 
+  ArrowNodeIcon, 
+  ShieldNodeIcon, 
+  AwardNodeIcon, 
+  GlobeNodeIcon, 
+  SparkleNodeIcon 
+} from '@/components/ui/custom-icons';
 
 const HeroSection = () => {
   return (
@@ -22,7 +28,7 @@ const HeroSection = () => {
           <div className="space-y-8">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm font-medium text-primary animate-fade-in">
-              <Sparkles className="w-4 h-4" />
+              <SparkleNodeIcon className="w-4 h-4" />
               Europe's Leading AI Certification Platform
             </div>
 
@@ -70,7 +76,7 @@ const HeroSection = () => {
               <Button variant="hero" size="xl" asChild>
                 <a href="https://app.coad.ai/signup" className="group">
                   Start Free Module Trial
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowNodeIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
               <Button variant="heroOutline" size="xl" asChild>
@@ -82,19 +88,19 @@ const HeroSection = () => {
             <div className="flex flex-wrap items-center gap-6 pt-4 animate-fade-in-up stagger-5">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <div className="w-10 h-10 rounded-full bg-success/10 flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-success" />
+                  <ShieldNodeIcon className="w-5 h-5 text-success" />
                 </div>
                 <span>EU AI Act<br />Compliant</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Award className="w-5 h-5 text-primary" />
+                  <AwardNodeIcon className="w-5 h-5 text-primary" />
                 </div>
                 <span>ESG 2015<br />Certified</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <div className="w-10 h-10 rounded-full bg-teal/10 flex items-center justify-center">
-                  <Globe className="w-5 h-5 text-teal" />
+                  <GlobeNodeIcon className="w-5 h-5 text-teal" />
                 </div>
                 <span>EU<br />Recognized</span>
               </div>
@@ -151,7 +157,7 @@ const HeroSection = () => {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                        <Shield className="w-4 h-4 text-primary" />
+                        <ShieldNodeIcon className="w-4 h-4 text-primary" />
                       </div>
                       <span className="text-xs text-muted-foreground">Blockchain Verified</span>
                     </div>
@@ -164,7 +170,7 @@ const HeroSection = () => {
 
               {/* Floating Badge */}
               <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-card shadow-lg border border-border flex items-center justify-center animate-pulse-glow">
-                <Award className="w-10 h-10 text-primary" />
+                <AwardNodeIcon className="w-10 h-10 text-primary" />
               </div>
 
               {/* Background Cards */}

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { MenuNodeIcon, CloseNodeIcon, ChevronNodeIcon } from '@/components/ui/custom-icons';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import CoadLogo from '@/components/ui/coad-logo';
@@ -24,8 +24,8 @@ const Header = () => {
       label: 'Tracks', 
       href: '#tracks',
       dropdown: [
-        { label: 'AIC Track', href: '#aic-track' },
-        { label: 'AIO Track', href: '#aio-track' },
+        { label: 'ADC Track', href: '#adc-track' },
+        { label: 'ACOS Track', href: '#acos-track' },
         { label: 'Compare Tracks', href: '#pricing' },
       ]
     },
@@ -61,7 +61,7 @@ const Header = () => {
                     onMouseLeave={() => setIsTracksOpen(false)}
                   >
                     {link.label}
-                    <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                    <ChevronNodeIcon className="w-4 h-4 transition-transform group-hover:rotate-180" />
                   </button>
                 ) : (
                   <a 
@@ -113,7 +113,7 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? <CloseNodeIcon className="w-6 h-6" /> : <MenuNodeIcon className="w-6 h-6" />}
           </button>
         </nav>
       </div>
