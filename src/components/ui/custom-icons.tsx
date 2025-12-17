@@ -700,3 +700,191 @@ export const FileCheckIcon = ({ className, color = 'primary' }: IconProps) => {
     </svg>
   );
 };
+
+// Award/Medal icon
+export const AwardNodeIcon = ({ className, color = 'primary' }: IconProps) => {
+  const mainColor = getColor(color);
+  const id = gradientId('award', color);
+  return (
+    <svg viewBox="0 0 40 40" className={cn('w-6 h-6', className)}>
+      <defs>
+        <linearGradient id={id} x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor={mainColor} />
+          <stop offset="100%" stopColor="hsl(var(--teal))" />
+        </linearGradient>
+      </defs>
+      <circle cx="20" cy="14" r="10" fill="none" stroke={`url(#${id})`} strokeWidth="2" />
+      <path d="M14 22 L10 36 L20 30 L30 36 L26 22" fill="none" stroke={`url(#${id})`} strokeWidth="2" />
+      <circle cx="20" cy="14" r="5" fill={`url(#${id})`} />
+    </svg>
+  );
+};
+
+// Star icon
+export const StarNodeIcon = ({ className, color = 'primary' }: IconProps) => {
+  const mainColor = getColor(color);
+  const id = gradientId('star', color);
+  return (
+    <svg viewBox="0 0 40 40" className={cn('w-6 h-6', className)}>
+      <defs>
+        <linearGradient id={id} x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor={mainColor} />
+          <stop offset="100%" stopColor="hsl(var(--teal))" />
+        </linearGradient>
+      </defs>
+      <path d="M20 4 L24 14 L34 16 L27 24 L29 34 L20 29 L11 34 L13 24 L6 16 L16 14 Z" fill={`url(#${id})`} opacity="0.3" stroke={`url(#${id})`} strokeWidth="2" />
+      <circle cx="20" cy="18" r="3" fill={`url(#${id})`} />
+    </svg>
+  );
+};
+
+// Percent icon
+export const PercentNodeIcon = ({ className, color = 'primary' }: IconProps) => {
+  const mainColor = getColor(color);
+  const id = gradientId('percent', color);
+  return (
+    <svg viewBox="0 0 40 40" className={cn('w-6 h-6', className)}>
+      <defs>
+        <linearGradient id={id} x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor={mainColor} />
+          <stop offset="100%" stopColor="hsl(var(--teal))" />
+        </linearGradient>
+      </defs>
+      <line x1="32" y1="8" x2="8" y2="32" stroke={`url(#${id})`} strokeWidth="2" strokeLinecap="round" />
+      <circle cx="12" cy="12" r="5" fill="none" stroke={`url(#${id})`} strokeWidth="2" />
+      <circle cx="28" cy="28" r="5" fill="none" stroke={`url(#${id})`} strokeWidth="2" />
+      <circle cx="12" cy="12" r="2" fill={`url(#${id})`} />
+      <circle cx="28" cy="28" r="2" fill={`url(#${id})`} />
+    </svg>
+  );
+};
+
+// Menu hamburger
+export const MenuNodeIcon = ({ className, color = 'primary' }: IconProps) => {
+  const mainColor = getColor(color);
+  return (
+    <svg viewBox="0 0 40 40" className={cn('w-6 h-6', className)}>
+      <line x1="6" y1="10" x2="34" y2="10" stroke={mainColor} strokeWidth="3" strokeLinecap="round" />
+      <line x1="6" y1="20" x2="34" y2="20" stroke={mainColor} strokeWidth="3" strokeLinecap="round" />
+      <line x1="6" y1="30" x2="34" y2="30" stroke={mainColor} strokeWidth="3" strokeLinecap="round" />
+      <circle cx="6" cy="10" r="2" fill={mainColor} opacity="0.5" />
+      <circle cx="6" cy="20" r="2" fill={mainColor} opacity="0.5" />
+      <circle cx="6" cy="30" r="2" fill={mainColor} opacity="0.5" />
+    </svg>
+  );
+};
+
+// Close X
+export const CloseNodeIcon = ({ className, color = 'primary' }: IconProps) => {
+  const mainColor = getColor(color);
+  return (
+    <svg viewBox="0 0 40 40" className={cn('w-6 h-6', className)}>
+      <line x1="10" y1="10" x2="30" y2="30" stroke={mainColor} strokeWidth="3" strokeLinecap="round" />
+      <line x1="30" y1="10" x2="10" y2="30" stroke={mainColor} strokeWidth="3" strokeLinecap="round" />
+      <circle cx="20" cy="20" r="3" fill={mainColor} opacity="0.4" />
+    </svg>
+  );
+};
+
+// Chevron down
+export const ChevronNodeIcon = ({ className, color = 'primary' }: IconProps) => {
+  const mainColor = getColor(color);
+  return (
+    <svg viewBox="0 0 40 40" className={cn('w-6 h-6', className)}>
+      <path d="M10 15 L20 25 L30 15" fill="none" stroke={mainColor} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="20" cy="25" r="2" fill={mainColor} opacity="0.4" />
+    </svg>
+  );
+};
+
+// Social: LinkedIn
+export const LinkedInNodeIcon = ({ className, color = 'primary' }: IconProps) => {
+  const mainColor = getColor(color);
+  return (
+    <svg viewBox="0 0 40 40" className={cn('w-6 h-6', className)}>
+      <rect x="6" y="6" width="28" height="28" rx="4" fill="none" stroke={mainColor} strokeWidth="2" />
+      <path d="M14 16 L14 26 M14 12 L14 12.1" stroke={mainColor} strokeWidth="3" strokeLinecap="round" />
+      <path d="M20 26 L20 20 C20 18 21 16 24 16 C27 16 28 18 28 20 L28 26" fill="none" stroke={mainColor} strokeWidth="3" strokeLinecap="round" />
+    </svg>
+  );
+};
+
+// Social: Twitter/X
+export const TwitterNodeIcon = ({ className, color = 'primary' }: IconProps) => {
+  const mainColor = getColor(color);
+  return (
+    <svg viewBox="0 0 40 40" className={cn('w-6 h-6', className)}>
+      <path d="M8 8 L16 20 L8 32 L12 32 L18 23 L24 32 L32 32 L24 19 L31 8 L27 8 L22 16 L17 8 Z" fill={mainColor} />
+    </svg>
+  );
+};
+
+// Social: Facebook
+export const FacebookNodeIcon = ({ className, color = 'primary' }: IconProps) => {
+  const mainColor = getColor(color);
+  return (
+    <svg viewBox="0 0 40 40" className={cn('w-6 h-6', className)}>
+      <rect x="6" y="6" width="28" height="28" rx="4" fill="none" stroke={mainColor} strokeWidth="2" />
+      <path d="M22 34 L22 22 L26 22 L27 18 L22 18 L22 15 C22 14 22.5 13 24 13 L27 13 L27 9 C27 9 25 9 23 9 C20 9 18 11 18 14 L18 18 L14 18 L14 22 L18 22 L18 34" fill={mainColor} />
+    </svg>
+  );
+};
+
+// Social: Instagram
+export const InstagramNodeIcon = ({ className, color = 'primary' }: IconProps) => {
+  const mainColor = getColor(color);
+  return (
+    <svg viewBox="0 0 40 40" className={cn('w-6 h-6', className)}>
+      <rect x="6" y="6" width="28" height="28" rx="6" fill="none" stroke={mainColor} strokeWidth="2" />
+      <circle cx="20" cy="20" r="6" fill="none" stroke={mainColor} strokeWidth="2" />
+      <circle cx="28" cy="12" r="2" fill={mainColor} />
+    </svg>
+  );
+};
+
+// Mail
+export const MailNodeIcon = ({ className, color = 'primary' }: IconProps) => {
+  const mainColor = getColor(color);
+  return (
+    <svg viewBox="0 0 40 40" className={cn('w-6 h-6', className)}>
+      <rect x="4" y="8" width="32" height="24" rx="2" fill="none" stroke={mainColor} strokeWidth="2" />
+      <path d="M4 10 L20 22 L36 10" fill="none" stroke={mainColor} strokeWidth="2" />
+      <circle cx="20" cy="22" r="2" fill={mainColor} opacity="0.5" />
+    </svg>
+  );
+};
+
+// Phone
+export const PhoneNodeIcon = ({ className, color = 'primary' }: IconProps) => {
+  const mainColor = getColor(color);
+  return (
+    <svg viewBox="0 0 40 40" className={cn('w-6 h-6', className)}>
+      <path d="M8 6 L14 6 L17 14 L13 17 C15 21 19 25 23 27 L26 23 L34 26 L34 32 C34 34 32 36 30 36 C16 36 4 24 4 10 C4 8 6 6 8 6 Z" fill="none" stroke={mainColor} strokeWidth="2" />
+      <circle cx="14" cy="10" r="2" fill={mainColor} opacity="0.5" />
+    </svg>
+  );
+};
+
+// Map pin
+export const MapPinNodeIcon = ({ className, color = 'primary' }: IconProps) => {
+  const mainColor = getColor(color);
+  return (
+    <svg viewBox="0 0 40 40" className={cn('w-6 h-6', className)}>
+      <path d="M20 36 C20 36 32 24 32 16 C32 9 27 4 20 4 C13 4 8 9 8 16 C8 24 20 36 20 36 Z" fill="none" stroke={mainColor} strokeWidth="2" />
+      <circle cx="20" cy="16" r="5" fill={mainColor} />
+    </svg>
+  );
+};
+
+// External link
+export const ExternalLinkNodeIcon = ({ className, color = 'primary' }: IconProps) => {
+  const mainColor = getColor(color);
+  return (
+    <svg viewBox="0 0 40 40" className={cn('w-6 h-6', className)}>
+      <path d="M30 22 L30 32 C30 34 28 36 26 36 L8 36 C6 36 4 34 4 32 L4 14 C4 12 6 10 8 10 L18 10" fill="none" stroke={mainColor} strokeWidth="2" />
+      <path d="M24 6 L34 6 L34 16" fill="none" stroke={mainColor} strokeWidth="2" strokeLinecap="round" />
+      <path d="M16 24 L34 6" stroke={mainColor} strokeWidth="2" strokeLinecap="round" />
+      <circle cx="34" cy="6" r="2" fill={mainColor} opacity="0.5" />
+    </svg>
+  );
+};

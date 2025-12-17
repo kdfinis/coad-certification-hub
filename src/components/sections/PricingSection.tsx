@@ -1,5 +1,15 @@
 import { Button } from '@/components/ui/button';
-import { Check, ArrowRight, Award, Shield, Layers, Building2, Clock, Percent, Star } from 'lucide-react';
+import { 
+  AwardNodeIcon, 
+  ShieldNodeIcon, 
+  CircuitLayersIcon, 
+  CorporateBuildingIcon, 
+  ClockNodeIcon, 
+  PercentNodeIcon, 
+  StarNodeIcon,
+  CheckNodeIcon,
+  ArrowNodeIcon
+} from '@/components/ui/custom-icons';
 import { cn } from '@/lib/utils';
 
 const PricingSection = () => {
@@ -12,7 +22,7 @@ const PricingSection = () => {
         { name: 'Level 2 (Advanced Expert)', price: '€2,200', hours: '270 hours', duration: '4 months' },
         { name: 'Level 3 (Master)', price: '€2,200', hours: '360 hours', duration: '6 months' },
       ],
-      icon: Award,
+      Icon: AwardNodeIcon,
       featured: false,
       features: [
         'Progressive 3-level certification',
@@ -35,7 +45,7 @@ const PricingSection = () => {
         { name: 'Legal & Compliance Controller', price: '€1,640', hours: '90 hours' },
       ],
       duration: '6 months',
-      icon: Shield,
+      Icon: ShieldNodeIcon,
       featured: true,
       badge: 'Charterholder Track',
       features: [
@@ -54,7 +64,7 @@ const PricingSection = () => {
       subtitle: 'Standalone Certifications',
       priceRange: '€800 - €2,100',
       hours: '90 hours each',
-      icon: Layers,
+      Icon: CircuitLayersIcon,
       featured: false,
       features: [
         '18 specialized modules available',
@@ -71,7 +81,7 @@ const PricingSection = () => {
       name: 'Corporate Training',
       subtitle: 'Enterprise Solutions',
       price: 'From €20,000',
-      icon: Building2,
+      Icon: CorporateBuildingIcon,
       featured: false,
       features: [
         'Customized team programs',
@@ -96,7 +106,7 @@ const PricingSection = () => {
             <span className="gradient-text">Certification Path</span>
           </h2>
           <p className="body-large text-muted-foreground">
-            All prices VAT-inclusive (17% Luxembourg). Pay monthly or upfront with 10% discount.
+            All prices VAT-inclusive. Pay monthly or upfront with 10% discount.
           </p>
         </div>
 
@@ -116,7 +126,7 @@ const PricingSection = () => {
               {plan.badge && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                   <span className="inline-flex items-center gap-1 px-4 py-1.5 bg-gradient-cta text-white text-sm font-medium rounded-full shadow-lg">
-                    <Star className="w-3 h-3" />
+                    <StarNodeIcon className="w-3 h-3" />
                     {plan.badge}
                   </span>
                 </div>
@@ -127,7 +137,7 @@ const PricingSection = () => {
                 'w-14 h-14 rounded-xl flex items-center justify-center mb-6',
                 plan.color === 'teal' ? 'bg-teal/10' : 'bg-primary/10'
               )}>
-                <plan.icon className={cn(
+                <plan.Icon className={cn(
                   'w-7 h-7',
                   plan.color === 'teal' ? 'text-teal' : 'text-primary'
                 )} />
@@ -158,7 +168,7 @@ const PricingSection = () => {
                     </span>
                     {plan.hours && (
                       <div className="flex items-center gap-1 mt-2 text-sm text-muted-foreground">
-                        <Clock className="w-4 h-4" />
+                        <ClockNodeIcon className="w-4 h-4" />
                         {plan.hours}
                         {plan.duration && ` • ${plan.duration}`}
                       </div>
@@ -175,7 +185,7 @@ const PricingSection = () => {
                       'w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5',
                       plan.color === 'teal' ? 'bg-teal/10' : 'bg-success/10'
                     )}>
-                      <Check className={cn(
+                      <CheckNodeIcon className={cn(
                         'w-3 h-3',
                         plan.color === 'teal' ? 'text-teal' : 'text-success'
                       )} />
@@ -193,7 +203,7 @@ const PricingSection = () => {
               >
                 <a href={plan.href}>
                   {plan.cta}
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <ArrowNodeIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
             </div>
@@ -203,11 +213,11 @@ const PricingSection = () => {
         {/* Discount Note */}
         <div className="flex flex-wrap justify-center gap-6 mt-10 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
-            <Percent className="w-4 h-4 text-primary" />
+            <PercentNodeIcon className="w-4 h-4 text-primary" />
             <span>10% discount for full upfront payment</span>
           </div>
           <div className="flex items-center gap-2">
-            <Layers className="w-4 h-4 text-primary" />
+            <CircuitLayersIcon className="w-4 h-4 text-primary" />
             <span>Module credits apply 20% toward full tracks</span>
           </div>
         </div>
