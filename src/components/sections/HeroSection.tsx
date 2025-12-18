@@ -10,7 +10,8 @@ import {
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-to-br from-gray-50 via-background to-gray-100 overflow-hidden">
-      {/* Background Pattern */}
+      {/* VISUAL-EDIT: Background Pattern - Can adjust opacity and pattern size */}
+      {/* DRAG-DROP: Background elements can be repositioned */}
       <div className="absolute inset-0 opacity-[0.03]">
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)`,
@@ -18,32 +19,41 @@ const HeroSection = () => {
         }} />
       </div>
       
-      {/* Gradient Orbs */}
+      {/* VISUAL-EDIT: Gradient Orbs - Can adjust position, size, and blur */}
+      {/* DRAG-DROP: Orbs can be repositioned visually */}
       <div className="absolute top-20 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-teal/10 rounded-full blur-3xl" />
 
+      {/* SPACING: Container padding can be adjusted (pt-24 pb-16) */}
       <div className="container-coad relative z-10 pt-24 pb-16">
+        {/* VISUAL-EDIT: Grid layout - Can switch between 1 and 2 columns */}
+        {/* DRAG-DROP: Columns can be reordered */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Text Content */}
+          {/* VISUAL-EDIT: Content spacing can be adjusted (space-y-8) */}
           <div className="space-y-8">
-            {/* Badge */}
+            {/* VISUAL-EDIT: Badge - Can adjust styling, position, and text */}
+            {/* DRAG-DROP: Badge can be moved or removed */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm font-medium text-primary animate-fade-in">
               <SparkleNodeIcon className="w-4 h-4" />
               Europe's Leading AI Certification Platform
             </div>
 
-            {/* Headline */}
+            {/* VISUAL-EDIT: Headline - Can adjust size, color, and gradient */}
+            {/* DRAG-DROP: Text elements can be rearranged */}
             <h1 className="heading-1 text-foreground animate-fade-in-up stagger-1">
               Master AI Governance<br />
               <span className="gradient-text">& Competence</span>
             </h1>
 
-            {/* Subheadline */}
+            {/* VISUAL-EDIT: Subheadline - Can adjust text, size, and max-width */}
+            {/* DRAG-DROP: Paragraph can be repositioned */}
             <p className="body-large text-muted-foreground max-w-xl animate-fade-in-up stagger-2">
               Earn your ADC or ACOS Charterholder status with EU-recognized credentials. Join our Accredited Experts Directory with priority placement and exclusive recognition for professionals mastering AI.
             </p>
 
-            {/* Key Benefits */}
+            {/* VISUAL-EDIT: Key Benefits Grid - Can adjust columns and spacing */}
+            {/* DRAG-DROP: Benefit items can be reordered */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 animate-fade-in-up stagger-3">
               <div className="flex items-center gap-2 text-sm text-foreground">
                 <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center">
@@ -71,7 +81,8 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* CTA Buttons */}
+            {/* VISUAL-EDIT: CTA Buttons - Can adjust layout, spacing, and order */}
+            {/* DRAG-DROP: Buttons can be reordered or repositioned */}
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up stagger-4">
               <Button variant="hero" size="xl" asChild>
                 <a href="https://app.coad.ai/signup" className="group">
@@ -84,7 +95,9 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            {/* Trust Badges */}
+            {/* VISUAL-EDIT: Trust Badges - Can adjust spacing and layout */}
+            {/* DRAG-DROP: Badges can be reordered or removed */}
+            {/* SPACING: Gap and padding can be adjusted (gap-6 pt-4) */}
             <div className="flex flex-wrap items-center gap-6 pt-4 animate-fade-in-up stagger-5">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <div className="w-10 h-10 rounded-full bg-success/10 flex items-center justify-center">
@@ -108,10 +121,14 @@ const HeroSection = () => {
           </div>
 
           {/* Right Column - Visual */}
+          {/* VISUAL-EDIT: Certificate Card - Can adjust size, position, and styling */}
+          {/* DRAG-DROP: Entire card section can be repositioned */}
           <div className="relative animate-fade-in-up stagger-5">
             {/* Certificate Card Mockup */}
+            {/* SPACING: Max width can be adjusted (max-w-md) */}
             <div className="relative mx-auto max-w-md">
-              {/* Main Certificate */}
+              {/* VISUAL-EDIT: Main Certificate Card - Can adjust padding, border radius, shadow */}
+              {/* DRAG-DROP: Card content can be rearranged */}
               <div className="relative bg-card rounded-2xl shadow-xl border border-border p-8 animate-float">
                 {/* Glow Effect */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/20 to-teal/20 blur-xl -z-10" />
