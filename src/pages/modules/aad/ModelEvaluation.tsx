@@ -16,50 +16,61 @@ const ModelEvaluation = () => {
   const weeklyBreakdown = [
     {
       week: 1,
-      title: "Masterclass – Evaluation Frameworks",
-      hours: 22,
-      description: "Expert-led session on comprehensive AI model evaluation methodologies.",
+      title: "Masterclass – Evaluation Fundamentals",
+      hours: "25-30",
+      description: "Live/Recorded Session (1-2 hours) covering evaluation metrics, test set design, bias detection, robustness testing, and validation frameworks.",
+      keyConcepts: ["Evaluation metrics", "Test design", "Bias detection", "Robustness", "Validation frameworks"],
       activities: [
-        "Evaluation metrics selection",
-        "Benchmark design principles",
-        "Bias and fairness testing",
-        "EU AI Act evaluation requirements"
+        "Evaluation Metrics: Understand accuracy, precision, recall, F1, AUC, and task-specific metrics",
+        "Test Set Design: Design representative test sets and validation strategies",
+        "Bias Detection: Identify and measure bias and fairness issues in models",
+        "Robustness Testing: Test model performance across diverse scenarios and edge cases",
+        "Validation Frameworks: Establish comprehensive validation processes"
       ]
     },
     {
       week: 2,
-      title: "Hands-On Labs – Testing Implementation",
-      hours: 23,
-      description: "Practical exercises implementing model evaluation frameworks.",
+      title: "Hands-On Labs – Evaluation Implementation",
+      hours: "25-30",
+      description: "Practical Exercises (25-30 hours) including metric selection, test design, and bias & fairness analysis.",
+      keyConcepts: ["Metric selection", "Test design", "Bias analysis", "Fairness assessment"],
       activities: [
-        "Automated testing pipelines",
-        "Red-teaming exercises",
-        "Performance benchmarking",
-        "A/B testing methodologies"
+        "Lab 1: Metric Selection - Select appropriate metrics for different tasks and use cases, implement metric calculations and reporting, create evaluation dashboards",
+        "Lab 2: Test Design - Design test sets for model evaluation, plan cross-validation and holdout strategies, create test data specifications",
+        "Lab 3: Bias & Fairness Analysis - Conduct bias and fairness assessments, analyze model performance across demographic groups, create fairness reports",
+        "Deliverables: Evaluation plans, metric calculations, bias analysis reports"
       ]
     },
     {
       week: 3,
       title: "Mentored Sessions – Advanced Evaluation",
-      hours: 22,
-      description: "Expert guidance on complex evaluation scenarios.",
+      hours: "25-30",
+      description: "Forum Q&A + Optional Live Office Hours for expert guidance, advanced techniques, case studies, best practices, and troubleshooting.",
+      keyConcepts: ["Expert guidance", "Advanced techniques", "Case studies", "Best practices"],
       activities: [
-        "Adversarial robustness testing",
-        "Explainability evaluation",
-        "ESG impact assessment",
-        "Continuous monitoring setup"
+        "Expert Guidance: Get feedback on your evaluation strategies",
+        "Advanced Techniques: Learn advanced evaluation and testing techniques",
+        "Case Studies: Analyze real-world model evaluation scenarios",
+        "Best Practices: Learn from successful model evaluation implementations",
+        "Troubleshooting: Get help with evaluation challenges",
+        "Focus Areas: Evaluation quality, bias detection, robustness testing, validation completeness"
       ]
     },
     {
       week: 4,
-      title: "Mini-Capstone – Evaluation Framework",
-      hours: 23,
-      description: "Design and deliver a comprehensive model evaluation framework.",
+      title: "Mini-Capstone – Comprehensive Evaluation Plan",
+      hours: "25-30",
+      description: "Final Project (25-30 hours) creating a comprehensive evaluation plan for an AI model.",
+      keyConcepts: ["Evaluation strategy", "Test set specification", "Bias assessment", "Robustness testing", "Performance reporting", "Validation process"],
       activities: [
-        "Complete evaluation suite",
-        "Testing documentation",
-        "Compliance verification",
-        "Blockchain certificate issuance"
+        "Evaluation Strategy: Complete evaluation framework with metrics and test design",
+        "Test Set Specification: Detailed test set design and validation strategy",
+        "Bias Assessment: Bias and fairness analysis plan",
+        "Robustness Testing: Strategy for testing across diverse scenarios",
+        "Performance Reporting: Framework for reporting evaluation results",
+        "Validation Process: Complete validation process from testing to deployment approval",
+        "Mentor Review: Receive detailed rubric-based feedback on evaluation plan completeness, metric selection, and practical applicability",
+        "Portfolio Piece: Your capstone becomes a portfolio-ready evaluation plan demonstrating your model evaluation competency"
       ]
     }
   ];
@@ -127,8 +138,7 @@ const ModelEvaluation = () => {
               </h1>
               
               <p className="body-large text-gray-300 mb-8 max-w-2xl">
-                Ensure AI quality before deployment. Learn rigorous evaluation methodologies 
-                that test for accuracy, fairness, robustness, and regulatory compliance.
+                The Model Evaluation & Validation module teaches you to assess and validate AI model performance comprehensively. You'll learn evaluation metrics, testing strategies, bias detection, robustness testing, and validation frameworks—ensuring AI models meet quality, fairness, and reliability standards before deployment.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
@@ -167,34 +177,56 @@ const ModelEvaluation = () => {
               <div>
                 <h2 className="heading-2 mb-6">Module Overview</h2>
                 <p className="body-large text-muted-foreground mb-6">
-                  Deploying untested AI is a recipe for disaster. This module teaches you to 
-                  build comprehensive evaluation frameworks that catch issues before they 
-                  impact users or violate regulations.
+                  The Model Evaluation & Validation module teaches you to assess and validate AI model performance comprehensively. You'll learn evaluation metrics, testing strategies, bias detection, robustness testing, and validation frameworks—ensuring AI models meet quality, fairness, and reliability standards before deployment.
                 </p>
-                <p className="body text-muted-foreground mb-8">
-                  From basic metrics to advanced adversarial testing, you'll learn the full 
-                  spectrum of evaluation techniques used by leading AI organizations to 
-                  ensure model quality and compliance.
+                <p className="body text-muted-foreground mb-6">
+                  Model evaluation is critical for responsible AI deployment. This module provides frameworks for comprehensive model assessment: understanding different metrics, designing test sets, detecting bias and fairness issues, testing robustness, and validating model performance across diverse scenarios. Whether you're evaluating your own models or reviewing models for deployment, this module gives you the evaluation skills needed for production AI systems.
                 </p>
+
+                <div className="bg-muted/50 rounded-xl p-6 border border-border mb-8">
+                  <h3 className="font-semibold mb-4">Who This Module Is For</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">ML Engineers</strong> evaluating model performance before deployment</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Data Scientists</strong> assessing model quality and reliability</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Quality Assurance Professionals</strong> testing AI systems</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Risk Managers</strong> validating AI models for compliance</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Technical Leads</strong> overseeing model evaluation processes</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Anyone</strong> responsible for AI model quality and validation</span>
+                    </li>
+                  </ul>
+                  <p className="text-xs text-muted-foreground mt-4 italic">Prerequisites: Understanding of ML/AI concepts. Familiarity with model training helpful.</p>
+                </div>
 
                 <div className="bg-muted/50 rounded-xl p-6 border border-border">
                   <h3 className="font-semibold mb-4">Assessment Criteria</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Project rubric assessment (80% pass threshold)</span>
+                      <div>
+                        <span className="text-foreground font-medium">Project Rubric (80% pass requirement)</span>
+                        <p className="text-sm text-muted-foreground mt-1">Evaluation strategy quality (25%), test design effectiveness (25%), bias assessment completeness (20%), robustness testing (20%), documentation clarity (10%)</p>
+                      </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Evaluation framework delivery</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Bias assessment report</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Testing documentation</span>
+                      <span className="text-muted-foreground">Active participation in labs, forums, and mentored sessions</span>
                     </li>
                   </ul>
                 </div>
@@ -202,15 +234,51 @@ const ModelEvaluation = () => {
 
               <div>
                 <h3 className="heading-3 mb-6">Learning Outcomes</h3>
+                <p className="text-muted-foreground mb-6 text-sm">
+                  Upon completion, you will be able to:
+                </p>
                 <div className="space-y-4">
-                  {learningOutcomes.map((outcome, index) => (
+                  {[
+                    "Select Metrics: Choose appropriate evaluation metrics for different tasks",
+                    "Design Tests: Create representative test sets and validation strategies",
+                    "Detect Bias: Identify and measure bias and fairness issues",
+                    "Test Robustness: Evaluate model performance across diverse scenarios",
+                    "Validate Models: Establish comprehensive validation processes",
+                    "Report Results: Create clear evaluation reports for stakeholders"
+                  ].map((outcome, index) => (
                     <div key={index} className="flex items-start gap-4 p-4 bg-card rounded-lg border border-border">
                       <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                         <span className="text-primary font-semibold text-sm">{index + 1}</span>
                       </div>
-                      <p className="text-foreground">{outcome}</p>
+                      <p className="text-foreground text-sm">{outcome}</p>
                     </div>
                   ))}
+                </div>
+
+                <div className="mt-8 bg-gradient-to-br from-primary/10 to-teal/10 rounded-xl p-6 border border-border">
+                  <h3 className="font-semibold mb-3">Module Benefits</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Quality Assurance:</strong> Essential skills for ensuring AI model quality</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Responsible AI:</strong> Learn to detect and address bias and fairness issues</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Career Enhancement:</strong> Model evaluation skills are highly valued</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Track Credit:</strong> Counts toward AAC track completion</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Risk Mitigation:</strong> Validate models before deployment to reduce risks</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -239,6 +307,18 @@ const ModelEvaluation = () => {
                   <div className="p-6">
                     <h3 className="font-semibold text-lg mb-3">{week.title}</h3>
                     <p className="text-muted-foreground text-sm mb-4">{week.description}</p>
+                    {week.keyConcepts && (
+                      <div className="mb-4">
+                        <p className="text-xs font-semibold text-foreground mb-2">Key Concepts:</p>
+                        <div className="flex flex-wrap gap-2">
+                          {week.keyConcepts.map((concept, i) => (
+                            <span key={i} className="px-2 py-1 bg-primary/10 text-primary text-xs rounded">
+                              {concept}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                     <ul className="space-y-2">
                       {week.activities.map((activity, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm">
@@ -254,6 +334,126 @@ const ModelEvaluation = () => {
           </div>
         </section>
 
+        {/* Certification & Benefits */}
+        <section className="section-padding bg-background">
+          <div className="container-coad">
+            <div className="grid lg:grid-cols-2 gap-12">
+              <div>
+                <h2 className="heading-2 mb-6">Assessment & Certification</h2>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="font-semibold mb-3">Assessment Method</h3>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      Your mini-capstone is evaluated against a detailed rubric covering:
+                    </p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-semibold">25%</span>
+                        <span className="text-muted-foreground">Evaluation strategy quality</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-semibold">25%</span>
+                        <span className="text-muted-foreground">Test design effectiveness</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-semibold">20%</span>
+                        <span className="text-muted-foreground">Bias assessment completeness</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-semibold">20%</span>
+                        <span className="text-muted-foreground">Robustness testing</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-semibold">10%</span>
+                        <span className="text-muted-foreground">Documentation clarity</span>
+                      </li>
+                    </ul>
+                    <p className="text-sm text-muted-foreground mt-4">
+                      <strong className="text-foreground">Pass Requirement:</strong> 80% overall score
+                    </p>
+                  </div>
+                  <div className="bg-gradient-to-br from-primary/10 to-teal/10 rounded-xl p-6 border border-border">
+                    <h3 className="font-semibold mb-3">Certificate</h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Upon successful completion, you receive:
+                    </p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-start gap-2">
+                        <AwardNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground"><strong className="text-foreground">Blockchain-Verified Certificate:</strong> "Certificate of Competency in Model Evaluation & Validation"</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <AwardNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground"><strong className="text-foreground">Digital Badge:</strong> Shareable on LinkedIn and the Accredited Experts Directory</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <AwardNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground"><strong className="text-foreground">ECTS Credits:</strong> 3 credits (90 hours) toward professional development</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <AwardNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground"><strong className="text-foreground">Portfolio Artifact:</strong> Your capstone evaluation plan for your professional portfolio</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h2 className="heading-2 mb-6">Pricing & Enrollment</h2>
+                <div className="bg-card rounded-xl p-6 border border-border mb-6">
+                  <div className="text-4xl font-bold gradient-text mb-2">€1,100</div>
+                  <p className="text-muted-foreground text-sm mb-6">4 weeks (90 hours) • 3 ECTS Credits</p>
+                  <h3 className="font-semibold mb-3">What's Included:</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground mb-6">
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Access to all masterclass recordings</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Hands-on lab exercises and materials</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Mentored support (forum + optional office hours)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Rubric-based assessment and feedback</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Blockchain-verified certificate upon completion</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Lifetime access to course materials</span>
+                    </li>
+                  </ul>
+                  <div className="pt-4 border-t border-border">
+                    <h3 className="font-semibold mb-3">Enrollment Options:</h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span><strong className="text-foreground">Standalone:</strong> Take this module independently</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span><strong className="text-foreground">Track Credit:</strong> Counts toward AAC (Agentic AI Competency) track completion</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span><strong className="text-foreground">Corporate:</strong> Bulk enrollment available for teams</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Real-World Use Cases */}
         <section className="section-padding bg-background">
           <div className="container-coad">
             <div className="text-center mb-12">
@@ -275,20 +475,26 @@ const ModelEvaluation = () => {
           </div>
         </section>
 
+        {/* Track Integration */}
         <section className="section-padding bg-navy text-primary-foreground">
           <div className="container-coad">
             <div className="max-w-4xl mx-auto text-center">
               <GraduationNodeIcon className="w-16 h-16 mx-auto mb-6 text-primary" />
-              <h2 className="heading-2 mb-4">Part of the AAD Track</h2>
-              <p className="body-large text-gray-300 mb-8">
-                This module counts toward your Agentic AI Developer (AAD) Track certification.
+              <h2 className="heading-2 mb-4">Part of the AAC Track</h2>
+              <p className="body-large text-gray-300 mb-6">
+                This module counts toward your Agentic AI Competency (AAC) Track certification. 
+                Complete all track modules to achieve Charterholder status and priority 
+                listing in the COAD Expert Directory.
+              </p>
+              <p className="text-sm text-gray-400 mb-8">
+                <strong>Track Integration:</strong> This module feeds into AAC Phase 3 (Multi-Agent & Advanced Agentic AI)
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="xl" asChild>
                   <Link to="/auth">Enroll Now – €1,100</Link>
                 </Button>
                 <Button variant="outline" size="xl" className="border-gray-600 text-gray-300 hover:bg-white/10" asChild>
-                  <Link to="/certifications">Explore Full AAD Track</Link>
+                  <Link to="/certifications">Explore Full AAC Track</Link>
                 </Button>
               </div>
             </div>
