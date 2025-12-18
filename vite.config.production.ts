@@ -1,16 +1,12 @@
+// Production Vite Configuration
+// This extends the base vite.config.ts for production builds
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { componentTagger } from "lovable-tagger";
 
-// https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/coad-certification-hub/' : '/',
-  server: {
-    host: "::",
-    port: 8080,
-  },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+export default defineConfig({
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -18,8 +14,14 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     outDir: "dist",
-    sourcemap: mode === "development",
-    minify: mode === "production" ? "terser" : false,
+    sourcemap: false,
+    minify: "terser",
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
     rollupOptions: {
       output: {
         manualChunks: {
@@ -29,4 +31,9 @@ export default defineConfig(({ mode }) => ({
       },
     },
   },
-}));
+  server: {
+    host: "0.0.0.0",
+    port: 8080,
+  },
+});
+

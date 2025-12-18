@@ -1,0 +1,652 @@
+// AI Workforce Hub Database Schema
+// Generated from AI_WORKFORCE_DATABASE_ARCHITECTURE.md
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserType {
+  professional
+  client
+  admin
+  allocation_firm
+}
+
+enum ProjectRatePreference {
+  hourly
+  project
+  both
+}
+
+enum AvailabilityType {
+  full_time
+  part_time
+  project_based
+}
+
+enum CharterholderType {
+  ADC
+  ACOS
+}
+
+enum EligibilityTier {
+  charterholder
+  track_completer
+  module_completer
+}
+
+enum ProfileStatus {
+  pending
+  active
+  suspended
+  inactive
+}
+
+enum CertificationType {
+  track
+  module
+}
+
+enum TrackName {
+  AAC
+  AIO
+}
+
+enum CertificationStatus {
+  in_progress
+  completed
+  expired
+}
+
+enum CompetencyType {
+  track
+  module
+  skill
+}
+
+enum CompetencyLevel {
+  entry
+  mid
+  senior
+}
+
+enum PortfolioType {
+  project
+  case_study
+  article
+  github
+  website
+  other
+}
+
+enum CompanySize {
+  startup
+  small
+  medium
+  large
+  enterprise
+}
+
+enum ClientType {
+  corporate
+  startup
+  government
+  nonprofit
+  individual
+}
+
+enum PreferredTier {
+  charterholder
+  track_completer
+  any
+}
+
+enum RequiredTrack {
+  AAC
+  AIO
+  any
+}
+
+enum ProjectType {
+  consulting
+  development
+  audit
+  training
+  other
+}
+
+enum EngagementType {
+  full_time
+  part_time
+  project_based
+}
+
+enum LocationPreference {
+  remote
+  onsite
+  hybrid
+}
+
+enum ProjectStatus {
+  draft
+  submitted
+  matching
+  matched
+  in_progress
+  completed
+  cancelled
+}
+
+enum RequirementType {
+  competency
+  skill
+  experience
+  certification
+  other
+}
+
+enum RequirementLevel {
+  required
+  preferred
+  nice_to_have
+}
+
+enum MatchStatus {
+  pending
+  presented
+  accepted
+  declined
+  expired
+}
+
+enum ProfessionalResponse {
+  pending
+  interested
+  declined
+  accepted
+}
+
+enum ContractType {
+  hourly
+  project
+  retainer
+}
+
+enum PaymentSchedule {
+  upfront
+  milestone
+  biweekly
+  monthly
+  end
+}
+
+enum ContractStatus {
+  draft
+  pending
+  signed
+  active
+  completed
+  cancelled
+  disputed
+}
+
+enum PaymentType {
+  client_to_coad
+  coad_to_professional
+  refund
+}
+
+enum PaymentMethod {
+  bank_transfer
+  stripe
+  paypal
+  other
+}
+
+enum PaymentStatus {
+  pending
+  processing
+  completed
+  failed
+  refunded
+}
+
+enum PartnershipStatus {
+  active
+  inactive
+  pending
+}
+
+enum NotificationType {
+  project_match
+  project_accepted
+  contract_signed
+  payment_received
+  message
+  system
+}
+
+model User {
+  id           String    @id @default(uuid())
+  email        String    @unique
+  passwordHash String    @map("password_hash")
+  firstName    String?   @map("first_name")
+  lastName     String?   @map("last_name")
+  phone        String?
+  timezone     String    @default("UTC")
+  createdAt    DateTime  @default(now()) @map("created_at")
+  updatedAt    DateTime  @updatedAt @map("updated_at")
+  lastLogin    DateTime? @map("last_login")
+  isActive     Boolean   @default(true) @map("is_active")
+  userType     UserType  @map("user_type")
+
+  professional  Professional?
+  client        Client?
+  notifications Notification[]
+
+  @@index([email])
+  @@index([userType])
+  @@map("users")
+}
+
+model Professional {
+  id                       String                @id @default(uuid())
+  userId                   String                @unique @map("user_id")
+  professionalSummary      String?               @map("professional_summary") @db.Text
+  bio                      String?               @db.Text
+  linkedinUrl              String?               @map("linkedin_url")
+  websiteUrl               String?               @map("website_url")
+  location                 String?
+  languages                String[]
+  hourlyRateMin            Decimal?              @map("hourly_rate_min") @db.Decimal(10, 2)
+  hourlyRateMax            Decimal?              @map("hourly_rate_max") @db.Decimal(10, 2)
+  projectRatePreference    ProjectRatePreference @default(both) @map("project_rate_preference")
+  availabilityType         AvailabilityType      @map("availability_type")
+  availabilityHoursPerWeek Int?                  @map("availability_hours_per_week")
+  isCharterholder          Boolean               @default(false) @map("is_charterholder")
+  charterholderType        CharterholderType?    @map("charterholder_type")
+  eligibilityTier          EligibilityTier       @map("eligibility_tier")
+  profileStatus            ProfileStatus         @default(pending) @map("profile_status")
+  profileCompletedAt       DateTime?             @map("profile_completed_at")
+  profileApprovedAt        DateTime?             @map("profile_approved_at")
+  profileApprovedBy        String?               @map("profile_approved_by")
+  createdAt                DateTime              @default(now()) @map("created_at")
+  updatedAt                DateTime              @updatedAt @map("updated_at")
+
+  user           User                        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  certifications ProfessionalCertification[]
+  competencies   ProfessionalCompetency[]
+  portfolios     ProfessionalPortfolio[]
+  availability   ProfessionalAvailability[]
+  matches        ProjectMatch[]
+  contracts      Contract[]
+  ratings        ProfessionalRating[]
+
+  @@index([userId])
+  @@index([eligibilityTier])
+  @@index([isCharterholder])
+  @@index([profileStatus])
+  @@map("professionals")
+}
+
+model Certification {
+  id                String              @id @default(uuid())
+  userId            String              @map("user_id")
+  certificationType CertificationType   @map("certification_type")
+  trackName         TrackName?          @map("track_name")
+  moduleName        String?             @map("module_name")
+  phaseOrDomain     String?             @map("phase_or_domain")
+  status            CertificationStatus @default(in_progress)
+  completedAt       DateTime?           @map("completed_at")
+  certificateHash   String?             @map("certificate_hash")
+  certificateUrl    String?             @map("certificate_url")
+  createdAt         DateTime            @default(now()) @map("created_at")
+  updatedAt         DateTime            @updatedAt @map("updated_at")
+
+  professionalCertifications ProfessionalCertification[]
+
+  @@index([userId])
+  @@index([certificationType])
+  @@index([trackName])
+  @@index([moduleName])
+  @@index([status])
+  @@map("certifications")
+}
+
+model ProfessionalCertification {
+  id              String   @id @default(uuid())
+  professionalId  String   @map("professional_id")
+  certificationId String   @map("certification_id")
+  isPrimary       Boolean  @default(false) @map("is_primary")
+  createdAt       DateTime @default(now()) @map("created_at")
+
+  professional  Professional  @relation(fields: [professionalId], references: [id], onDelete: Cascade)
+  certification Certification @relation(fields: [certificationId], references: [id], onDelete: Cascade)
+
+  @@unique([professionalId, certificationId])
+  @@index([professionalId])
+  @@index([certificationId])
+  @@map("professional_certifications")
+}
+
+model ProfessionalCompetency {
+  id                    String          @id @default(uuid())
+  professionalId        String          @map("professional_id")
+  competencyType        CompetencyType  @map("competency_type")
+  competencyName        String          @map("competency_name")
+  competencyLevel       CompetencyLevel @default(entry) @map("competency_level")
+  sourceCertificationId String?         @map("source_certification_id")
+  verified              Boolean         @default(true)
+  createdAt             DateTime        @default(now()) @map("created_at")
+
+  professional Professional @relation(fields: [professionalId], references: [id], onDelete: Cascade)
+
+  @@index([professionalId])
+  @@index([competencyName])
+  @@index([competencyType])
+  @@index([competencyLevel])
+  @@map("professional_competencies")
+}
+
+model ProfessionalPortfolio {
+  id                       String        @id @default(uuid())
+  professionalId           String        @map("professional_id")
+  title                    String
+  description              String?       @db.Text
+  portfolioType            PortfolioType @map("portfolio_type")
+  url                      String?
+  imageUrl                 String?       @map("image_url")
+  technologies             String[]
+  competenciesDemonstrated String[]      @map("competencies_demonstrated")
+  dateCompleted            DateTime?     @map("date_completed")
+  isFeatured               Boolean       @default(false) @map("is_featured")
+  displayOrder             Int           @default(0) @map("display_order")
+  createdAt                DateTime      @default(now()) @map("created_at")
+  updatedAt                DateTime      @updatedAt @map("updated_at")
+
+  professional Professional @relation(fields: [professionalId], references: [id], onDelete: Cascade)
+
+  @@index([professionalId])
+  @@index([isFeatured])
+  @@map("professional_portfolios")
+}
+
+model ProfessionalAvailability {
+  id                  String    @id @default(uuid())
+  professionalId      String    @map("professional_id")
+  startDate           DateTime  @map("start_date")
+  endDate             DateTime? @map("end_date")
+  hoursPerWeek        Int?      @map("hours_per_week")
+  timezone            String    @default("UTC")
+  availableDays       String[]
+  availableHoursStart String?   @map("available_hours_start")
+  availableHoursEnd   String?   @map("available_hours_end")
+  isCurrent           Boolean   @default(true) @map("is_current")
+  createdAt           DateTime  @default(now()) @map("created_at")
+  updatedAt           DateTime  @updatedAt @map("updated_at")
+
+  professional Professional @relation(fields: [professionalId], references: [id], onDelete: Cascade)
+
+  @@index([professionalId])
+  @@index([isCurrent])
+  @@index([startDate])
+  @@index([endDate])
+  @@map("professional_availability")
+}
+
+model Client {
+  id                 String       @id @default(uuid())
+  userId             String       @unique @map("user_id")
+  companyName        String?      @map("company_name")
+  companySize        CompanySize? @map("company_size")
+  industry           String?
+  location           String?
+  websiteUrl         String?      @map("website_url")
+  contactPersonName  String?      @map("contact_person_name")
+  contactPersonTitle String?      @map("contact_person_title")
+  billingAddress     String?      @map("billing_address") @db.Text
+  taxId              String?      @map("tax_id")
+  clientType         ClientType   @map("client_type")
+  createdAt          DateTime     @default(now()) @map("created_at")
+  updatedAt          DateTime     @updatedAt @map("updated_at")
+
+  user                User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  projects            Project[]
+  ratings             ClientRating[]
+  professionalRatings ProfessionalRating[]
+
+  @@index([userId])
+  @@index([companyName])
+  @@map("clients")
+}
+
+model Project {
+  id                   String             @id @default(uuid())
+  clientId             String             @map("client_id")
+  allocationFirmId     String?            @map("allocation_firm_id")
+  projectTitle         String             @map("project_title")
+  projectDescription   String             @map("project_description") @db.Text
+  projectScope         String?            @map("project_scope") @db.Text
+  deliverables         String?            @db.Text
+  requiredCompetencies Json?              @map("required_competencies")
+  preferredTier        PreferredTier      @default(any) @map("preferred_tier")
+  requiredTrack        RequiredTrack      @default(any) @map("required_track")
+  requiredModules      String[]           @map("required_modules")
+  projectType          ProjectType        @map("project_type")
+  engagementType       EngagementType     @map("engagement_type")
+  startDate            DateTime?          @map("start_date")
+  endDate              DateTime?          @map("end_date")
+  durationWeeks        Int?               @map("duration_weeks")
+  budgetMin            Decimal?           @map("budget_min") @db.Decimal(10, 2)
+  budgetMax            Decimal?           @map("budget_max") @db.Decimal(10, 2)
+  budgetCurrency       String             @default("EUR") @map("budget_currency")
+  locationPreference   LocationPreference @default(remote) @map("location_preference")
+  languageRequirements String[]           @map("language_requirements")
+  status               ProjectStatus      @default(draft)
+  submittedAt          DateTime?          @map("submitted_at")
+  matchedAt            DateTime?          @map("matched_at")
+  startedAt            DateTime?          @map("started_at")
+  completedAt          DateTime?          @map("completed_at")
+  createdAt            DateTime           @default(now()) @map("created_at")
+  updatedAt            DateTime           @updatedAt @map("updated_at")
+
+  client         Client               @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  allocationFirm AllocationFirm?      @relation(fields: [allocationFirmId], references: [id])
+  requirements   ProjectRequirement[]
+  matches        ProjectMatch[]
+  contracts      Contract[]
+
+  @@index([clientId])
+  @@index([status])
+  @@index([preferredTier])
+  @@index([requiredTrack])
+  @@index([startDate])
+  @@map("projects")
+}
+
+model ProjectRequirement {
+  id               String           @id @default(uuid())
+  projectId        String           @map("project_id")
+  requirementType  RequirementType  @map("requirement_type")
+  requirementName  String           @map("requirement_name")
+  requirementLevel RequirementLevel @default(required) @map("requirement_level")
+  requirementValue String?          @map("requirement_value") @db.Text
+  createdAt        DateTime         @default(now()) @map("created_at")
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId])
+  @@index([requirementType])
+  @@index([requirementLevel])
+  @@map("project_requirements")
+}
+
+model ProjectMatch {
+  id                     String                @id @default(uuid())
+  projectId              String                @map("project_id")
+  professionalId         String                @map("professional_id")
+  matchScore             Decimal               @map("match_score") @db.Decimal(5, 2)
+  matchReasons           String[]              @map("match_reasons")
+  matchAlgorithmVersion  String?               @map("match_algorithm_version")
+  status                 MatchStatus           @default(pending)
+  presentedToClientAt    DateTime?             @map("presented_to_client_at")
+  clientViewedAt         DateTime?             @map("client_viewed_at")
+  professionalNotifiedAt DateTime?             @map("professional_notified_at")
+  professionalResponse   ProfessionalResponse? @map("professional_response")
+  professionalResponseAt DateTime?             @map("professional_response_at")
+  clientSelected         Boolean               @default(false) @map("client_selected")
+  clientSelectedAt       DateTime?             @map("client_selected_at")
+  createdAt              DateTime              @default(now()) @map("created_at")
+  updatedAt              DateTime              @updatedAt @map("updated_at")
+
+  project      Project      @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  professional Professional @relation(fields: [professionalId], references: [id], onDelete: Cascade)
+
+  @@unique([projectId, professionalId])
+  @@index([projectId])
+  @@index([professionalId])
+  @@index([status])
+  @@index([matchScore])
+  @@index([clientSelected])
+  @@map("project_matches")
+}
+
+model Contract {
+  id                     String          @id @default(uuid())
+  projectId              String          @map("project_id")
+  professionalId         String          @map("professional_id")
+  contractNumber         String          @unique @map("contract_number")
+  contractType           ContractType    @map("contract_type")
+  rate                   Decimal         @db.Decimal(10, 2)
+  rateCurrency           String          @default("EUR") @map("rate_currency")
+  totalAmount            Decimal         @map("total_amount") @db.Decimal(10, 2)
+  coadMarginPercentage   Decimal         @map("coad_margin_percentage") @db.Decimal(5, 2)
+  professionalPayout     Decimal         @map("professional_payout") @db.Decimal(10, 2)
+  startDate              DateTime        @map("start_date")
+  endDate                DateTime?       @map("end_date")
+  milestones             Json?
+  paymentSchedule        PaymentSchedule @map("payment_schedule")
+  termsAndConditions     String?         @map("terms_and_conditions") @db.Text
+  contractStatus         ContractStatus  @default(draft) @map("contract_status")
+  signedByClientAt       DateTime?       @map("signed_by_client_at")
+  signedByProfessionalAt DateTime?       @map("signed_by_professional_at")
+  signedByCoadAt         DateTime?       @map("signed_by_coad_at")
+  contractDocumentUrl    String?         @map("contract_document_url")
+  createdAt              DateTime        @default(now()) @map("created_at")
+  updatedAt              DateTime        @updatedAt @map("updated_at")
+
+  project      Project      @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  professional Professional @relation(fields: [professionalId], references: [id], onDelete: Cascade)
+  payments     Payment[]
+
+  @@index([projectId])
+  @@index([professionalId])
+  @@index([contractStatus])
+  @@index([contractNumber])
+  @@map("contracts")
+}
+
+model Payment {
+  id               String         @id @default(uuid())
+  contractId       String         @map("contract_id")
+  paymentType      PaymentType    @map("payment_type")
+  amount           Decimal        @db.Decimal(10, 2)
+  currency         String         @default("EUR")
+  paymentMethod    PaymentMethod? @map("payment_method")
+  paymentStatus    PaymentStatus  @default(pending) @map("payment_status")
+  paymentReference String?        @map("payment_reference")
+  transactionId    String?        @map("transaction_id")
+  dueDate          DateTime?      @map("due_date")
+  paidAt           DateTime?      @map("paid_at")
+  processedAt      DateTime?      @map("processed_at")
+  failureReason    String?        @map("failure_reason") @db.Text
+  createdAt        DateTime       @default(now()) @map("created_at")
+  updatedAt        DateTime       @updatedAt @map("updated_at")
+
+  contract Contract @relation(fields: [contractId], references: [id], onDelete: Cascade)
+
+  @@index([contractId])
+  @@index([paymentStatus])
+  @@index([paymentType])
+  @@map("payments")
+}
+
+model AllocationFirm {
+  id                   String            @id @default(uuid())
+  userId               String?           @unique @map("user_id")
+  firmName             String            @map("firm_name")
+  contactEmail         String?           @map("contact_email")
+  contactPhone         String?           @map("contact_phone")
+  websiteUrl           String?           @map("website_url")
+  commissionPercentage Decimal           @default(40.00) @map("commission_percentage") @db.Decimal(5, 2)
+  partnershipStatus    PartnershipStatus @default(pending) @map("partnership_status")
+  createdAt            DateTime          @default(now()) @map("created_at")
+  updatedAt            DateTime          @updatedAt @map("updated_at")
+
+  projects Project[]
+
+  @@index([partnershipStatus])
+  @@map("allocation_firms")
+}
+
+model ProfessionalRating {
+  id               String   @id @default(uuid())
+  contractId       String   @unique @map("contract_id")
+  professionalId   String   @map("professional_id")
+  clientId         String   @map("client_id")
+  rating           Int
+  reviewText       String?  @map("review_text") @db.Text
+  reviewCategories Json?    @map("review_categories")
+  isPublic         Boolean  @default(true) @map("is_public")
+  createdAt        DateTime @default(now()) @map("created_at")
+
+  professional Professional @relation(fields: [professionalId], references: [id], onDelete: Cascade)
+  client       Client       @relation(fields: [clientId], references: [id], onDelete: Cascade)
+
+  @@index([professionalId])
+  @@index([clientId])
+  @@index([rating])
+  @@map("professional_ratings")
+}
+
+model ClientRating {
+  id             String   @id @default(uuid())
+  contractId     String   @unique @map("contract_id")
+  professionalId String   @map("professional_id")
+  clientId       String   @map("client_id")
+  rating         Int
+  reviewText     String?  @map("review_text") @db.Text
+  isPublic       Boolean  @default(false) @map("is_public")
+  createdAt      DateTime @default(now()) @map("created_at")
+
+  client Client @relation(fields: [clientId], references: [id], onDelete: Cascade)
+
+  @@index([clientId])
+  @@index([professionalId])
+  @@map("client_ratings")
+}
+
+model Notification {
+  id               String           @id @default(uuid())
+  userId           String           @map("user_id")
+  notificationType NotificationType @map("notification_type")
+  title            String
+  message          String           @db.Text
+  linkUrl          String?          @map("link_url")
+  isRead           Boolean          @default(false) @map("is_read")
+  readAt           DateTime?        @map("read_at")
+  createdAt        DateTime         @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([isRead])
+  @@index([notificationType])
+  @@index([createdAt])
+  @@map("notifications")
+}
