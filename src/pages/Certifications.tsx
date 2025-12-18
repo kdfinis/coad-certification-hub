@@ -194,6 +194,18 @@ const Certifications = () => {
     }
   ];
 
+  const getDetailRoute = (title: string) => {
+    const routes: Record<string, string> = {
+      'ADC Professional': '/certifications/adc-professional',
+      'ADC Advanced Expert': '/certifications/adc-advanced',
+      'ADC Master Charterholder': '/certifications/adc-master',
+      'ACOS Professional': '/certifications/acos-professional',
+      'ACOS Advanced Expert': '/certifications/acos-advanced',
+      'ACOS Master Charterholder': '/certifications/acos-master',
+    };
+    return routes[title] || '/certifications';
+  };
+
   const renderLevelCard = (level: typeof adcLevels[0], index: number) => (
     <div 
       key={index}
@@ -256,17 +268,29 @@ const Certifications = () => {
           </ul>
         </div>
 
-        {/* CTA */}
-        <Button 
-          variant={level.featured ? "hero" : "outline"} 
-          size="lg" 
-          className="w-full"
-          asChild
-        >
-          <Link to="/auth">
-            {level.featured ? 'Start Master Programme' : 'Enroll Now'}
-          </Link>
-        </Button>
+        {/* CTAs */}
+        <div className="space-y-3">
+          <Button 
+            variant={level.featured ? "hero" : "outline"} 
+            size="lg" 
+            className="w-full"
+            asChild
+          >
+            <Link to={getDetailRoute(level.title)}>
+              View Full Curriculum
+            </Link>
+          </Button>
+          <Button 
+            variant="ghost" 
+            size="lg" 
+            className="w-full"
+            asChild
+          >
+            <Link to="/auth">
+              {level.featured ? 'Start Master Programme' : 'Enroll Now'}
+            </Link>
+          </Button>
+        </div>
       </div>
     </div>
   );
