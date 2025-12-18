@@ -15,6 +15,7 @@ import ADCMaster from "./pages/certifications/ADCMaster";
 import ACOSProfessional from "./pages/certifications/ACOSProfessional";
 import ACOSAdvanced from "./pages/certifications/ACOSAdvanced";
 import ACOSMaster from "./pages/certifications/ACOSMaster";
+import AIWorkforce from "./pages/AIWorkforce";
 import NotFound from "./pages/NotFound";
 
 // AAD Modules (Agentic AI Developer)
@@ -94,6 +95,9 @@ const App = () => (
             <Route path="/modules/aio/ai-for-security" element={<AIForSecurity />} />
             <Route path="/modules/aio/cybersecurity-auditing" element={<CybersecurityAuditing />} />
             <Route path="/modules/aio/aml-kyc" element={<AMLKYC />} />
+            
+            {/* AI Workforce */}
+            <Route path="/ai-workforce" element={<AIWorkforce />} />
             
             <Route path="*" element={<NotFound />} />
           </Routes>

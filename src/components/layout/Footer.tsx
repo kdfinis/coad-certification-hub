@@ -14,11 +14,11 @@ import CoadLogo from '@/components/ui/coad-logo';
 const Footer = () => {
   const footerLinks = {
     certifications: [
-      { label: 'ADC Track', href: '#adc-track' },
-      { label: 'ACOS Track', href: '#acos-track' },
-      { label: 'Compare Tracks', href: '#pricing' },
-      { label: 'All Modules', href: '#modules' },
-      { label: 'Corporate Training', href: '#pricing' },
+      { label: 'ADC Track', href: '/certifications?track=adc', isRoute: true },
+      { label: 'ACOS Track', href: '/certifications?track=acos', isRoute: true },
+      { label: 'All Modules', href: '/#modules' },
+      { label: 'AI Workforce', href: '/ai-workforce', isRoute: true },
+      { label: 'Corporate Training', href: '/#pricing' },
     ],
     resources: [
       { label: 'Help Center', href: '#' },
