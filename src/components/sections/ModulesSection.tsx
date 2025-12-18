@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Clock } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -12,34 +13,42 @@ import {
   ShieldNodeIcon,
   SustainabilityIcon,
   RiskAlertIcon,
-  DataNodeIcon
+  DataNodeIcon,
+  CodeNodeIcon,
+  LightbulbNodeIcon
 } from '@/components/ui/custom-icons';
 
 const ModulesSection = () => {
   const [filter, setFilter] = useState<'all' | 'aic' | 'aio'>('all');
 
   const aicModules = [
-    { name: 'Task Decomposition', Icon: CircuitLayersIcon, hours: 90, price: '€800', description: 'Break complex tasks into AI-manageable components' },
-    { name: 'Multi-Agent Systems', Icon: NetworkNodesIcon, hours: 90, price: '€1,200', description: 'Coordinate multiple AI agents effectively' },
-    { name: 'Performance Optimization', Icon: EnergyNodeIcon, hours: 90, price: '€1,750', description: 'Optimize AI system performance and efficiency' },
-    { name: 'Human-AI Design', Icon: DataFlowIcon, hours: 90, price: '€1,000', description: 'Design effective human-AI collaboration workflows' },
-    { name: 'Restricted Methods', Icon: CircuitLockIcon, hours: 90, price: '€1,500', description: 'Navigate restricted AI methods responsibly' },
-    { name: 'Latest in AI 2025', Icon: NeuralBrainIcon, hours: 90, price: '€800', description: 'Stay current with cutting-edge AI developments' },
+    { name: 'Task Decomposition', slug: 'task-decomposition', Icon: CircuitLayersIcon, hours: 60, price: '€800', description: 'Break complex tasks into AI-manageable components' },
+    { name: 'Multi-Agent Coordination', slug: 'multi-agent-coordination', Icon: NetworkNodesIcon, hours: 90, price: '€1,200', description: 'Coordinate multiple AI agents effectively' },
+    { name: 'Performance Optimization', slug: 'performance-optimization', Icon: EnergyNodeIcon, hours: 120, price: '€1,750', description: 'Optimize AI system performance and efficiency' },
+    { name: 'Human-AI Design', slug: 'human-ai-design', Icon: DataFlowIcon, hours: 90, price: '€1,000', description: 'Design effective human-AI collaboration workflows' },
+    { name: 'Restricted Methods', slug: 'restricted-methods', Icon: CircuitLockIcon, hours: 120, price: '€1,500', description: 'Navigate restricted AI methods responsibly' },
+    { name: 'Latest in AI 2025', slug: 'latest-in-ai', Icon: NeuralBrainIcon, hours: 60, price: '€800', description: 'Stay current with cutting-edge AI developments' },
+    { name: 'Secure AI Operations', slug: 'secure-ai-operations', Icon: ShieldNodeIcon, hours: 120, price: '€1,800', description: 'Implement security best practices for AI systems' },
+    { name: 'Prompt Engineering', slug: 'prompt-engineering', Icon: LightbulbNodeIcon, hours: 60, price: '€750', description: 'Master the art of effective AI prompting' },
+    { name: 'AI Product Management', slug: 'ai-product-management', Icon: DataNodeIcon, hours: 90, price: '€1,100', description: 'Lead AI product development lifecycle' },
+    { name: 'Data Pipeline Design', slug: 'data-pipeline-design', Icon: DataFlowIcon, hours: 90, price: '€1,200', description: 'Build robust data pipelines for AI systems' },
+    { name: 'Model Evaluation', slug: 'model-evaluation', Icon: CodeNodeIcon, hours: 90, price: '€1,100', description: 'Assess and validate AI model performance' },
+    { name: 'AI Deployment', slug: 'ai-deployment', Icon: NetworkNodesIcon, hours: 120, price: '€1,600', description: 'Deploy AI systems to production at scale' },
   ];
 
   const aioModules = [
-    { name: 'Ethical Data Use', Icon: ShieldNodeIcon, hours: 90, price: '€960', description: 'Ensure ethical data practices in AI systems' },
-    { name: 'Privacy Auditor', Icon: CircuitLockIcon, hours: 90, price: '€1,440', description: 'Conduct comprehensive privacy audits' },
-    { name: 'Legal Auditor', Icon: DataNodeIcon, hours: 90, price: '€1,800', description: 'Perform legal compliance assessments' },
-    { name: 'Resource Management', Icon: DataFlowIcon, hours: 90, price: '€1,200', description: 'Optimize AI resource allocation' },
-    { name: 'Process Optimization', Icon: NetworkNodesIcon, hours: 90, price: '€1,800', description: 'Streamline AI-driven processes' },
-    { name: 'Sustainability & AI', Icon: SustainabilityIcon, hours: 90, price: '€1,440', description: 'Implement sustainable AI practices' },
-    { name: 'Crisis Prevention', Icon: RiskAlertIcon, hours: 90, price: '€2,100', description: 'Prevent and mitigate AI-related crises' },
-    { name: 'Financial Evaluations', Icon: EnergyNodeIcon, hours: 90, price: '€1,440', description: 'Evaluate AI investments and ROI' },
-    { name: 'AI for Government', Icon: DataNodeIcon, hours: 90, price: '€1,200', description: 'Deploy AI in public sector contexts' },
-    { name: 'AI for Security', Icon: ShieldNodeIcon, hours: 90, price: '€1,800', description: 'Apply AI in security operations' },
-    { name: 'Cybersecurity Auditing', Icon: CircuitLockIcon, hours: 90, price: '€2,100', description: 'Audit AI cybersecurity measures' },
-    { name: 'AI-Enhanced AML/KYC', Icon: NeuralBrainIcon, hours: 90, price: '€1,800', description: 'Implement AI in compliance processes' },
+    { name: 'Ethical Data Use', slug: 'ethical-data-use', Icon: ShieldNodeIcon, hours: 60, price: '€960', description: 'Ensure ethical data practices in AI systems' },
+    { name: 'Privacy Auditor', slug: 'privacy-auditor', Icon: CircuitLockIcon, hours: 90, price: '€1,440', description: 'Conduct comprehensive privacy audits' },
+    { name: 'Crisis Prevention', slug: 'crisis-prevention', Icon: RiskAlertIcon, hours: 120, price: '€2,100', description: 'Prevent and mitigate AI-related crises' },
+    { name: 'Legal Auditor', slug: 'legal-auditor', Icon: DataNodeIcon, hours: 90, price: '€1,800', description: 'Perform legal compliance assessments' },
+    { name: 'Resource Management', slug: 'resource-management', Icon: DataFlowIcon, hours: 60, price: '€1,200', description: 'Optimize AI resource allocation' },
+    { name: 'Process Optimization', slug: 'process-optimization', Icon: NetworkNodesIcon, hours: 90, price: '€1,800', description: 'Streamline AI-driven processes' },
+    { name: 'Sustainability & AI', slug: 'sustainability-ai', Icon: SustainabilityIcon, hours: 60, price: '€1,440', description: 'Implement sustainable AI practices' },
+    { name: 'Financial Evaluations', slug: 'financial-evaluations', Icon: EnergyNodeIcon, hours: 90, price: '€1,440', description: 'Evaluate AI investments and ROI' },
+    { name: 'AI for Government', slug: 'ai-for-government', Icon: DataNodeIcon, hours: 60, price: '€1,200', description: 'Deploy AI in public sector contexts' },
+    { name: 'AI for Security', slug: 'ai-for-security', Icon: ShieldNodeIcon, hours: 90, price: '€1,800', description: 'Apply AI in security operations' },
+    { name: 'Cybersecurity Auditing', slug: 'cybersecurity-auditing', Icon: CircuitLockIcon, hours: 120, price: '€2,100', description: 'Audit AI cybersecurity measures' },
+    { name: 'AI-Enhanced AML/KYC', slug: 'aml-kyc', Icon: NeuralBrainIcon, hours: 90, price: '€1,800', description: 'Implement AI in compliance processes' },
   ];
 
   const allModules = [
@@ -61,7 +70,7 @@ const ModulesSection = () => {
             <span className="gradient-text">Modules</span>
           </h2>
           <p className="body-large text-muted-foreground">
-            Each standalone module is a self-contained unit with its own certificate of competency, tested via rubrics. They feed into tracks but can be taken independently. All ESG 2015 compliant and EU AI Act-aligned.
+            Each standalone module is a self-contained 4-week unit with its own certificate of competency. JHU-inspired methodology with masterclasses, hands-on labs, mentored sessions, and mini-capstone projects. All ESG 2015 compliant and EU AI Act-aligned.
           </p>
         </div>
 
@@ -70,8 +79,8 @@ const ModulesSection = () => {
           <div className="inline-flex p-1 bg-muted rounded-lg">
             {[
               { value: 'all', label: 'All Modules' },
-              { value: 'aic', label: 'AIC Modules' },
-              { value: 'aio', label: 'AIO Modules' },
+              { value: 'aic', label: 'AIC Modules (12)' },
+              { value: 'aio', label: 'AIO Modules (12)' },
             ].map((tab) => (
               <button
                 key={tab.value}
@@ -90,11 +99,12 @@ const ModulesSection = () => {
         </div>
 
         {/* Modules Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {filteredModules.map((module, index) => (
-            <div
+            <Link
+              to={`/modules/${module.track}/${module.slug}`}
               key={`${module.track}-${module.name}`}
-              className="group bg-card rounded-xl border border-border p-6 card-hover"
+              className="group bg-card rounded-xl border border-border p-6 card-hover block"
               style={{ animationDelay: `${index * 50}ms` }}
             >
               {/* Icon & Track Badge */}
@@ -130,7 +140,7 @@ const ModulesSection = () => {
               <div className="flex items-center justify-between text-sm">
                 <div className="flex items-center gap-1 text-muted-foreground">
                   <Clock className="w-3.5 h-3.5" />
-                  {module.hours} hours
+                  {module.hours}h / 4 weeks
                 </div>
                 <span className={cn(
                   'font-semibold',
@@ -142,24 +152,22 @@ const ModulesSection = () => {
 
               {/* Hover Action */}
               <div className="mt-4 pt-4 border-t border-border">
-                <Button variant="ghost" size="sm" className="w-full group/btn" asChild>
-                  <a href="#pricing">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                  </a>
-                </Button>
+                <span className="flex items-center justify-center text-sm font-medium text-primary group-hover:gap-2 transition-all">
+                  View Curriculum
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
         {/* CTA */}
         <div className="text-center mt-12">
           <Button variant="hero" size="lg" asChild>
-            <a href="#pricing" className="group">
-              Browse All Modules
+            <Link to="/certifications" className="group">
+              View Full Certification Tracks
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </Link>
           </Button>
         </div>
       </div>
