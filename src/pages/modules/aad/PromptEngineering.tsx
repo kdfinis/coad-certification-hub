@@ -16,50 +16,60 @@ const PromptEngineering = () => {
   const weeklyBreakdown = [
     {
       week: 1,
-      title: "Masterclass – Prompt Design Principles",
-      hours: 15,
-      description: "Expert-led session covering the science and art of effective prompt engineering.",
+      title: "Masterclass – Prompt Engineering Fundamentals",
+      hours: "15-20",
+      description: "Live/Recorded Session (1-2 hours) covering model behavior, prompt patterns, task optimization, iteration strategies, and common pitfalls.",
+      keyConcepts: ["Prompt patterns", "Model behavior", "Task optimization", "Iteration strategies"],
       activities: [
-        "LLM behavior and capabilities",
-        "Prompt structure and formatting",
-        "Context window optimization",
-        "Zero-shot vs few-shot techniques"
+        "Model Behavior: Understand how LLMs process prompts and generate outputs",
+        "Prompt Patterns: Learn proven patterns (Chain-of-Thought, few-shot, role-playing, structured output)",
+        "Task Optimization: Design prompts optimized for specific tasks (classification, generation, extraction, reasoning)",
+        "Iteration Strategies: Systematic approaches to improving prompts through testing",
+        "Common Pitfalls: Avoid typical prompt engineering mistakes"
       ]
     },
     {
       week: 2,
-      title: "Hands-On Labs – Advanced Techniques",
-      hours: 15,
-      description: "Practical exercises with chain-of-thought, role prompting, and retrieval augmentation.",
+      title: "Hands-On Labs – Crafting Effective Prompts",
+      hours: "15-20",
+      description: "Practical Exercises (15-20 hours) including pattern application, task optimization, and advanced techniques.",
+      keyConcepts: ["Pattern application", "Task optimization", "Few-shot learning", "Chain-of-Thought"],
       activities: [
-        "Chain-of-thought prompting",
-        "Role and persona engineering",
-        "RAG system integration",
-        "Prompt chaining strategies"
+        "Lab 1: Pattern Application - Apply different prompt patterns to various tasks, compare results, create prompt libraries",
+        "Lab 2: Task Optimization - Design prompts for specific use cases, optimize for quality/consistency/efficiency, test and iterate",
+        "Lab 3: Advanced Techniques - Use few-shot learning and in-context examples, implement Chain-of-Thought reasoning, design prompts for complex multi-step tasks",
+        "Deliverables: Prompt libraries, optimized prompts, comparison analyses"
       ]
     },
     {
       week: 3,
-      title: "Mentored Sessions – Enterprise Applications",
-      hours: 15,
-      description: "Expert guidance on deploying prompt engineering in production environments.",
+      title: "Mentored Sessions – Prompt Refinement",
+      hours: "15-20",
+      description: "Forum Q&A + Optional Live Office Hours for expert feedback, quality improvement, use case guidance, best practices, and troubleshooting.",
+      keyConcepts: ["Expert feedback", "Quality improvement", "Best practices", "Troubleshooting"],
       activities: [
-        "Prompt version control",
-        "Testing and evaluation methods",
-        "ESG-aligned content generation",
-        "EU AI Act transparency requirements"
+        "Expert Feedback: Get expert review of your prompt designs",
+        "Quality Improvement: Learn techniques for improving prompt quality and consistency",
+        "Use Case Guidance: Receive guidance on prompts for specific use cases",
+        "Best Practices: Learn from successful prompt engineering examples",
+        "Troubleshooting: Get help debugging prompt issues and improving results",
+        "Focus Areas: Prompt quality, consistency, optimization, practical application"
       ]
     },
     {
       week: 4,
-      title: "Mini-Capstone – Prompt Library",
-      hours: 15,
-      description: "Design and deliver a production-ready prompt library for enterprise use.",
+      title: "Mini-Capstone – Prompt Engineering Portfolio",
+      hours: "15-20",
+      description: "Final Project (15-20 hours) creating a comprehensive prompt engineering portfolio demonstrating mastery across different use cases.",
+      keyConcepts: ["Prompt library", "Use case demonstrations", "Optimization documentation", "Performance analysis", "Best practices guide"],
       activities: [
-        "Comprehensive prompt library",
-        "Documentation and guidelines",
-        "Testing and validation results",
-        "Blockchain certificate issuance"
+        "Prompt Library: Collection of optimized prompts for various tasks",
+        "Use Case Demonstrations: Working prompts for 3-5 different use cases",
+        "Optimization Documentation: Explanation of prompt design decisions and iterations",
+        "Performance Analysis: Comparison of prompt variations and their results",
+        "Best Practices Guide: Documented learnings and recommendations",
+        "Mentor Review: Receive detailed rubric-based feedback on prompt quality, variety, and practical applicability",
+        "Portfolio Piece: Your capstone becomes a portfolio-ready prompt engineering portfolio demonstrating your skills"
       ]
     }
   ];
@@ -128,8 +138,7 @@ const PromptEngineering = () => {
               </h1>
               
               <p className="body-large text-gray-300 mb-8 max-w-2xl">
-                Master the art and science of communicating with large language models. Learn 
-                advanced techniques to get consistent, high-quality outputs from AI systems.
+                The Prompt Engineering module teaches you to master the art of effective AI prompting. You'll learn proven techniques for crafting prompts that produce reliable, high-quality outputs from large language models—moving beyond trial-and-error to systematic, repeatable prompt design.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
@@ -169,34 +178,56 @@ const PromptEngineering = () => {
               <div>
                 <h2 className="heading-2 mb-6">Module Overview</h2>
                 <p className="body-large text-muted-foreground mb-6">
-                  Prompt engineering is the foundational skill for anyone working with LLMs. This 
-                  module takes you from basics to advanced techniques, covering everything from 
-                  simple prompts to complex RAG systems.
+                  The Prompt Engineering module teaches you to master the art of effective AI prompting. You'll learn proven techniques for crafting prompts that produce reliable, high-quality outputs from large language models—moving beyond trial-and-error to systematic, repeatable prompt design.
                 </p>
-                <p className="body text-muted-foreground mb-8">
-                  You'll learn not just how to write prompts, but how to build maintainable prompt 
-                  systems for enterprise use – including version control, testing, and compliance 
-                  documentation.
+                <p className="body text-muted-foreground mb-6">
+                  Prompt engineering is the foundation of working with modern AI systems. This module provides structured frameworks for prompt design: understanding model behavior, using proven patterns (Chain-of-Thought, few-shot learning, role-playing), optimizing for specific tasks, and iterating systematically. Whether you're building AI applications, automating workflows, or extracting insights, this module gives you the prompt engineering skills needed for success.
                 </p>
+
+                <div className="bg-muted/50 rounded-xl p-6 border border-border mb-8">
+                  <h3 className="font-semibold mb-4">Who This Module Is For</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">AI Practitioners</strong> building applications with LLMs</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Developers</strong> integrating AI capabilities into products</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Analysts</strong> using AI for data analysis and insights</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Content Creators</strong> leveraging AI for content generation</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Automation Specialists</strong> building AI-powered workflows</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Anyone</strong> working with large language models who wants better results</span>
+                    </li>
+                  </ul>
+                  <p className="text-xs text-muted-foreground mt-4 italic">Prerequisites: Basic familiarity with AI/LLMs helpful but not required. No coding required.</p>
+                </div>
 
                 <div className="bg-muted/50 rounded-xl p-6 border border-border">
                   <h3 className="font-semibold mb-4">Assessment Criteria</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Project rubric assessment (80% pass threshold)</span>
+                      <div>
+                        <span className="text-foreground font-medium">Project Rubric (80% pass requirement)</span>
+                        <p className="text-sm text-muted-foreground mt-1">Prompt quality and effectiveness (30%), pattern application (25%), use case variety (20%), optimization documentation (15%), portfolio completeness (10%)</p>
+                      </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Prompt library delivery</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Testing documentation</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Peer review participation</span>
+                      <span className="text-muted-foreground">Active participation in labs, forums, and mentored sessions</span>
                     </li>
                   </ul>
                 </div>
@@ -204,15 +235,51 @@ const PromptEngineering = () => {
 
               <div>
                 <h3 className="heading-3 mb-6">Learning Outcomes</h3>
+                <p className="text-muted-foreground mb-6 text-sm">
+                  Upon completion, you will be able to:
+                </p>
                 <div className="space-y-4">
-                  {learningOutcomes.map((outcome, index) => (
+                  {[
+                    "Design Effective Prompts: Create prompts that produce reliable, high-quality outputs",
+                    "Apply Patterns: Use proven prompt patterns for different tasks and use cases",
+                    "Optimize Prompts: Iterate systematically to improve prompt quality and consistency",
+                    "Handle Complex Tasks: Design prompts for multi-step, complex reasoning tasks",
+                    "Build Prompt Libraries: Create reusable prompt collections for common tasks",
+                    "Document Best Practices: Document prompt engineering learnings and patterns"
+                  ].map((outcome, index) => (
                     <div key={index} className="flex items-start gap-4 p-4 bg-card rounded-lg border border-border">
                       <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                         <span className="text-primary font-semibold text-sm">{index + 1}</span>
                       </div>
-                      <p className="text-foreground">{outcome}</p>
+                      <p className="text-foreground text-sm">{outcome}</p>
                     </div>
                   ))}
+                </div>
+
+                <div className="mt-8 bg-gradient-to-br from-primary/10 to-teal/10 rounded-xl p-6 border border-border">
+                  <h3 className="font-semibold mb-3">Module Benefits</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Foundation Skill:</strong> Prompt engineering is essential for working with modern AI</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Immediate Application:</strong> Apply prompt skills to current projects immediately</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Career Enhancement:</strong> Demonstrate practical AI skills employers value</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Track Credit:</strong> Counts toward AAC track completion</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Cost Efficiency:</strong> Better prompts reduce API costs and improve results</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -246,6 +313,18 @@ const PromptEngineering = () => {
                   <div className="p-6">
                     <h3 className="font-semibold text-lg mb-3">{week.title}</h3>
                     <p className="text-muted-foreground text-sm mb-4">{week.description}</p>
+                    {week.keyConcepts && (
+                      <div className="mb-4">
+                        <p className="text-xs font-semibold text-foreground mb-2">Key Concepts:</p>
+                        <div className="flex flex-wrap gap-2">
+                          {week.keyConcepts.map((concept, i) => (
+                            <span key={i} className="px-2 py-1 bg-primary/10 text-primary text-xs rounded">
+                              {concept}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                     <ul className="space-y-2">
                       {week.activities.map((activity, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm">
@@ -257,6 +336,125 @@ const PromptEngineering = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Certification & Benefits */}
+        <section className="section-padding bg-background">
+          <div className="container-coad">
+            <div className="grid lg:grid-cols-2 gap-12">
+              <div>
+                <h2 className="heading-2 mb-6">Assessment & Certification</h2>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="font-semibold mb-3">Assessment Method</h3>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      Your mini-capstone is evaluated against a detailed rubric covering:
+                    </p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-semibold">30%</span>
+                        <span className="text-muted-foreground">Prompt quality and effectiveness</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-semibold">25%</span>
+                        <span className="text-muted-foreground">Pattern application</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-semibold">20%</span>
+                        <span className="text-muted-foreground">Use case variety</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-semibold">15%</span>
+                        <span className="text-muted-foreground">Optimization documentation</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-semibold">10%</span>
+                        <span className="text-muted-foreground">Portfolio completeness</span>
+                      </li>
+                    </ul>
+                    <p className="text-sm text-muted-foreground mt-4">
+                      <strong className="text-foreground">Pass Requirement:</strong> 80% overall score
+                    </p>
+                  </div>
+                  <div className="bg-gradient-to-br from-primary/10 to-teal/10 rounded-xl p-6 border border-border">
+                    <h3 className="font-semibold mb-3">Certificate</h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Upon successful completion, you receive:
+                    </p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-start gap-2">
+                        <AwardNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground"><strong className="text-foreground">Blockchain-Verified Certificate:</strong> "Certificate of Competency in Prompt Engineering"</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <AwardNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground"><strong className="text-foreground">Digital Badge:</strong> Shareable on LinkedIn and the Accredited Experts Directory</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <AwardNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground"><strong className="text-foreground">ECTS Credits:</strong> 2 credits (60 hours) toward professional development</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <AwardNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground"><strong className="text-foreground">Portfolio Artifact:</strong> Your capstone prompt portfolio for your professional portfolio</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h2 className="heading-2 mb-6">Pricing & Enrollment</h2>
+                <div className="bg-card rounded-xl p-6 border border-border mb-6">
+                  <div className="text-4xl font-bold gradient-text mb-2">€750</div>
+                  <p className="text-muted-foreground text-sm mb-6">4 weeks (60 hours) • 2 ECTS Credits</p>
+                  <h3 className="font-semibold mb-3">What's Included:</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground mb-6">
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Access to all masterclass recordings</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Hands-on lab exercises and materials</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Mentored support (forum + optional office hours)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Rubric-based assessment and feedback</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Blockchain-verified certificate upon completion</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Lifetime access to course materials</span>
+                    </li>
+                  </ul>
+                  <div className="pt-4 border-t border-border">
+                    <h3 className="font-semibold mb-3">Enrollment Options:</h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span><strong className="text-foreground">Standalone:</strong> Take this module independently</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span><strong className="text-foreground">Track Credit:</strong> Counts toward AAC (Agentic AI Competency) track completion</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span><strong className="text-foreground">Corporate:</strong> Bulk enrollment available for teams</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -288,16 +486,21 @@ const PromptEngineering = () => {
           <div className="container-coad">
             <div className="max-w-4xl mx-auto text-center">
               <GraduationNodeIcon className="w-16 h-16 mx-auto mb-6 text-primary" />
-              <h2 className="heading-2 mb-4">Part of the AAD Track</h2>
-              <p className="body-large text-gray-300 mb-8">
-                This module counts toward your Agentic AI Developer (AAD) Track certification.
+              <h2 className="heading-2 mb-4">Part of the AAC Track</h2>
+              <p className="body-large text-gray-300 mb-6">
+                This module counts toward your Agentic AI Competency (AAC) Track certification. 
+                Complete all track modules to achieve Charterholder status and priority 
+                listing in the COAD Expert Directory.
+              </p>
+              <p className="text-sm text-gray-400 mb-8">
+                <strong>Track Integration:</strong> This module feeds into AAC Phase 1 (Foundations & Prompt Engineering)
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="xl" asChild>
                   <Link to="/auth">Enroll Now – €750</Link>
                 </Button>
                 <Button variant="outline" size="xl" className="border-gray-600 text-gray-300 hover:bg-white/10" asChild>
-                  <Link to="/certifications">Explore Full AAD Track</Link>
+                  <Link to="/certifications">Explore Full AAC Track</Link>
                 </Button>
               </div>
             </div>
