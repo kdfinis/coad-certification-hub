@@ -238,6 +238,18 @@ const PrivacyAuditor = () => {
                   <div className="p-6">
                     <h3 className="font-semibold text-lg mb-3">{week.title}</h3>
                     <p className="text-muted-foreground text-sm mb-4">{week.description}</p>
+                    {week.keyConcepts && (
+                      <div className="mb-4">
+                        <p className="text-xs font-semibold text-foreground mb-2">Key Concepts:</p>
+                        <div className="flex flex-wrap gap-2">
+                          {week.keyConcepts.map((concept, i) => (
+                            <span key={i} className="px-2 py-1 bg-teal/10 text-teal text-xs rounded">
+                              {concept}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                     <ul className="space-y-2">{week.activities.map((activity, i) => (<li key={i} className="flex items-start gap-2 text-sm"><CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" /><span className="text-muted-foreground">{activity}</span></li>))}</ul>
                   </div>
                 </div>
@@ -246,6 +258,126 @@ const PrivacyAuditor = () => {
           </div>
         </section>
 
+        {/* Certification & Benefits */}
+        <section className="section-padding bg-background">
+          <div className="container-coad">
+            <div className="grid lg:grid-cols-2 gap-12">
+              <div>
+                <h2 className="heading-2 mb-6">Assessment & Certification</h2>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="font-semibold mb-3">Assessment Method</h3>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      Your mini-capstone is evaluated against a detailed rubric covering:
+                    </p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-start gap-2">
+                        <span className="text-teal font-semibold">25%</span>
+                        <span className="text-muted-foreground">Data flow mapping completeness</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-teal font-semibold">30%</span>
+                        <span className="text-muted-foreground">Privacy risk assessment quality</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-teal font-semibold">20%</span>
+                        <span className="text-muted-foreground">DPIA quality</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-teal font-semibold">15%</span>
+                        <span className="text-muted-foreground">Compliance evaluation</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-teal font-semibold">10%</span>
+                        <span className="text-muted-foreground">Documentation clarity</span>
+                      </li>
+                    </ul>
+                    <p className="text-sm text-muted-foreground mt-4">
+                      <strong className="text-foreground">Pass Requirement:</strong> 80% overall score
+                    </p>
+                  </div>
+                  <div className="bg-gradient-to-br from-teal/10 to-primary/10 rounded-xl p-6 border border-border">
+                    <h3 className="font-semibold mb-3">Certificate</h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Upon successful completion, you receive:
+                    </p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-start gap-2">
+                        <AwardNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground"><strong className="text-foreground">Blockchain-Verified Certificate:</strong> "Certificate of Competency in Privacy Auditing for AI Systems"</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <AwardNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground"><strong className="text-foreground">Digital Badge:</strong> Shareable on LinkedIn and the Accredited Experts Directory</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <AwardNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground"><strong className="text-foreground">ECTS Credits:</strong> 3 credits (90 hours) toward professional development</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <AwardNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground"><strong className="text-foreground">Portfolio Artifact:</strong> Your capstone privacy audit for your professional portfolio</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h2 className="heading-2 mb-6">Pricing & Enrollment</h2>
+                <div className="bg-card rounded-xl p-6 border border-border mb-6">
+                  <div className="text-4xl font-bold gradient-text mb-2">€1,440</div>
+                  <p className="text-muted-foreground text-sm mb-6">4 weeks (90 hours) • 3 ECTS Credits</p>
+                  <h3 className="font-semibold mb-3">What's Included:</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground mb-6">
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Access to all masterclass recordings</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Hands-on lab exercises and materials</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Mentored support (forum + optional office hours)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Rubric-based assessment and feedback</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Blockchain-verified certificate upon completion</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Lifetime access to course materials</span>
+                    </li>
+                  </ul>
+                  <div className="pt-4 border-t border-border">
+                    <h3 className="font-semibold mb-3">Enrollment Options:</h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                        <span><strong className="text-foreground">Standalone:</strong> Take this module independently</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                        <span><strong className="text-foreground">Track Credit:</strong> Counts toward AIO (AI Oversight) track completion</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                        <span><strong className="text-foreground">Corporate:</strong> Bulk enrollment available for teams</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Real-World Use Cases */}
         <section className="section-padding bg-background">
           <div className="container-coad">
             <div className="text-center mb-12"><h2 className="heading-2 mb-4">Real-World Applications</h2></div>
@@ -260,12 +392,20 @@ const PrivacyAuditor = () => {
           </div>
         </section>
 
+        {/* Track Integration */}
         <section className="section-padding bg-navy text-primary-foreground">
           <div className="container-coad">
             <div className="max-w-4xl mx-auto text-center">
               <GraduationNodeIcon className="w-16 h-16 mx-auto mb-6 text-teal" />
               <h2 className="heading-2 mb-4">Part of the AIO Track</h2>
-              <p className="body-large text-gray-300 mb-8">This module counts toward your AI Oversight (AIO) Track certification.</p>
+              <p className="body-large text-gray-300 mb-6">
+                This module counts toward your AI Oversight (AIO) Track certification. 
+                Complete all track modules to achieve Charterholder status and priority 
+                listing in the COAD Expert Directory.
+              </p>
+              <p className="text-sm text-gray-400 mb-8">
+                <strong>Track Integration:</strong> This module feeds into AIO Domain 2 (Ethical Oversight)
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="xl" asChild><Link to="/auth">Enroll Now – €1,440</Link></Button>
                 <Button variant="outline" size="xl" className="border-gray-600 text-gray-300 hover:bg-white/10" asChild><Link to="/certifications">Explore Full AIO Track</Link></Button>
