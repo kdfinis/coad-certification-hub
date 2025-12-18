@@ -19,49 +19,60 @@ const TaskDecomposition = () => {
     {
       week: 1,
       title: "Masterclass – Breaking Problems into AI Tasks",
-      hours: 15,
-      description: "Expert-led recorded session covering problem decomposition frameworks, task identification methodologies, and AI capability mapping.",
+      hours: "15-20",
+      description: "Live/Recorded Session (1-2 hours) covering goal analysis, task hierarchies, workflow mapping, AI suitability assessment, and success criteria definition.",
+      keyConcepts: ["Task decomposition", "Workflow modeling", "AI-human task allocation", "Dependency mapping"],
       activities: [
-        "Problem analysis frameworks for AI suitability",
-        "Task granularity optimization techniques",
-        "AI capability assessment matrices",
-        "Live Q&A with industry practitioners"
+        "Goal Analysis: Learn to identify the core objective behind any business problem",
+        "Task Hierarchies: Understand how to decompose high-level goals into sub-tasks and atomic actions",
+        "Workflow Mapping: Master techniques for visualizing processes, dependencies, and decision points",
+        "AI Suitability Assessment: Discover which tasks are best suited for AI automation vs. human judgment",
+        "Success Criteria Definition: Learn to define measurable outcomes for each workflow stage"
       ]
     },
     {
       week: 2,
-      title: "Hands-On Labs – Build Simple Workflows",
-      hours: 15,
-      description: "Practical workshop using no-code and low-code tools to construct AI workflows from decomposed tasks.",
+      title: "Hands-On Labs – Building Simple Workflows",
+      hours: "15-20",
+      description: "Practical Exercises (15-20 hours) including process mapping, workflow design, and AI integration planning.",
+      keyConcepts: ["Process mapping", "Workflow design", "AI integration", "Exception handling"],
       activities: [
-        "No-code workflow builder exercises",
-        "Task sequencing and dependency mapping",
-        "Integration with popular AI tools",
-        "Workflow documentation standards"
+        "Lab 1: Process Mapping - Map a current business process, identify automation opportunities, distinguish structured vs unstructured tasks",
+        "Lab 2: Workflow Design - Design optimized workflows using no-code/low-code tools, create process diagrams, document failure paths",
+        "Lab 3: AI Integration Planning - Identify where AI agents fit, define input/output requirements, plan oversight checkpoints",
+        "Deliverables: Process maps, workflow diagrams, AI integration plan"
       ]
     },
     {
       week: 3,
-      title: "Mentored Sessions – Forum Feedback",
-      hours: 15,
-      description: "Weekly forum Q&A plus optional live office hours with industry professionals reviewing your personal project.",
+      title: "Mentored Sessions – Refining Your Workflow",
+      hours: "15-20",
+      description: "Forum Q&A + Optional Live Office Hours for structured feedback, edge case analysis, optimization guidance, and real-world scenarios.",
+      keyConcepts: ["Peer review", "Edge case handling", "Optimization", "Best practices"],
       activities: [
-        "Peer review of decomposition strategies",
-        "Expert feedback on workflow designs",
-        "ESG compliance checks in workflows",
-        "EU AI Act alignment verification"
+        "Structured Feedback: Post your workflow design for peer and mentor review",
+        "Edge Case Analysis: Discuss how to handle exceptions, errors, and unexpected inputs",
+        "Optimization Guidance: Receive expert feedback on workflow efficiency and clarity",
+        "Real-World Scenarios: Work through case studies from various industries",
+        "Q&A Sessions: Get answers to specific questions about your workflow challenges",
+        "Focus Areas: Clarity, robustness, failure handling, scalability"
       ]
     },
     {
       week: 4,
       title: "Mini-Capstone – Deliver Optimized Workflow",
-      hours: 15,
-      description: "Final practical deliverable with mentor review, creating a portfolio-ready AI workflow system.",
+      hours: "15-20",
+      description: "Final Project (15-20 hours) designing and documenting a fully optimized workflow for a real business process.",
+      keyConcepts: ["Complete process map", "Task breakdown", "AI integration points", "Failure handling", "Oversight checkpoints", "Success metrics"],
       activities: [
-        "Complete workflow system delivery",
-        "Documentation and presentation",
-        "Mentor feedback and assessment",
-        "Blockchain certificate issuance"
+        "Complete Process Map: Visual representation of the entire workflow",
+        "Task Breakdown: Detailed decomposition of each major step",
+        "AI Integration Points: Clear specification of where and how AI agents participate",
+        "Failure Handling: Documented exception paths and error recovery",
+        "Oversight Checkpoints: Defined human review and approval stages",
+        "Success Metrics: Measurable outcomes for workflow validation",
+        "Mentor Review: Receive detailed rubric-based feedback on clarity, completeness, and practical applicability",
+        "Portfolio Piece: Your capstone becomes a portfolio-ready artifact demonstrating your workflow design competency"
       ]
     }
   ];
@@ -171,34 +182,60 @@ const TaskDecomposition = () => {
               <div>
                 <h2 className="heading-2 mb-6">Module Overview</h2>
                 <p className="body-large text-muted-foreground mb-6">
-                  This foundation module teaches you to analyze complex business problems and 
-                  decompose them into discrete tasks suitable for AI automation. Using a JHU-inspired 
-                  methodology, you'll move from theory to practice in just four weeks.
+                  The Task Decomposition & AI Workflow Design module equips professionals with the foundational skill of breaking complex business problems into structured, AI-manageable components. Whether you're an analyst, engineer, consultant, or product manager, this module teaches you to transform vague objectives into clear, executable workflows that AI systems can reliably handle and improve over time.
                 </p>
-                <p className="body text-muted-foreground mb-8">
-                  The module emphasizes practical application over theory – 60% of your time will be 
-                  spent on hands-on labs and projects. You'll work with real-world scenarios and 
-                  build a portfolio piece that demonstrates your competency.
+                <p className="body text-muted-foreground mb-6">
+                  Many professionals know what they want AI to accomplish but struggle to translate business needs into actionable steps. This module bridges that gap, providing you with systematic frameworks for task analysis, workflow mapping, and AI integration planning. You'll learn to distinguish between human and agent work, identify dependencies, define success criteria, and design workflows that are both powerful and maintainable.
                 </p>
+
+                <div className="bg-muted/50 rounded-xl p-6 border border-border mb-8">
+                  <h3 className="font-semibold mb-4">Who This Module Is For</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Business Analysts</strong> who need to translate stakeholder requirements into AI-automatable processes</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Product Managers</strong> designing features that integrate AI capabilities</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Consultants</strong> helping clients identify AI opportunities in their operations</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Operations Professionals</strong> seeking to optimize workflows with AI assistance</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Technical Professionals</strong> new to AI who want to understand workflow design principles</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Entrepreneurs</strong> building AI-powered products or services</span>
+                    </li>
+                  </ul>
+                  <p className="text-xs text-muted-foreground mt-4 italic">Prerequisites: No coding required. Basic familiarity with business processes and problem-solving is helpful.</p>
+                </div>
 
                 <div className="bg-muted/50 rounded-xl p-6 border border-border">
                   <h3 className="font-semibold mb-4">Assessment Criteria</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Project rubric assessment (80% pass threshold)</span>
+                      <div>
+                        <span className="text-foreground font-medium">Project Rubric (80% pass requirement)</span>
+                        <p className="text-sm text-muted-foreground mt-1">Task decomposition quality (25%), workflow clarity (25%), AI integration planning (20%), failure handling (20%), documentation quality (10%)</p>
+                      </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Active participation in forum discussions</span>
+                      <span className="text-muted-foreground">Active participation in forums, labs, and mentored sessions</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
                       <span className="text-muted-foreground">Mini-capstone deliverable with mentor feedback</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">ESG and EU AI Act compliance verification</span>
                     </li>
                   </ul>
                 </div>
@@ -206,15 +243,51 @@ const TaskDecomposition = () => {
 
               <div>
                 <h3 className="heading-3 mb-6">Learning Outcomes</h3>
+                <p className="text-muted-foreground mb-6 text-sm">
+                  Upon completion, you will be able to:
+                </p>
                 <div className="space-y-4">
-                  {learningOutcomes.map((outcome, index) => (
+                  {[
+                    "Decompose Complex Problems: Break down ambiguous business objectives into clear, actionable tasks",
+                    "Design AI-Ready Workflows: Create process maps that clearly show where AI agents fit and how they interact with human steps",
+                    "Identify Dependencies: Map task sequences, prerequisites, and parallel execution opportunities",
+                    "Plan for Failure: Design workflows that gracefully handle errors, exceptions, and edge cases",
+                    "Define Success Criteria: Establish measurable outcomes for each workflow stage",
+                    "Document Processes: Create clear, maintainable workflow documentation suitable for technical and non-technical stakeholders"
+                  ].map((outcome, index) => (
                     <div key={index} className="flex items-start gap-4 p-4 bg-card rounded-lg border border-border">
                       <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                         <span className="text-primary font-semibold text-sm">{index + 1}</span>
                       </div>
-                      <p className="text-foreground">{outcome}</p>
+                      <p className="text-foreground text-sm">{outcome}</p>
                     </div>
                   ))}
+                </div>
+
+                <div className="mt-8 bg-gradient-to-br from-primary/10 to-teal/10 rounded-xl p-6 border border-border">
+                  <h3 className="font-semibold mb-3">Module Benefits</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Immediate Applicability:</strong> Apply workflow design skills to your current role immediately</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Foundation for AI Projects:</strong> Essential prerequisite for building AI-powered systems</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Career Enhancement:</strong> Demonstrate structured thinking and process optimization skills</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Standalone or Stackable:</strong> Take independently or as credit toward AAC track completion</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">EU AI Act Alignment:</strong> Learn to design workflows that incorporate oversight and compliance from the start</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -251,6 +324,18 @@ const TaskDecomposition = () => {
                   <div className="p-6">
                     <h3 className="font-semibold text-lg mb-3">{week.title}</h3>
                     <p className="text-muted-foreground text-sm mb-4">{week.description}</p>
+                    {week.keyConcepts && (
+                      <div className="mb-4">
+                        <p className="text-xs font-semibold text-foreground mb-2">Key Concepts:</p>
+                        <div className="flex flex-wrap gap-2">
+                          {week.keyConcepts.map((concept, i) => (
+                            <span key={i} className="px-2 py-1 bg-primary/10 text-primary text-xs rounded">
+                              {concept}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                     <ul className="space-y-2">
                       {week.activities.map((activity, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm">
@@ -292,23 +377,145 @@ const TaskDecomposition = () => {
           </div>
         </section>
 
+        {/* Certification & Benefits */}
+        <section className="section-padding bg-background">
+          <div className="container-coad">
+            <div className="grid lg:grid-cols-2 gap-12">
+              <div>
+                <h2 className="heading-2 mb-6">Assessment & Certification</h2>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="font-semibold mb-3">Assessment Method</h3>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      Your mini-capstone is evaluated against a detailed rubric covering:
+                    </p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-semibold">25%</span>
+                        <span className="text-muted-foreground">Task decomposition quality</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-semibold">25%</span>
+                        <span className="text-muted-foreground">Workflow clarity and completeness</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-semibold">20%</span>
+                        <span className="text-muted-foreground">AI integration planning</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-semibold">20%</span>
+                        <span className="text-muted-foreground">Failure handling and oversight</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-semibold">10%</span>
+                        <span className="text-muted-foreground">Documentation quality</span>
+                      </li>
+                    </ul>
+                    <p className="text-sm text-muted-foreground mt-4">
+                      <strong className="text-foreground">Pass Requirement:</strong> 80% overall score
+                    </p>
+                  </div>
+                  <div className="bg-gradient-to-br from-primary/10 to-teal/10 rounded-xl p-6 border border-border">
+                    <h3 className="font-semibold mb-3">Certificate</h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Upon successful completion, you receive:
+                    </p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-start gap-2">
+                        <AwardNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground"><strong className="text-foreground">Blockchain-Verified Certificate:</strong> "Certificate of Competency in Task Decomposition & AI Workflow Design"</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <AwardNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground"><strong className="text-foreground">Digital Badge:</strong> Shareable on LinkedIn and the Accredited Experts Directory</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <AwardNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground"><strong className="text-foreground">ECTS Credits:</strong> 2 credits (60 hours) toward professional development</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <AwardNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground"><strong className="text-foreground">Portfolio Artifact:</strong> Your capstone workflow design for your professional portfolio</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h2 className="heading-2 mb-6">Pricing & Enrollment</h2>
+                <div className="bg-card rounded-xl p-6 border border-border mb-6">
+                  <div className="text-4xl font-bold gradient-text mb-2">€800</div>
+                  <p className="text-muted-foreground text-sm mb-6">4 weeks (60 hours) • 2 ECTS Credits</p>
+                  <h3 className="font-semibold mb-3">What's Included:</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground mb-6">
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Access to all masterclass recordings</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Hands-on lab exercises and materials</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Mentored support (forum + optional office hours)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Rubric-based assessment and feedback</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Blockchain-verified certificate upon completion</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Lifetime access to course materials</span>
+                    </li>
+                  </ul>
+                  <div className="pt-4 border-t border-border">
+                    <h3 className="font-semibold mb-3">Enrollment Options:</h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span><strong className="text-foreground">Standalone:</strong> Take this module independently</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span><strong className="text-foreground">Track Credit:</strong> Counts toward AAC (Agentic AI Competency) track completion</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span><strong className="text-foreground">Corporate:</strong> Bulk enrollment available for teams</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Track Integration */}
         <section className="section-padding bg-navy text-primary-foreground">
           <div className="container-coad">
             <div className="max-w-4xl mx-auto text-center">
               <GraduationNodeIcon className="w-16 h-16 mx-auto mb-6 text-primary" />
-              <h2 className="heading-2 mb-4">Part of the AAD Track</h2>
-              <p className="body-large text-gray-300 mb-8">
-                This module counts toward your Agentic AI Developer (AAD) Track certification. 
+              <h2 className="heading-2 mb-4">Part of the AAC Track</h2>
+              <p className="body-large text-gray-300 mb-6">
+                This module counts toward your Agentic AI Competency (AAC) Track certification. 
                 Complete all track modules to achieve Charterholder status and priority 
                 listing in the COAD Expert Directory.
+              </p>
+              <p className="text-sm text-gray-400 mb-8">
+                <strong>Track Integration:</strong> This module feeds into AAC Phase 1 (Foundations & Prompt Engineering)
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="xl" asChild>
                   <Link to="/auth">Enroll Now – €800</Link>
                 </Button>
                 <Button variant="outline" size="xl" className="border-gray-600 text-gray-300 hover:bg-white/10" asChild>
-                  <Link to="/certifications">Explore Full AAD Track</Link>
+                  <Link to="/certifications">Explore Full AAC Track</Link>
                 </Button>
               </div>
             </div>
