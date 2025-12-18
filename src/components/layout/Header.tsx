@@ -39,9 +39,10 @@ const Header = () => {
   ];
 
   return (
-    {/* VISUAL-EDIT: Header - Can adjust sticky behavior, background, and z-index */}
-    {/* SPACING: Header height and padding can be adjusted (h-18 py-4) */}
-    <header 
+    <>
+      {/* VISUAL-EDIT: Header - Can adjust sticky behavior, background, and z-index */}
+      {/* SPACING: Header height and padding can be adjusted (h-18 py-4) */}
+      <header 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled 
