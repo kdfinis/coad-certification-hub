@@ -19,9 +19,9 @@ import {
 } from '@/components/ui/custom-icons';
 
 const ModulesSection = () => {
-  const [filter, setFilter] = useState<'all' | 'aic' | 'aio'>('all');
+  const [filter, setFilter] = useState<'all' | 'aad' | 'aio'>('all');
 
-  const aicModules = [
+  const aadModules = [
     { name: 'Task Decomposition', slug: 'task-decomposition', Icon: CircuitLayersIcon, hours: 60, price: '€800', description: 'Break complex tasks into AI-manageable components' },
     { name: 'Multi-Agent Coordination', slug: 'multi-agent-coordination', Icon: NetworkNodesIcon, hours: 90, price: '€1,200', description: 'Coordinate multiple AI agents effectively' },
     { name: 'Performance Optimization', slug: 'performance-optimization', Icon: EnergyNodeIcon, hours: 120, price: '€1,750', description: 'Optimize AI system performance and efficiency' },
@@ -52,7 +52,7 @@ const ModulesSection = () => {
   ];
 
   const allModules = [
-    ...aicModules.map(m => ({ ...m, track: 'aic' as const })),
+    ...aadModules.map(m => ({ ...m, track: 'aad' as const })),
     ...aioModules.map(m => ({ ...m, track: 'aio' as const })),
   ];
 
@@ -79,7 +79,7 @@ const ModulesSection = () => {
           <div className="inline-flex p-1 bg-muted rounded-lg">
             {[
               { value: 'all', label: 'All Modules' },
-              { value: 'aic', label: 'AIC Modules (12)' },
+              { value: 'aad', label: 'AAD Modules (12)' },
               { value: 'aio', label: 'AIO Modules (12)' },
             ].map((tab) => (
               <button
@@ -111,16 +111,16 @@ const ModulesSection = () => {
               <div className="flex items-start justify-between mb-4">
                 <div className={cn(
                   'w-12 h-12 rounded-xl flex items-center justify-center',
-                  module.track === 'aic' ? 'bg-primary/10' : 'bg-teal/10'
+                  module.track === 'aad' ? 'bg-primary/10' : 'bg-teal/10'
                 )}>
                   <module.Icon 
                     className="w-7 h-7"
-                    color={module.track === 'aic' ? 'primary' : 'teal'}
+                    color={module.track === 'aad' ? 'primary' : 'teal'}
                   />
                 </div>
                 <span className={cn(
                   'px-2 py-1 rounded-full text-xs font-medium',
-                  module.track === 'aic' 
+                  module.track === 'aad' 
                     ? 'bg-primary/10 text-primary' 
                     : 'bg-teal/10 text-teal'
                 )}>
@@ -144,7 +144,7 @@ const ModulesSection = () => {
                 </div>
                 <span className={cn(
                   'font-semibold',
-                  module.track === 'aic' ? 'text-primary' : 'text-teal'
+                  module.track === 'aad' ? 'text-primary' : 'text-teal'
                 )}>
                   {module.price}
                 </span>

@@ -1,4 +1,4 @@
-// AIC Module pages - barrel export
+// AAD Module pages (Agentic AI Developer) - barrel export
 export { default as TaskDecomposition } from './TaskDecomposition';
 export { default as MultiAgentCoordination } from './MultiAgentCoordination';
 export { default as PerformanceOptimization } from './PerformanceOptimization';

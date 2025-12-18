@@ -12,53 +12,53 @@ import {
 } from '@/components/ui/custom-icons';
 import { ArrowRight, Calendar, Briefcase } from 'lucide-react';
 
-const HumanAIDesign = () => {
+const AIProductManagement = () => {
   const weeklyBreakdown = [
     {
       week: 1,
-      title: "Masterclass – Human-AI Collaboration Principles",
+      title: "Masterclass – AI Product Strategy",
       hours: 22,
-      description: "Expert-led session on designing effective interfaces between humans and AI systems.",
+      description: "Expert session on product strategy for AI-powered products and services.",
       activities: [
-        "Human-centered AI design principles",
-        "Cognitive load management in AI interfaces",
-        "Trust calibration frameworks",
-        "EU AI Act human oversight requirements"
+        "AI product lifecycle management",
+        "Market analysis for AI products",
+        "Stakeholder alignment strategies",
+        "EU AI Act product requirements"
       ]
     },
     {
       week: 2,
-      title: "Hands-On Labs – Interaction Design",
+      title: "Hands-On Labs – Product Development",
       hours: 23,
-      description: "Practical workshops building human-AI interaction patterns and feedback loops.",
+      description: "Practical exercises in AI product specification and development workflows.",
       activities: [
-        "Designing AI explanation interfaces",
-        "Building feedback collection systems",
-        "Human-in-the-loop workflow design",
-        "Accessibility in AI applications"
+        "AI product specification writing",
+        "Cross-functional team coordination",
+        "MVP definition for AI products",
+        "Metrics and success criteria"
       ]
     },
     {
       week: 3,
-      title: "Mentored Sessions – User Research",
+      title: "Mentored Sessions – Go-to-Market",
       hours: 22,
-      description: "Expert guidance on conducting user research for AI systems.",
+      description: "Expert guidance on launching AI products in regulated markets.",
       activities: [
-        "AI usability testing methods",
-        "Measuring human-AI team performance",
-        "ESG considerations in design",
-        "Inclusive design practices"
+        "Compliance-first launch strategies",
+        "ESG positioning for AI products",
+        "Risk communication to stakeholders",
+        "Post-launch monitoring setup"
       ]
     },
     {
       week: 4,
-      title: "Mini-Capstone – Human-AI Workflow System",
+      title: "Mini-Capstone – Product Roadmap",
       hours: 23,
-      description: "Design and deliver a complete human-AI collaboration workflow.",
+      description: "Deliver a comprehensive AI product roadmap with compliance integration.",
       activities: [
-        "End-to-end workflow delivery",
-        "User testing and iteration",
-        "Documentation and presentation",
+        "Complete product roadmap",
+        "Stakeholder presentation",
+        "Compliance checkpoint planning",
         "Blockchain certificate issuance"
       ]
     }
@@ -66,43 +66,42 @@ const HumanAIDesign = () => {
 
   const realWorldUseCases = [
     {
-      industry: "Medical Diagnosis",
-      scenario: "Designing AI-assisted diagnostic tools that present findings clearly to physicians while maintaining appropriate human oversight."
+      industry: "SaaS",
+      scenario: "Managing AI feature development within a product suite while balancing innovation with compliance requirements."
     },
     {
-      industry: "Content Moderation",
-      scenario: "Building human-AI workflows where AI flags content and humans make final decisions with full context."
+      industry: "Healthcare Tech",
+      scenario: "Launching AI diagnostic tools through complex regulatory pathways while meeting market timelines."
     },
     {
-      industry: "Customer Service",
-      scenario: "Creating seamless handoffs between AI chatbots and human agents with preserved conversation context."
+      industry: "FinTech",
+      scenario: "Integrating AI capabilities into financial products while maintaining regulatory compliance."
     },
     {
-      industry: "Legal Review",
-      scenario: "Designing AI-assisted contract review tools that highlight risks while enabling lawyer judgment."
+      industry: "EdTech",
+      scenario: "Building adaptive learning products that leverage AI while protecting student data."
     }
   ];
 
   const learningOutcomes = [
-    "Apply human-centered design principles to AI systems",
-    "Design effective human-AI collaboration workflows",
-    "Build trust calibration and explanation interfaces",
-    "Implement human-in-the-loop patterns",
-    "Ensure EU AI Act human oversight compliance",
-    "Create accessible and inclusive AI applications"
+    "Develop AI product strategies for regulated markets",
+    "Create comprehensive AI product specifications",
+    "Coordinate cross-functional AI development teams",
+    "Design compliance-integrated product roadmaps",
+    "Launch AI products with ESG considerations",
+    "Establish post-launch monitoring frameworks"
   ];
 
   return (
     <>
       <Helmet>
-        <title>Human-AI Design | AIC Module | COAD</title>
-        <meta name="description" content="Master human-AI collaboration design in this 90-hour, 4-week module. Learn to create effective human-AI workflows with blockchain certification." />
+        <title>AI Product Management | AAD Module | COAD</title>
+        <meta name="description" content="Master AI product management in this 90-hour module. Learn to build and launch AI products in regulated markets with blockchain certification." />
       </Helmet>
 
       <Header />
 
       <main className="pt-20">
-        {/* Hero */}
         <section className="bg-navy text-primary-foreground py-16 md:py-24 relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-20 left-20 w-96 h-96 bg-primary rounded-full blur-3xl" />
@@ -112,7 +111,7 @@ const HumanAIDesign = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">
-                  AIC Module
+                  AAD Module
                 </span>
                 <span className="px-3 py-1 rounded-full bg-teal/20 text-teal text-sm font-medium">
                   90 Hours • 4 Weeks
@@ -123,13 +122,13 @@ const HumanAIDesign = () => {
               </div>
               
               <h1 className="heading-1 mb-6">
-                Human-AI<br />
-                <span className="gradient-text">Design</span>
+                AI Product<br />
+                <span className="gradient-text">Management</span>
               </h1>
               
               <p className="body-large text-gray-300 mb-8 max-w-2xl">
-                Learn to design effective collaboration workflows between humans and AI systems. 
-                Create interfaces that build trust and maximize combined human-AI performance.
+                Lead AI product development from concept to launch. Learn to navigate 
+                technical complexity, regulatory requirements, and market demands.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
@@ -150,7 +149,7 @@ const HumanAIDesign = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" size="xl" asChild>
                   <Link to="/auth">
-                    Enroll Now – €1,000
+                    Enroll Now – €1,100
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </Button>
@@ -162,21 +161,20 @@ const HumanAIDesign = () => {
           </div>
         </section>
 
-        {/* Module Overview */}
         <section className="section-padding bg-background">
           <div className="container-coad">
             <div className="grid lg:grid-cols-2 gap-16">
               <div>
                 <h2 className="heading-2 mb-6">Module Overview</h2>
                 <p className="body-large text-muted-foreground mb-6">
-                  The most successful AI implementations aren't about replacing humans – they're about 
-                  augmenting human capabilities. This module teaches you to design systems where humans 
-                  and AI work together effectively.
+                  AI products require unique product management approaches. This module teaches 
+                  you to bridge the gap between technical AI teams and business stakeholders 
+                  while navigating complex regulatory landscapes.
                 </p>
                 <p className="body text-muted-foreground mb-8">
-                  You'll learn user research methods specific to AI, design patterns for human-AI 
-                  collaboration, and how to build interfaces that calibrate trust appropriately – 
-                  avoiding both over-reliance and under-utilization of AI capabilities.
+                  You'll learn to create product roadmaps that integrate compliance checkpoints, 
+                  manage AI-specific risks, and launch products that meet both market and 
+                  regulatory expectations.
                 </p>
 
                 <div className="bg-muted/50 rounded-xl p-6 border border-border">
@@ -188,15 +186,15 @@ const HumanAIDesign = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">User testing documentation</span>
+                      <span className="text-muted-foreground">Product roadmap delivery</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Mini-capstone with mentor feedback</span>
+                      <span className="text-muted-foreground">Stakeholder presentation</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">EU AI Act human oversight verification</span>
+                      <span className="text-muted-foreground">Compliance integration plan</span>
                     </li>
                   </ul>
                 </div>
@@ -219,29 +217,22 @@ const HumanAIDesign = () => {
           </div>
         </section>
 
-        {/* Weekly Breakdown */}
         <section className="section-padding bg-muted/50">
           <div className="container-coad">
             <div className="text-center mb-12">
               <h2 className="heading-2 mb-4">4-Week Curriculum</h2>
-              <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-                JHU-inspired methodology focusing on user research and interaction design.
-              </p>
             </div>
-
             <div className="grid md:grid-cols-2 gap-8">
               {weeklyBreakdown.map((week, index) => (
                 <div key={index} className="bg-card rounded-2xl border border-border overflow-hidden card-hover">
                   <div className="bg-gradient-to-r from-primary/10 to-teal/10 px-6 py-4 border-b border-border">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                          <span className="text-primary-foreground font-bold">{week.week}</span>
-                        </div>
-                        <div>
-                          <span className="text-sm text-muted-foreground">Week {week.week}</span>
-                          <p className="font-semibold text-foreground">{week.hours} Hours</p>
-                        </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                        <span className="text-primary-foreground font-bold">{week.week}</span>
+                      </div>
+                      <div>
+                        <span className="text-sm text-muted-foreground">Week {week.week}</span>
+                        <p className="font-semibold text-foreground">{week.hours} Hours</p>
                       </div>
                     </div>
                   </div>
@@ -263,16 +254,11 @@ const HumanAIDesign = () => {
           </div>
         </section>
 
-        {/* Real-World Use Cases */}
         <section className="section-padding bg-background">
           <div className="container-coad">
             <div className="text-center mb-12">
               <h2 className="heading-2 mb-4">Real-World Applications</h2>
-              <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-                Human-AI collaboration is essential in high-stakes domains.
-              </p>
             </div>
-
             <div className="grid md:grid-cols-2 gap-6">
               {realWorldUseCases.map((useCase, index) => (
                 <div key={index} className="bg-card rounded-xl p-6 border border-border card-hover">
@@ -289,7 +275,6 @@ const HumanAIDesign = () => {
           </div>
         </section>
 
-        {/* Track Integration */}
         <section className="section-padding bg-navy text-primary-foreground">
           <div className="container-coad">
             <div className="max-w-4xl mx-auto text-center">
@@ -300,10 +285,10 @@ const HumanAIDesign = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="xl" asChild>
-                  <Link to="/auth">Enroll Now – €1,000</Link>
+                  <Link to="/auth">Enroll Now – €1,100</Link>
                 </Button>
                 <Button variant="outline" size="xl" className="border-gray-600 text-gray-300 hover:bg-white/10" asChild>
-                  <Link to="/certifications">Explore Full AIC Track</Link>
+                  <Link to="/certifications">Explore Full AAD Track</Link>
                 </Button>
               </div>
             </div>
@@ -316,4 +301,4 @@ const HumanAIDesign = () => {
   );
 };
 
-export default HumanAIDesign;
+export default AIProductManagement;

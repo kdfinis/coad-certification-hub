@@ -1,7 +1,7 @@
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/sections/HeroSection';
-import ADCTrackSection from '@/components/sections/ADCTrackSection';
+import AADTrackSection from '@/components/sections/AADTrackSection';
 import ACOSTrackSection from '@/components/sections/ACOSTrackSection';
 import ModulesSection from '@/components/sections/ModulesSection';
 import ComplianceSection from '@/components/sections/ComplianceSection';
@@ -30,7 +30,7 @@ const Index = () => {
         
         <main>
           <HeroSection />
-          <ADCTrackSection />
+          <AADTrackSection />
           <ACOSTrackSection />
           <ModulesSection />
           <ComplianceSection />

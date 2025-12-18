@@ -4,7 +4,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import {
-  ShieldNodeIcon,
+  DataFlowIcon,
   CheckNodeIcon,
   ClockNodeIcon,
   AwardNodeIcon,
@@ -12,53 +12,53 @@ import {
 } from '@/components/ui/custom-icons';
 import { ArrowRight, Calendar, Briefcase } from 'lucide-react';
 
-const SecureAIOperations = () => {
+const HumanAIDesign = () => {
   const weeklyBreakdown = [
     {
       week: 1,
-      title: "Masterclass – AI Security Fundamentals",
-      hours: 30,
-      description: "Expert deep dive into AI-specific security threats, attack vectors, and defense strategies.",
+      title: "Masterclass – Human-AI Collaboration Principles",
+      hours: 22,
+      description: "Expert-led session on designing effective interfaces between humans and AI systems.",
       activities: [
-        "AI threat landscape overview",
-        "Adversarial attack methodologies",
-        "Model security and integrity",
-        "EU AI Act security requirements"
+        "Human-centered AI design principles",
+        "Cognitive load management in AI interfaces",
+        "Trust calibration frameworks",
+        "EU AI Act human oversight requirements"
       ]
     },
     {
       week: 2,
-      title: "Hands-On Labs – Security Implementation",
-      hours: 30,
-      description: "Practical exercises implementing security controls for AI systems.",
+      title: "Hands-On Labs – Interaction Design",
+      hours: 23,
+      description: "Practical workshops building human-AI interaction patterns and feedback loops.",
       activities: [
-        "Input validation and sanitization",
-        "Model hardening techniques",
-        "Secure deployment practices",
-        "Access control implementation"
+        "Designing AI explanation interfaces",
+        "Building feedback collection systems",
+        "Human-in-the-loop workflow design",
+        "Accessibility in AI applications"
       ]
     },
     {
       week: 3,
-      title: "Mentored Sessions – Threat Response",
-      hours: 30,
-      description: "Expert guidance on threat detection and incident response for AI systems.",
+      title: "Mentored Sessions – User Research",
+      hours: 22,
+      description: "Expert guidance on conducting user research for AI systems.",
       activities: [
-        "Security monitoring setup",
-        "Incident response procedures",
-        "ESG security compliance",
-        "Third-party risk assessment"
+        "AI usability testing methods",
+        "Measuring human-AI team performance",
+        "ESG considerations in design",
+        "Inclusive design practices"
       ]
     },
     {
       week: 4,
-      title: "Mini-Capstone – Security Architecture",
-      hours: 30,
-      description: "Design and deliver a comprehensive AI security architecture.",
+      title: "Mini-Capstone – Human-AI Workflow System",
+      hours: 23,
+      description: "Design and deliver a complete human-AI collaboration workflow.",
       activities: [
-        "Complete security architecture",
-        "Threat model documentation",
-        "Defense-in-depth strategy",
+        "End-to-end workflow delivery",
+        "User testing and iteration",
+        "Documentation and presentation",
         "Blockchain certificate issuance"
       ]
     }
@@ -66,37 +66,37 @@ const SecureAIOperations = () => {
 
   const realWorldUseCases = [
     {
-      industry: "Financial Services",
-      scenario: "Securing AI-driven fraud detection systems against adversarial attacks and model manipulation."
+      industry: "Medical Diagnosis",
+      scenario: "Designing AI-assisted diagnostic tools that present findings clearly to physicians while maintaining appropriate human oversight."
     },
     {
-      industry: "Healthcare",
-      scenario: "Protecting AI diagnostic systems from data poisoning and ensuring patient data security."
+      industry: "Content Moderation",
+      scenario: "Building human-AI workflows where AI flags content and humans make final decisions with full context."
     },
     {
-      industry: "Critical Infrastructure",
-      scenario: "Securing AI systems in energy grids and transportation against sophisticated attacks."
+      industry: "Customer Service",
+      scenario: "Creating seamless handoffs between AI chatbots and human agents with preserved conversation context."
     },
     {
-      industry: "Defense",
-      scenario: "Implementing multi-layered security for AI systems in sensitive applications."
+      industry: "Legal Review",
+      scenario: "Designing AI-assisted contract review tools that highlight risks while enabling lawyer judgment."
     }
   ];
 
   const learningOutcomes = [
-    "Master AI-specific security threats and attack vectors",
-    "Implement robust security controls for AI systems",
-    "Design defense-in-depth architectures",
-    "Conduct threat modeling for AI applications",
-    "Establish incident response procedures",
-    "Ensure EU AI Act security compliance"
+    "Apply human-centered design principles to AI systems",
+    "Design effective human-AI collaboration workflows",
+    "Build trust calibration and explanation interfaces",
+    "Implement human-in-the-loop patterns",
+    "Ensure EU AI Act human oversight compliance",
+    "Create accessible and inclusive AI applications"
   ];
 
   return (
     <>
       <Helmet>
-        <title>Secure AI Operations | AIC Module | COAD</title>
-        <meta name="description" content="Master AI security in this intensive 120-hour module. Learn to protect AI systems from threats with blockchain certification." />
+        <title>Human-AI Design | AAD Module | COAD</title>
+        <meta name="description" content="Master human-AI collaboration design in this 90-hour, 4-week module. Learn to create effective human-AI workflows with blockchain certification." />
       </Helmet>
 
       <Header />
@@ -112,30 +112,30 @@ const SecureAIOperations = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">
-                  AIC Module
+                  AAD Module
                 </span>
                 <span className="px-3 py-1 rounded-full bg-teal/20 text-teal text-sm font-medium">
-                  120 Hours • 4 Weeks
+                  90 Hours • 4 Weeks
                 </span>
-                <span className="px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-sm font-medium">
-                  Heavy Intensity
+                <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-sm font-medium">
+                  Standard Intensity
                 </span>
               </div>
               
               <h1 className="heading-1 mb-6">
-                Secure AI<br />
-                <span className="gradient-text">Operations</span>
+                Human-AI<br />
+                <span className="gradient-text">Design</span>
               </h1>
               
               <p className="body-large text-gray-300 mb-8 max-w-2xl">
-                Master the security challenges unique to AI systems. Learn to defend against 
-                adversarial attacks, implement robust security architectures, and ensure compliance.
+                Learn to design effective collaboration workflows between humans and AI systems. 
+                Create interfaces that build trust and maximize combined human-AI performance.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center gap-2 text-gray-300">
                   <ClockNodeIcon className="w-5 h-5 text-primary" />
-                  <span>120 Contact Hours</span>
+                  <span>90 Contact Hours</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-300">
                   <Calendar className="w-5 h-5 text-primary" />
@@ -150,7 +150,7 @@ const SecureAIOperations = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" size="xl" asChild>
                   <Link to="/auth">
-                    Enroll Now – €1,800
+                    Enroll Now – €1,000
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </Button>
@@ -169,14 +169,14 @@ const SecureAIOperations = () => {
               <div>
                 <h2 className="heading-2 mb-6">Module Overview</h2>
                 <p className="body-large text-muted-foreground mb-6">
-                  AI systems face unique security challenges beyond traditional software. This 
-                  intensive module covers everything from adversarial attacks to supply chain 
-                  risks, preparing you to build and maintain secure AI infrastructure.
+                  The most successful AI implementations aren't about replacing humans – they're about 
+                  augmenting human capabilities. This module teaches you to design systems where humans 
+                  and AI work together effectively.
                 </p>
                 <p className="body text-muted-foreground mb-8">
-                  You'll work with real attack scenarios, implement defense mechanisms, and 
-                  develop comprehensive security architectures that meet EU AI Act requirements 
-                  for high-risk systems.
+                  You'll learn user research methods specific to AI, design patterns for human-AI 
+                  collaboration, and how to build interfaces that calibrate trust appropriately – 
+                  avoiding both over-reliance and under-utilization of AI capabilities.
                 </p>
 
                 <div className="bg-muted/50 rounded-xl p-6 border border-border">
@@ -188,15 +188,15 @@ const SecureAIOperations = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Security architecture documentation</span>
+                      <span className="text-muted-foreground">User testing documentation</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Threat model delivery</span>
+                      <span className="text-muted-foreground">Mini-capstone with mentor feedback</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Incident response plan</span>
+                      <span className="text-muted-foreground">EU AI Act human oversight verification</span>
                     </li>
                   </ul>
                 </div>
@@ -225,7 +225,7 @@ const SecureAIOperations = () => {
             <div className="text-center mb-12">
               <h2 className="heading-2 mb-4">4-Week Curriculum</h2>
               <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-                Intensive security training with hands-on labs and real attack scenarios.
+                JHU-inspired methodology focusing on user research and interaction design.
               </p>
             </div>
 
@@ -269,7 +269,7 @@ const SecureAIOperations = () => {
             <div className="text-center mb-12">
               <h2 className="heading-2 mb-4">Real-World Applications</h2>
               <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-                AI security is critical across all high-stakes applications.
+                Human-AI collaboration is essential in high-stakes domains.
               </p>
             </div>
 
@@ -294,16 +294,16 @@ const SecureAIOperations = () => {
           <div className="container-coad">
             <div className="max-w-4xl mx-auto text-center">
               <GraduationNodeIcon className="w-16 h-16 mx-auto mb-6 text-primary" />
-              <h2 className="heading-2 mb-4">Part of the AIC Track</h2>
+              <h2 className="heading-2 mb-4">Part of the AAD Track</h2>
               <p className="body-large text-gray-300 mb-8">
-                This advanced module counts toward your AI Competence (AIC) Track certification.
+                This module counts toward your Agentic AI Developer (AAD) Track certification.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="xl" asChild>
-                  <Link to="/auth">Enroll Now – €1,800</Link>
+                  <Link to="/auth">Enroll Now – €1,000</Link>
                 </Button>
                 <Button variant="outline" size="xl" className="border-gray-600 text-gray-300 hover:bg-white/10" asChild>
-                  <Link to="/certifications">Explore Full AIC Track</Link>
+                  <Link to="/certifications">Explore Full AAD Track</Link>
                 </Button>
               </div>
             </div>
@@ -316,4 +316,4 @@ const SecureAIOperations = () => {
   );
 };
 
-export default SecureAIOperations;
+export default HumanAIDesign;

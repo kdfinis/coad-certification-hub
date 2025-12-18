@@ -4,63 +4,61 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import {
-  CircuitLayersIcon,
+  EnergyNodeIcon,
   CheckNodeIcon,
   ClockNodeIcon,
   AwardNodeIcon,
-  GraduationNodeIcon,
-  NetworkNodesIcon,
-  ShieldNodeIcon
+  GraduationNodeIcon
 } from '@/components/ui/custom-icons';
-import { ArrowRight, Calendar, Users, Target, BookOpen, Briefcase } from 'lucide-react';
+import { ArrowRight, Calendar, Briefcase } from 'lucide-react';
 
-const TaskDecomposition = () => {
+const PerformanceOptimization = () => {
   const weeklyBreakdown = [
     {
       week: 1,
-      title: "Masterclass – Breaking Problems into AI Tasks",
-      hours: 15,
-      description: "Expert-led recorded session covering problem decomposition frameworks, task identification methodologies, and AI capability mapping.",
+      title: "Masterclass – Tuning for Speed & Cost",
+      hours: 30,
+      description: "Expert-led deep dive into AI performance optimization covering latency reduction, throughput maximization, and cost management.",
       activities: [
-        "Problem analysis frameworks for AI suitability",
-        "Task granularity optimization techniques",
-        "AI capability assessment matrices",
-        "Live Q&A with industry practitioners"
+        "Performance profiling methodologies",
+        "Latency vs throughput trade-offs",
+        "Cost-per-inference optimization",
+        "Cloud vs edge deployment decisions"
       ]
     },
     {
       week: 2,
-      title: "Hands-On Labs – Build Simple Workflows",
-      hours: 15,
-      description: "Practical workshop using no-code and low-code tools to construct AI workflows from decomposed tasks.",
+      title: "Hands-On Labs – Benchmarking Tools",
+      hours: 30,
+      description: "Practical workshops using industry-standard benchmarking and profiling tools for AI systems.",
       activities: [
-        "No-code workflow builder exercises",
-        "Task sequencing and dependency mapping",
-        "Integration with popular AI tools",
-        "Workflow documentation standards"
+        "Setting up performance monitoring stacks",
+        "A/B testing for model optimization",
+        "Memory and compute profiling",
+        "Automated performance regression testing"
       ]
     },
     {
       week: 3,
-      title: "Mentored Sessions – Forum Feedback",
-      hours: 15,
-      description: "Weekly forum Q&A plus optional live office hours with industry professionals reviewing your personal project.",
+      title: "Mentored Sessions – Advanced Optimization",
+      hours: 30,
+      description: "Expert feedback on optimization strategies for complex enterprise scenarios.",
       activities: [
-        "Peer review of decomposition strategies",
-        "Expert feedback on workflow designs",
-        "ESG compliance checks in workflows",
-        "EU AI Act alignment verification"
+        "Model compression techniques",
+        "Quantization and pruning strategies",
+        "ESG-compliant optimization practices",
+        "EU AI Act performance documentation"
       ]
     },
     {
       week: 4,
-      title: "Mini-Capstone – Deliver Optimized Workflow",
-      hours: 15,
-      description: "Final practical deliverable with mentor review, creating a portfolio-ready AI workflow system.",
+      title: "Mini-Capstone – Optimized Enterprise System",
+      hours: 30,
+      description: "Deliver a fully optimized AI system with comprehensive performance documentation.",
       activities: [
-        "Complete workflow system delivery",
-        "Documentation and presentation",
-        "Mentor feedback and assessment",
+        "End-to-end system optimization",
+        "Performance benchmarking report",
+        "Cost analysis and projections",
         "Blockchain certificate issuance"
       ]
     }
@@ -68,37 +66,37 @@ const TaskDecomposition = () => {
 
   const realWorldUseCases = [
     {
+      industry: "Streaming Platforms",
+      scenario: "Optimizing recommendation engines to serve millions of users with sub-100ms latency while managing compute costs."
+    },
+    {
+      industry: "Autonomous Vehicles",
+      scenario: "Edge AI optimization for real-time decision making with strict latency and power consumption constraints."
+    },
+    {
+      industry: "Healthcare Diagnostics",
+      scenario: "Optimizing medical imaging AI to process scans quickly while maintaining accuracy for critical diagnoses."
+    },
+    {
       industry: "Financial Services",
-      scenario: "Automating loan application processing by breaking down document verification, credit scoring, and compliance checks into discrete AI tasks."
-    },
-    {
-      industry: "Healthcare",
-      scenario: "Decomposing patient intake workflows into AI-managed scheduling, document digitization, and preliminary symptom analysis."
-    },
-    {
-      industry: "Manufacturing",
-      scenario: "Creating modular quality control workflows with AI inspection, defect classification, and reporting tasks."
-    },
-    {
-      industry: "Legal Services",
-      scenario: "Building contract review workflows with extraction, clause analysis, and risk flagging as separate AI components."
+      scenario: "High-frequency trading systems requiring microsecond-level AI inference optimization."
     }
   ];
 
   const learningOutcomes = [
-    "Master problem decomposition frameworks for AI applications",
-    "Design efficient task sequences for AI workflow systems",
-    "Apply no-code tools for rapid AI workflow prototyping",
-    "Ensure ESG 2015 compliance in workflow design",
-    "Create documentation meeting EU AI Act standards",
-    "Build portfolio-ready workflow deliverables"
+    "Master AI performance profiling and benchmarking techniques",
+    "Implement latency and throughput optimization strategies",
+    "Apply model compression, quantization, and pruning",
+    "Design cost-effective AI deployment architectures",
+    "Create performance documentation for EU AI Act compliance",
+    "Build enterprise-grade optimized AI systems"
   ];
 
   return (
     <>
       <Helmet>
-        <title>Task Decomposition & AI Workflow Design | AIC Module | COAD</title>
-        <meta name="description" content="Master problem decomposition and AI workflow design in this 60-hour, 4-week module. Build practical skills with no-code tools and earn a blockchain-verified certificate." />
+        <title>Performance Optimization | AAD Module | COAD</title>
+        <meta name="description" content="Master AI performance optimization in this intensive 120-hour, 4-week module. Learn to tune systems for speed and cost efficiency with blockchain certification." />
       </Helmet>
 
       <Header />
@@ -114,30 +112,30 @@ const TaskDecomposition = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">
-                  AIC Module
+                  AAD Module
                 </span>
                 <span className="px-3 py-1 rounded-full bg-teal/20 text-teal text-sm font-medium">
-                  60 Hours • 4 Weeks
+                  120 Hours • 4 Weeks
                 </span>
-                <span className="px-3 py-1 rounded-full bg-muted/20 text-gray-300 text-sm font-medium">
-                  Light Intensity
+                <span className="px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-sm font-medium">
+                  Heavy Intensity
                 </span>
               </div>
               
               <h1 className="heading-1 mb-6">
-                Task Decomposition &<br />
-                <span className="gradient-text">AI Workflow Design</span>
+                Performance<br />
+                <span className="gradient-text">Optimization</span>
               </h1>
               
               <p className="body-large text-gray-300 mb-8 max-w-2xl">
-                Learn to break complex problems into AI-manageable components and design efficient 
-                workflows using no-code tools. Perfect for non-programmers entering AI implementation.
+                Master the art and science of optimizing AI systems for speed, cost, and 
+                efficiency. Learn enterprise-grade techniques used by leading tech companies.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center gap-2 text-gray-300">
                   <ClockNodeIcon className="w-5 h-5 text-primary" />
-                  <span>60 Contact Hours</span>
+                  <span>120 Contact Hours</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-300">
                   <Calendar className="w-5 h-5 text-primary" />
@@ -152,7 +150,7 @@ const TaskDecomposition = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" size="xl" asChild>
                   <Link to="/auth">
-                    Enroll Now – €800
+                    Enroll Now – €1,750
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </Button>
@@ -171,14 +169,14 @@ const TaskDecomposition = () => {
               <div>
                 <h2 className="heading-2 mb-6">Module Overview</h2>
                 <p className="body-large text-muted-foreground mb-6">
-                  This foundation module teaches you to analyze complex business problems and 
-                  decompose them into discrete tasks suitable for AI automation. Using a JHU-inspired 
-                  methodology, you'll move from theory to practice in just four weeks.
+                  This intensive module covers everything you need to know about making AI systems 
+                  run faster, cheaper, and more efficiently. From profiling to deployment optimization, 
+                  you'll learn techniques used at the highest levels of the industry.
                 </p>
                 <p className="body text-muted-foreground mb-8">
-                  The module emphasizes practical application over theory – 60% of your time will be 
-                  spent on hands-on labs and projects. You'll work with real-world scenarios and 
-                  build a portfolio piece that demonstrates your competency.
+                  With 120 hours over 4 weeks, this is our most comprehensive technical module. 
+                  You'll spend significant time in hands-on labs working with real optimization 
+                  challenges and enterprise-scale systems.
                 </p>
 
                 <div className="bg-muted/50 rounded-xl p-6 border border-border">
@@ -190,11 +188,11 @@ const TaskDecomposition = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Active participation in forum discussions</span>
+                      <span className="text-muted-foreground">Performance benchmarking report</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Mini-capstone deliverable with mentor feedback</span>
+                      <span className="text-muted-foreground">Mini-capstone with mentor feedback</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
@@ -227,8 +225,7 @@ const TaskDecomposition = () => {
             <div className="text-center mb-12">
               <h2 className="heading-2 mb-4">4-Week Curriculum</h2>
               <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-                JHU-inspired methodology combining live masterclasses, hands-on labs, 
-                mentored sessions, and a practical capstone project.
+                Intensive JHU-inspired methodology with 30 hours per week of focused optimization training.
               </p>
             </div>
 
@@ -272,7 +269,7 @@ const TaskDecomposition = () => {
             <div className="text-center mb-12">
               <h2 className="heading-2 mb-4">Real-World Applications</h2>
               <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-                See how task decomposition and workflow design applies across industries.
+                Performance optimization is critical across every industry using AI.
               </p>
             </div>
 
@@ -297,18 +294,17 @@ const TaskDecomposition = () => {
           <div className="container-coad">
             <div className="max-w-4xl mx-auto text-center">
               <GraduationNodeIcon className="w-16 h-16 mx-auto mb-6 text-primary" />
-              <h2 className="heading-2 mb-4">Part of the AIC Track</h2>
+              <h2 className="heading-2 mb-4">Part of the AAD Track</h2>
               <p className="body-large text-gray-300 mb-8">
-                This module counts toward your AI Competence (AIC) Track certification. 
-                Complete all track modules to achieve Charterholder status and priority 
-                listing in the COAD Expert Directory.
+                This advanced module counts toward your Agentic AI Developer (AAD) Track certification. 
+                Complete all track modules to achieve Charterholder status.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="xl" asChild>
-                  <Link to="/auth">Enroll Now – €800</Link>
+                  <Link to="/auth">Enroll Now – €1,750</Link>
                 </Button>
                 <Button variant="outline" size="xl" className="border-gray-600 text-gray-300 hover:bg-white/10" asChild>
-                  <Link to="/certifications">Explore Full AIC Track</Link>
+                  <Link to="/certifications">Explore Full AAD Track</Link>
                 </Button>
               </div>
             </div>
@@ -321,4 +317,4 @@ const TaskDecomposition = () => {
   );
 };
 
-export default TaskDecomposition;
+export default PerformanceOptimization;

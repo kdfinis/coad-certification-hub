@@ -4,7 +4,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import {
-  EnergyNodeIcon,
+  NetworkNodesIcon,
   CheckNodeIcon,
   ClockNodeIcon,
   AwardNodeIcon,
@@ -12,53 +12,53 @@ import {
 } from '@/components/ui/custom-icons';
 import { ArrowRight, Calendar, Briefcase } from 'lucide-react';
 
-const PerformanceOptimization = () => {
+const MultiAgentCoordination = () => {
   const weeklyBreakdown = [
     {
       week: 1,
-      title: "Masterclass – Tuning for Speed & Cost",
-      hours: 30,
-      description: "Expert-led deep dive into AI performance optimization covering latency reduction, throughput maximization, and cost management.",
+      title: "Masterclass – Agent Systems Basics",
+      hours: 22,
+      description: "Expert-led session covering multi-agent architectures, communication protocols, and coordination strategies.",
       activities: [
-        "Performance profiling methodologies",
-        "Latency vs throughput trade-offs",
-        "Cost-per-inference optimization",
-        "Cloud vs edge deployment decisions"
+        "Multi-agent system architectures overview",
+        "Agent communication protocols and standards",
+        "Task distribution and load balancing",
+        "Real-world multi-agent case studies"
       ]
     },
     {
       week: 2,
-      title: "Hands-On Labs – Benchmarking Tools",
-      hours: 30,
-      description: "Practical workshops using industry-standard benchmarking and profiling tools for AI systems.",
+      title: "Hands-On Labs – Coordinate Multiple AI Tools",
+      hours: 23,
+      description: "Practical exercises building systems that orchestrate multiple AI agents working together.",
       activities: [
-        "Setting up performance monitoring stacks",
-        "A/B testing for model optimization",
-        "Memory and compute profiling",
-        "Automated performance regression testing"
+        "Setting up agent orchestration frameworks",
+        "Building inter-agent communication channels",
+        "Conflict resolution mechanisms",
+        "Performance monitoring dashboards"
       ]
     },
     {
       week: 3,
-      title: "Mentored Sessions – Advanced Optimization",
-      hours: 30,
-      description: "Expert feedback on optimization strategies for complex enterprise scenarios.",
+      title: "Mentored Sessions – Live Q&A on Scaling",
+      hours: 22,
+      description: "Interactive sessions with industry experts on scaling multi-agent systems for enterprise use.",
       activities: [
-        "Model compression techniques",
-        "Quantization and pruning strategies",
-        "ESG-compliant optimization practices",
-        "EU AI Act performance documentation"
+        "Scaling strategies for production environments",
+        "Cost optimization for multi-agent systems",
+        "ESG compliance in distributed AI",
+        "EU AI Act requirements for agent systems"
       ]
     },
     {
       week: 4,
-      title: "Mini-Capstone – Optimized Enterprise System",
-      hours: 30,
-      description: "Deliver a fully optimized AI system with comprehensive performance documentation.",
+      title: "Mini-Capstone – Multi-Agent Business Solution",
+      hours: 23,
+      description: "Design and deliver a complete multi-agent business solution with mentor review.",
       activities: [
-        "End-to-end system optimization",
-        "Performance benchmarking report",
-        "Cost analysis and projections",
+        "End-to-end solution architecture",
+        "Documentation and compliance verification",
+        "Presentation to expert panel",
         "Blockchain certificate issuance"
       ]
     }
@@ -66,37 +66,37 @@ const PerformanceOptimization = () => {
 
   const realWorldUseCases = [
     {
-      industry: "Streaming Platforms",
-      scenario: "Optimizing recommendation engines to serve millions of users with sub-100ms latency while managing compute costs."
+      industry: "E-Commerce",
+      scenario: "Coordinating pricing agents, inventory agents, and customer service agents to optimize real-time marketplace operations."
     },
     {
-      industry: "Autonomous Vehicles",
-      scenario: "Edge AI optimization for real-time decision making with strict latency and power consumption constraints."
+      industry: "Supply Chain",
+      scenario: "Orchestrating logistics agents, demand forecasting agents, and supplier management agents for end-to-end visibility."
     },
     {
-      industry: "Healthcare Diagnostics",
-      scenario: "Optimizing medical imaging AI to process scans quickly while maintaining accuracy for critical diagnoses."
+      industry: "Financial Trading",
+      scenario: "Multi-agent systems for market analysis, risk assessment, and execution agents working in millisecond coordination."
     },
     {
-      industry: "Financial Services",
-      scenario: "High-frequency trading systems requiring microsecond-level AI inference optimization."
+      industry: "Smart Cities",
+      scenario: "Traffic management, energy distribution, and emergency response agents collaborating for urban optimization."
     }
   ];
 
   const learningOutcomes = [
-    "Master AI performance profiling and benchmarking techniques",
-    "Implement latency and throughput optimization strategies",
-    "Apply model compression, quantization, and pruning",
-    "Design cost-effective AI deployment architectures",
-    "Create performance documentation for EU AI Act compliance",
-    "Build enterprise-grade optimized AI systems"
+    "Design multi-agent system architectures for business applications",
+    "Implement agent communication and coordination protocols",
+    "Scale agent systems for enterprise production environments",
+    "Optimize performance and costs in multi-agent deployments",
+    "Ensure EU AI Act compliance for distributed AI systems",
+    "Build portfolio-ready multi-agent solutions"
   ];
 
   return (
     <>
       <Helmet>
-        <title>Performance Optimization | AIC Module | COAD</title>
-        <meta name="description" content="Master AI performance optimization in this intensive 120-hour, 4-week module. Learn to tune systems for speed and cost efficiency with blockchain certification." />
+        <title>Multi-Agent Coordination | AAD Module | COAD</title>
+        <meta name="description" content="Master multi-agent AI system coordination in this 90-hour, 4-week module. Learn to orchestrate multiple AI tools and earn a blockchain-verified certificate." />
       </Helmet>
 
       <Header />
@@ -112,30 +112,30 @@ const PerformanceOptimization = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">
-                  AIC Module
+                  AAD Module
                 </span>
                 <span className="px-3 py-1 rounded-full bg-teal/20 text-teal text-sm font-medium">
-                  120 Hours • 4 Weeks
+                  90 Hours • 4 Weeks
                 </span>
-                <span className="px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-sm font-medium">
-                  Heavy Intensity
+                <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-sm font-medium">
+                  Standard Intensity
                 </span>
               </div>
               
               <h1 className="heading-1 mb-6">
-                Performance<br />
-                <span className="gradient-text">Optimization</span>
+                Multi-Agent<br />
+                <span className="gradient-text">Coordination</span>
               </h1>
               
               <p className="body-large text-gray-300 mb-8 max-w-2xl">
-                Master the art and science of optimizing AI systems for speed, cost, and 
-                efficiency. Learn enterprise-grade techniques used by leading tech companies.
+                Learn to orchestrate multiple AI agents working together to solve complex business 
+                problems. Build scalable, coordinated AI systems for enterprise environments.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center gap-2 text-gray-300">
                   <ClockNodeIcon className="w-5 h-5 text-primary" />
-                  <span>120 Contact Hours</span>
+                  <span>90 Contact Hours</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-300">
                   <Calendar className="w-5 h-5 text-primary" />
@@ -150,7 +150,7 @@ const PerformanceOptimization = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" size="xl" asChild>
                   <Link to="/auth">
-                    Enroll Now – €1,750
+                    Enroll Now – €1,200
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </Button>
@@ -169,14 +169,14 @@ const PerformanceOptimization = () => {
               <div>
                 <h2 className="heading-2 mb-6">Module Overview</h2>
                 <p className="body-large text-muted-foreground mb-6">
-                  This intensive module covers everything you need to know about making AI systems 
-                  run faster, cheaper, and more efficiently. From profiling to deployment optimization, 
-                  you'll learn techniques used at the highest levels of the industry.
+                  Multi-agent systems are the future of AI deployment. This module teaches you to 
+                  design, build, and manage systems where multiple AI agents collaborate to achieve 
+                  complex objectives that no single agent could accomplish alone.
                 </p>
                 <p className="body text-muted-foreground mb-8">
-                  With 120 hours over 4 weeks, this is our most comprehensive technical module. 
-                  You'll spend significant time in hands-on labs working with real optimization 
-                  challenges and enterprise-scale systems.
+                  Through hands-on labs and real-world projects, you'll gain practical experience 
+                  with agent orchestration frameworks, communication protocols, and scaling strategies 
+                  used by leading enterprises.
                 </p>
 
                 <div className="bg-muted/50 rounded-xl p-6 border border-border">
@@ -188,11 +188,11 @@ const PerformanceOptimization = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Performance benchmarking report</span>
+                      <span className="text-muted-foreground">Active participation in forum discussions</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Mini-capstone with mentor feedback</span>
+                      <span className="text-muted-foreground">Mini-capstone deliverable with mentor feedback</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
@@ -225,7 +225,8 @@ const PerformanceOptimization = () => {
             <div className="text-center mb-12">
               <h2 className="heading-2 mb-4">4-Week Curriculum</h2>
               <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-                Intensive JHU-inspired methodology with 30 hours per week of focused optimization training.
+                JHU-inspired methodology with live masterclasses, hands-on labs, 
+                mentored sessions, and a practical capstone project.
               </p>
             </div>
 
@@ -269,7 +270,7 @@ const PerformanceOptimization = () => {
             <div className="text-center mb-12">
               <h2 className="heading-2 mb-4">Real-World Applications</h2>
               <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-                Performance optimization is critical across every industry using AI.
+                See how multi-agent coordination transforms industries.
               </p>
             </div>
 
@@ -294,17 +295,17 @@ const PerformanceOptimization = () => {
           <div className="container-coad">
             <div className="max-w-4xl mx-auto text-center">
               <GraduationNodeIcon className="w-16 h-16 mx-auto mb-6 text-primary" />
-              <h2 className="heading-2 mb-4">Part of the AIC Track</h2>
+              <h2 className="heading-2 mb-4">Part of the AAD Track</h2>
               <p className="body-large text-gray-300 mb-8">
-                This advanced module counts toward your AI Competence (AIC) Track certification. 
+                This module counts toward your Agentic AI Developer (AAD) Track certification. 
                 Complete all track modules to achieve Charterholder status.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="xl" asChild>
-                  <Link to="/auth">Enroll Now – €1,750</Link>
+                  <Link to="/auth">Enroll Now – €1,200</Link>
                 </Button>
                 <Button variant="outline" size="xl" className="border-gray-600 text-gray-300 hover:bg-white/10" asChild>
-                  <Link to="/certifications">Explore Full AIC Track</Link>
+                  <Link to="/certifications">Explore Full AAD Track</Link>
                 </Button>
               </div>
             </div>
@@ -317,4 +318,4 @@ const PerformanceOptimization = () => {
   );
 };
 
-export default PerformanceOptimization;
+export default MultiAgentCoordination;

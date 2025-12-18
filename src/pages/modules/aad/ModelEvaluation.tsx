@@ -4,7 +4,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import {
-  DataNodeIcon,
+  BalanceScaleIcon,
   CheckNodeIcon,
   ClockNodeIcon,
   AwardNodeIcon,
@@ -12,52 +12,52 @@ import {
 } from '@/components/ui/custom-icons';
 import { ArrowRight, Calendar, Briefcase } from 'lucide-react';
 
-const DataPipelineDesign = () => {
+const ModelEvaluation = () => {
   const weeklyBreakdown = [
     {
       week: 1,
-      title: "Masterclass – Pipeline Architecture",
+      title: "Masterclass – Evaluation Frameworks",
       hours: 22,
-      description: "Expert-led session on modern data pipeline architectures for AI systems.",
+      description: "Expert-led session on comprehensive AI model evaluation methodologies.",
       activities: [
-        "Data pipeline design patterns",
-        "Batch vs streaming architectures",
-        "Data quality frameworks",
-        "EU AI Act data requirements"
+        "Evaluation metrics selection",
+        "Benchmark design principles",
+        "Bias and fairness testing",
+        "EU AI Act evaluation requirements"
       ]
     },
     {
       week: 2,
-      title: "Hands-On Labs – Building Pipelines",
+      title: "Hands-On Labs – Testing Implementation",
       hours: 23,
-      description: "Practical exercises building robust data pipelines for AI applications.",
+      description: "Practical exercises implementing model evaluation frameworks.",
       activities: [
-        "ETL/ELT implementation",
-        "Data validation and cleansing",
-        "Pipeline orchestration tools",
-        "Monitoring and alerting setup"
+        "Automated testing pipelines",
+        "Red-teaming exercises",
+        "Performance benchmarking",
+        "A/B testing methodologies"
       ]
     },
     {
       week: 3,
-      title: "Mentored Sessions – Scale & Compliance",
+      title: "Mentored Sessions – Advanced Evaluation",
       hours: 22,
-      description: "Expert guidance on scaling pipelines while maintaining compliance.",
+      description: "Expert guidance on complex evaluation scenarios.",
       activities: [
-        "Scaling strategies for production",
-        "Data lineage implementation",
-        "ESG data governance",
-        "Privacy-preserving pipelines"
+        "Adversarial robustness testing",
+        "Explainability evaluation",
+        "ESG impact assessment",
+        "Continuous monitoring setup"
       ]
     },
     {
       week: 4,
-      title: "Mini-Capstone – Production Pipeline",
+      title: "Mini-Capstone – Evaluation Framework",
       hours: 23,
-      description: "Design and deliver a production-ready AI data pipeline.",
+      description: "Design and deliver a comprehensive model evaluation framework.",
       activities: [
-        "Complete pipeline delivery",
-        "Documentation and runbooks",
+        "Complete evaluation suite",
+        "Testing documentation",
         "Compliance verification",
         "Blockchain certificate issuance"
       ]
@@ -66,37 +66,37 @@ const DataPipelineDesign = () => {
 
   const realWorldUseCases = [
     {
-      industry: "Retail Analytics",
-      scenario: "Building real-time data pipelines for AI-driven inventory and demand forecasting systems."
+      industry: "Healthcare AI",
+      scenario: "Building evaluation frameworks for medical AI that test accuracy, safety, and fairness across patient demographics."
     },
     {
       industry: "Financial Services",
-      scenario: "Creating compliant data pipelines for AI credit scoring with full audit trails."
+      scenario: "Evaluating credit scoring models for bias, accuracy, and regulatory compliance before deployment."
     },
     {
-      industry: "IoT & Manufacturing",
-      scenario: "Streaming data pipelines for predictive maintenance AI in industrial settings."
+      industry: "Autonomous Systems",
+      scenario: "Safety-critical evaluation frameworks for self-driving AI with edge case testing."
     },
     {
-      industry: "Healthcare",
-      scenario: "Privacy-compliant pipelines for AI diagnostics with patient data protection."
+      industry: "HR Tech",
+      scenario: "Testing recruitment AI for bias and discrimination before deployment under EU AI Act."
     }
   ];
 
   const learningOutcomes = [
-    "Design scalable data pipeline architectures for AI",
-    "Implement data quality and validation frameworks",
-    "Build compliant pipelines with full lineage tracking",
-    "Configure monitoring and alerting systems",
-    "Ensure EU AI Act data governance compliance",
-    "Create production-ready pipeline documentation"
+    "Design comprehensive AI evaluation frameworks",
+    "Implement automated testing pipelines",
+    "Conduct bias and fairness assessments",
+    "Perform adversarial robustness testing",
+    "Ensure EU AI Act evaluation compliance",
+    "Build continuous monitoring systems"
   ];
 
   return (
     <>
       <Helmet>
-        <title>Data Pipeline Design | AIC Module | COAD</title>
-        <meta name="description" content="Master AI data pipeline design in this 90-hour module. Learn to build scalable, compliant data infrastructure with blockchain certification." />
+        <title>Model Evaluation & Testing | AAD Module | COAD</title>
+        <meta name="description" content="Master AI model evaluation in this 90-hour module. Learn comprehensive testing methodologies with blockchain certification." />
       </Helmet>
 
       <Header />
@@ -111,7 +111,7 @@ const DataPipelineDesign = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">
-                  AIC Module
+                  AAD Module
                 </span>
                 <span className="px-3 py-1 rounded-full bg-teal/20 text-teal text-sm font-medium">
                   90 Hours • 4 Weeks
@@ -122,13 +122,13 @@ const DataPipelineDesign = () => {
               </div>
               
               <h1 className="heading-1 mb-6">
-                Data Pipeline<br />
-                <span className="gradient-text">Design</span>
+                Model Evaluation<br />
+                <span className="gradient-text">& Testing</span>
               </h1>
               
               <p className="body-large text-gray-300 mb-8 max-w-2xl">
-                Build the data foundation for AI success. Learn to design, implement, and 
-                maintain robust data pipelines that power intelligent systems at scale.
+                Ensure AI quality before deployment. Learn rigorous evaluation methodologies 
+                that test for accuracy, fairness, robustness, and regulatory compliance.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
@@ -149,7 +149,7 @@ const DataPipelineDesign = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" size="xl" asChild>
                   <Link to="/auth">
-                    Enroll Now – €1,200
+                    Enroll Now – €1,100
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </Button>
@@ -167,14 +167,14 @@ const DataPipelineDesign = () => {
               <div>
                 <h2 className="heading-2 mb-6">Module Overview</h2>
                 <p className="body-large text-muted-foreground mb-6">
-                  Every AI system is only as good as its data. This module teaches you to build 
-                  the data infrastructure that powers intelligent applications – from ingestion 
-                  to transformation to serving.
+                  Deploying untested AI is a recipe for disaster. This module teaches you to 
+                  build comprehensive evaluation frameworks that catch issues before they 
+                  impact users or violate regulations.
                 </p>
                 <p className="body text-muted-foreground mb-8">
-                  You'll work with modern data engineering tools and patterns, learning to build 
-                  pipelines that are not only performant but also compliant with EU data 
-                  governance requirements.
+                  From basic metrics to advanced adversarial testing, you'll learn the full 
+                  spectrum of evaluation techniques used by leading AI organizations to 
+                  ensure model quality and compliance.
                 </p>
 
                 <div className="bg-muted/50 rounded-xl p-6 border border-border">
@@ -186,15 +186,15 @@ const DataPipelineDesign = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Pipeline architecture delivery</span>
+                      <span className="text-muted-foreground">Evaluation framework delivery</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Data quality documentation</span>
+                      <span className="text-muted-foreground">Bias assessment report</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Compliance verification</span>
+                      <span className="text-muted-foreground">Testing documentation</span>
                     </li>
                   </ul>
                 </div>
@@ -279,16 +279,16 @@ const DataPipelineDesign = () => {
           <div className="container-coad">
             <div className="max-w-4xl mx-auto text-center">
               <GraduationNodeIcon className="w-16 h-16 mx-auto mb-6 text-primary" />
-              <h2 className="heading-2 mb-4">Part of the AIC Track</h2>
+              <h2 className="heading-2 mb-4">Part of the AAD Track</h2>
               <p className="body-large text-gray-300 mb-8">
-                This module counts toward your AI Competence (AIC) Track certification.
+                This module counts toward your Agentic AI Developer (AAD) Track certification.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="xl" asChild>
-                  <Link to="/auth">Enroll Now – €1,200</Link>
+                  <Link to="/auth">Enroll Now – €1,100</Link>
                 </Button>
                 <Button variant="outline" size="xl" className="border-gray-600 text-gray-300 hover:bg-white/10" asChild>
-                  <Link to="/certifications">Explore Full AIC Track</Link>
+                  <Link to="/certifications">Explore Full AAD Track</Link>
                 </Button>
               </div>
             </div>
@@ -301,4 +301,4 @@ const DataPipelineDesign = () => {
   );
 };
 
-export default DataPipelineDesign;
+export default ModelEvaluation;
