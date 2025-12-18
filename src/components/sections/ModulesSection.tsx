@@ -107,19 +107,13 @@ const ModulesSection = () => {
               className="group bg-card rounded-xl border border-border p-6 card-hover block"
               style={{ animationDelay: `${index * 50}ms` }}
             >
-              {/* Icon & Track Badge */}
+              {/* Module Name - Top with gradient stencil effect */}
               <div className="flex items-start justify-between mb-4">
-                <div className={cn(
-                  'w-12 h-12 rounded-xl flex items-center justify-center',
-                  module.track === 'aad' ? 'bg-primary/10' : 'bg-teal/10'
-                )}>
-                  <module.Icon 
-                    className="w-7 h-7"
-                    color={module.track === 'aad' ? 'primary' : 'teal'}
-                  />
-                </div>
+                <h3 className="font-bold text-sm tracking-wider uppercase gradient-text group-hover:opacity-80 transition-opacity">
+                  {module.name}
+                </h3>
                 <span className={cn(
-                  'px-2 py-1 rounded-full text-xs font-medium',
+                  'px-2 py-1 rounded-full text-xs font-medium flex-shrink-0 ml-2',
                   module.track === 'aad' 
                     ? 'bg-primary/10 text-primary' 
                     : 'bg-teal/10 text-teal'
@@ -128,10 +122,18 @@ const ModulesSection = () => {
                 </span>
               </div>
 
-              {/* Content */}
-              <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                {module.name}
-              </h3>
+              {/* Icon */}
+              <div className={cn(
+                'w-12 h-12 rounded-xl flex items-center justify-center mb-4',
+                module.track === 'aad' ? 'bg-primary/10' : 'bg-teal/10'
+              )}>
+                <module.Icon 
+                  className="w-7 h-7"
+                  color={module.track === 'aad' ? 'primary' : 'teal'}
+                />
+              </div>
+
+              {/* Description */}
               <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
                 {module.description}
               </p>
