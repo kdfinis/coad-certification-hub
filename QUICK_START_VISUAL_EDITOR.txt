@@ -1,0 +1,87 @@
+═══════════════════════════════════════════════════════════════
+  QUICK START: Cursor Visual Editor
+═══════════════════════════════════════════════════════════════
+
+FILE READY: src/components/sections/HeroSection.tsx
+STATUS: ✅ Fully optimized with visual editing annotations
+PREVIEW: http://localhost:8080 (running)
+
+═══════════════════════════════════════════════════════════════
+  HOW TO OPEN VISUAL EDITOR
+═══════════════════════════════════════════════════════════════
+
+OPTION 1: Right-Click Method
+─────────────────────────────
+1. In Cursor, find: src/components/sections/HeroSection.tsx
+2. Right-click the file
+3. Select "Open in Visual Editor" or "Open in AI Editor"
+
+OPTION 2: Command Palette
+─────────────────────────
+1. Press: Cmd+Shift+P (Mac) or Ctrl+Shift+P (Windows)
+2. Type: "Visual Editor" or "AI Editor"
+3. Select the option
+4. Choose HeroSection.tsx
+
+OPTION 3: File Tab Icon
+───────────────────────
+1. Open HeroSection.tsx normally
+2. Look for visual/design icon in file tab
+3. Click to switch to visual mode
+
+═══════════════════════════════════════════════════════════════
+  WHAT YOU CAN DO IN VISUAL EDITOR
+═══════════════════════════════════════════════════════════════
+
+✅ Drag & Drop Elements:
+   - Reorder benefit items
+   - Reposition CTA buttons
+   - Rearrange trust badges
+   - Move certificate card
+
+✅ Adjust Spacing:
+   - Container padding (pt-24 pb-16)
+   - Grid gaps (gap-12 lg:gap-16)
+   - Element spacing (space-y-8)
+
+✅ Modify Styling:
+   - Colors and gradients
+   - Typography sizes
+   - Border radius
+   - Shadows and effects
+
+✅ See Live Changes:
+   - Changes sync to code automatically
+   - Browser at localhost:8080 auto-refreshes
+   - Instant visual feedback
+
+═══════════════════════════════════════════════════════════════
+  ANNOTATIONS GUIDE
+═══════════════════════════════════════════════════════════════
+
+Look for these comments in the code:
+
+VISUAL-EDIT: [description]
+→ Areas optimized for visual editing
+
+DRAG-DROP: [element]
+→ Elements you can drag and drop
+
+SPACING: [value]
+→ Spacing you can adjust visually
+
+═══════════════════════════════════════════════════════════════
+  TIPS
+═══════════════════════════════════════════════════════════════
+
+💡 Keep localhost:8080 open in browser
+💡 Start with HeroSection (fully optimized)
+💡 Save frequently (auto-sync)
+💡 Test responsive views after changes
+
+═══════════════════════════════════════════════════════════════
+
+FILE LOCATION: /Users/karlodefinis/Desktop/AI COMPANY/website/code/src/components/sections/HeroSection.tsx
+
+READY TO EDIT! 🚀
+
