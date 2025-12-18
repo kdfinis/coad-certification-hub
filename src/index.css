@@ -271,4 +271,20 @@
   .stagger-4 { animation-delay: 300ms; }
   .stagger-5 { animation-delay: 400ms; }
   .stagger-6 { animation-delay: 500ms; }
+
+  /* Page transition animation */
+  .page-transitioning main {
+    animation: pageEnter 0.6s ease-out forwards;
+  }
+
+  @keyframes pageEnter {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }

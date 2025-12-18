@@ -4,7 +4,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import {
-  NetworkNodesIcon,
+  LightbulbNodeIcon,
   CheckNodeIcon,
   ClockNodeIcon,
   AwardNodeIcon,
@@ -12,53 +12,53 @@ import {
 } from '@/components/ui/custom-icons';
 import { ArrowRight, Calendar, Briefcase } from 'lucide-react';
 
-const AIDeployment = () => {
+const PromptEngineering = () => {
   const weeklyBreakdown = [
     {
       week: 1,
-      title: "Masterclass – Deployment Strategies",
-      hours: 30,
-      description: "Expert-led deep dive into AI deployment architectures and strategies.",
+      title: "Masterclass – Prompt Design Principles",
+      hours: 15,
+      description: "Expert-led session covering the science and art of effective prompt engineering.",
       activities: [
-        "Cloud vs edge deployment",
-        "Container orchestration for AI",
-        "Model serving architectures",
-        "EU AI Act deployment requirements"
+        "LLM behavior and capabilities",
+        "Prompt structure and formatting",
+        "Context window optimization",
+        "Zero-shot vs few-shot techniques"
       ]
     },
     {
       week: 2,
-      title: "Hands-On Labs – Infrastructure Setup",
-      hours: 30,
-      description: "Practical exercises building production AI infrastructure.",
+      title: "Hands-On Labs – Advanced Techniques",
+      hours: 15,
+      description: "Practical exercises with chain-of-thought, role prompting, and retrieval augmentation.",
       activities: [
-        "Kubernetes for AI workloads",
-        "Model versioning and rollback",
-        "Canary and blue-green deployments",
-        "Autoscaling configuration"
+        "Chain-of-thought prompting",
+        "Role and persona engineering",
+        "RAG system integration",
+        "Prompt chaining strategies"
       ]
     },
     {
       week: 3,
-      title: "Mentored Sessions – Production Operations",
-      hours: 30,
-      description: "Expert guidance on operating AI systems in production.",
+      title: "Mentored Sessions – Enterprise Applications",
+      hours: 15,
+      description: "Expert guidance on deploying prompt engineering in production environments.",
       activities: [
-        "Monitoring and observability",
-        "Incident response procedures",
-        "ESG-compliant operations",
-        "Cost management strategies"
+        "Prompt version control",
+        "Testing and evaluation methods",
+        "ESG-aligned content generation",
+        "EU AI Act transparency requirements"
       ]
     },
     {
       week: 4,
-      title: "Mini-Capstone – Production System",
-      hours: 30,
-      description: "Deploy a complete AI system to production with full observability.",
+      title: "Mini-Capstone – Prompt Library",
+      hours: 15,
+      description: "Design and deliver a production-ready prompt library for enterprise use.",
       activities: [
-        "End-to-end deployment",
-        "Operations runbook delivery",
-        "Compliance documentation",
+        "Comprehensive prompt library",
+        "Documentation and guidelines",
+        "Testing and validation results",
         "Blockchain certificate issuance"
       ]
     }
@@ -66,42 +66,43 @@ const AIDeployment = () => {
 
   const realWorldUseCases = [
     {
-      industry: "E-Commerce",
-      scenario: "Deploying recommendation systems that handle Black Friday traffic spikes without service degradation."
+      industry: "Customer Service",
+      scenario: "Designing prompts for AI assistants that maintain brand voice while resolving customer issues effectively."
     },
     {
-      industry: "Financial Trading",
-      scenario: "Low-latency AI deployment for real-time trading decisions with five-nines availability."
+      industry: "Content Creation",
+      scenario: "Building prompt systems for marketing teams to generate consistent, on-brand content at scale."
     },
     {
-      industry: "Content Platforms",
-      scenario: "Global AI deployment for content moderation across multiple regions with local compliance."
+      industry: "Legal",
+      scenario: "Creating prompts for contract analysis and document summarization with high accuracy requirements."
     },
     {
-      industry: "Healthcare",
-      scenario: "Deploying AI diagnostics with strict uptime requirements and fail-safe mechanisms."
+      industry: "Education",
+      scenario: "Developing adaptive tutoring prompts that adjust to student comprehension levels."
     }
   ];
 
   const learningOutcomes = [
-    "Design production-grade AI deployment architectures",
-    "Implement container orchestration for AI workloads",
-    "Configure monitoring and observability systems",
-    "Manage model versions and rollback procedures",
-    "Ensure EU AI Act deployment compliance",
-    "Create comprehensive operations documentation"
+    "Master core prompt engineering principles and techniques",
+    "Implement advanced prompting strategies like chain-of-thought",
+    "Design prompt systems for enterprise applications",
+    "Create maintainable prompt libraries with version control",
+    "Ensure EU AI Act transparency compliance",
+    "Build evaluation frameworks for prompt performance"
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Deployment & MLOps | AIC Module | COAD</title>
-        <meta name="description" content="Master AI deployment and MLOps in this intensive 120-hour module. Learn production infrastructure with blockchain certification." />
+        <title>Prompt Engineering | AAD Module | COAD</title>
+        <meta name="description" content="Master prompt engineering in this 60-hour, 4-week module. Learn advanced techniques for LLM optimization with blockchain certification." />
       </Helmet>
 
       <Header />
 
       <main className="pt-20">
+        {/* Hero */}
         <section className="bg-navy text-primary-foreground py-16 md:py-24 relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-20 left-20 w-96 h-96 bg-primary rounded-full blur-3xl" />
@@ -111,30 +112,30 @@ const AIDeployment = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">
-                  AIC Module
+                  AAD Module
                 </span>
                 <span className="px-3 py-1 rounded-full bg-teal/20 text-teal text-sm font-medium">
-                  120 Hours • 4 Weeks
+                  60 Hours • 4 Weeks
                 </span>
-                <span className="px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-sm font-medium">
-                  Heavy Intensity
+                <span className="px-3 py-1 rounded-full bg-muted/20 text-gray-300 text-sm font-medium">
+                  Light Intensity
                 </span>
               </div>
               
               <h1 className="heading-1 mb-6">
-                AI Deployment<br />
-                <span className="gradient-text">& MLOps</span>
+                Prompt<br />
+                <span className="gradient-text">Engineering</span>
               </h1>
               
               <p className="body-large text-gray-300 mb-8 max-w-2xl">
-                Bridge the gap from model to production. Master the infrastructure, 
-                processes, and tools needed to deploy and operate AI systems at scale.
+                Master the art and science of communicating with large language models. Learn 
+                advanced techniques to get consistent, high-quality outputs from AI systems.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center gap-2 text-gray-300">
                   <ClockNodeIcon className="w-5 h-5 text-primary" />
-                  <span>120 Contact Hours</span>
+                  <span>60 Contact Hours</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-300">
                   <Calendar className="w-5 h-5 text-primary" />
@@ -149,7 +150,7 @@ const AIDeployment = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" size="xl" asChild>
                   <Link to="/auth">
-                    Enroll Now – €1,600
+                    Enroll Now – €750
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </Button>
@@ -161,20 +162,21 @@ const AIDeployment = () => {
           </div>
         </section>
 
+        {/* Content sections follow same pattern */}
         <section className="section-padding bg-background">
           <div className="container-coad">
             <div className="grid lg:grid-cols-2 gap-16">
               <div>
                 <h2 className="heading-2 mb-6">Module Overview</h2>
                 <p className="body-large text-muted-foreground mb-6">
-                  Most AI projects fail in deployment, not development. This intensive module 
-                  teaches you the MLOps practices and infrastructure skills needed to 
-                  successfully deploy and operate AI systems in production.
+                  Prompt engineering is the foundational skill for anyone working with LLMs. This 
+                  module takes you from basics to advanced techniques, covering everything from 
+                  simple prompts to complex RAG systems.
                 </p>
                 <p className="body text-muted-foreground mb-8">
-                  You'll work with real cloud infrastructure, learning to build scalable, 
-                  reliable, and compliant AI deployment pipelines that can handle enterprise 
-                  requirements.
+                  You'll learn not just how to write prompts, but how to build maintainable prompt 
+                  systems for enterprise use – including version control, testing, and compliance 
+                  documentation.
                 </p>
 
                 <div className="bg-muted/50 rounded-xl p-6 border border-border">
@@ -186,15 +188,15 @@ const AIDeployment = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Production deployment delivery</span>
+                      <span className="text-muted-foreground">Prompt library delivery</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Operations runbook</span>
+                      <span className="text-muted-foreground">Testing documentation</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Monitoring dashboard setup</span>
+                      <span className="text-muted-foreground">Peer review participation</span>
                     </li>
                   </ul>
                 </div>
@@ -217,11 +219,16 @@ const AIDeployment = () => {
           </div>
         </section>
 
+        {/* Weekly Breakdown */}
         <section className="section-padding bg-muted/50">
           <div className="container-coad">
             <div className="text-center mb-12">
               <h2 className="heading-2 mb-4">4-Week Curriculum</h2>
+              <p className="body-large text-muted-foreground max-w-2xl mx-auto">
+                From fundamentals to enterprise-grade prompt systems.
+              </p>
             </div>
+
             <div className="grid md:grid-cols-2 gap-8">
               {weeklyBreakdown.map((week, index) => (
                 <div key={index} className="bg-card rounded-2xl border border-border overflow-hidden card-hover">
@@ -254,6 +261,7 @@ const AIDeployment = () => {
           </div>
         </section>
 
+        {/* Real-World Use Cases */}
         <section className="section-padding bg-background">
           <div className="container-coad">
             <div className="text-center mb-12">
@@ -275,20 +283,21 @@ const AIDeployment = () => {
           </div>
         </section>
 
+        {/* Track Integration */}
         <section className="section-padding bg-navy text-primary-foreground">
           <div className="container-coad">
             <div className="max-w-4xl mx-auto text-center">
               <GraduationNodeIcon className="w-16 h-16 mx-auto mb-6 text-primary" />
-              <h2 className="heading-2 mb-4">Part of the AIC Track</h2>
+              <h2 className="heading-2 mb-4">Part of the AAD Track</h2>
               <p className="body-large text-gray-300 mb-8">
-                This advanced module counts toward your AI Competence (AIC) Track certification.
+                This module counts toward your Agentic AI Developer (AAD) Track certification.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="xl" asChild>
-                  <Link to="/auth">Enroll Now – €1,600</Link>
+                  <Link to="/auth">Enroll Now – €750</Link>
                 </Button>
                 <Button variant="outline" size="xl" className="border-gray-600 text-gray-300 hover:bg-white/10" asChild>
-                  <Link to="/certifications">Explore Full AIC Track</Link>
+                  <Link to="/certifications">Explore Full AAD Track</Link>
                 </Button>
               </div>
             </div>
@@ -301,4 +310,4 @@ const AIDeployment = () => {
   );
 };
 
-export default AIDeployment;
+export default PromptEngineering;

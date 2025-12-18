@@ -16,7 +16,7 @@ import {
   ArrowNodeIcon
 } from '@/components/ui/custom-icons';
 
-const AICTrackSection = () => {
+const AADTrackSection = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
@@ -93,7 +93,7 @@ const AICTrackSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-background" id="aic-track">
+    <section className="section-padding bg-background" id="aad-track">
       <div className="container-coad">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-16">
@@ -103,18 +103,18 @@ const AICTrackSection = () => {
           </div>
           
           <h2 className="heading-2 text-foreground mb-6">
-            Revamp Your Career with AIC:<br />
-            <span className="gradient-text">From AI Novice to Competence Master</span>
+            Revamp Your Career with AAD:<br />
+            <span className="gradient-text">From AI Novice to Agentic AI Developer</span>
           </h2>
           
           <p className="body-large text-muted-foreground">
-            Designed for scientifically minded experts and career changers, the AIC Track equips you with practical AI development skills to enrich your expertise and launch into high-demand roles. No coding background required—open to programmers for cutting-edge updates.
+            Designed for scientifically minded experts and career changers, the AAD Track (Agentic AI Developer) equips you with practical AI development skills to enrich your expertise and launch into high-demand roles. No coding background required—open to programmers for cutting-edge updates.
           </p>
         </div>
 
         {/* Who It's For */}
         <div className="bg-muted/30 rounded-3xl p-8 md:p-12 mb-16">
-          <h3 className="heading-4 text-foreground mb-6 text-center">Who is AIC for?</h3>
+          <h3 className="heading-4 text-foreground mb-6 text-center">Who is AAD for?</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-card rounded-xl p-6 border border-border">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
@@ -210,7 +210,7 @@ const AICTrackSection = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="hero" size="lg" asChild>
                 <a href="https://app.coad.ai/signup" className="group">
-                  Enroll in AIC Tier 1 – Start Your Revamp
+                  Enroll in AAD Tier 1 – Start Your Revamp
                   <ArrowNodeIcon className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
@@ -345,13 +345,12 @@ const AICTrackSection = () => {
           </div>
         </div>
 
-        {/* Testimonial */}
         <div className="bg-gradient-to-br from-primary/5 to-teal/5 rounded-3xl p-8 md:p-12">
           <div className="flex items-start gap-4 max-w-3xl mx-auto">
             <QuoteNodeIcon className="w-12 h-12 shrink-0" color="primary" />
             <div>
               <p className="text-lg md:text-xl text-foreground italic mb-4">
-                "As a biologist, AIC allowed me to blend my expertise with AI for groundbreaking research—it's completely revamped my career trajectory."
+                "As a biologist, AAD allowed me to blend my expertise with AI for groundbreaking research—it's completely revamped my career trajectory."
               </p>
               <p className="text-muted-foreground font-medium">
                 — Dr. Elena R., AI Researcher
@@ -364,4 +363,4 @@ const AICTrackSection = () => {
   );
 };
 
-export default AICTrackSection;
+export default AADTrackSection;

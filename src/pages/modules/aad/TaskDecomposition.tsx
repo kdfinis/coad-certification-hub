@@ -4,61 +4,63 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import {
-  NetworkNodesIcon,
+  CircuitLayersIcon,
   CheckNodeIcon,
   ClockNodeIcon,
   AwardNodeIcon,
-  GraduationNodeIcon
+  GraduationNodeIcon,
+  NetworkNodesIcon,
+  ShieldNodeIcon
 } from '@/components/ui/custom-icons';
-import { ArrowRight, Calendar, Briefcase } from 'lucide-react';
+import { ArrowRight, Calendar, Users, Target, BookOpen, Briefcase } from 'lucide-react';
 
-const MultiAgentCoordination = () => {
+const TaskDecomposition = () => {
   const weeklyBreakdown = [
     {
       week: 1,
-      title: "Masterclass – Agent Systems Basics",
-      hours: 22,
-      description: "Expert-led session covering multi-agent architectures, communication protocols, and coordination strategies.",
+      title: "Masterclass – Breaking Problems into AI Tasks",
+      hours: 15,
+      description: "Expert-led recorded session covering problem decomposition frameworks, task identification methodologies, and AI capability mapping.",
       activities: [
-        "Multi-agent system architectures overview",
-        "Agent communication protocols and standards",
-        "Task distribution and load balancing",
-        "Real-world multi-agent case studies"
+        "Problem analysis frameworks for AI suitability",
+        "Task granularity optimization techniques",
+        "AI capability assessment matrices",
+        "Live Q&A with industry practitioners"
       ]
     },
     {
       week: 2,
-      title: "Hands-On Labs – Coordinate Multiple AI Tools",
-      hours: 23,
-      description: "Practical exercises building systems that orchestrate multiple AI agents working together.",
+      title: "Hands-On Labs – Build Simple Workflows",
+      hours: 15,
+      description: "Practical workshop using no-code and low-code tools to construct AI workflows from decomposed tasks.",
       activities: [
-        "Setting up agent orchestration frameworks",
-        "Building inter-agent communication channels",
-        "Conflict resolution mechanisms",
-        "Performance monitoring dashboards"
+        "No-code workflow builder exercises",
+        "Task sequencing and dependency mapping",
+        "Integration with popular AI tools",
+        "Workflow documentation standards"
       ]
     },
     {
       week: 3,
-      title: "Mentored Sessions – Live Q&A on Scaling",
-      hours: 22,
-      description: "Interactive sessions with industry experts on scaling multi-agent systems for enterprise use.",
+      title: "Mentored Sessions – Forum Feedback",
+      hours: 15,
+      description: "Weekly forum Q&A plus optional live office hours with industry professionals reviewing your personal project.",
       activities: [
-        "Scaling strategies for production environments",
-        "Cost optimization for multi-agent systems",
-        "ESG compliance in distributed AI",
-        "EU AI Act requirements for agent systems"
+        "Peer review of decomposition strategies",
+        "Expert feedback on workflow designs",
+        "ESG compliance checks in workflows",
+        "EU AI Act alignment verification"
       ]
     },
     {
       week: 4,
-      title: "Mini-Capstone – Multi-Agent Business Solution",
-      hours: 23,
-      description: "Design and deliver a complete multi-agent business solution with mentor review.",
+      title: "Mini-Capstone – Deliver Optimized Workflow",
+      hours: 15,
+      description: "Final practical deliverable with mentor review, creating a portfolio-ready AI workflow system.",
       activities: [
-        "End-to-end solution architecture",
-        "Documentation and compliance verification",
-        "Presentation to expert panel",
+        "Complete workflow system delivery",
+        "Documentation and presentation",
+        "Mentor feedback and assessment",
         "Blockchain certificate issuance"
       ]
     }
@@ -66,37 +68,37 @@ const MultiAgentCoordination = () => {
 
   const realWorldUseCases = [
     {
-      industry: "E-Commerce",
-      scenario: "Coordinating pricing agents, inventory agents, and customer service agents to optimize real-time marketplace operations."
+      industry: "Financial Services",
+      scenario: "Automating loan application processing by breaking down document verification, credit scoring, and compliance checks into discrete AI tasks."
     },
     {
-      industry: "Supply Chain",
-      scenario: "Orchestrating logistics agents, demand forecasting agents, and supplier management agents for end-to-end visibility."
+      industry: "Healthcare",
+      scenario: "Decomposing patient intake workflows into AI-managed scheduling, document digitization, and preliminary symptom analysis."
     },
     {
-      industry: "Financial Trading",
-      scenario: "Multi-agent systems for market analysis, risk assessment, and execution agents working in millisecond coordination."
+      industry: "Manufacturing",
+      scenario: "Creating modular quality control workflows with AI inspection, defect classification, and reporting tasks."
     },
     {
-      industry: "Smart Cities",
-      scenario: "Traffic management, energy distribution, and emergency response agents collaborating for urban optimization."
+      industry: "Legal Services",
+      scenario: "Building contract review workflows with extraction, clause analysis, and risk flagging as separate AI components."
     }
   ];
 
   const learningOutcomes = [
-    "Design multi-agent system architectures for business applications",
-    "Implement agent communication and coordination protocols",
-    "Scale agent systems for enterprise production environments",
-    "Optimize performance and costs in multi-agent deployments",
-    "Ensure EU AI Act compliance for distributed AI systems",
-    "Build portfolio-ready multi-agent solutions"
+    "Master problem decomposition frameworks for AI applications",
+    "Design efficient task sequences for AI workflow systems",
+    "Apply no-code tools for rapid AI workflow prototyping",
+    "Ensure ESG 2015 compliance in workflow design",
+    "Create documentation meeting EU AI Act standards",
+    "Build portfolio-ready workflow deliverables"
   ];
 
   return (
     <>
       <Helmet>
-        <title>Multi-Agent Coordination | AIC Module | COAD</title>
-        <meta name="description" content="Master multi-agent AI system coordination in this 90-hour, 4-week module. Learn to orchestrate multiple AI tools and earn a blockchain-verified certificate." />
+        <title>Task Decomposition & AI Workflow Design | AAD Module | COAD</title>
+        <meta name="description" content="Master problem decomposition and AI workflow design in this 60-hour, 4-week module. Build practical skills with no-code tools and earn a blockchain-verified certificate." />
       </Helmet>
 
       <Header />
@@ -112,30 +114,30 @@ const MultiAgentCoordination = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">
-                  AIC Module
+                  AAD Module
                 </span>
                 <span className="px-3 py-1 rounded-full bg-teal/20 text-teal text-sm font-medium">
-                  90 Hours • 4 Weeks
+                  60 Hours • 4 Weeks
                 </span>
-                <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-sm font-medium">
-                  Standard Intensity
+                <span className="px-3 py-1 rounded-full bg-muted/20 text-gray-300 text-sm font-medium">
+                  Light Intensity
                 </span>
               </div>
               
               <h1 className="heading-1 mb-6">
-                Multi-Agent<br />
-                <span className="gradient-text">Coordination</span>
+                Task Decomposition &<br />
+                <span className="gradient-text">AI Workflow Design</span>
               </h1>
               
               <p className="body-large text-gray-300 mb-8 max-w-2xl">
-                Learn to orchestrate multiple AI agents working together to solve complex business 
-                problems. Build scalable, coordinated AI systems for enterprise environments.
+                Learn to break complex problems into AI-manageable components and design efficient 
+                workflows using no-code tools. Perfect for non-programmers entering AI implementation.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center gap-2 text-gray-300">
                   <ClockNodeIcon className="w-5 h-5 text-primary" />
-                  <span>90 Contact Hours</span>
+                  <span>60 Contact Hours</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-300">
                   <Calendar className="w-5 h-5 text-primary" />
@@ -150,7 +152,7 @@ const MultiAgentCoordination = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" size="xl" asChild>
                   <Link to="/auth">
-                    Enroll Now – €1,200
+                    Enroll Now – €800
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </Button>
@@ -169,14 +171,14 @@ const MultiAgentCoordination = () => {
               <div>
                 <h2 className="heading-2 mb-6">Module Overview</h2>
                 <p className="body-large text-muted-foreground mb-6">
-                  Multi-agent systems are the future of AI deployment. This module teaches you to 
-                  design, build, and manage systems where multiple AI agents collaborate to achieve 
-                  complex objectives that no single agent could accomplish alone.
+                  This foundation module teaches you to analyze complex business problems and 
+                  decompose them into discrete tasks suitable for AI automation. Using a JHU-inspired 
+                  methodology, you'll move from theory to practice in just four weeks.
                 </p>
                 <p className="body text-muted-foreground mb-8">
-                  Through hands-on labs and real-world projects, you'll gain practical experience 
-                  with agent orchestration frameworks, communication protocols, and scaling strategies 
-                  used by leading enterprises.
+                  The module emphasizes practical application over theory – 60% of your time will be 
+                  spent on hands-on labs and projects. You'll work with real-world scenarios and 
+                  build a portfolio piece that demonstrates your competency.
                 </p>
 
                 <div className="bg-muted/50 rounded-xl p-6 border border-border">
@@ -225,7 +227,7 @@ const MultiAgentCoordination = () => {
             <div className="text-center mb-12">
               <h2 className="heading-2 mb-4">4-Week Curriculum</h2>
               <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-                JHU-inspired methodology with live masterclasses, hands-on labs, 
+                JHU-inspired methodology combining live masterclasses, hands-on labs, 
                 mentored sessions, and a practical capstone project.
               </p>
             </div>
@@ -270,7 +272,7 @@ const MultiAgentCoordination = () => {
             <div className="text-center mb-12">
               <h2 className="heading-2 mb-4">Real-World Applications</h2>
               <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-                See how multi-agent coordination transforms industries.
+                See how task decomposition and workflow design applies across industries.
               </p>
             </div>
 
@@ -295,17 +297,18 @@ const MultiAgentCoordination = () => {
           <div className="container-coad">
             <div className="max-w-4xl mx-auto text-center">
               <GraduationNodeIcon className="w-16 h-16 mx-auto mb-6 text-primary" />
-              <h2 className="heading-2 mb-4">Part of the AIC Track</h2>
+              <h2 className="heading-2 mb-4">Part of the AAD Track</h2>
               <p className="body-large text-gray-300 mb-8">
-                This module counts toward your AI Competence (AIC) Track certification. 
-                Complete all track modules to achieve Charterholder status.
+                This module counts toward your Agentic AI Developer (AAD) Track certification. 
+                Complete all track modules to achieve Charterholder status and priority 
+                listing in the COAD Expert Directory.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="xl" asChild>
-                  <Link to="/auth">Enroll Now – €1,200</Link>
+                  <Link to="/auth">Enroll Now – €800</Link>
                 </Button>
                 <Button variant="outline" size="xl" className="border-gray-600 text-gray-300 hover:bg-white/10" asChild>
-                  <Link to="/certifications">Explore Full AIC Track</Link>
+                  <Link to="/certifications">Explore Full AAD Track</Link>
                 </Button>
               </div>
             </div>
@@ -318,4 +321,4 @@ const MultiAgentCoordination = () => {
   );
 };
 
-export default MultiAgentCoordination;
+export default TaskDecomposition;

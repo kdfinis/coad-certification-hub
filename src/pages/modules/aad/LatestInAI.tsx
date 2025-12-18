@@ -4,7 +4,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import {
-  BalanceScaleIcon,
+  NeuralBrainIcon,
   CheckNodeIcon,
   ClockNodeIcon,
   AwardNodeIcon,
@@ -12,53 +12,53 @@ import {
 } from '@/components/ui/custom-icons';
 import { ArrowRight, Calendar, Briefcase } from 'lucide-react';
 
-const ModelEvaluation = () => {
+const LatestInAI = () => {
   const weeklyBreakdown = [
     {
       week: 1,
-      title: "Masterclass – Evaluation Frameworks",
-      hours: 22,
-      description: "Expert-led session on comprehensive AI model evaluation methodologies.",
+      title: "Masterclass – 2025 AI Landscape",
+      hours: 15,
+      description: "Expert overview of the most significant AI developments and trends shaping 2025.",
       activities: [
-        "Evaluation metrics selection",
-        "Benchmark design principles",
-        "Bias and fairness testing",
-        "EU AI Act evaluation requirements"
+        "Foundation model evolution and capabilities",
+        "Emerging AI architectures and paradigms",
+        "Industry adoption patterns",
+        "EU regulatory developments"
       ]
     },
     {
       week: 2,
-      title: "Hands-On Labs – Testing Implementation",
-      hours: 23,
-      description: "Practical exercises implementing model evaluation frameworks.",
+      title: "Hands-On Labs – New Tools & Platforms",
+      hours: 15,
+      description: "Practical exploration of the latest AI tools, platforms, and frameworks.",
       activities: [
-        "Automated testing pipelines",
-        "Red-teaming exercises",
-        "Performance benchmarking",
-        "A/B testing methodologies"
+        "Latest LLM capabilities exploration",
+        "New multimodal AI tools",
+        "Emerging development frameworks",
+        "Evaluation and benchmarking methods"
       ]
     },
     {
       week: 3,
-      title: "Mentored Sessions – Advanced Evaluation",
-      hours: 22,
-      description: "Expert guidance on complex evaluation scenarios.",
+      title: "Mentored Sessions – Strategic Implications",
+      hours: 15,
+      description: "Expert discussions on strategic implications of AI developments.",
       activities: [
-        "Adversarial robustness testing",
-        "Explainability evaluation",
-        "ESG impact assessment",
-        "Continuous monitoring setup"
+        "Business impact assessments",
+        "Competitive landscape analysis",
+        "ESG considerations in new AI",
+        "Regulatory horizon scanning"
       ]
     },
     {
       week: 4,
-      title: "Mini-Capstone – Evaluation Framework",
-      hours: 23,
-      description: "Design and deliver a comprehensive model evaluation framework.",
+      title: "Mini-Capstone – Technology Assessment",
+      hours: 15,
+      description: "Deliver a comprehensive technology assessment and adoption roadmap.",
       activities: [
-        "Complete evaluation suite",
-        "Testing documentation",
-        "Compliance verification",
+        "Technology evaluation report",
+        "Adoption recommendations",
+        "Risk-benefit analysis",
         "Blockchain certificate issuance"
       ]
     }
@@ -66,42 +66,43 @@ const ModelEvaluation = () => {
 
   const realWorldUseCases = [
     {
-      industry: "Healthcare AI",
-      scenario: "Building evaluation frameworks for medical AI that test accuracy, safety, and fairness across patient demographics."
+      industry: "Enterprise Strategy",
+      scenario: "Evaluating and recommending AI technology investments for organizational digital transformation."
     },
     {
-      industry: "Financial Services",
-      scenario: "Evaluating credit scoring models for bias, accuracy, and regulatory compliance before deployment."
+      industry: "Product Development",
+      scenario: "Identifying AI capabilities to integrate into product roadmaps for competitive advantage."
     },
     {
-      industry: "Autonomous Systems",
-      scenario: "Safety-critical evaluation frameworks for self-driving AI with edge case testing."
+      industry: "Consulting",
+      scenario: "Advising clients on AI technology trends and their strategic implications."
     },
     {
-      industry: "HR Tech",
-      scenario: "Testing recruitment AI for bias and discrimination before deployment under EU AI Act."
+      industry: "Innovation Labs",
+      scenario: "Exploring emerging AI technologies for potential proof-of-concept development."
     }
   ];
 
   const learningOutcomes = [
-    "Design comprehensive AI evaluation frameworks",
-    "Implement automated testing pipelines",
-    "Conduct bias and fairness assessments",
-    "Perform adversarial robustness testing",
-    "Ensure EU AI Act evaluation compliance",
-    "Build continuous monitoring systems"
+    "Understand current AI landscape and major developments",
+    "Evaluate new AI tools and platforms effectively",
+    "Assess business implications of AI trends",
+    "Conduct technology adoption assessments",
+    "Navigate regulatory developments in AI",
+    "Create strategic AI technology roadmaps"
   ];
 
   return (
     <>
       <Helmet>
-        <title>Model Evaluation & Testing | AIC Module | COAD</title>
-        <meta name="description" content="Master AI model evaluation in this 90-hour module. Learn comprehensive testing methodologies with blockchain certification." />
+        <title>Latest in AI 2025 | AAD Module | COAD</title>
+        <meta name="description" content="Stay current with cutting-edge AI developments in this 60-hour, 4-week module. Learn the latest tools, trends, and strategic implications." />
       </Helmet>
 
       <Header />
 
       <main className="pt-20">
+        {/* Hero */}
         <section className="bg-navy text-primary-foreground py-16 md:py-24 relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-20 left-20 w-96 h-96 bg-primary rounded-full blur-3xl" />
@@ -111,30 +112,30 @@ const ModelEvaluation = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">
-                  AIC Module
+                  AAD Module
                 </span>
                 <span className="px-3 py-1 rounded-full bg-teal/20 text-teal text-sm font-medium">
-                  90 Hours • 4 Weeks
+                  60 Hours • 4 Weeks
                 </span>
-                <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-sm font-medium">
-                  Standard Intensity
+                <span className="px-3 py-1 rounded-full bg-muted/20 text-gray-300 text-sm font-medium">
+                  Light Intensity
                 </span>
               </div>
               
               <h1 className="heading-1 mb-6">
-                Model Evaluation<br />
-                <span className="gradient-text">& Testing</span>
+                Latest in AI<br />
+                <span className="gradient-text">2025</span>
               </h1>
               
               <p className="body-large text-gray-300 mb-8 max-w-2xl">
-                Ensure AI quality before deployment. Learn rigorous evaluation methodologies 
-                that test for accuracy, fairness, robustness, and regulatory compliance.
+                Stay at the forefront of AI innovation. Explore the latest developments, tools, 
+                and strategic trends shaping the AI landscape in 2025 and beyond.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center gap-2 text-gray-300">
                   <ClockNodeIcon className="w-5 h-5 text-primary" />
-                  <span>90 Contact Hours</span>
+                  <span>60 Contact Hours</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-300">
                   <Calendar className="w-5 h-5 text-primary" />
@@ -149,7 +150,7 @@ const ModelEvaluation = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" size="xl" asChild>
                   <Link to="/auth">
-                    Enroll Now – €1,100
+                    Enroll Now – €800
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </Button>
@@ -161,20 +162,21 @@ const ModelEvaluation = () => {
           </div>
         </section>
 
+        {/* Module Overview */}
         <section className="section-padding bg-background">
           <div className="container-coad">
             <div className="grid lg:grid-cols-2 gap-16">
               <div>
                 <h2 className="heading-2 mb-6">Module Overview</h2>
                 <p className="body-large text-muted-foreground mb-6">
-                  Deploying untested AI is a recipe for disaster. This module teaches you to 
-                  build comprehensive evaluation frameworks that catch issues before they 
-                  impact users or violate regulations.
+                  AI evolves rapidly. This module ensures you stay current with the latest developments, 
+                  from foundation model advancements to emerging regulatory frameworks. Updated quarterly 
+                  to reflect the latest industry trends.
                 </p>
                 <p className="body text-muted-foreground mb-8">
-                  From basic metrics to advanced adversarial testing, you'll learn the full 
-                  spectrum of evaluation techniques used by leading AI organizations to 
-                  ensure model quality and compliance.
+                  Perfect for professionals who need to understand AI trends without deep technical 
+                  implementation. You'll learn to evaluate new technologies, assess their business 
+                  implications, and make informed recommendations.
                 </p>
 
                 <div className="bg-muted/50 rounded-xl p-6 border border-border">
@@ -186,15 +188,15 @@ const ModelEvaluation = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Evaluation framework delivery</span>
+                      <span className="text-muted-foreground">Technology evaluation report</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Bias assessment report</span>
+                      <span className="text-muted-foreground">Strategic recommendations delivery</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Testing documentation</span>
+                      <span className="text-muted-foreground">Peer discussion participation</span>
                     </li>
                   </ul>
                 </div>
@@ -217,22 +219,29 @@ const ModelEvaluation = () => {
           </div>
         </section>
 
+        {/* Weekly Breakdown */}
         <section className="section-padding bg-muted/50">
           <div className="container-coad">
             <div className="text-center mb-12">
               <h2 className="heading-2 mb-4">4-Week Curriculum</h2>
+              <p className="body-large text-muted-foreground max-w-2xl mx-auto">
+                A curated exploration of the AI landscape, updated quarterly.
+              </p>
             </div>
+
             <div className="grid md:grid-cols-2 gap-8">
               {weeklyBreakdown.map((week, index) => (
                 <div key={index} className="bg-card rounded-2xl border border-border overflow-hidden card-hover">
                   <div className="bg-gradient-to-r from-primary/10 to-teal/10 px-6 py-4 border-b border-border">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                        <span className="text-primary-foreground font-bold">{week.week}</span>
-                      </div>
-                      <div>
-                        <span className="text-sm text-muted-foreground">Week {week.week}</span>
-                        <p className="font-semibold text-foreground">{week.hours} Hours</p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                          <span className="text-primary-foreground font-bold">{week.week}</span>
+                        </div>
+                        <div>
+                          <span className="text-sm text-muted-foreground">Week {week.week}</span>
+                          <p className="font-semibold text-foreground">{week.hours} Hours</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -254,11 +263,16 @@ const ModelEvaluation = () => {
           </div>
         </section>
 
+        {/* Real-World Use Cases */}
         <section className="section-padding bg-background">
           <div className="container-coad">
             <div className="text-center mb-12">
               <h2 className="heading-2 mb-4">Real-World Applications</h2>
+              <p className="body-large text-muted-foreground max-w-2xl mx-auto">
+                Staying current with AI is essential for strategic decision-making.
+              </p>
             </div>
+
             <div className="grid md:grid-cols-2 gap-6">
               {realWorldUseCases.map((useCase, index) => (
                 <div key={index} className="bg-card rounded-xl p-6 border border-border card-hover">
@@ -275,20 +289,21 @@ const ModelEvaluation = () => {
           </div>
         </section>
 
+        {/* Track Integration */}
         <section className="section-padding bg-navy text-primary-foreground">
           <div className="container-coad">
             <div className="max-w-4xl mx-auto text-center">
               <GraduationNodeIcon className="w-16 h-16 mx-auto mb-6 text-primary" />
-              <h2 className="heading-2 mb-4">Part of the AIC Track</h2>
+              <h2 className="heading-2 mb-4">Part of the AAD Track</h2>
               <p className="body-large text-gray-300 mb-8">
-                This module counts toward your AI Competence (AIC) Track certification.
+                This introductory module counts toward your Agentic AI Developer (AAD) Track certification.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="xl" asChild>
-                  <Link to="/auth">Enroll Now – €1,100</Link>
+                  <Link to="/auth">Enroll Now – €800</Link>
                 </Button>
                 <Button variant="outline" size="xl" className="border-gray-600 text-gray-300 hover:bg-white/10" asChild>
-                  <Link to="/certifications">Explore Full AIC Track</Link>
+                  <Link to="/certifications">Explore Full AAD Track</Link>
                 </Button>
               </div>
             </div>
@@ -301,4 +316,4 @@ const ModelEvaluation = () => {
   );
 };
 
-export default ModelEvaluation;
+export default LatestInAI;

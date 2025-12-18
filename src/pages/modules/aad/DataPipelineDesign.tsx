@@ -4,7 +4,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import {
-  DataFlowIcon,
+  DataNodeIcon,
   CheckNodeIcon,
   ClockNodeIcon,
   AwardNodeIcon,
@@ -12,53 +12,53 @@ import {
 } from '@/components/ui/custom-icons';
 import { ArrowRight, Calendar, Briefcase } from 'lucide-react';
 
-const AIProductManagement = () => {
+const DataPipelineDesign = () => {
   const weeklyBreakdown = [
     {
       week: 1,
-      title: "Masterclass – AI Product Strategy",
+      title: "Masterclass – Pipeline Architecture",
       hours: 22,
-      description: "Expert session on product strategy for AI-powered products and services.",
+      description: "Expert-led session on modern data pipeline architectures for AI systems.",
       activities: [
-        "AI product lifecycle management",
-        "Market analysis for AI products",
-        "Stakeholder alignment strategies",
-        "EU AI Act product requirements"
+        "Data pipeline design patterns",
+        "Batch vs streaming architectures",
+        "Data quality frameworks",
+        "EU AI Act data requirements"
       ]
     },
     {
       week: 2,
-      title: "Hands-On Labs – Product Development",
+      title: "Hands-On Labs – Building Pipelines",
       hours: 23,
-      description: "Practical exercises in AI product specification and development workflows.",
+      description: "Practical exercises building robust data pipelines for AI applications.",
       activities: [
-        "AI product specification writing",
-        "Cross-functional team coordination",
-        "MVP definition for AI products",
-        "Metrics and success criteria"
+        "ETL/ELT implementation",
+        "Data validation and cleansing",
+        "Pipeline orchestration tools",
+        "Monitoring and alerting setup"
       ]
     },
     {
       week: 3,
-      title: "Mentored Sessions – Go-to-Market",
+      title: "Mentored Sessions – Scale & Compliance",
       hours: 22,
-      description: "Expert guidance on launching AI products in regulated markets.",
+      description: "Expert guidance on scaling pipelines while maintaining compliance.",
       activities: [
-        "Compliance-first launch strategies",
-        "ESG positioning for AI products",
-        "Risk communication to stakeholders",
-        "Post-launch monitoring setup"
+        "Scaling strategies for production",
+        "Data lineage implementation",
+        "ESG data governance",
+        "Privacy-preserving pipelines"
       ]
     },
     {
       week: 4,
-      title: "Mini-Capstone – Product Roadmap",
+      title: "Mini-Capstone – Production Pipeline",
       hours: 23,
-      description: "Deliver a comprehensive AI product roadmap with compliance integration.",
+      description: "Design and deliver a production-ready AI data pipeline.",
       activities: [
-        "Complete product roadmap",
-        "Stakeholder presentation",
-        "Compliance checkpoint planning",
+        "Complete pipeline delivery",
+        "Documentation and runbooks",
+        "Compliance verification",
         "Blockchain certificate issuance"
       ]
     }
@@ -66,37 +66,37 @@ const AIProductManagement = () => {
 
   const realWorldUseCases = [
     {
-      industry: "SaaS",
-      scenario: "Managing AI feature development within a product suite while balancing innovation with compliance requirements."
+      industry: "Retail Analytics",
+      scenario: "Building real-time data pipelines for AI-driven inventory and demand forecasting systems."
     },
     {
-      industry: "Healthcare Tech",
-      scenario: "Launching AI diagnostic tools through complex regulatory pathways while meeting market timelines."
+      industry: "Financial Services",
+      scenario: "Creating compliant data pipelines for AI credit scoring with full audit trails."
     },
     {
-      industry: "FinTech",
-      scenario: "Integrating AI capabilities into financial products while maintaining regulatory compliance."
+      industry: "IoT & Manufacturing",
+      scenario: "Streaming data pipelines for predictive maintenance AI in industrial settings."
     },
     {
-      industry: "EdTech",
-      scenario: "Building adaptive learning products that leverage AI while protecting student data."
+      industry: "Healthcare",
+      scenario: "Privacy-compliant pipelines for AI diagnostics with patient data protection."
     }
   ];
 
   const learningOutcomes = [
-    "Develop AI product strategies for regulated markets",
-    "Create comprehensive AI product specifications",
-    "Coordinate cross-functional AI development teams",
-    "Design compliance-integrated product roadmaps",
-    "Launch AI products with ESG considerations",
-    "Establish post-launch monitoring frameworks"
+    "Design scalable data pipeline architectures for AI",
+    "Implement data quality and validation frameworks",
+    "Build compliant pipelines with full lineage tracking",
+    "Configure monitoring and alerting systems",
+    "Ensure EU AI Act data governance compliance",
+    "Create production-ready pipeline documentation"
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Product Management | AIC Module | COAD</title>
-        <meta name="description" content="Master AI product management in this 90-hour module. Learn to build and launch AI products in regulated markets with blockchain certification." />
+        <title>Data Pipeline Design | AAD Module | COAD</title>
+        <meta name="description" content="Master AI data pipeline design in this 90-hour module. Learn to build scalable, compliant data infrastructure with blockchain certification." />
       </Helmet>
 
       <Header />
@@ -111,7 +111,7 @@ const AIProductManagement = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">
-                  AIC Module
+                  AAD Module
                 </span>
                 <span className="px-3 py-1 rounded-full bg-teal/20 text-teal text-sm font-medium">
                   90 Hours • 4 Weeks
@@ -122,13 +122,13 @@ const AIProductManagement = () => {
               </div>
               
               <h1 className="heading-1 mb-6">
-                AI Product<br />
-                <span className="gradient-text">Management</span>
+                Data Pipeline<br />
+                <span className="gradient-text">Design</span>
               </h1>
               
               <p className="body-large text-gray-300 mb-8 max-w-2xl">
-                Lead AI product development from concept to launch. Learn to navigate 
-                technical complexity, regulatory requirements, and market demands.
+                Build the data foundation for AI success. Learn to design, implement, and 
+                maintain robust data pipelines that power intelligent systems at scale.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
@@ -149,7 +149,7 @@ const AIProductManagement = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" size="xl" asChild>
                   <Link to="/auth">
-                    Enroll Now – €1,100
+                    Enroll Now – €1,200
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </Button>
@@ -167,14 +167,14 @@ const AIProductManagement = () => {
               <div>
                 <h2 className="heading-2 mb-6">Module Overview</h2>
                 <p className="body-large text-muted-foreground mb-6">
-                  AI products require unique product management approaches. This module teaches 
-                  you to bridge the gap between technical AI teams and business stakeholders 
-                  while navigating complex regulatory landscapes.
+                  Every AI system is only as good as its data. This module teaches you to build 
+                  the data infrastructure that powers intelligent applications – from ingestion 
+                  to transformation to serving.
                 </p>
                 <p className="body text-muted-foreground mb-8">
-                  You'll learn to create product roadmaps that integrate compliance checkpoints, 
-                  manage AI-specific risks, and launch products that meet both market and 
-                  regulatory expectations.
+                  You'll work with modern data engineering tools and patterns, learning to build 
+                  pipelines that are not only performant but also compliant with EU data 
+                  governance requirements.
                 </p>
 
                 <div className="bg-muted/50 rounded-xl p-6 border border-border">
@@ -186,15 +186,15 @@ const AIProductManagement = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Product roadmap delivery</span>
+                      <span className="text-muted-foreground">Pipeline architecture delivery</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Stakeholder presentation</span>
+                      <span className="text-muted-foreground">Data quality documentation</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Compliance integration plan</span>
+                      <span className="text-muted-foreground">Compliance verification</span>
                     </li>
                   </ul>
                 </div>
@@ -285,10 +285,10 @@ const AIProductManagement = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="xl" asChild>
-                  <Link to="/auth">Enroll Now – €1,100</Link>
+                  <Link to="/auth">Enroll Now – €1,200</Link>
                 </Button>
                 <Button variant="outline" size="xl" className="border-gray-600 text-gray-300 hover:bg-white/10" asChild>
-                  <Link to="/certifications">Explore Full AIC Track</Link>
+                  <Link to="/certifications">Explore Full AAD Track</Link>
                 </Button>
               </div>
             </div>
@@ -301,4 +301,4 @@ const AIProductManagement = () => {
   );
 };
 
-export default AIProductManagement;
+export default DataPipelineDesign;

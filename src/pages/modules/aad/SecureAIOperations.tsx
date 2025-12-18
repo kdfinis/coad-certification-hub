@@ -4,7 +4,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import {
-  CircuitLockIcon,
+  ShieldNodeIcon,
   CheckNodeIcon,
   ClockNodeIcon,
   AwardNodeIcon,
@@ -12,53 +12,53 @@ import {
 } from '@/components/ui/custom-icons';
 import { ArrowRight, Calendar, Briefcase } from 'lucide-react';
 
-const RestrictedMethods = () => {
+const SecureAIOperations = () => {
   const weeklyBreakdown = [
     {
       week: 1,
-      title: "Masterclass – EU AI Act Prohibited Practices",
+      title: "Masterclass – AI Security Fundamentals",
       hours: 30,
-      description: "Expert analysis of prohibited and restricted AI practices under EU regulations.",
+      description: "Expert deep dive into AI-specific security threats, attack vectors, and defense strategies.",
       activities: [
-        "Complete EU AI Act prohibited practices review",
-        "High-risk AI system classifications",
-        "Regulatory boundary identification",
-        "Case studies of enforcement actions"
+        "AI threat landscape overview",
+        "Adversarial attack methodologies",
+        "Model security and integrity",
+        "EU AI Act security requirements"
       ]
     },
     {
       week: 2,
-      title: "Hands-On Labs – Risk Assessment",
+      title: "Hands-On Labs – Security Implementation",
       hours: 30,
-      description: "Practical exercises in identifying and mitigating restricted AI methods.",
+      description: "Practical exercises implementing security controls for AI systems.",
       activities: [
-        "AI system risk classification tools",
-        "Conformity assessment procedures",
-        "Documentation requirements",
-        "Technical mitigation strategies"
+        "Input validation and sanitization",
+        "Model hardening techniques",
+        "Secure deployment practices",
+        "Access control implementation"
       ]
     },
     {
       week: 3,
-      title: "Mentored Sessions – Edge Cases",
+      title: "Mentored Sessions – Threat Response",
       hours: 30,
-      description: "Expert guidance on navigating complex regulatory scenarios.",
+      description: "Expert guidance on threat detection and incident response for AI systems.",
       activities: [
-        "Ambiguous use case analysis",
-        "Regulatory interpretation guidance",
-        "ESG compliance intersections",
-        "Cross-border deployment considerations"
+        "Security monitoring setup",
+        "Incident response procedures",
+        "ESG security compliance",
+        "Third-party risk assessment"
       ]
     },
     {
       week: 4,
-      title: "Mini-Capstone – Compliance Framework",
+      title: "Mini-Capstone – Security Architecture",
       hours: 30,
-      description: "Develop a comprehensive compliance framework for restricted AI methods.",
+      description: "Design and deliver a comprehensive AI security architecture.",
       activities: [
-        "Complete compliance documentation",
-        "Risk mitigation plan delivery",
-        "Expert panel review",
+        "Complete security architecture",
+        "Threat model documentation",
+        "Defense-in-depth strategy",
         "Blockchain certificate issuance"
       ]
     }
@@ -66,37 +66,37 @@ const RestrictedMethods = () => {
 
   const realWorldUseCases = [
     {
-      industry: "Biometric Systems",
-      scenario: "Navigating restrictions on real-time biometric identification while building compliant security systems."
+      industry: "Financial Services",
+      scenario: "Securing AI-driven fraud detection systems against adversarial attacks and model manipulation."
     },
     {
-      industry: "Social Scoring",
-      scenario: "Understanding prohibited practices in social evaluation systems while building legitimate reputation tools."
+      industry: "Healthcare",
+      scenario: "Protecting AI diagnostic systems from data poisoning and ensuring patient data security."
     },
     {
-      industry: "Employment AI",
-      scenario: "Developing compliant recruitment AI while avoiding prohibited discriminatory practices."
+      industry: "Critical Infrastructure",
+      scenario: "Securing AI systems in energy grids and transportation against sophisticated attacks."
     },
     {
-      industry: "Law Enforcement",
-      scenario: "Building AI tools for public safety that comply with strict human rights protections."
+      industry: "Defense",
+      scenario: "Implementing multi-layered security for AI systems in sensitive applications."
     }
   ];
 
   const learningOutcomes = [
-    "Master EU AI Act prohibited and restricted practices",
-    "Conduct comprehensive AI risk classifications",
-    "Develop compliant alternatives to restricted methods",
-    "Create conformity assessment documentation",
-    "Navigate ambiguous regulatory scenarios",
-    "Build compliance frameworks for high-risk AI"
+    "Master AI-specific security threats and attack vectors",
+    "Implement robust security controls for AI systems",
+    "Design defense-in-depth architectures",
+    "Conduct threat modeling for AI applications",
+    "Establish incident response procedures",
+    "Ensure EU AI Act security compliance"
   ];
 
   return (
     <>
       <Helmet>
-        <title>Restricted Methods | AIC Module | COAD</title>
-        <meta name="description" content="Master EU AI Act restricted methods in this intensive 120-hour module. Learn compliance frameworks for high-risk AI with blockchain certification." />
+        <title>Secure AI Operations | AAD Module | COAD</title>
+        <meta name="description" content="Master AI security in this intensive 120-hour module. Learn to protect AI systems from threats with blockchain certification." />
       </Helmet>
 
       <Header />
@@ -112,7 +112,7 @@ const RestrictedMethods = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">
-                  AIC Module
+                  AAD Module
                 </span>
                 <span className="px-3 py-1 rounded-full bg-teal/20 text-teal text-sm font-medium">
                   120 Hours • 4 Weeks
@@ -123,13 +123,13 @@ const RestrictedMethods = () => {
               </div>
               
               <h1 className="heading-1 mb-6">
-                Restricted<br />
-                <span className="gradient-text">Methods</span>
+                Secure AI<br />
+                <span className="gradient-text">Operations</span>
               </h1>
               
               <p className="body-large text-gray-300 mb-8 max-w-2xl">
-                Navigate the complex landscape of prohibited and restricted AI practices under EU 
-                regulations. Learn to build compliant alternatives and develop robust compliance frameworks.
+                Master the security challenges unique to AI systems. Learn to defend against 
+                adversarial attacks, implement robust security architectures, and ensure compliance.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
@@ -150,7 +150,7 @@ const RestrictedMethods = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" size="xl" asChild>
                   <Link to="/auth">
-                    Enroll Now – €1,500
+                    Enroll Now – €1,800
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </Button>
@@ -169,14 +169,14 @@ const RestrictedMethods = () => {
               <div>
                 <h2 className="heading-2 mb-6">Module Overview</h2>
                 <p className="body-large text-muted-foreground mb-6">
-                  The EU AI Act introduces strict prohibitions and restrictions on certain AI practices. 
-                  This module provides deep expertise in understanding these boundaries and developing 
-                  compliant alternatives.
+                  AI systems face unique security challenges beyond traditional software. This 
+                  intensive module covers everything from adversarial attacks to supply chain 
+                  risks, preparing you to build and maintain secure AI infrastructure.
                 </p>
                 <p className="body text-muted-foreground mb-8">
-                  You'll analyze real enforcement actions, work through ambiguous edge cases, and 
-                  develop practical skills in risk classification and conformity assessment that 
-                  are essential for any AI professional operating in the EU market.
+                  You'll work with real attack scenarios, implement defense mechanisms, and 
+                  develop comprehensive security architectures that meet EU AI Act requirements 
+                  for high-risk systems.
                 </p>
 
                 <div className="bg-muted/50 rounded-xl p-6 border border-border">
@@ -188,15 +188,15 @@ const RestrictedMethods = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Compliance framework documentation</span>
+                      <span className="text-muted-foreground">Security architecture documentation</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Risk mitigation plan delivery</span>
+                      <span className="text-muted-foreground">Threat model delivery</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Expert panel evaluation</span>
+                      <span className="text-muted-foreground">Incident response plan</span>
                     </li>
                   </ul>
                 </div>
@@ -225,7 +225,7 @@ const RestrictedMethods = () => {
             <div className="text-center mb-12">
               <h2 className="heading-2 mb-4">4-Week Curriculum</h2>
               <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-                Intensive deep dive into EU AI Act compliance for restricted practices.
+                Intensive security training with hands-on labs and real attack scenarios.
               </p>
             </div>
 
@@ -269,7 +269,7 @@ const RestrictedMethods = () => {
             <div className="text-center mb-12">
               <h2 className="heading-2 mb-4">Real-World Applications</h2>
               <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-                Understanding restricted methods is critical for compliant AI deployment.
+                AI security is critical across all high-stakes applications.
               </p>
             </div>
 
@@ -294,16 +294,16 @@ const RestrictedMethods = () => {
           <div className="container-coad">
             <div className="max-w-4xl mx-auto text-center">
               <GraduationNodeIcon className="w-16 h-16 mx-auto mb-6 text-primary" />
-              <h2 className="heading-2 mb-4">Part of the AIC Track</h2>
+              <h2 className="heading-2 mb-4">Part of the AAD Track</h2>
               <p className="body-large text-gray-300 mb-8">
-                This advanced module counts toward your AI Competence (AIC) Track certification.
+                This advanced module counts toward your Agentic AI Developer (AAD) Track certification.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="xl" asChild>
-                  <Link to="/auth">Enroll Now – €1,500</Link>
+                  <Link to="/auth">Enroll Now – €1,800</Link>
                 </Button>
                 <Button variant="outline" size="xl" className="border-gray-600 text-gray-300 hover:bg-white/10" asChild>
-                  <Link to="/certifications">Explore Full AIC Track</Link>
+                  <Link to="/certifications">Explore Full AAD Track</Link>
                 </Button>
               </div>
             </div>
@@ -316,4 +316,4 @@ const RestrictedMethods = () => {
   );
 };
 
-export default RestrictedMethods;
+export default SecureAIOperations;
