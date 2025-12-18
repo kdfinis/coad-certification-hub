@@ -18,11 +18,15 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // VISUAL-EDIT: Navigation Links - Can reorder, add, or remove items
+  // DRAG-DROP: Navigation items can be rearranged visually
   const navLinks = [
     { label: 'Certifications', href: '/certifications', isRoute: true },
     { 
       label: 'Tracks', 
       href: '#tracks',
+      // VISUAL-EDIT: Dropdown Items - Can adjust order and content
+      // DRAG-DROP: Dropdown items can be reordered
       dropdown: [
         { label: 'ADC Track', href: '/certifications?track=adc', isRoute: true },
         { label: 'ACOS Track', href: '/certifications?track=acos', isRoute: true },
@@ -35,6 +39,8 @@ const Header = () => {
   ];
 
   return (
+    {/* VISUAL-EDIT: Header - Can adjust sticky behavior, background, and z-index */}
+    {/* SPACING: Header height and padding can be adjusted (h-18 py-4) */}
     <header 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
@@ -44,8 +50,11 @@ const Header = () => {
       )}
     >
       <div className="container-coad">
+        {/* VISUAL-EDIT: Navigation Layout - Can adjust flex layout and spacing */}
+        {/* DRAG-DROP: Logo and nav items can be repositioned */}
         <nav className="flex items-center justify-between h-18 py-4">
-          {/* Logo */}
+          {/* VISUAL-EDIT: Logo - Can adjust size and position */}
+          {/* DRAG-DROP: Logo can be repositioned */}
           <Link to="/" className="flex items-center gap-2">
             <CoadLogo size="md" />
           </Link>
