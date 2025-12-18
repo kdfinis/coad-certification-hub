@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COAD Website Preview</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+        }
+        .preview-container {
+            width: 100%;
+            height: 100vh;
+            border: none;
+            display: block;
+        }
+        .status-bar {
+            background: #1a1a1a;
+            padding: 10px 20px;
+            border-bottom: 1px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #00d4aa;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .url-display {
+            color: #00d4aa;
+            font-size: 12px;
+            font-family: monospace;
+        }
+        .refresh-btn {
+            background: #00d4aa;
+            color: #1a1a1a;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .refresh-btn:hover {
+            background: #00b894;
+        }
+    </style>
+</head>
+<body>
+    <div class="status-bar">
+        <div class="status-indicator">
+            <div class="status-dot"></div>
+            <span>Live Preview - Development Server Running</span>
+        </div>
+        <div class="url-display">http://localhost:8080</div>
+        <button class="refresh-btn" onclick="refreshPreview()">Refresh</button>
+    </div>
+    <iframe 
+        id="preview-frame"
+        class="preview-container"
+        src="http://localhost:8080"
+        frameborder="0"
+        allowfullscreen
+    ></iframe>
+    
+    <script>
+        function refreshPreview() {
+            document.getElementById('preview-frame').src = document.getElementById('preview-frame').src;
+        }
+        
+        // Auto-refresh every 30 seconds if needed
+        // setInterval(refreshPreview, 30000);
+        
+        // Check if server is running
+        fetch('http://localhost:8080')
+            .then(() => {
+                console.log('Server is running');
+            })
+            .catch(() => {
+                document.body.innerHTML = `
+                    <div style="display: flex; align-items: center; justify-content: center; height: 100vh; flex-direction: column; gap: 20px;">
+                        <h2 style="color: #ff6b6b;">Development Server Not Running</h2>
+                        <p>Please start the development server:</p>
+                        <code style="background: #333; padding: 10px; border-radius: 4px;">npm run dev</code>
+                        <button onclick="location.reload()" style="background: #00d4aa; color: #1a1a1a; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: 600;">Retry</button>
+                    </div>
+                `;
+            });
+    </script>
+</body>
+</html>
+
