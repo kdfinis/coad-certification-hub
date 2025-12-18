@@ -8,10 +8,65 @@ import { ArrowRight, Calendar, Briefcase } from 'lucide-react';
 
 const PrivacyAuditor = () => {
   const weeklyBreakdown = [
-    { week: 1, title: "Masterclass – GDPR/AI Act Privacy Rules", hours: 22, description: "Expert deep dive into privacy regulations affecting AI systems, including GDPR and EU AI Act requirements.", activities: ["GDPR fundamentals for AI", "EU AI Act privacy provisions", "Data protection impact assessments", "Lawful basis for AI processing"] },
-    { week: 2, title: "Hands-On Labs – Data Flow Mapping", hours: 23, description: "Practical exercises in mapping data flows through AI systems and identifying privacy risks.", activities: ["Data flow diagram creation", "Personal data identification", "Risk mapping exercises", "Privacy by design implementation"] },
-    { week: 3, title: "Mentored Sessions – Live Privacy Q&A", hours: 22, description: "Expert-led discussions on complex privacy scenarios and regulatory interpretations.", activities: ["Cross-border data transfers", "Automated decision-making rights", "ESG privacy considerations", "Vendor privacy assessments"] },
-    { week: 4, title: "Mini-Capstone – Full Privacy Audit", hours: 23, description: "Conduct and deliver a comprehensive privacy audit for an AI system.", activities: ["Complete privacy audit", "DPIA documentation", "Remediation recommendations", "Blockchain certificate issuance"] }
+    {
+      week: 1,
+      title: "Masterclass – Privacy Principles & Regulations",
+      hours: "25-30",
+      description: "Live/Recorded Session (1-2 hours) covering privacy principles, EU AI Act privacy, data classification, privacy by design, and regulatory context.",
+      keyConcepts: ["Privacy principles", "GDPR", "EU AI Act", "Data classification", "Privacy by design"],
+      activities: [
+        "Privacy Principles: Understand GDPR principles (lawfulness, purpose limitation, data minimization, accuracy, storage limitation, integrity, confidentiality)",
+        "EU AI Act Privacy: Learn privacy requirements specific to AI systems in the EU AI Act",
+        "Data Classification: Identify personal data, sensitive data, and special categories",
+        "Privacy by Design: Understand privacy-by-design principles for AI systems",
+        "Regulatory Context: Understand GDPR, EU AI Act, and other privacy regulations"
+      ]
+    },
+    {
+      week: 2,
+      title: "Hands-On Labs – Data Flow Mapping & Privacy Assessment",
+      hours: "25-30",
+      description: "Practical Exercises (25-30 hours) including data flow mapping, privacy risk assessment, and DPIA framework.",
+      keyConcepts: ["Data flow mapping", "Privacy risk assessment", "DPIA", "Privacy by design"],
+      activities: [
+        "Lab 1: Data Flow Mapping - Map data flows through AI systems, identify data collection/processing/storage/sharing points, create data flow diagrams",
+        "Lab 2: Privacy Risk Assessment - Identify privacy risks in AI data processing, assess risk severity and likelihood, create privacy risk registers",
+        "Lab 3: DPIA Framework - Conduct Data Protection Impact Assessments for AI systems, document privacy impacts and mitigation measures, create DPIA reports",
+        "Deliverables: Data flow maps, privacy risk assessments, DPIA reports"
+      ]
+    },
+    {
+      week: 3,
+      title: "Mentored Sessions – Privacy Clinic",
+      hours: "25-30",
+      description: "Forum Q&A + Optional Live Office Hours for expert guidance, edge cases, best practices, regulatory updates, and Q&A sessions.",
+      keyConcepts: ["Expert guidance", "Edge cases", "Best practices", "Regulatory updates"],
+      activities: [
+        "Expert Guidance: Get privacy expert feedback on your audits",
+        "Edge Cases: Discuss complex privacy scenarios and cross-border issues",
+        "Best Practices: Learn from successful privacy audit implementations",
+        "Regulatory Updates: Stay current with privacy regulatory developments",
+        "Q&A Sessions: Get answers to specific privacy questions",
+        "Focus Areas: Privacy assessment quality, risk identification, compliance verification"
+      ]
+    },
+    {
+      week: 4,
+      title: "Mini-Capstone – Complete Privacy Audit",
+      hours: "25-30",
+      description: "Final Project (25-30 hours) conducting a comprehensive privacy audit for an AI system.",
+      keyConcepts: ["Data flow analysis", "Privacy risk assessment", "DPIA report", "Compliance evaluation", "Recommendations", "Audit report"],
+      activities: [
+        "Data Flow Analysis: Complete mapping of data flows through the AI system",
+        "Privacy Risk Assessment: Comprehensive privacy risk identification and evaluation",
+        "DPIA Report: Full Data Protection Impact Assessment",
+        "Compliance Evaluation: Assessment against GDPR, EU AI Act, and internal policies",
+        "Recommendations: Privacy improvement recommendations",
+        "Audit Report: Complete privacy audit report suitable for stakeholders",
+        "Mentor Review: Receive detailed rubric-based feedback on audit completeness, risk assessment quality, and compliance evaluation",
+        "Portfolio Piece: Your capstone becomes a portfolio-ready privacy audit report suitable for internal or external review"
+      ]
+    }
   ];
 
   const realWorldUseCases = [
@@ -41,7 +96,7 @@ const PrivacyAuditor = () => {
                 <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-sm font-medium">Standard Intensity</span>
               </div>
               <h1 className="heading-1 mb-6">Privacy<br /><span className="gradient-text">Auditor</span></h1>
-              <p className="body-large text-gray-300 mb-8 max-w-2xl">Become an expert in AI privacy compliance. Learn to conduct comprehensive privacy audits, navigate GDPR requirements, and ensure AI systems protect personal data.</p>
+              <p className="body-large text-gray-300 mb-8 max-w-2xl">The Privacy Auditor module teaches you to conduct comprehensive privacy audits for AI systems. You'll learn to map data flows, identify personal and sensitive data, assess privacy risks, and perform structured audits that ensure AI systems respect privacy law and internal policies—critical for GDPR compliance and EU AI Act requirements.</p>
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center gap-2 text-gray-300"><ClockNodeIcon className="w-5 h-5 text-teal" /><span>90 Contact Hours</span></div>
                 <div className="flex items-center gap-2 text-gray-300"><Calendar className="w-5 h-5 text-teal" /><span>4 Weeks Duration</span></div>
@@ -60,26 +115,108 @@ const PrivacyAuditor = () => {
             <div className="grid lg:grid-cols-2 gap-16">
               <div>
                 <h2 className="heading-2 mb-6">Module Overview</h2>
-                <p className="body-large text-muted-foreground mb-6">Privacy is a fundamental right that AI systems must respect. This module provides comprehensive training in privacy auditing for AI, combining legal knowledge with practical assessment techniques.</p>
-                <p className="body text-muted-foreground mb-8">You'll learn to map complex data flows, conduct DPIAs, and create audit documentation that demonstrates compliance with GDPR and EU AI Act privacy requirements.</p>
+                <p className="body-large text-muted-foreground mb-6">
+                  The Privacy Auditor module teaches you to conduct comprehensive privacy audits for AI systems. You'll learn to map data flows, identify personal and sensitive data, assess privacy risks, and perform structured audits that ensure AI systems respect privacy law and internal policies—critical for GDPR compliance and EU AI Act requirements.
+                </p>
+                <p className="body text-muted-foreground mb-6">
+                  Privacy is a fundamental right and legal requirement. This module provides frameworks for AI privacy auditing: understanding privacy principles, mapping data flows, identifying privacy risks, conducting Data Protection Impact Assessments (DPIAs), and ensuring compliance with GDPR, EU AI Act, and other privacy regulations. Whether you're an auditor, compliance officer, or privacy professional, this module gives you the skills needed for comprehensive AI privacy audits.
+                </p>
+
+                <div className="bg-muted/50 rounded-xl p-6 border border-border mb-8">
+                  <h3 className="font-semibold mb-4">Who This Module Is For</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Privacy Professionals</strong> conducting AI privacy audits</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Compliance Officers</strong> ensuring privacy compliance in AI systems</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Data Protection Officers</strong> overseeing AI data protection</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Auditors</strong> performing privacy assessments</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Risk Managers</strong> assessing privacy risks</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Anyone</strong> responsible for AI privacy compliance</span>
+                    </li>
+                  </ul>
+                  <p className="text-xs text-muted-foreground mt-4 italic">Prerequisites: Understanding of privacy concepts helpful. Interest in privacy and compliance.</p>
+                </div>
+
                 <div className="bg-muted/50 rounded-xl p-6 border border-border">
                   <h3 className="font-semibold mb-4">Assessment Criteria</h3>
                   <ul className="space-y-3">
-                    {["Project rubric assessment (80% pass threshold)", "Complete privacy audit delivery", "DPIA documentation", "Remediation plan"].map((item, i) => (
-                      <li key={i} className="flex items-start gap-3"><CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" /><span className="text-muted-foreground">{item}</span></li>
-                    ))}
+                    <li className="flex items-start gap-3">
+                      <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="text-foreground font-medium">Project Rubric (80% pass requirement)</span>
+                        <p className="text-sm text-muted-foreground mt-1">Data flow mapping completeness (25%), privacy risk assessment quality (30%), DPIA quality (20%), compliance evaluation (15%), documentation clarity (10%)</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">Active participation in labs, forums, and mentored sessions</span>
+                    </li>
                   </ul>
                 </div>
               </div>
               <div>
                 <h3 className="heading-3 mb-6">Learning Outcomes</h3>
+                <p className="text-muted-foreground mb-6 text-sm">
+                  Upon completion, you will be able to:
+                </p>
                 <div className="space-y-4">
-                  {learningOutcomes.map((outcome, index) => (
+                  {[
+                    "Map Data Flows: Create comprehensive data flow maps for AI systems",
+                    "Assess Privacy Risks: Identify and evaluate privacy risks in AI processing",
+                    "Conduct DPIAs: Perform Data Protection Impact Assessments for AI systems",
+                    "Evaluate Compliance: Assess compliance with privacy regulations",
+                    "Document Audits: Create clear, comprehensive privacy audit reports",
+                    "Recommend Improvements: Provide actionable privacy improvement recommendations"
+                  ].map((outcome, index) => (
                     <div key={index} className="flex items-start gap-4 p-4 bg-card rounded-lg border border-border">
-                      <div className="w-8 h-8 rounded-full bg-teal/10 flex items-center justify-center flex-shrink-0"><span className="text-teal font-semibold text-sm">{index + 1}</span></div>
-                      <p className="text-foreground">{outcome}</p>
+                      <div className="w-8 h-8 rounded-full bg-teal/10 flex items-center justify-center flex-shrink-0">
+                        <span className="text-teal font-semibold text-sm">{index + 1}</span>
+                      </div>
+                      <p className="text-foreground text-sm">{outcome}</p>
                     </div>
                   ))}
+                </div>
+
+                <div className="mt-8 bg-gradient-to-br from-teal/10 to-primary/10 rounded-xl p-6 border border-border">
+                  <h3 className="font-semibold mb-3">Module Benefits</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Regulatory Compliance:</strong> Essential for GDPR and EU AI Act compliance</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Career Enhancement:</strong> Privacy auditing skills are in high demand</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Risk Mitigation:</strong> Identify and address privacy risks before incidents</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Track Credit:</strong> Counts toward AIO track completion</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Professional Credibility:</strong> Demonstrate privacy expertise</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

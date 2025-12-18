@@ -16,50 +16,61 @@ const HumanAIDesign = () => {
   const weeklyBreakdown = [
     {
       week: 1,
-      title: "Masterclass – Human-AI Collaboration Principles",
-      hours: 22,
-      description: "Expert-led session on designing effective interfaces between humans and AI systems.",
+      title: "Masterclass – Human-Agent Interaction Fundamentals",
+      hours: "25-30",
+      description: "Live/Recorded Session (1-2 hours) covering trust & transparency, mental models, control & agency, consent & approval, and feedback loops.",
+      keyConcepts: ["Trust", "Transparency", "Mental models", "Control", "Human-in-the-loop design"],
       activities: [
-        "Human-centered AI design principles",
-        "Cognitive load management in AI interfaces",
-        "Trust calibration frameworks",
-        "EU AI Act human oversight requirements"
+        "Trust & Transparency: Understand how to build user trust in AI systems through transparency and explainability",
+        "Mental Models: Learn how users form mental models of AI behavior and how to align design with these models",
+        "Control & Agency: Design interfaces that give users meaningful control over AI actions",
+        "Consent & Approval: Plan human-in-the-loop checkpoints (approvals, escalations, overrides)",
+        "Feedback Loops: Design systems for users to provide feedback and correct AI behavior"
       ]
     },
     {
       week: 2,
       title: "Hands-On Labs – Interaction Design",
-      hours: 23,
-      description: "Practical workshops building human-AI interaction patterns and feedback loops.",
+      hours: "25-30",
+      description: "Practical Exercises (25-30 hours) including interaction flow design, UX patterns, and oversight design.",
+      keyConcepts: ["Interaction flows", "UX patterns", "Oversight interfaces", "Design systems"],
       activities: [
-        "Designing AI explanation interfaces",
-        "Building feedback collection systems",
-        "Human-in-the-loop workflow design",
-        "Accessibility in AI applications"
+        "Lab 1: Interaction Flow Design - Sketch interaction flows for typical AI encounters, design user journeys, create wireframes",
+        "Lab 2: UX Patterns - Study proven UX patterns for AI interactions, design interface components, create design systems",
+        "Lab 3: Oversight Design - Design oversight interfaces showing AI actions, plan approval workflows, create monitoring dashboards",
+        "Deliverables: Interaction flow diagrams, wireframes, UX pattern library, oversight interface designs"
       ]
     },
     {
       week: 3,
-      title: "Mentored Sessions – User Research",
-      hours: 22,
-      description: "Expert guidance on conducting user research for AI systems.",
+      title: "Mentored Sessions – Design Critique",
+      hours: "25-30",
+      description: "Forum Q&A + Optional Live Office Hours for design review, usability feedback, oversight analysis, case studies, and best practices.",
+      keyConcepts: ["Design review", "Usability", "Oversight effectiveness", "Best practices"],
       activities: [
-        "AI usability testing methods",
-        "Measuring human-AI team performance",
-        "ESG considerations in design",
-        "Inclusive design practices"
+        "Design Review: Present your interaction designs for structured critique",
+        "Usability Feedback: Receive expert guidance on interface usability and clarity",
+        "Oversight Analysis: Get feedback on oversight mechanisms and control points",
+        "Case Studies: Analyze real-world human-AI interaction designs (good and bad)",
+        "Best Practices: Learn from successful human-AI collaboration patterns",
+        "Focus Areas: Usability, trust-building, oversight effectiveness, user control"
       ]
     },
     {
       week: 4,
-      title: "Mini-Capstone – Human-AI Workflow System",
-      hours: 23,
-      description: "Design and deliver a complete human-AI collaboration workflow.",
+      title: "Mini-Capstone – Interaction Design Dossier",
+      hours: "25-30",
+      description: "Final Project (25-30 hours) creating a complete interaction design dossier for a human-AI collaboration use case.",
+      keyConcepts: ["User journey map", "Interface designs", "Oversight model", "Trust mechanisms", "Error handling", "Design rationale"],
       activities: [
-        "End-to-end workflow delivery",
-        "User testing and iteration",
-        "Documentation and presentation",
-        "Blockchain certificate issuance"
+        "User Journey Map: Complete flow showing how users interact with AI agents",
+        "Interface Designs: Storyboards, wireframes, or mockups of key interaction points",
+        "Oversight Model: Specification of who approves what, when, and how",
+        "Trust Mechanisms: Design elements that build user trust (explanations, transparency, control)",
+        "Error Handling: Design for AI mistakes, user corrections, and system recovery",
+        "Design Rationale: Explanation of design decisions and trade-offs",
+        "Mentor Review: Receive detailed rubric-based feedback on design quality, usability, and oversight effectiveness",
+        "Portfolio Piece: Your capstone becomes a portfolio-ready design dossier demonstrating your human-AI design competency"
       ]
     }
   ];
@@ -128,8 +139,7 @@ const HumanAIDesign = () => {
               </h1>
               
               <p className="body-large text-gray-300 mb-8 max-w-2xl">
-                Learn to design effective collaboration workflows between humans and AI systems. 
-                Create interfaces that build trust and maximize combined human-AI performance.
+                The Human-AI Design module teaches you to create effective interfaces and workflows where humans and AI agents collaborate seamlessly. You'll learn to design interactions that are understandable, trustworthy, and controllable, ensuring humans remain meaningfully in charge while leveraging AI capabilities.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
@@ -169,34 +179,56 @@ const HumanAIDesign = () => {
               <div>
                 <h2 className="heading-2 mb-6">Module Overview</h2>
                 <p className="body-large text-muted-foreground mb-6">
-                  The most successful AI implementations aren't about replacing humans – they're about 
-                  augmenting human capabilities. This module teaches you to design systems where humans 
-                  and AI work together effectively.
+                  The Human-AI Design module teaches you to create effective interfaces and workflows where humans and AI agents collaborate seamlessly. You'll learn to design interactions that are understandable, trustworthy, and controllable, ensuring humans remain meaningfully in charge while leveraging AI capabilities.
                 </p>
-                <p className="body text-muted-foreground mb-8">
-                  You'll learn user research methods specific to AI, design patterns for human-AI 
-                  collaboration, and how to build interfaces that calibrate trust appropriately – 
-                  avoiding both over-reliance and under-utilization of AI capabilities.
+                <p className="body text-muted-foreground mb-6">
+                  As AI systems become more autonomous, designing effective human-AI collaboration becomes critical. This module combines UX principles, AI capabilities, and oversight requirements to teach you how to design interactions that users trust, understand, and can control. Whether you're building customer-facing AI features, internal automation tools, or oversight interfaces, this module provides the frameworks needed to create human-AI experiences that are both powerful and responsible.
                 </p>
+
+                <div className="bg-muted/50 rounded-xl p-6 border border-border mb-8">
+                  <h3 className="font-semibold mb-4">Who This Module Is For</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">UX/UI Designers</strong> creating interfaces for AI-powered products</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Product Managers</strong> designing human-AI interaction features</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Product Designers</strong> working on AI-integrated applications</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Technical Leads</strong> overseeing human-AI collaboration systems</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Oversight Professionals</strong> designing control and monitoring interfaces</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Anyone</strong> responsible for how humans interact with AI systems</span>
+                    </li>
+                  </ul>
+                  <p className="text-xs text-muted-foreground mt-4 italic">Prerequisites: Basic understanding of UX principles helpful but not required. Interest in human-AI interaction design.</p>
+                </div>
 
                 <div className="bg-muted/50 rounded-xl p-6 border border-border">
                   <h3 className="font-semibold mb-4">Assessment Criteria</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Project rubric assessment (80% pass threshold)</span>
+                      <div>
+                        <span className="text-foreground font-medium">Project Rubric (80% pass requirement)</span>
+                        <p className="text-sm text-muted-foreground mt-1">Interaction design quality (30%), oversight model effectiveness (25%), trust-building mechanisms (20%), usability and clarity (15%), documentation completeness (10%)</p>
+                      </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">User testing documentation</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Mini-capstone with mentor feedback</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckNodeIcon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">EU AI Act human oversight verification</span>
+                      <span className="text-muted-foreground">Active participation in labs, forums, and mentored sessions</span>
                     </li>
                   </ul>
                 </div>
@@ -204,15 +236,51 @@ const HumanAIDesign = () => {
 
               <div>
                 <h3 className="heading-3 mb-6">Learning Outcomes</h3>
+                <p className="text-muted-foreground mb-6 text-sm">
+                  Upon completion, you will be able to:
+                </p>
                 <div className="space-y-4">
-                  {learningOutcomes.map((outcome, index) => (
+                  {[
+                    "Design Trustworthy Interfaces: Create AI interfaces that users trust through transparency and control",
+                    "Plan Human Oversight: Design effective human-in-the-loop checkpoints and approval workflows",
+                    "Create Interaction Flows: Map complete user journeys for human-AI collaboration",
+                    "Apply UX Patterns: Use proven patterns for AI transparency, explanations, and control",
+                    "Handle Errors Gracefully: Design for AI mistakes and user corrections",
+                    "Document Designs: Create clear design documentation for human-AI interfaces"
+                  ].map((outcome, index) => (
                     <div key={index} className="flex items-start gap-4 p-4 bg-card rounded-lg border border-border">
                       <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                         <span className="text-primary font-semibold text-sm">{index + 1}</span>
                       </div>
-                      <p className="text-foreground">{outcome}</p>
+                      <p className="text-foreground text-sm">{outcome}</p>
                     </div>
                   ))}
+                </div>
+
+                <div className="mt-8 bg-gradient-to-br from-primary/10 to-teal/10 rounded-xl p-6 border border-border">
+                  <h3 className="font-semibold mb-3">Module Benefits</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Critical Skill:</strong> Human-AI design is essential for responsible AI deployment</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Career Enhancement:</strong> UX design skills combined with AI expertise are highly valued</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">EU AI Act Alignment:</strong> Learn to design interfaces that support human oversight requirements</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Track Credit:</strong> Counts toward AAC track completion and Charterholder status</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">Immediate Application:</strong> Apply design principles to current projects immediately</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -248,6 +316,18 @@ const HumanAIDesign = () => {
                   <div className="p-6">
                     <h3 className="font-semibold text-lg mb-3">{week.title}</h3>
                     <p className="text-muted-foreground text-sm mb-4">{week.description}</p>
+                    {week.keyConcepts && (
+                      <div className="mb-4">
+                        <p className="text-xs font-semibold text-foreground mb-2">Key Concepts:</p>
+                        <div className="flex flex-wrap gap-2">
+                          {week.keyConcepts.map((concept, i) => (
+                            <span key={i} className="px-2 py-1 bg-primary/10 text-primary text-xs rounded">
+                              {concept}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                     <ul className="space-y-2">
                       {week.activities.map((activity, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm">
@@ -259,6 +339,125 @@ const HumanAIDesign = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Certification & Benefits */}
+        <section className="section-padding bg-background">
+          <div className="container-coad">
+            <div className="grid lg:grid-cols-2 gap-12">
+              <div>
+                <h2 className="heading-2 mb-6">Assessment & Certification</h2>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="font-semibold mb-3">Assessment Method</h3>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      Your mini-capstone is evaluated against a detailed rubric covering:
+                    </p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-semibold">30%</span>
+                        <span className="text-muted-foreground">Interaction design quality</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-semibold">25%</span>
+                        <span className="text-muted-foreground">Oversight model effectiveness</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-semibold">20%</span>
+                        <span className="text-muted-foreground">Trust-building mechanisms</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-semibold">15%</span>
+                        <span className="text-muted-foreground">Usability and clarity</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-semibold">10%</span>
+                        <span className="text-muted-foreground">Documentation completeness</span>
+                      </li>
+                    </ul>
+                    <p className="text-sm text-muted-foreground mt-4">
+                      <strong className="text-foreground">Pass Requirement:</strong> 80% overall score
+                    </p>
+                  </div>
+                  <div className="bg-gradient-to-br from-primary/10 to-teal/10 rounded-xl p-6 border border-border">
+                    <h3 className="font-semibold mb-3">Certificate</h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Upon successful completion, you receive:
+                    </p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-start gap-2">
+                        <AwardNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground"><strong className="text-foreground">Blockchain-Verified Certificate:</strong> "Certificate of Competency in Human-AI Design"</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <AwardNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground"><strong className="text-foreground">Digital Badge:</strong> Shareable on LinkedIn and the Accredited Experts Directory</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <AwardNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground"><strong className="text-foreground">ECTS Credits:</strong> 3 credits (90 hours) toward professional development</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <AwardNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground"><strong className="text-foreground">Portfolio Artifact:</strong> Your capstone design dossier for your professional portfolio</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h2 className="heading-2 mb-6">Pricing & Enrollment</h2>
+                <div className="bg-card rounded-xl p-6 border border-border mb-6">
+                  <div className="text-4xl font-bold gradient-text mb-2">€1,000</div>
+                  <p className="text-muted-foreground text-sm mb-6">4 weeks (90 hours) • 3 ECTS Credits</p>
+                  <h3 className="font-semibold mb-3">What's Included:</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground mb-6">
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Access to all masterclass recordings</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Hands-on lab exercises and materials</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Mentored support (forum + optional office hours)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Rubric-based assessment and feedback</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Blockchain-verified certificate upon completion</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Lifetime access to course materials</span>
+                    </li>
+                  </ul>
+                  <div className="pt-4 border-t border-border">
+                    <h3 className="font-semibold mb-3">Enrollment Options:</h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span><strong className="text-foreground">Standalone:</strong> Take this module independently</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span><strong className="text-foreground">Track Credit:</strong> Counts toward AAC (Agentic AI Competency) track completion</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span><strong className="text-foreground">Corporate:</strong> Bulk enrollment available for teams</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -294,16 +493,21 @@ const HumanAIDesign = () => {
           <div className="container-coad">
             <div className="max-w-4xl mx-auto text-center">
               <GraduationNodeIcon className="w-16 h-16 mx-auto mb-6 text-primary" />
-              <h2 className="heading-2 mb-4">Part of the AAD Track</h2>
-              <p className="body-large text-gray-300 mb-8">
-                This module counts toward your Agentic AI Developer (AAD) Track certification.
+              <h2 className="heading-2 mb-4">Part of the AAC Track</h2>
+              <p className="body-large text-gray-300 mb-6">
+                This module counts toward your Agentic AI Competency (AAC) Track certification. 
+                Complete all track modules to achieve Charterholder status and priority 
+                listing in the COAD Expert Directory.
+              </p>
+              <p className="text-sm text-gray-400 mb-8">
+                <strong>Track Integration:</strong> This module feeds into AAC Phase 2 (Agentic AI Design & Ethics)
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="xl" asChild>
                   <Link to="/auth">Enroll Now – €1,000</Link>
                 </Button>
                 <Button variant="outline" size="xl" className="border-gray-600 text-gray-300 hover:bg-white/10" asChild>
-                  <Link to="/certifications">Explore Full AAD Track</Link>
+                  <Link to="/certifications">Explore Full AAC Track</Link>
                 </Button>
               </div>
             </div>
