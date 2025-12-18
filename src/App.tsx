@@ -16,6 +16,34 @@ import ACOSAdvanced from "./pages/certifications/ACOSAdvanced";
 import ACOSMaster from "./pages/certifications/ACOSMaster";
 import NotFound from "./pages/NotFound";
 
+// AIC Modules
+import TaskDecomposition from "./pages/modules/aic/TaskDecomposition";
+import MultiAgentCoordination from "./pages/modules/aic/MultiAgentCoordination";
+import PerformanceOptimization from "./pages/modules/aic/PerformanceOptimization";
+import HumanAIDesign from "./pages/modules/aic/HumanAIDesign";
+import RestrictedMethods from "./pages/modules/aic/RestrictedMethods";
+import LatestInAI from "./pages/modules/aic/LatestInAI";
+import SecureAIOperations from "./pages/modules/aic/SecureAIOperations";
+import PromptEngineering from "./pages/modules/aic/PromptEngineering";
+import AIProductManagement from "./pages/modules/aic/AIProductManagement";
+import DataPipelineDesign from "./pages/modules/aic/DataPipelineDesign";
+import ModelEvaluation from "./pages/modules/aic/ModelEvaluation";
+import AIDeployment from "./pages/modules/aic/AIDeployment";
+
+// AIO Modules
+import EthicalDataUse from "./pages/modules/aio/EthicalDataUse";
+import PrivacyAuditor from "./pages/modules/aio/PrivacyAuditor";
+import CrisisPrevention from "./pages/modules/aio/CrisisPrevention";
+import LegalAuditor from "./pages/modules/aio/LegalAuditor";
+import ResourceManagement from "./pages/modules/aio/ResourceManagement";
+import ProcessOptimization from "./pages/modules/aio/ProcessOptimization";
+import SustainabilityAI from "./pages/modules/aio/SustainabilityAI";
+import FinancialEvaluations from "./pages/modules/aio/FinancialEvaluations";
+import AIForGovernment from "./pages/modules/aio/AIForGovernment";
+import AIForSecurity from "./pages/modules/aio/AIForSecurity";
+import CybersecurityAuditing from "./pages/modules/aio/CybersecurityAuditing";
+import AMLKYC from "./pages/modules/aio/AMLKYC";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -36,7 +64,35 @@ const App = () => (
             <Route path="/certifications/acos-professional" element={<ACOSProfessional />} />
             <Route path="/certifications/acos-advanced" element={<ACOSAdvanced />} />
             <Route path="/certifications/acos-master" element={<ACOSMaster />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            
+            {/* AIC Modules */}
+            <Route path="/modules/aic/task-decomposition" element={<TaskDecomposition />} />
+            <Route path="/modules/aic/multi-agent-coordination" element={<MultiAgentCoordination />} />
+            <Route path="/modules/aic/performance-optimization" element={<PerformanceOptimization />} />
+            <Route path="/modules/aic/human-ai-design" element={<HumanAIDesign />} />
+            <Route path="/modules/aic/restricted-methods" element={<RestrictedMethods />} />
+            <Route path="/modules/aic/latest-in-ai" element={<LatestInAI />} />
+            <Route path="/modules/aic/secure-ai-operations" element={<SecureAIOperations />} />
+            <Route path="/modules/aic/prompt-engineering" element={<PromptEngineering />} />
+            <Route path="/modules/aic/ai-product-management" element={<AIProductManagement />} />
+            <Route path="/modules/aic/data-pipeline-design" element={<DataPipelineDesign />} />
+            <Route path="/modules/aic/model-evaluation" element={<ModelEvaluation />} />
+            <Route path="/modules/aic/ai-deployment" element={<AIDeployment />} />
+            
+            {/* AIO Modules */}
+            <Route path="/modules/aio/ethical-data-use" element={<EthicalDataUse />} />
+            <Route path="/modules/aio/privacy-auditor" element={<PrivacyAuditor />} />
+            <Route path="/modules/aio/crisis-prevention" element={<CrisisPrevention />} />
+            <Route path="/modules/aio/legal-auditor" element={<LegalAuditor />} />
+            <Route path="/modules/aio/resource-management" element={<ResourceManagement />} />
+            <Route path="/modules/aio/process-optimization" element={<ProcessOptimization />} />
+            <Route path="/modules/aio/sustainability-ai" element={<SustainabilityAI />} />
+            <Route path="/modules/aio/financial-evaluations" element={<FinancialEvaluations />} />
+            <Route path="/modules/aio/ai-for-government" element={<AIForGovernment />} />
+            <Route path="/modules/aio/ai-for-security" element={<AIForSecurity />} />
+            <Route path="/modules/aio/cybersecurity-auditing" element={<CybersecurityAuditing />} />
+            <Route path="/modules/aio/aml-kyc" element={<AMLKYC />} />
+            
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
