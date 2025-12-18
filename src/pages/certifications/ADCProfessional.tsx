@@ -162,8 +162,7 @@ const ADCProfessional = () => {
               </h1>
               
               <p className="body-large text-gray-300 mb-8 max-w-2xl">
-                Your entry point into AI development compliance. Build the foundational knowledge 
-                needed to understand and apply EU AI Act requirements in your organisation.
+                The ADC Professional certification is your entry point into AI development compliance. Designed for ambitious professionals who want to move beyond simple automation and learn how to design, build, and oversee autonomous, goal-driven AI agents. Build the foundational knowledge needed to understand and apply EU AI Act requirements while mastering the fundamentals of Agentic AI development.
               </p>
 
               <div className="flex flex-wrap gap-6 mb-10">
@@ -259,8 +258,166 @@ const ADCProfessional = () => {
           </div>
         </section>
 
-        {/* Learning Outcomes */}
+        {/* Your Journey */}
         <section className="section-padding bg-background">
+          <div className="container-coad">
+            <div className="text-center mb-12">
+              <h2 className="heading-2 mb-4">Your ADC Journey</h2>
+              <p className="body-large text-muted-foreground max-w-3xl mx-auto">
+                The ADC (AI Development Certified) track follows a structured progression from foundational knowledge to advanced mastery, culminating in Charterholder status.
+              </p>
+            </div>
+
+            <div className="max-w-5xl mx-auto">
+              {/* Journey Path */}
+              <div className="relative">
+                {/* Connection Line */}
+                <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-teal to-primary transform -translate-x-1/2 hidden lg:block" />
+                
+                <div className="space-y-12">
+                  {/* Level 1: Professional */}
+                  <div className="relative flex flex-col lg:flex-row items-center gap-8">
+                    <div className="lg:w-1/2 lg:text-right">
+                      <div className="bg-card rounded-xl p-6 border-2 border-primary shadow-lg">
+                        <div className="flex items-center justify-end gap-3 mb-4">
+                          <span className="px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full">Level 1</span>
+                          <span className="text-2xl font-bold text-primary">Professional</span>
+                        </div>
+                        <h3 className="heading-4 mb-3">Foundation Level</h3>
+                        <p className="text-muted-foreground text-sm mb-4">
+                          Build foundational knowledge in AI development compliance, EU AI Act requirements, risk classification, and data governance. Perfect for professionals beginning their journey in AI governance.
+                        </p>
+                        <ul className="space-y-2 text-sm text-muted-foreground">
+                          <li className="flex items-start gap-2">
+                            <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                            <span>4 core modules (8-12 weeks)</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                            <span>Self-paced learning</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                            <span>€1,200 investment</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center flex-shrink-0 border-4 border-background shadow-lg z-10">
+                      <span className="text-2xl font-bold text-primary-foreground">1</span>
+                    </div>
+                    <div className="lg:w-1/2"></div>
+                  </div>
+
+                  {/* Level 2: Advanced Expert */}
+                  <div className="relative flex flex-col lg:flex-row items-center gap-8">
+                    <div className="lg:w-1/2"></div>
+                    <div className="w-16 h-16 rounded-full bg-teal flex items-center justify-center flex-shrink-0 border-4 border-background shadow-lg z-10">
+                      <span className="text-2xl font-bold text-primary-foreground">2</span>
+                    </div>
+                    <div className="lg:w-1/2 lg:text-left">
+                      <div className="bg-card rounded-xl p-6 border-2 border-teal shadow-lg">
+                        <div className="flex items-center gap-3 mb-4">
+                          <span className="text-2xl font-bold text-teal">Advanced Expert</span>
+                          <span className="px-3 py-1 bg-teal/10 text-teal text-sm font-semibold rounded-full">Level 2</span>
+                        </div>
+                        <h3 className="heading-4 mb-3">Intermediate Level</h3>
+                        <p className="text-muted-foreground text-sm mb-4">
+                          Deepen your expertise with advanced Agentic AI concepts, multi-agent systems, performance optimization, and production deployment. Build hands-on skills through practical projects.
+                        </p>
+                        <ul className="space-y-2 text-sm text-muted-foreground">
+                          <li className="flex items-start gap-2">
+                            <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                            <span>Advanced modules & projects</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                            <span>Portfolio development</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                            <span>Mentored learning</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Level 3: Master */}
+                  <div className="relative flex flex-col lg:flex-row items-center gap-8">
+                    <div className="lg:w-1/2 lg:text-right">
+                      <div className="bg-card rounded-xl p-6 border-2 border-primary shadow-lg">
+                        <div className="flex items-center justify-end gap-3 mb-4">
+                          <span className="px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full">Level 3</span>
+                          <span className="text-2xl font-bold text-primary">Master</span>
+                        </div>
+                        <h3 className="heading-4 mb-3">Advanced Level</h3>
+                        <p className="text-muted-foreground text-sm mb-4">
+                          Master advanced Agentic AI architectures, reinforcement learning, human-agent collaboration, and enterprise-scale system design. Complete comprehensive capstone projects.
+                        </p>
+                        <ul className="space-y-2 text-sm text-muted-foreground">
+                          <li className="flex items-start gap-2">
+                            <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                            <span>Master-level modules</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                            <span>Advanced capstone projects</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                            <span>Expert mentorship</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center flex-shrink-0 border-4 border-background shadow-lg z-10">
+                      <span className="text-2xl font-bold text-primary-foreground">3</span>
+                    </div>
+                    <div className="lg:w-1/2"></div>
+                  </div>
+
+                  {/* Charterholder */}
+                  <div className="relative flex flex-col lg:flex-row items-center gap-8">
+                    <div className="lg:w-1/2"></div>
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-teal flex items-center justify-center flex-shrink-0 border-4 border-background shadow-xl z-10">
+                      <AwardNodeIcon className="w-10 h-10 text-primary-foreground" />
+                    </div>
+                    <div className="lg:w-1/2 lg:text-left">
+                      <div className="bg-gradient-to-br from-primary/10 to-teal/10 rounded-xl p-6 border-2 border-primary shadow-lg">
+                        <div className="flex items-center gap-3 mb-4">
+                          <span className="text-2xl font-bold gradient-text">ADC Charterholder</span>
+                          <span className="px-3 py-1 bg-primary/20 text-primary text-sm font-semibold rounded-full">Elite Status</span>
+                        </div>
+                        <h3 className="heading-4 mb-3">Top-Level Achievement</h3>
+                        <p className="text-muted-foreground text-sm mb-4">
+                          Upon completing all three levels, achieve Charterholder status with priority placement in the Accredited Experts Directory, enhanced visibility, and recognition as a top-tier AI development professional.
+                        </p>
+                        <ul className="space-y-2 text-sm text-muted-foreground">
+                          <li className="flex items-start gap-2">
+                            <AwardNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                            <span><strong className="text-foreground">Priority Directory Placement:</strong> Top of search results</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <AwardNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                            <span><strong className="text-foreground">Charterholder Badge:</strong> Public recognition</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <AwardNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                            <span><strong className="text-foreground">AI Workforce Access:</strong> Premium opportunities</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Learning Outcomes */}
+        <section className="section-padding bg-muted/50">
           <div className="container-coad">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -284,7 +441,7 @@ const ADCProfessional = () => {
                 <h3 className="heading-3 mb-4">Ready to Level Up?</h3>
                 <p className="text-muted-foreground mb-6">
                   After completing ADC Professional, continue your journey with the 
-                  ADC Advanced Expert certification to deepen your expertise.
+                  ADC Advanced Expert certification to deepen your expertise and move closer to Charterholder status.
                 </p>
                 <Button variant="outline" asChild>
                   <Link to="/certifications/adc-advanced">View ADC Advanced Expert →</Link>
@@ -328,9 +485,9 @@ const ADCProfessional = () => {
           <div className="container-coad relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <CredentialIcon className="w-16 h-16 mx-auto mb-6 text-primary" />
-              <h2 className="heading-2 mb-4">Start Your Journey Today</h2>
+              <h2 className="heading-2 mb-4">Start Your ADC Journey Today</h2>
               <p className="body-large text-gray-300 mb-8">
-                Join professionals across Europe building their AI governance expertise.
+                Join professionals across Europe building their AI development expertise. Begin with ADC Professional and progress through Advanced Expert and Master levels to achieve Charterholder status—the highest recognition in AI development competency.
               </p>
               
               <div className="bg-card/10 backdrop-blur-sm rounded-2xl p-8 border border-primary/20 mb-8">
