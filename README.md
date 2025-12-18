@@ -1,73 +1,101 @@
-# Welcome to your Lovable project
+# COAD Certification Hub
 
-## Project info
+**Domain:** coad.ai  
+**Status:** Production-Ready  
+**Repository:** https://github.com/kdfinis/coad-certification-hub
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## 🚀 Quick Start
 
-There are several ways of editing your application.
+### Preview Without Localhost
 
-**Use Lovable**
+**Option 1: Vercel (Recommended)**
+1. Visit: https://vercel.com/new
+2. Import: `kdfinis/coad-certification-hub`
+3. Deploy → Get instant preview URL
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+**Option 2: Netlify**
+1. Visit: https://netlify.com
+2. Import: `kdfinis/coad-certification-hub`
+3. Deploy → Get preview URL
 
-Changes made via Lovable will be committed automatically to this repo.
+**See:** [PREVIEW_WITHOUT_LOCALHOST.md](./PREVIEW_WITHOUT_LOCALHOST.md) for details
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📦 Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Frontend:** Vite + React + TypeScript
+- **UI:** shadcn-ui + Tailwind CSS
+- **Backend:** Express.js + Prisma
+- **Database:** PostgreSQL
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🛠️ Development
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```bash
+# Install dependencies
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start dev server (localhost:8080)
 npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📁 Project Structure
 
-**Use GitHub Codespaces**
+```
+├── src/              # Frontend source code
+├── server/           # Backend API server
+├── prisma/           # Database schema & migrations
+├── public/           # Static assets
+└── dist/             # Production build output
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 🌐 Deployment
 
-This project is built with:
+### Environment Variables
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Set these in your hosting platform:
 
-## How can I deploy this project?
+```env
+VITE_API_BASE_URL=https://api.coad.ai
+VITE_DOMAIN=https://coad.ai
+VITE_APP_URL=https://app.coad.ai
+```
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### Build Commands
 
-## Can I connect a custom domain to my Lovable project?
+- **Vercel/Netlify:** Auto-detected from config files
+- **GitHub Pages:** Uses `.github/workflows/deploy.yml`
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📚 Documentation
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- [Production Deployment](./PRODUCTION_DEPLOYMENT.md)
+- [Preview Without Localhost](./PREVIEW_WITHOUT_LOCALHOST.md)
+- [Database Setup](./DATABASE_SETUP.md)
+- [Repository Status](./REPOSITORY_STATUS.md)
+
+---
+
+## 🔗 Links
+
+- **GitHub:** https://github.com/kdfinis/coad-certification-hub
+- **Domain:** https://coad.ai (when deployed)
+
+---
+
+**Ready to deploy?** Use Vercel for instant previews!
