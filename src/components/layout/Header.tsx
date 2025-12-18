@@ -30,7 +30,7 @@ const Header = () => {
       ]
     },
     { label: 'Modules', href: '/#modules' },
-    { label: 'Corporate', href: '/#pricing' },
+    { label: 'AI Workforce', href: '/ai-workforce', isRoute: true },
     { label: 'About', href: '/about', isRoute: true },
   ];
 
