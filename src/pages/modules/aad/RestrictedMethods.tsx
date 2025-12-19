@@ -16,87 +16,94 @@ const RestrictedMethods = () => {
   const weeklyBreakdown = [
     {
       week: 1,
-      title: "Masterclass – EU AI Act Prohibited Practices",
+      title: "Masterclass – Safety Fundamentals",
       hours: 30,
-      description: "Expert analysis of prohibited and restricted AI practices under EU regulations.",
+      description: "Expert session on failure modes, risk classification, guardrail design, red-teaming, and regulatory expectations for high-risk AI.",
       activities: [
-        "Complete EU AI Act prohibited practices review",
-        "High-risk AI system classifications",
-        "Regulatory boundary identification",
-        "Case studies of enforcement actions"
+        "Understand how AI systems fail (misalignment, misuse, adversarial attacks, drift)",
+        "Learn to categorize AI risks by severity, likelihood, and impact",
+        "Design restrictions (allowed/disallowed actions, tool whitelists/blacklists)",
+        "Test AI systems for vulnerabilities and failure modes",
+        "Understand safety requirements for high-risk AI (EU AI Act, sectoral regulations)"
       ]
     },
     {
       week: 2,
-      title: "Hands-On Labs – Risk Assessment",
-      hours: 30,
-      description: "Practical exercises in identifying and mitigating restricted AI methods.",
+      title: "Hands-On Labs – Policy and Guardrail Design",
+      hours: 35,
+      description: "Practical exercises in risk assessment, guardrail design, and safety testing.",
       activities: [
-        "AI system risk classification tools",
-        "Conformity assessment procedures",
-        "Documentation requirements",
-        "Technical mitigation strategies"
+        "Conduct risk assessments for specific AI use cases",
+        "Classify risks by severity and likelihood",
+        "Create risk registers and mitigation plans",
+        "Design policies and guardrails for AI agents",
+        "Create tool whitelists/blacklists and action restrictions",
+        "Design stress tests and adversarial scenarios",
+        "Create test plans for identifying failure modes"
       ]
     },
     {
       week: 3,
-      title: "Mentored Sessions – Edge Cases",
+      title: "Mentored Sessions – Testing and Monitoring",
       hours: 30,
-      description: "Expert guidance on navigating complex regulatory scenarios.",
+      description: "Expert guidance on safety testing, monitoring design, and best practices from real-world implementations.",
       activities: [
-        "Ambiguous use case analysis",
-        "Regulatory interpretation guidance",
-        "ESG compliance intersections",
-        "Cross-border deployment considerations"
+        "Get feedback on your safety designs from industry experts",
+        "Learn advanced techniques for safety testing and red-teaming",
+        "Receive guidance on designing safety monitoring dashboards",
+        "Analyze real-world AI safety incidents and prevention strategies",
+        "Learn from successful safety implementations"
       ]
     },
     {
       week: 4,
-      title: "Mini-Capstone – Compliance Framework",
-      hours: 30,
-      description: "Develop a comprehensive compliance framework for restricted AI methods.",
+      title: "Mini-Capstone – Safety Case",
+      hours: 35,
+      description: "Produce a comprehensive safety case for an AI agent deployment with risk register, control design, test plan, monitoring scheme, and compliance documentation.",
       activities: [
-        "Complete compliance documentation",
-        "Risk mitigation plan delivery",
-        "Expert panel review",
-        "Blockchain certificate issuance"
+        "Complete risk assessment with identified failure modes and impacts",
+        "Detailed specification of guardrails, restrictions, and safety controls",
+        "Comprehensive safety testing strategy including red-teaming scenarios",
+        "Design for real-time safety monitoring and alerting",
+        "Plan for detecting and responding to safety incidents",
+        "Evidence of meeting regulatory safety requirements"
       ]
     }
   ];
 
   const realWorldUseCases = [
     {
-      industry: "Biometric Systems",
-      scenario: "Navigating restrictions on real-time biometric identification while building compliant security systems."
+      industry: "High-Risk AI Applications",
+      scenario: "Designing safety guardrails and monitoring for autonomous AI systems in critical infrastructure or healthcare applications."
     },
     {
-      industry: "Social Scoring",
-      scenario: "Understanding prohibited practices in social evaluation systems while building legitimate reputation tools."
+      industry: "Oversight Systems",
+      scenario: "Creating safety monitoring and controls for AI systems that operate with significant autonomy and potential impact."
     },
     {
-      industry: "Employment AI",
-      scenario: "Developing compliant recruitment AI while avoiding prohibited discriminatory practices."
+      industry: "Regulatory Compliance",
+      scenario: "Ensuring AI systems meet EU AI Act safety requirements for high-risk applications through comprehensive safety cases."
     },
     {
-      industry: "Law Enforcement",
-      scenario: "Building AI tools for public safety that comply with strict human rights protections."
+      industry: "Security-Critical AI",
+      scenario: "Securing AI systems against misuse, adversarial attacks, and ensuring safe behavior in sensitive environments."
     }
   ];
 
   const learningOutcomes = [
-    "Master EU AI Act prohibited and restricted practices",
-    "Conduct comprehensive AI risk classifications",
-    "Develop compliant alternatives to restricted methods",
-    "Create conformity assessment documentation",
-    "Navigate ambiguous regulatory scenarios",
-    "Build compliance frameworks for high-risk AI"
+    "Identify and classify safety risks in AI systems",
+    "Create effective restrictions and safety controls for AI agents",
+    "Design and execute safety tests including red-teaming scenarios",
+    "Create monitoring schemes that detect unsafe behavior",
+    "Plan for safety incident detection and response",
+    "Create comprehensive safety cases for regulatory and internal review"
   ];
 
   return (
     <>
       <Helmet>
-        <title>Restricted Methods | AAD Module | COAD</title>
-        <meta name="description" content="Master EU AI Act restricted methods in this intensive 120-hour module. Learn compliance frameworks for high-risk AI with blockchain certification." />
+        <title>Restricted Methods & Safety | AAC Module | COAD</title>
+        <meta name="description" content="Master AI safety and restricted methods in this intensive 120-hour module. Learn to design guardrails, assess risks, and create safety cases for Agentic AI systems." />
       </Helmet>
 
       <Header />
@@ -112,7 +119,7 @@ const RestrictedMethods = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">
-                  AAD Module
+                  AAC Module
                 </span>
                 <span className="px-3 py-1 rounded-full bg-teal/20 text-teal text-sm font-medium">
                   120 Hours • 4 Weeks
@@ -128,8 +135,7 @@ const RestrictedMethods = () => {
               </h1>
               
               <p className="body-large text-gray-300 mb-8 max-w-2xl">
-                Navigate the complex landscape of prohibited and restricted AI practices under EU 
-                regulations. Learn to build compliant alternatives and develop robust compliance frameworks.
+                Design restrictions, guardrails, and monitoring for powerful Agentic AI systems. Learn to identify risks, design controls, and operationalize safe behavior in autonomous AI systems.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
@@ -169,14 +175,10 @@ const RestrictedMethods = () => {
               <div>
                 <h2 className="heading-2 mb-6">Module Overview</h2>
                 <p className="body-large text-muted-foreground mb-6">
-                  The EU AI Act introduces strict prohibitions and restrictions on certain AI practices. 
-                  This module provides deep expertise in understanding these boundaries and developing 
-                  compliant alternatives.
+                  The Restricted Methods & Safety module is an advanced safety-focused program for professionals who must design restrictions, guardrails, and monitoring for powerful Agentic AI systems.
                 </p>
                 <p className="body text-muted-foreground mb-8">
-                  You'll analyze real enforcement actions, work through ambiguous edge cases, and 
-                  develop practical skills in risk classification and conformity assessment that 
-                  are essential for any AI professional operating in the EU market.
+                  As AI systems become more autonomous and capable, ensuring they operate safely and within defined boundaries becomes critical. This module teaches you to think like a safety engineer for AI: identifying failure modes, designing guardrails, planning for misuse, and creating monitoring systems that detect and prevent unsafe behavior.
                 </p>
 
                 <div className="bg-muted/50 rounded-xl p-6 border border-border">
@@ -225,7 +227,7 @@ const RestrictedMethods = () => {
             <div className="text-center mb-12">
               <h2 className="heading-2 mb-4">4-Week Curriculum</h2>
               <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-                Intensive deep dive into EU AI Act compliance for restricted practices.
+                From safety fundamentals to comprehensive safety cases—master the frameworks needed to deploy AI safely.
               </p>
             </div>
 
@@ -269,7 +271,7 @@ const RestrictedMethods = () => {
             <div className="text-center mb-12">
               <h2 className="heading-2 mb-4">Real-World Applications</h2>
               <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-                Understanding restricted methods is critical for compliant AI deployment.
+                See how safety engineering principles protect organizations and users in real-world AI deployments.
               </p>
             </div>
 

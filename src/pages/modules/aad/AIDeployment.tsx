@@ -16,50 +16,59 @@ const AIDeployment = () => {
   const weeklyBreakdown = [
     {
       week: 1,
-      title: "Masterclass – Deployment Strategies",
+      title: "Masterclass – Deployment Fundamentals",
       hours: 30,
-      description: "Expert-led deep dive into AI deployment architectures and strategies.",
+      description: "Expert session on deployment architectures, infrastructure planning, model serving, versioning strategies, and scalability planning.",
       activities: [
-        "Cloud vs edge deployment",
-        "Container orchestration for AI",
-        "Model serving architectures",
-        "EU AI Act deployment requirements"
+        "Understand different deployment patterns (batch, real-time, edge)",
+        "Plan compute, storage, and networking for AI workloads",
+        "Design model serving infrastructure and APIs",
+        "Manage model versions and updates",
+        "Plan for scaling AI systems under load"
       ]
     },
     {
       week: 2,
-      title: "Hands-On Labs – Infrastructure Setup",
-      hours: 30,
-      description: "Practical exercises building production AI infrastructure.",
+      title: "Hands-On Labs – Deployment Design",
+      hours: 40,
+      description: "Practical exercises in architecture design, model serving, and monitoring & observability.",
       activities: [
-        "Kubernetes for AI workloads",
-        "Model versioning and rollback",
-        "Canary and blue-green deployments",
-        "Autoscaling configuration"
+        "Design deployment architectures for specific use cases",
+        "Plan infrastructure requirements and scaling strategies",
+        "Create deployment architecture diagrams",
+        "Design model serving APIs and interfaces",
+        "Plan for batch and real-time inference",
+        "Design monitoring and observability for AI systems",
+        "Plan metrics, logging, and alerting",
+        "Create monitoring dashboards"
       ]
     },
     {
       week: 3,
       title: "Mentored Sessions – Production Operations",
       hours: 30,
-      description: "Expert guidance on operating AI systems in production.",
+      description: "Expert guidance on deployment reliability, scalability, monitoring, and operations from successful production deployments.",
       activities: [
-        "Monitoring and observability",
-        "Incident response procedures",
-        "ESG-compliant operations",
-        "Cost management strategies"
+        "Get feedback on your deployment designs",
+        "Learn from successful production deployments",
+        "Discuss common deployment challenges and solutions",
+        "Plan for ongoing operations and maintenance",
+        "Analyze real-world deployment scenarios"
       ]
     },
     {
       week: 4,
-      title: "Mini-Capstone – Production System",
-      hours: 30,
-      description: "Deploy a complete AI system to production with full observability.",
+      title: "Mini-Capstone – Complete Deployment Plan",
+      hours: 40,
+      description: "Create a comprehensive deployment plan for an AI system with deployment architecture, infrastructure plan, model serving design, versioning strategy, monitoring plan, operations plan, and rollback strategy.",
       activities: [
-        "End-to-end deployment",
-        "Operations runbook delivery",
-        "Compliance documentation",
-        "Blockchain certificate issuance"
+        "Complete architecture design for production deployment",
+        "Detailed infrastructure requirements and scaling strategy",
+        "Model serving API and interface specifications",
+        "Model versioning and update procedures",
+        "Comprehensive monitoring, logging, and alerting strategy",
+        "Ongoing operations, maintenance, and incident response procedures",
+        "Plan for rolling back deployments if issues occur"
       ]
     }
   ];
@@ -84,19 +93,19 @@ const AIDeployment = () => {
   ];
 
   const learningOutcomes = [
-    "Design production-grade AI deployment architectures",
-    "Implement container orchestration for AI workloads",
-    "Configure monitoring and observability systems",
-    "Manage model versions and rollback procedures",
-    "Ensure EU AI Act deployment compliance",
-    "Create comprehensive operations documentation"
+    "Create production deployment architectures for AI systems",
+    "Design scalable infrastructure for AI workloads",
+    "Design and implement model serving systems",
+    "Establish comprehensive monitoring and observability",
+    "Implement model versioning and update strategies",
+    "Plan for ongoing operations and maintenance"
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Deployment & MLOps | AAD Module | COAD</title>
-        <meta name="description" content="Master AI deployment and MLOps in this intensive 120-hour module. Learn production infrastructure with blockchain certification." />
+        <title>AI Deployment to Production | AAC Module | COAD</title>
+        <meta name="description" content="Master deploying AI systems to production at scale. Learn deployment architectures, infrastructure planning, monitoring, versioning, and production operations." />
       </Helmet>
 
       <Header />
@@ -111,7 +120,7 @@ const AIDeployment = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">
-                  AAD Module
+                  AAC Module
                 </span>
                 <span className="px-3 py-1 rounded-full bg-teal/20 text-teal text-sm font-medium">
                   120 Hours • 4 Weeks
@@ -127,8 +136,7 @@ const AIDeployment = () => {
               </h1>
               
               <p className="body-large text-gray-300 mb-8 max-w-2xl">
-                Bridge the gap from model to production. Master the infrastructure, 
-                processes, and tools needed to deploy and operate AI systems at scale.
+                Deploy AI systems to production at scale. Learn deployment architectures, infrastructure planning, monitoring and observability, versioning and rollback strategies, and production operations.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">

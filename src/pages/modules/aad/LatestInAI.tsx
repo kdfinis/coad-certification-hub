@@ -16,50 +16,58 @@ const LatestInAI = () => {
   const weeklyBreakdown = [
     {
       week: 1,
-      title: "Masterclass – 2025 AI Landscape",
+      title: "Masterclass – AI Landscape Overview",
       hours: 15,
-      description: "Expert overview of the most significant AI developments and trends shaping 2025.",
+      description: "Expert session on the current AI, GenAI, and Agentic AI landscape, key paradigms, ecosystem players, and evaluation frameworks.",
       activities: [
-        "Foundation model evolution and capabilities",
-        "Emerging AI architectures and paradigms",
-        "Industry adoption patterns",
-        "EU regulatory developments"
+        "Understand the current AI, GenAI, and Agentic AI landscape",
+        "Learn about major paradigms and approaches (LLMs, agents, multi-agent systems, tool use)",
+        "Identify major players, frameworks, and platforms",
+        "Learn to distinguish between breakthrough developments and incremental updates",
+        "Understand how to assess new developments for practical impact"
       ]
     },
     {
       week: 2,
-      title: "Hands-On Labs – New Tools & Platforms",
-      hours: 15,
-      description: "Practical exploration of the latest AI tools, platforms, and frameworks.",
+      title: "Hands-On Labs – Mapping Trends to Use Cases",
+      hours: 20,
+      description: "Practical exercises analyzing trends, evaluating tools, and creating strategic mapping documents.",
       activities: [
-        "Latest LLM capabilities exploration",
-        "New multimodal AI tools",
-        "Emerging development frameworks",
-        "Evaluation and benchmarking methods"
+        "Analyze recent AI developments and their implications",
+        "Map emerging tools and techniques to business use cases",
+        "Create trend analysis reports",
+        "Evaluate new AI tools and frameworks for specific use cases",
+        "Compare capabilities, limitations, and adoption considerations",
+        "Map AI trends to your organization's or personal roadmap",
+        "Identify opportunities and risks from new developments"
       ]
     },
     {
       week: 3,
-      title: "Mentored Sessions – Strategic Implications",
+      title: "Mentored Sessions – Critical Evaluation",
       hours: 15,
-      description: "Expert discussions on strategic implications of AI developments.",
+      description: "Expert guidance on distinguishing hype from reality, risk assessment, use case analysis, and strategic planning.",
       activities: [
-        "Business impact assessments",
-        "Competitive landscape analysis",
-        "ESG considerations in new AI",
-        "Regulatory horizon scanning"
+        "Get expert perspectives on current AI developments",
+        "Learn to distinguish between marketing hype and genuine breakthroughs",
+        "Discuss risks and limitations of new AI capabilities",
+        "Evaluate how new developments fit specific use cases",
+        "Receive guidance on integrating new capabilities into your roadmap"
       ]
     },
     {
       week: 4,
-      title: "Mini-Capstone – Technology Assessment",
-      hours: 15,
-      description: "Deliver a comprehensive technology assessment and adoption roadmap.",
+      title: "Mini-Capstone – Personal AI Development Roadmap",
+      hours: 20,
+      description: "Create a comprehensive 12-24 month personal or organizational AI development roadmap with current state assessment, trend analysis, opportunity identification, learning plan, tool adoption strategy, risk mitigation, and success metrics.",
       activities: [
-        "Technology evaluation report",
-        "Adoption recommendations",
-        "Risk-benefit analysis",
-        "Blockchain certificate issuance"
+        "Assess where you are now with AI capabilities",
+        "Analyze key AI developments relevant to your context",
+        "Identify specific opportunities from new AI capabilities",
+        "Plan what you'll learn, build, and test over the next 12-24 months",
+        "Determine which new tools and frameworks you'll adopt and when",
+        "Plan how you'll manage risks from adopting new capabilities",
+        "Define how you'll measure progress and success"
       ]
     }
   ];
@@ -84,19 +92,19 @@ const LatestInAI = () => {
   ];
 
   const learningOutcomes = [
-    "Understand current AI landscape and major developments",
-    "Evaluate new AI tools and platforms effectively",
-    "Assess business implications of AI trends",
-    "Conduct technology adoption assessments",
-    "Navigate regulatory developments in AI",
-    "Create strategic AI technology roadmaps"
+    "Systematically track and evaluate new AI developments",
+    "Identify significant breakthroughs vs. incremental updates",
+    "Assess new AI tools and frameworks for practical applicability",
+    "Create roadmaps for adopting new AI capabilities",
+    "Understand risks and limitations of emerging AI technologies",
+    "Maintain ongoing awareness of AI landscape developments"
   ];
 
   return (
     <>
       <Helmet>
-        <title>Latest in AI 2025 | AAD Module | COAD</title>
-        <meta name="description" content="Stay current with cutting-edge AI developments in this 60-hour, 4-week module. Learn the latest tools, trends, and strategic implications." />
+        <title>Latest in AI 2025 | AAC Module | COAD</title>
+        <meta name="description" content="Stay current with cutting-edge developments in Agentic AI, large language models, and autonomous systems. Learn to track breakthroughs and evaluate new tools." />
       </Helmet>
 
       <Header />
@@ -112,7 +120,7 @@ const LatestInAI = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">
-                  AAD Module
+                  AAC Module
                 </span>
                 <span className="px-3 py-1 rounded-full bg-teal/20 text-teal text-sm font-medium">
                   60 Hours • 4 Weeks
@@ -128,8 +136,7 @@ const LatestInAI = () => {
               </h1>
               
               <p className="body-large text-gray-300 mb-8 max-w-2xl">
-                Stay at the forefront of AI innovation. Explore the latest developments, tools, 
-                and strategic trends shaping the AI landscape in 2025 and beyond.
+                Keep current with cutting-edge developments in Agentic AI, large language models, and autonomous systems. Learn to track breakthroughs, evaluate new tools and techniques, and connect emerging trends to your own roadmap.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
