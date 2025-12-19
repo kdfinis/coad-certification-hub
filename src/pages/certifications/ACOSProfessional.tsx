@@ -261,8 +261,162 @@ const ACOSProfessional = () => {
           </div>
         </section>
 
-        {/* Learning Outcomes */}
+        {/* Your Journey */}
         <section className="section-padding bg-background">
+          <div className="container-coad">
+            <div className="text-center mb-12">
+              <h2 className="heading-2 mb-4">Your ACOS Journey</h2>
+              <p className="body-large text-muted-foreground max-w-3xl mx-auto">
+                The ACOS (AI Controlling and Oversight Certified) track follows a domain-based progression. Complete all 4 domains to achieve Charterholder status—the highest recognition in AI oversight.
+              </p>
+            </div>
+
+            <div className="max-w-5xl mx-auto">
+              {/* Domain Progression */}
+              <div className="grid md:grid-cols-2 gap-6 mb-12">
+                {/* Domain 1: Safety & Risk Controller */}
+                <div className="bg-card rounded-xl p-6 border border-border card-hover">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <ShieldNodeIcon className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">Domain 1: Safety & Risk Controller</h3>
+                      <p className="text-sm text-muted-foreground">€1,800 • 2.67 ECTS • 80 hours</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Master risk assessment, threat monitoring, and safeguards for AI systems. Essential for professionals ensuring AI safety and security.
+                  </p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Risk assessment frameworks</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Threat monitoring systems</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Safety safeguards design</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Domain 2: Ethics Controller */}
+                <div className="bg-card rounded-xl p-6 border border-border card-hover">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-lg bg-teal/10 flex items-center justify-center">
+                      <BalanceScaleIcon className="w-6 h-6 text-teal" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">Domain 2: Ethics Controller</h3>
+                      <p className="text-sm text-muted-foreground">€1,800 • 2.67 ECTS • 80 hours</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Ensure ethical AI deployment that respects human rights. Learn bias detection, ethical decision-making, and human rights protection.
+                  </p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Human rights protection</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Bias detection and mitigation</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Ethical decision-making frameworks</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Domain 3: Legal & Compliance Controller */}
+                <div className="bg-card rounded-xl p-6 border border-border card-hover">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <BalanceScaleIcon className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">Domain 3: Legal & Compliance Controller</h3>
+                      <p className="text-sm text-muted-foreground">€1,600 • 2.67 ECTS • 80 hours</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Navigate EU AI Act requirements with confidence. Master regulatory compliance, legal frameworks, and conformity assessment.
+                  </p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>EU AI Act requirements</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Regulatory compliance frameworks</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                      <span>Legal frameworks and obligations</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Domain 4: Corporate Digital & AI Transformation Controller */}
+                <div className="bg-card rounded-xl p-6 border-2 border-primary shadow-lg card-hover">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
+                      <NetworkNodesIcon className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">Domain 4: Corporate Digital & AI Transformation</h3>
+                      <p className="text-sm text-primary font-medium">€2,600 • 4 ECTS • 120 hours</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Lead comprehensive digital and AI transformation initiatives. Master strategic planning, AI integration, and organizational change management. This domain represents 1/3 of total track content.
+                  </p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                      <span>Strategic digital transformation</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                      <span>AI integration strategies</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                      <span>Organizational change management</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Charterholder Path */}
+              <div className="bg-gradient-to-br from-primary/10 to-teal/10 rounded-2xl p-8 border-2 border-primary text-center">
+                <AwardNodeIcon className="w-16 h-16 mx-auto mb-6 text-primary" />
+                <h3 className="heading-3 mb-4">Achieve ACOS Charterholder Status</h3>
+                <p className="body-large text-muted-foreground mb-6 max-w-2xl mx-auto">
+                  Complete all 4 domains to achieve ACOS Charterholder status—the highest recognition in AI oversight. Charterholders receive priority placement in the Accredited Experts Directory, exclusive community access, and speaking opportunities.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button variant="hero" size="lg" asChild>
+                    <Link to="/certifications">Explore All Domains</Link>
+                  </Button>
+                  <Button variant="outline" size="lg" asChild>
+                    <Link to="/certifications/acos-advanced">View Advanced Path →</Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Learning Outcomes */}
+        <section className="section-padding bg-muted/50">
           <div className="container-coad">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
