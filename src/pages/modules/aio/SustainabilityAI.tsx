@@ -8,10 +8,61 @@ import { ArrowRight, Calendar, Briefcase } from 'lucide-react';
 
 const SustainabilityAI = () => {
   const weeklyBreakdown = [
-    { week: 1, title: "Masterclass – ESG Frameworks for AI", hours: 15, description: "Expert session on environmental, social, and governance considerations in AI systems.", activities: ["ESG 2015 framework overview", "AI environmental impact", "Social responsibility in AI", "Governance best practices"] },
-    { week: 2, title: "Hands-On Labs – Impact Assessment", hours: 15, description: "Practical exercises measuring and reducing AI environmental footprint.", activities: ["Carbon footprint calculation", "Energy efficiency optimization", "Sustainable procurement", "Green AI practices"] },
-    { week: 3, title: "Mentored Sessions – Sustainable Strategy", hours: 15, description: "Expert guidance on developing sustainable AI strategies.", activities: ["Long-term sustainability planning", "Stakeholder communication", "EU regulatory alignment", "Impact reporting"] },
-    { week: 4, title: "Mini-Capstone – Sustainability Report", hours: 15, description: "Develop a comprehensive AI sustainability report.", activities: ["Complete sustainability assessment", "Improvement recommendations", "Reporting documentation", "Blockchain certificate issuance"] }
+    { 
+      week: 1, 
+      title: "Masterclass – Sustainability Fundamentals", 
+      hours: 15, 
+      description: "Expert session on sustainability lenses, ESG integration, impact assessment, optimization strategies, and regulatory context.", 
+      activities: [
+        "Understand environmental (energy, carbon, materials) and social (equity, access, inclusion) impacts of AI",
+        "Learn to integrate ESG principles into AI governance",
+        "Understand how to assess AI sustainability impacts",
+        "Learn strategies for optimizing AI for sustainability",
+        "Understand sustainability requirements and expectations"
+      ] 
+    },
+    { 
+      week: 2, 
+      title: "Hands-On Labs – Sustainability Assessment", 
+      hours: 20, 
+      description: "Practical exercises in impact assessment, ESG evaluation, and optimization planning.", 
+      activities: [
+        "Assess environmental and social impacts of AI projects",
+        "Measure energy usage, carbon footprint, and resource consumption",
+        "Create sustainability impact assessments",
+        "Evaluate AI projects against ESG criteria",
+        "Assess alignment with sustainability goals",
+        "Identify sustainability optimization opportunities",
+        "Plan for reducing environmental impact"
+      ] 
+    },
+    { 
+      week: 3, 
+      title: "Mentored Sessions – Sustainability Best Practices", 
+      hours: 15, 
+      description: "Expert guidance on sustainability assessments, best practices, case studies, and optimization strategies.", 
+      activities: [
+        "Get feedback on your sustainability assessments",
+        "Learn from successful sustainable AI implementations",
+        "Analyze real-world sustainability scenarios",
+        "Discuss strategies for improving sustainability",
+        "Stay current with sustainability regulatory developments"
+      ] 
+    },
+    { 
+      week: 4, 
+      title: "Mini-Capstone – Sustainability Impact Assessment", 
+      hours: 20, 
+      description: "Create a comprehensive sustainability impact assessment for an AI initiative with impact assessment, ESG evaluation, optimization plan, governance framework, metrics & reporting, and recommendations.", 
+      activities: [
+        "Complete environmental and social impact analysis",
+        "Assessment against ESG criteria and sustainability goals",
+        "Strategy for improving sustainability",
+        "Integration of sustainability into AI governance",
+        "Sustainability metrics and reporting framework",
+        "Sustainability improvement recommendations"
+      ] 
+    }
   ];
 
   const realWorldUseCases = [
@@ -21,7 +72,14 @@ const SustainabilityAI = () => {
     { industry: "Public Sector", scenario: "Ensuring AI deployments align with government sustainability commitments." }
   ];
 
-  const learningOutcomes = ["Apply ESG frameworks to AI systems", "Measure AI environmental impact", "Develop sustainable AI strategies", "Optimize AI for energy efficiency", "Create sustainability reports", "Align AI with regulatory ESG requirements"];
+  const learningOutcomes = [
+    "Evaluate environmental and social impacts of AI systems",
+    "Assess AI projects against ESG criteria",
+    "Design strategies for improving AI sustainability",
+    "Integrate sustainability into AI governance frameworks",
+    "Define sustainability metrics and reporting",
+    "Provide actionable sustainability recommendations"
+  ];
 
   return (
     <>
@@ -41,7 +99,7 @@ const SustainabilityAI = () => {
                 <span className="px-3 py-1 rounded-full bg-muted/20 text-gray-300 text-sm font-medium">Light Intensity</span>
               </div>
               <h1 className="heading-1 mb-6">Sustainability<br /><span className="gradient-text">& AI</span></h1>
-              <p className="body-large text-gray-300 mb-8 max-w-2xl">Build AI that's good for business and the planet. Learn to measure, optimize, and report on AI sustainability using ESG frameworks.</p>
+              <p className="body-large text-gray-300 mb-8 max-w-2xl">Ensure AI initiatives contribute to sustainability goals rather than undermining them. Learn to link AI projects to environmental and social metrics, assess sustainability impacts, optimize for resource efficiency, and create sustainability frameworks.</p>
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center gap-2 text-gray-300"><ClockNodeIcon className="w-5 h-5 text-teal" /><span>60 Contact Hours</span></div>
                 <div className="flex items-center gap-2 text-gray-300"><Calendar className="w-5 h-5 text-teal" /><span>4 Weeks Duration</span></div>

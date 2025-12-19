@@ -8,10 +8,61 @@ import { ArrowRight, Calendar, Briefcase } from 'lucide-react';
 
 const ResourceManagement = () => {
   const weeklyBreakdown = [
-    { week: 1, title: "Masterclass – AI Resource Planning", hours: 22, description: "Expert session on resource allocation strategies for AI initiatives.", activities: ["AI project portfolio management", "Resource allocation frameworks", "Capacity planning methods", "EU AI Act resource requirements"] },
-    { week: 2, title: "Hands-On Labs – Optimization Exercises", hours: 23, description: "Practical exercises in optimizing AI resource allocation.", activities: ["Budget optimization models", "Team structure design", "Technology stack decisions", "Vendor management strategies"] },
-    { week: 3, title: "Mentored Sessions – Strategic Planning", hours: 22, description: "Expert guidance on long-term AI resource strategy.", activities: ["Multi-year planning", "Skill gap analysis", "ESG resource considerations", "Cost-benefit frameworks"] },
-    { week: 4, title: "Mini-Capstone – Resource Strategy", hours: 23, description: "Develop a comprehensive AI resource management strategy.", activities: ["Complete resource plan", "Budget projections", "Implementation roadmap", "Blockchain certificate issuance"] }
+    { 
+      week: 1, 
+      title: "Masterclass – Resource Management Fundamentals", 
+      hours: 15, 
+      description: "Expert session on cost drivers, resource metrics, optimization strategies, capacity planning, and sustainability.", 
+      activities: [
+        "Understand AI cost drivers (compute, storage, API calls, data transfer)",
+        "Learn to measure resource usage and costs",
+        "Understand strategies for optimizing AI resource usage",
+        "Plan resource capacity and scaling strategies",
+        "Learn to optimize AI resources for environmental sustainability"
+      ] 
+    },
+    { 
+      week: 2, 
+      title: "Hands-On Labs – Cost Analysis & Optimization", 
+      hours: 20, 
+      description: "Practical exercises in cost measurement, resource modeling, and optimization planning.", 
+      activities: [
+        "Measure resource usage and costs for AI systems",
+        "Analyze cost breakdowns and identify hotspots",
+        "Create cost analysis reports",
+        "Model resource requirements for different scenarios",
+        "Plan capacity and scaling strategies",
+        "Identify optimization opportunities",
+        "Plan cost reduction strategies"
+      ] 
+    },
+    { 
+      week: 3, 
+      title: "Mentored Sessions – Optimization Guidance", 
+      hours: 15, 
+      description: "Expert guidance on resource management plans, best practices, cost reduction, and sustainability.", 
+      activities: [
+        "Get feedback on your resource management plans",
+        "Learn from successful resource optimization implementations",
+        "Discuss strategies for reducing AI costs",
+        "Plan for sustainable AI resource usage",
+        "Analyze real-world resource management scenarios"
+      ] 
+    },
+    { 
+      week: 4, 
+      title: "Mini-Capstone – Resource Management Plan", 
+      hours: 20, 
+      description: "Create a comprehensive resource management plan for an AI deployment with cost analysis, resource requirements, optimization strategy, sustainability plan, monitoring plan, and budget planning.", 
+      activities: [
+        "Complete cost breakdown and analysis",
+        "Detailed resource requirements and capacity planning",
+        "Comprehensive optimization plan with expected savings",
+        "Strategy for sustainable resource usage",
+        "Plan for ongoing resource monitoring and cost tracking",
+        "Resource budget and cost control procedures"
+      ] 
+    }
   ];
 
   const realWorldUseCases = [
@@ -21,13 +72,20 @@ const ResourceManagement = () => {
     { industry: "Financial Services", scenario: "Managing AI development resources while maintaining compliance investment priorities." }
   ];
 
-  const learningOutcomes = ["Develop AI resource allocation strategies", "Create capacity planning frameworks", "Optimize AI project portfolios", "Design effective team structures", "Conduct cost-benefit analyses", "Plan multi-year AI investments"];
+  const learningOutcomes = [
+    "Accurately measure AI resource usage and costs",
+    "Identify cost drivers and optimization opportunities",
+    "Design strategies for reducing costs and improving efficiency",
+    "Plan resource capacity and scaling strategies",
+    "Optimize resources for environmental sustainability",
+    "Establish cost control and monitoring procedures"
+  ];
 
   return (
     <>
       <Helmet>
         <title>Resource Management | AIO Module | COAD</title>
-        <meta name="description" content="Master AI resource management in this 90-hour module. Learn strategic planning and optimization with blockchain certification." />
+        <meta name="description" content="Master AI resource management in this 60-hour module. Learn to optimize AI resource allocation, measure resource usage, analyze cost drivers, and create resource management plans." />
       </Helmet>
       <Header />
       <main className="pt-20">
@@ -37,13 +95,13 @@ const ResourceManagement = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="px-3 py-1 rounded-full bg-teal/20 text-teal text-sm font-medium">AIO Module</span>
-                <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">90 Hours • 4 Weeks</span>
+                <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">60 Hours • 4 Weeks</span>
                 <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-sm font-medium">Standard Intensity</span>
               </div>
               <h1 className="heading-1 mb-6">Resource<br /><span className="gradient-text">Management</span></h1>
-              <p className="body-large text-gray-300 mb-8 max-w-2xl">Optimize AI investments for maximum impact. Learn strategic resource allocation, capacity planning, and portfolio management for AI initiatives.</p>
+              <p className="body-large text-gray-300 mb-8 max-w-2xl">Optimize AI resource allocation and manage costs effectively. Learn to measure resource usage, analyze cost drivers, optimize spending, and create resource management plans—ensuring AI systems operate efficiently and sustainably.</p>
               <div className="flex flex-wrap gap-4 mb-8">
-                <div className="flex items-center gap-2 text-gray-300"><ClockNodeIcon className="w-5 h-5 text-teal" /><span>90 Contact Hours</span></div>
+                <div className="flex items-center gap-2 text-gray-300"><ClockNodeIcon className="w-5 h-5 text-teal" /><span>60 Contact Hours</span></div>
                 <div className="flex items-center gap-2 text-gray-300"><Calendar className="w-5 h-5 text-teal" /><span>4 Weeks Duration</span></div>
                 <div className="flex items-center gap-2 text-gray-300"><AwardNodeIcon className="w-5 h-5 text-teal" /><span>Blockchain Certificate</span></div>
               </div>
