@@ -69,8 +69,11 @@ const ModulesSection = () => {
             Standalone Competency<br />
             <span className="gradient-text">Modules</span>
           </h2>
-          <p className="body-large text-muted-foreground">
-            Each standalone module is a self-contained 4-week unit with its own certificate of competency. JHU-inspired methodology with masterclasses, hands-on labs, mentored sessions, and mini-capstone projects. All ESG 2015 compliant and EU AI Act-aligned.
+          <p className="body-large text-muted-foreground mb-4">
+            <strong>Independent from certification tracks.</strong> Each competency module is a self-contained 4-week unit with its own certificate of competency. Take modules individually to build specific skills—no track enrollment required. JHU-inspired methodology with masterclasses, hands-on labs, mentored sessions, and mini-capstone projects.
+          </p>
+          <p className="text-sm text-muted-foreground">
+            <strong>Note:</strong> Competency modules are separate from ADC and ACOS certification tracks. Modules focus on specific skills; tracks provide structured progression to Charterholder status.
           </p>
         </div>
 
@@ -79,8 +82,8 @@ const ModulesSection = () => {
           <div className="inline-flex p-1 bg-muted rounded-lg">
             {[
               { value: 'all', label: 'All Modules' },
-              { value: 'aad', label: 'AAD Modules (12)' },
-              { value: 'aio', label: 'AIO Modules (12)' },
+              { value: 'aad', label: 'Development Focus (12)' },
+              { value: 'aio', label: 'Oversight Focus (12)' },
             ].map((tab) => (
               <button
                 key={tab.value}

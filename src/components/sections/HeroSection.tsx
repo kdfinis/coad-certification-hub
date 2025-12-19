@@ -49,7 +49,7 @@ const HeroSection = () => {
             {/* VISUAL-EDIT: Subheadline - Can adjust text, size, and max-width */}
             {/* DRAG-DROP: Paragraph can be repositioned */}
             <p className="body-large text-muted-foreground max-w-xl animate-fade-in-up stagger-2">
-              Earn your ADC or ACOS Charterholder status with EU-recognized credentials. Join our Accredited Experts Directory with priority placement and exclusive recognition for professionals mastering AI.
+              Choose from structured certification tracks (ADC or ACOS) with progression to Charterholder status, or take standalone competency modules independently. Both paths offer EU-recognized credentials and blockchain-verified certificates.
             </p>
 
             {/* VISUAL-EDIT: Key Benefits Grid - Can adjust columns and spacing */}
