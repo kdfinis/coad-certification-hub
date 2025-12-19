@@ -135,18 +135,22 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
-            className="lg:hidden p-2 text-foreground"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <CloseNodeIcon className="w-6 h-6" /> : <MenuNodeIcon className="w-6 h-6" />}
-          </button>
+                <button 
+                  className="lg:hidden p-2 text-foreground"
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+                  aria-expanded={isMobileMenuOpen}
+                  aria-controls="mobile-menu"
+                >
+                  {isMobileMenuOpen ? <CloseNodeIcon className="w-6 h-6" aria-hidden="true" /> : <MenuNodeIcon className="w-6 h-6" aria-hidden="true" />}
+                </button>
         </nav>
       </div>
 
       {/* Mobile Menu */}
-      <div 
+      <nav 
+        id="mobile-menu"
+        aria-label="Mobile navigation"
         className={cn(
           "lg:hidden fixed inset-0 top-[72px] bg-background z-40 transition-all duration-300",
           isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
@@ -211,10 +215,10 @@ const Header = () => {
             </Button>
           </div>
         </div>
-      </div>
-      </header>
-    </>
-  );
-};
+      </nav>
+    </header>
+        </>
+      );
+    };
 
 export default Header;

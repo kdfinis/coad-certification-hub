@@ -5,6 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import ScrollToTop from "./components/ScrollToTop";
+import ErrorBoundary from "./components/ErrorBoundary";
+import SkipToContent from "./components/SkipToContent";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Auth from "./pages/Auth";
@@ -17,6 +19,10 @@ import ACOSAdvanced from "./pages/certifications/ACOSAdvanced";
 import ACOSMaster from "./pages/certifications/ACOSMaster";
 import AIWorkforce from "./pages/AIWorkforce";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import CookiePolicy from "./pages/CookiePolicy";
+import GDPRCompliance from "./pages/GDPRCompliance";
 
 // AAD Modules (Agentic AI Developer)
 import TaskDecomposition from "./pages/modules/aad/TaskDecomposition";
@@ -49,14 +55,16 @@ import AMLKYC from "./pages/modules/aio/AMLKYC";
 const queryClient = new QueryClient();
 
 const App = () => (
-  <HelmetProvider>
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <ScrollToTop />
-          <Routes>
+  <ErrorBoundary>
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <SkipToContent />
+            <ScrollToTop />
+            <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/auth" element={<Auth />} />
@@ -99,12 +107,19 @@ const App = () => (
             {/* AI Workforce */}
             <Route path="/ai-workforce" element={<AIWorkforce />} />
             
+            {/* Legal Pages */}
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
+            <Route path="/gdpr-compliance" element={<GDPRCompliance />} />
+            
             <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
-  </HelmetProvider>
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
+  </ErrorBoundary>
 );
 
 export default App;

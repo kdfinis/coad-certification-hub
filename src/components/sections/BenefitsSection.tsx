@@ -110,8 +110,9 @@ const BenefitsSection = () => {
                   <div className={`aspect-square max-w-md mx-auto rounded-2xl ${colors.bg} ${colors.border} border-2 flex items-center justify-center overflow-hidden`}>
                     <img 
                       src={benefit.image} 
-                      alt={benefit.title}
+                      alt={`${benefit.title} - ${benefit.description}`}
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                   </div>
 

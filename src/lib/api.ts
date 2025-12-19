@@ -45,7 +45,10 @@ class ApiClient {
 
       return await response.json();
     } catch (error) {
-      console.error('API request failed:', error);
+      // Log errors in development only
+      if (import.meta.env.DEV) {
+        console.error('API request failed:', error);
+      }
       throw error;
     }
   }

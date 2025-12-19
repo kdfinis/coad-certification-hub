@@ -41,11 +41,11 @@ const Footer = () => {
       { label: 'Contact Us', href: '#contact' },
     ],
     legal: [
-      { label: 'Terms of Service', href: '#' },
-      { label: 'Privacy Policy', href: '#' },
-      { label: 'Cookie Policy', href: '#' },
+      { label: 'Terms of Service', href: '/terms-of-service', isRoute: true },
+      { label: 'Privacy Policy', href: '/privacy-policy', isRoute: true },
+      { label: 'Cookie Policy', href: '/cookie-policy', isRoute: true },
       { label: 'Refund Policy', href: '#' },
-      { label: 'GDPR Compliance', href: '#' },
+      { label: 'GDPR Compliance', href: '/gdpr-compliance', isRoute: true },
     ],
   };
 
