@@ -8,10 +8,61 @@ import { ArrowRight, Calendar, Briefcase } from 'lucide-react';
 
 const AIForSecurity = () => {
   const weeklyBreakdown = [
-    { week: 1, title: "Masterclass – AI in Security Operations", hours: 30, description: "Expert session on AI applications in security and defense contexts.", activities: ["Threat detection AI", "Surveillance and monitoring", "Access control systems", "EU AI Act security provisions"] },
-    { week: 2, title: "Hands-On Labs – Security AI Implementation", hours: 30, description: "Practical exercises with security-focused AI systems.", activities: ["Anomaly detection systems", "Behavioral analysis tools", "Automated response systems", "Integration with SOC workflows"] },
-    { week: 3, title: "Mentored Sessions – Ethics & Oversight", hours: 30, description: "Expert guidance on ethical considerations in security AI.", activities: ["Proportionality assessments", "Human rights considerations", "ESG in security AI", "Oversight mechanisms"] },
-    { week: 4, title: "Mini-Capstone – Security AI Framework", hours: 30, description: "Develop a comprehensive security AI deployment framework.", activities: ["Complete framework document", "Ethical guidelines", "Oversight procedures", "Blockchain certificate issuance"] }
+    { 
+      week: 1, 
+      title: "Masterclass – Security AI Fundamentals", 
+      hours: 22, 
+      description: "Expert session on security use cases, rights protection, legal compliance, oversight design, and ethical frameworks.", 
+      activities: [
+        "Understand AI applications in security (surveillance, threat detection, investigation)",
+        "Learn to balance security effectiveness with human rights protection",
+        "Understand legal requirements for security AI (proportionality, necessity, legality)",
+        "Design oversight mechanisms for security AI systems",
+        "Apply ethical frameworks to security AI deployment"
+      ] 
+    },
+    { 
+      week: 2, 
+      title: "Hands-On Labs – Security AI Design", 
+      hours: 30, 
+      description: "Practical exercises in use case analysis, oversight design, and compliance assessment.", 
+      activities: [
+        "Analyze security AI use cases (surveillance, threat detection, investigation)",
+        "Assess effectiveness and rights implications",
+        "Create use case assessments",
+        "Design oversight mechanisms for security AI",
+        "Plan human review and approval processes",
+        "Assess security AI against legal requirements",
+        "Evaluate proportionality and necessity"
+      ] 
+    },
+    { 
+      week: 3, 
+      title: "Mentored Sessions – Security AI Guidance", 
+      hours: 22, 
+      description: "Expert guidance on security AI, rights protection, best practices, case studies, and oversight planning.", 
+      activities: [
+        "Get feedback from security AI experts",
+        "Discuss balancing security and rights",
+        "Learn from responsible security AI deployments",
+        "Analyze real-world security AI scenarios",
+        "Refine oversight and control mechanisms"
+      ] 
+    },
+    { 
+      week: 4, 
+      title: "Mini-Capstone – Security AI Governance Framework", 
+      hours: 30, 
+      description: "Create a comprehensive governance framework for a security AI tool with use case assessment, rights protection plan, legal compliance, oversight framework, governance structure, and deployment plan.", 
+      activities: [
+        "Complete analysis of security AI use case",
+        "Strategy for protecting human rights",
+        "Assessment against legal requirements",
+        "Complete oversight and control design",
+        "Governance framework for security AI deployment",
+        "Strategy for responsible security AI deployment"
+      ] 
+    }
   ];
 
   const realWorldUseCases = [
@@ -21,13 +72,20 @@ const AIForSecurity = () => {
     { industry: "Critical Infrastructure", scenario: "Protecting energy, water, and communications with AI-powered security systems." }
   ];
 
-  const learningOutcomes = ["Deploy AI in security operations responsibly", "Implement threat detection systems", "Balance security with privacy rights", "Design human oversight mechanisms", "Navigate EU AI Act security requirements", "Create ethical security AI frameworks"];
+  const learningOutcomes = [
+    "Evaluate security AI use cases for effectiveness and rights implications",
+    "Design systems that protect human rights while maintaining security",
+    "Assess and ensure legal compliance in security AI",
+    "Create effective oversight mechanisms for security AI",
+    "Balance operational effectiveness with rights protection",
+    "Create governance frameworks for responsible security AI"
+  ];
 
   return (
     <>
       <Helmet>
         <title>AI for Security | AIO Module | COAD</title>
-        <meta name="description" content="Master security AI in this intensive 120-hour module. Learn ethical deployment and oversight with blockchain certification." />
+        <meta name="description" content="Master AI for security operations in this 90-hour module. Learn to apply AI in security contexts responsibly, balance operational effectiveness with rights protection, and create governance frameworks." />
       </Helmet>
       <Header />
       <main className="pt-20">
@@ -37,13 +95,13 @@ const AIForSecurity = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="px-3 py-1 rounded-full bg-teal/20 text-teal text-sm font-medium">AIO Module</span>
-                <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">120 Hours • 4 Weeks</span>
+                <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">90 Hours • 4 Weeks</span>
                 <span className="px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-sm font-medium">Heavy Intensity</span>
               </div>
               <h1 className="heading-1 mb-6">AI for<br /><span className="gradient-text">Security</span></h1>
-              <p className="body-large text-gray-300 mb-8 max-w-2xl">Deploy AI in security contexts responsibly. Master threat detection, ethical surveillance, and oversight mechanisms for security applications.</p>
+              <p className="body-large text-gray-300 mb-8 max-w-2xl">Apply AI in security contexts responsibly. Learn to balance operational effectiveness with rights protection, ensure legal compliance, design oversight mechanisms, and create governance frameworks—ensuring AI security tools are effective, lawful, and ethically deployed.</p>
               <div className="flex flex-wrap gap-4 mb-8">
-                <div className="flex items-center gap-2 text-gray-300"><ClockNodeIcon className="w-5 h-5 text-teal" /><span>120 Contact Hours</span></div>
+                <div className="flex items-center gap-2 text-gray-300"><ClockNodeIcon className="w-5 h-5 text-teal" /><span>90 Contact Hours</span></div>
                 <div className="flex items-center gap-2 text-gray-300"><Calendar className="w-5 h-5 text-teal" /><span>4 Weeks Duration</span></div>
                 <div className="flex items-center gap-2 text-gray-300"><AwardNodeIcon className="w-5 h-5 text-teal" /><span>Blockchain Certificate</span></div>
               </div>

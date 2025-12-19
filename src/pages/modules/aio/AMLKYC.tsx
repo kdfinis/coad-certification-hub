@@ -8,10 +8,61 @@ import { ArrowRight, Calendar, Briefcase } from 'lucide-react';
 
 const AMLKYC = () => {
   const weeklyBreakdown = [
-    { week: 1, title: "Masterclass – AI in Financial Compliance", hours: 30, description: "Expert session on AI applications in AML and KYC processes.", activities: ["AML/KYC regulatory landscape", "AI use cases in compliance", "Risk-based approach design", "EU AI Act financial provisions"] },
-    { week: 2, title: "Hands-On Labs – Compliance AI Systems", hours: 30, description: "Practical exercises implementing AI-enhanced compliance systems.", activities: ["Transaction monitoring AI", "Customer due diligence automation", "Sanctions screening systems", "Alert prioritization tools"] },
-    { week: 3, title: "Mentored Sessions – Audit & Validation", hours: 30, description: "Expert guidance on validating AI compliance systems.", activities: ["Model validation requirements", "Regulatory examination prep", "ESG in financial AI", "Explainability requirements"] },
-    { week: 4, title: "Mini-Capstone – Compliance AI Framework", hours: 30, description: "Develop a comprehensive AI-enhanced AML/KYC framework.", activities: ["Complete framework document", "Validation methodology", "Regulatory documentation", "Blockchain certificate issuance"] }
+    { 
+      week: 1, 
+      title: "Masterclass – AML/KYC AI Fundamentals", 
+      hours: 22, 
+      description: "Expert session on AML/KYC requirements, AI applications, model evaluation, false positive/negative assessment, and regulatory expectations.", 
+      activities: [
+        "Understand regulatory requirements for AML/KYC compliance",
+        "Learn how AI is used in AML/KYC (transaction monitoring, customer screening, risk scoring)",
+        "Understand how to evaluate AI models for compliance use",
+        "Learn to assess and optimize false positive/negative rates",
+        "Understand regulatory expectations for AI in compliance"
+      ] 
+    },
+    { 
+      week: 2, 
+      title: "Hands-On Labs – Compliance Assessment", 
+      hours: 30, 
+      description: "Practical exercises in model evaluation, false rate analysis, and compliance framework design.", 
+      activities: [
+        "Evaluate AI models for AML/KYC compliance use",
+        "Assess performance metrics and accuracy",
+        "Create model evaluation reports",
+        "Analyze false positive and false negative rates",
+        "Assess impact on compliance operations",
+        "Design oversight frameworks for AI-enhanced compliance",
+        "Plan validation and monitoring procedures"
+      ] 
+    },
+    { 
+      week: 3, 
+      title: "Mentored Sessions – Compliance Guidance", 
+      hours: 22, 
+      description: "Expert guidance on compliance assessments, regulatory updates, best practices, model validation, and case studies.", 
+      activities: [
+        "Get feedback from compliance experts on your assessments",
+        "Stay current with AML/KYC regulatory developments",
+        "Learn from successful AI-enhanced compliance implementations",
+        "Discuss model validation and governance for compliance",
+        "Analyze real-world AI compliance scenarios"
+      ] 
+    },
+    { 
+      week: 4, 
+      title: "Mini-Capstone – AML/KYC AI Oversight Plan", 
+      hours: 30, 
+      description: "Create a comprehensive oversight plan for AI-enhanced AML/KYC processes with model evaluation, performance assessment, compliance framework, regulatory alignment, monitoring plan, and recommendations.", 
+      activities: [
+        "Complete evaluation of AI models for compliance use",
+        "Assessment of false rates and operational impact",
+        "Complete oversight and validation framework",
+        "Assessment against regulatory requirements",
+        "Strategy for ongoing monitoring and validation",
+        "Recommendations for AI-enhanced compliance implementation"
+      ] 
+    }
   ];
 
   const realWorldUseCases = [
@@ -21,13 +72,20 @@ const AMLKYC = () => {
     { industry: "Insurance", scenario: "AI-driven fraud detection and compliance monitoring in insurance claims." }
   ];
 
-  const learningOutcomes = ["Deploy AI in AML/KYC processes", "Implement transaction monitoring AI", "Validate AI compliance systems", "Navigate financial AI regulations", "Ensure model explainability", "Prepare for regulatory examinations"];
+  const learningOutcomes = [
+    "Assess AI models for AML/KYC compliance use",
+    "Evaluate false rates and operational impact",
+    "Create oversight frameworks for AI-enhanced compliance",
+    "Assess and ensure regulatory compliance",
+    "Plan ongoing monitoring and validation",
+    "Provide recommendations for compliance enhancement"
+  ];
 
   return (
     <>
       <Helmet>
         <title>AI-Enhanced AML/KYC | AIO Module | COAD</title>
-        <meta name="description" content="Master AI-enhanced compliance in this 120-hour module. Learn AML/KYC AI implementation with blockchain certification." />
+        <meta name="description" content="Master AI-enhanced AML/KYC compliance in this 90-hour module. Learn to implement and oversee AI in Anti-Money Laundering and Know Your Customer compliance processes." />
       </Helmet>
       <Header />
       <main className="pt-20">
@@ -37,13 +95,13 @@ const AMLKYC = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="px-3 py-1 rounded-full bg-teal/20 text-teal text-sm font-medium">AIO Module</span>
-                <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">120 Hours • 4 Weeks</span>
+                <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">90 Hours • 4 Weeks</span>
                 <span className="px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-sm font-medium">Heavy Intensity</span>
               </div>
               <h1 className="heading-1 mb-6">AI-Enhanced<br /><span className="gradient-text">AML/KYC</span></h1>
-              <p className="body-large text-gray-300 mb-8 max-w-2xl">Transform financial compliance with AI. Master AI-powered transaction monitoring, customer due diligence, and regulatory compliance for financial services.</p>
+              <p className="body-large text-gray-300 mb-8 max-w-2xl">Implement and oversee AI in Anti-Money Laundering (AML) and Know Your Customer (KYC) compliance processes. Learn to evaluate AI models for compliance use, assess false positive/negative rates, ensure regulatory compliance, and create oversight frameworks.</p>
               <div className="flex flex-wrap gap-4 mb-8">
-                <div className="flex items-center gap-2 text-gray-300"><ClockNodeIcon className="w-5 h-5 text-teal" /><span>120 Contact Hours</span></div>
+                <div className="flex items-center gap-2 text-gray-300"><ClockNodeIcon className="w-5 h-5 text-teal" /><span>90 Contact Hours</span></div>
                 <div className="flex items-center gap-2 text-gray-300"><Calendar className="w-5 h-5 text-teal" /><span>4 Weeks Duration</span></div>
                 <div className="flex items-center gap-2 text-gray-300"><AwardNodeIcon className="w-5 h-5 text-teal" /><span>Blockchain Certificate</span></div>
               </div>

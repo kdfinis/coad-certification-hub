@@ -8,10 +8,61 @@ import { ArrowRight, Calendar, Briefcase } from 'lucide-react';
 
 const AIForGovernment = () => {
   const weeklyBreakdown = [
-    { week: 1, title: "Masterclass – Public Sector AI Governance", hours: 22, description: "Expert session on AI deployment in government contexts.", activities: ["Public sector AI frameworks", "Citizen rights and AI", "Transparency requirements", "EU AI Act public sector provisions"] },
-    { week: 2, title: "Hands-On Labs – Government Use Cases", hours: 23, description: "Practical exercises with government-specific AI applications.", activities: ["Citizen service AI", "Benefits administration", "Public safety applications", "Administrative automation"] },
-    { week: 3, title: "Mentored Sessions – Policy & Procurement", hours: 22, description: "Expert guidance on AI policy and procurement in government.", activities: ["AI procurement frameworks", "Policy development", "ESG in public AI", "Cross-agency coordination"] },
-    { week: 4, title: "Mini-Capstone – Government AI Strategy", hours: 23, description: "Develop an AI deployment strategy for a government agency.", activities: ["Complete strategy document", "Implementation roadmap", "Policy recommendations", "Blockchain certificate issuance"] }
+    { 
+      week: 1, 
+      title: "Masterclass – Public Sector AI Fundamentals", 
+      hours: 15, 
+      description: "Expert session on public value frameworks, accountability, transparency, procurement, and regulatory context.", 
+      activities: [
+        "Understand how to align AI with public value and citizen needs",
+        "Learn to design accountable AI systems for government",
+        "Ensure transparency in government AI use",
+        "Navigate government procurement processes for AI",
+        "Understand public sector AI regulations and requirements"
+      ] 
+    },
+    { 
+      week: 2, 
+      title: "Hands-On Labs – Public Sector AI Design", 
+      hours: 20, 
+      description: "Practical exercises in public value mapping, accountability design, and transparency planning.", 
+      activities: [
+        "Map AI initiatives to public value and citizen needs",
+        "Assess alignment with public interest",
+        "Create public value assessments",
+        "Design accountability frameworks for government AI",
+        "Plan oversight and review mechanisms",
+        "Plan transparency measures for government AI",
+        "Design citizen communication and engagement"
+      ] 
+    },
+    { 
+      week: 3, 
+      title: "Mentored Sessions – Public Sector Guidance", 
+      hours: 15, 
+      description: "Expert guidance on public sector AI, best practices, accountability, transparency, and case studies.", 
+      activities: [
+        "Get feedback from public sector AI experts",
+        "Learn from successful government AI deployments",
+        "Discuss accountability mechanisms and oversight",
+        "Plan for transparency and citizen engagement",
+        "Analyze real-world public sector AI scenarios"
+      ] 
+    },
+    { 
+      week: 4, 
+      title: "Mini-Capstone – Public Sector AI Deployment Plan", 
+      hours: 20, 
+      description: "Create a comprehensive deployment plan for a government AI use case with public value assessment, accountability framework, transparency plan, procurement strategy, governance framework, and deployment plan.", 
+      activities: [
+        "Alignment with public value and citizen needs",
+        "Complete accountability and oversight design",
+        "Transparency measures and citizen engagement strategy",
+        "Procurement approach and vendor management",
+        "Public sector AI governance and compliance",
+        "Strategy for deploying AI in government context"
+      ] 
+    }
   ];
 
   const realWorldUseCases = [
@@ -21,13 +72,20 @@ const AIForGovernment = () => {
     { industry: "Immigration", scenario: "Balancing AI efficiency in visa processing with individual rights protections." }
   ];
 
-  const learningOutcomes = ["Understand public sector AI governance", "Navigate government procurement for AI", "Ensure citizen rights in AI systems", "Develop AI policy recommendations", "Coordinate cross-agency AI initiatives", "Meet public sector transparency requirements"];
+  const learningOutcomes = [
+    "Ensure AI initiatives serve public interest",
+    "Create accountable AI systems for government",
+    "Plan transparency measures for government AI",
+    "Understand government procurement for AI",
+    "Design AI systems that build citizen trust",
+    "Plan responsible AI deployment in public sector"
+  ];
 
   return (
     <>
       <Helmet>
         <title>AI for Government | AIO Module | COAD</title>
-        <meta name="description" content="Master public sector AI in this 90-hour module. Learn government-specific governance with blockchain certification." />
+        <meta name="description" content="Master AI for government and public sector in this 60-hour module. Learn to deploy AI in public sector contexts responsibly, align with public value, and ensure accountability and transparency." />
       </Helmet>
       <Header />
       <main className="pt-20">
@@ -37,13 +95,13 @@ const AIForGovernment = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="px-3 py-1 rounded-full bg-teal/20 text-teal text-sm font-medium">AIO Module</span>
-                <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">90 Hours • 4 Weeks</span>
+                <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">60 Hours • 4 Weeks</span>
                 <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-sm font-medium">Standard Intensity</span>
               </div>
               <h1 className="heading-1 mb-6">AI for<br /><span className="gradient-text">Government</span></h1>
-              <p className="body-large text-gray-300 mb-8 max-w-2xl">Deploy AI in public sector contexts responsibly. Learn government-specific governance, citizen rights protection, and public sector procurement.</p>
+              <p className="body-large text-gray-300 mb-8 max-w-2xl">Deploy AI in public sector contexts responsibly. Learn to align AI initiatives with public value, ensure accountability and transparency, meet legal and regulatory requirements, and design governance frameworks—ensuring AI serves public interest while maintaining trust and compliance.</p>
               <div className="flex flex-wrap gap-4 mb-8">
-                <div className="flex items-center gap-2 text-gray-300"><ClockNodeIcon className="w-5 h-5 text-teal" /><span>90 Contact Hours</span></div>
+                <div className="flex items-center gap-2 text-gray-300"><ClockNodeIcon className="w-5 h-5 text-teal" /><span>60 Contact Hours</span></div>
                 <div className="flex items-center gap-2 text-gray-300"><Calendar className="w-5 h-5 text-teal" /><span>4 Weeks Duration</span></div>
                 <div className="flex items-center gap-2 text-gray-300"><AwardNodeIcon className="w-5 h-5 text-teal" /><span>Blockchain Certificate</span></div>
               </div>

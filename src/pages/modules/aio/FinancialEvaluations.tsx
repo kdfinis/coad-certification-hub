@@ -8,10 +8,60 @@ import { ArrowRight, Calendar, Briefcase } from 'lucide-react';
 
 const FinancialEvaluations = () => {
   const weeklyBreakdown = [
-    { week: 1, title: "Masterclass – AI Investment Analysis", hours: 22, description: "Expert session on financial evaluation frameworks for AI projects.", activities: ["AI ROI methodologies", "TCO calculation for AI", "Risk-adjusted returns", "EU AI Act cost implications"] },
-    { week: 2, title: "Hands-On Labs – Financial Modeling", hours: 23, description: "Practical exercises in building financial models for AI investments.", activities: ["Spreadsheet modeling", "Scenario analysis", "Sensitivity testing", "Business case development"] },
-    { week: 3, title: "Mentored Sessions – Investment Decisions", hours: 22, description: "Expert guidance on AI investment decision-making.", activities: ["Portfolio prioritization", "Vendor evaluation", "ESG investment criteria", "Board presentation skills"] },
-    { week: 4, title: "Mini-Capstone – Investment Business Case", hours: 23, description: "Develop a comprehensive AI investment business case.", activities: ["Complete business case", "Financial projections", "Risk assessment", "Blockchain certificate issuance"] }
+    { 
+      week: 1, 
+      title: "Masterclass – Financial Evaluation Fundamentals", 
+      hours: 22, 
+      description: "Expert session on AI business value, cost modeling, benefit quantification, risk-adjusted ROI, and business case frameworks.", 
+      activities: [
+        "Understand how AI creates business value (efficiency, revenue, cost reduction)",
+        "Learn to model AI costs (development, infrastructure, operations, maintenance)",
+        "Quantify AI benefits (time savings, quality improvements, revenue increases)",
+        "Calculate risk-adjusted ROI for AI investments",
+        "Understand frameworks for building AI business cases"
+      ] 
+    },
+    { 
+      week: 2, 
+      title: "Hands-On Labs – Financial Modeling", 
+      hours: 30, 
+      description: "Practical exercises in cost modeling, benefit quantification, and ROI calculation.", 
+      activities: [
+        "Model costs for AI projects (development, infrastructure, operations)",
+        "Create cost breakdowns and projections",
+        "Quantify benefits from AI implementations",
+        "Model revenue increases, cost savings, efficiency gains",
+        "Calculate ROI for AI investments",
+        "Assess risk-adjusted returns"
+      ] 
+    },
+    { 
+      week: 3, 
+      title: "Mentored Sessions – Financial Analysis", 
+      hours: 22, 
+      description: "Expert guidance on financial models, best practices, risk assessment, and business case development.", 
+      activities: [
+        "Get feedback on your financial models and analyses",
+        "Learn from successful AI investment evaluations",
+        "Discuss risk assessment and mitigation in financial evaluations",
+        "Analyze real-world AI investment scenarios",
+        "Refine your business case development skills"
+      ] 
+    },
+    { 
+      week: 4, 
+      title: "Mini-Capstone – Financial Evaluation & Recommendation", 
+      hours: 30, 
+      description: "Create a comprehensive financial evaluation for an AI investment with business case, cost analysis, benefit analysis, ROI analysis, risk assessment, and recommendation.", 
+      activities: [
+        "Complete business case with value proposition",
+        "Detailed cost modeling and projections",
+        "Quantified benefits and value creation",
+        "Risk-adjusted ROI calculation",
+        "Financial risk assessment and mitigation",
+        "Clear investment recommendation with justification"
+      ] 
+    }
   ];
 
   const realWorldUseCases = [
@@ -21,7 +71,14 @@ const FinancialEvaluations = () => {
     { industry: "Banking", scenario: "Evaluating AI investments for trading, risk, and customer service applications." }
   ];
 
-  const learningOutcomes = ["Calculate AI project ROI and TCO", "Build financial models for AI investments", "Conduct risk-adjusted investment analysis", "Develop compelling business cases", "Present to executive stakeholders", "Evaluate AI vendor proposals"];
+  const learningOutcomes = [
+    "Accurately model AI project costs and projections",
+    "Quantify AI business value and benefits",
+    "Calculate risk-adjusted ROI for AI investments",
+    "Assess financial risks in AI investments",
+    "Create comprehensive business cases for AI projects",
+    "Provide clear investment recommendations"
+  ];
 
   return (
     <>
@@ -41,7 +98,7 @@ const FinancialEvaluations = () => {
                 <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-sm font-medium">Standard Intensity</span>
               </div>
               <h1 className="heading-1 mb-6">Financial<br /><span className="gradient-text">Evaluations</span></h1>
-              <p className="body-large text-gray-300 mb-8 max-w-2xl">Make AI investments that deliver returns. Master financial evaluation, ROI calculation, and business case development for AI initiatives.</p>
+              <p className="body-large text-gray-300 mb-8 max-w-2xl">Evaluate AI investments and ROI comprehensively. Learn to build business cases, model financial scenarios, assess risks, calculate ROI, and create financial evaluation frameworks—ensuring AI investments are justified and deliver expected returns.</p>
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center gap-2 text-gray-300"><ClockNodeIcon className="w-5 h-5 text-teal" /><span>90 Contact Hours</span></div>
                 <div className="flex items-center gap-2 text-gray-300"><Calendar className="w-5 h-5 text-teal" /><span>4 Weeks Duration</span></div>

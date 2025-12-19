@@ -8,10 +8,61 @@ import { ArrowRight, Calendar, Briefcase } from 'lucide-react';
 
 const CybersecurityAuditing = () => {
   const weeklyBreakdown = [
-    { week: 1, title: "Masterclass – AI Cybersecurity Landscape", hours: 30, description: "Expert session on cybersecurity threats and controls for AI systems.", activities: ["AI-specific threat landscape", "Attack vectors for AI", "Security control frameworks", "EU AI Act cybersecurity requirements"] },
-    { week: 2, title: "Hands-On Labs – Security Assessment", hours: 30, description: "Practical exercises conducting cybersecurity assessments of AI systems.", activities: ["Vulnerability assessment", "Penetration testing concepts", "Security architecture review", "Third-party risk assessment"] },
-    { week: 3, title: "Mentored Sessions – Advanced Threats", hours: 30, description: "Expert guidance on advanced AI-specific cybersecurity threats.", activities: ["Adversarial attacks", "Model extraction threats", "Data poisoning defenses", "Supply chain security"] },
-    { week: 4, title: "Mini-Capstone – Security Audit Report", hours: 30, description: "Conduct and deliver a comprehensive AI cybersecurity audit.", activities: ["Complete security audit", "Risk assessment report", "Remediation recommendations", "Blockchain certificate issuance"] }
+    { 
+      week: 1, 
+      title: "Masterclass – AI Cybersecurity Fundamentals", 
+      hours: 30, 
+      description: "Expert session on AI-specific threats, threat modeling, vulnerability assessment, security testing, and audit frameworks.", 
+      activities: [
+        "Understand prompt injection, model extraction, data poisoning, adversarial attacks",
+        "Learn to model threats and attack vectors for AI systems",
+        "Understand how to identify vulnerabilities in AI systems",
+        "Design security tests for AI-specific threats",
+        "Understand frameworks for comprehensive AI security audits"
+      ] 
+    },
+    { 
+      week: 2, 
+      title: "Hands-On Labs – Security Testing Design", 
+      hours: 40, 
+      description: "Practical exercises in threat modeling, security test design, and vulnerability assessment.", 
+      activities: [
+        "Conduct threat modeling for AI systems",
+        "Identify attack vectors and vulnerabilities",
+        "Create threat models",
+        "Design security tests for AI-specific attacks",
+        "Plan penetration testing scenarios",
+        "Assess vulnerabilities in AI systems",
+        "Identify security weaknesses"
+      ] 
+    },
+    { 
+      week: 3, 
+      title: "Mentored Sessions – Audit Refinement", 
+      hours: 30, 
+      description: "Expert guidance on audit plans, attack scenarios, best practices, testing techniques, and remediation planning.", 
+      activities: [
+        "Get feedback from cybersecurity experts on your audit plans",
+        "Analyze real-world AI security attacks and vulnerabilities",
+        "Learn from successful security audit implementations",
+        "Discuss advanced security testing techniques",
+        "Plan for addressing identified vulnerabilities"
+      ] 
+    },
+    { 
+      week: 4, 
+      title: "Mini-Capstone – Cybersecurity Audit Plan", 
+      hours: 40, 
+      description: "Create a comprehensive cybersecurity audit plan for an AI system with threat model, security test plan, vulnerability assessment, risk evaluation, audit findings, and remediation plan.", 
+      activities: [
+        "Complete threat modeling with identified attack vectors",
+        "Comprehensive security testing strategy",
+        "Detailed vulnerability identification and assessment",
+        "Security risk evaluation and prioritization",
+        "Documented audit findings and recommendations",
+        "Strategy for addressing identified vulnerabilities"
+      ] 
+    }
   ];
 
   const realWorldUseCases = [
@@ -21,7 +72,14 @@ const CybersecurityAuditing = () => {
     { industry: "Defense", scenario: "High-assurance security auditing for AI systems in sensitive applications." }
   ];
 
-  const learningOutcomes = ["Understand AI-specific cybersecurity threats", "Conduct comprehensive security audits", "Assess adversarial attack vulnerabilities", "Evaluate third-party AI security", "Navigate EU AI Act cybersecurity requirements", "Create actionable security recommendations"];
+  const learningOutcomes = [
+    "Create comprehensive threat models for AI systems",
+    "Design security tests for AI-specific threats",
+    "Identify and assess vulnerabilities in AI systems",
+    "Perform comprehensive cybersecurity audits",
+    "Create clear audit reports with findings and recommendations",
+    "Develop strategies for addressing security vulnerabilities"
+  ];
 
   return (
     <>
@@ -41,7 +99,7 @@ const CybersecurityAuditing = () => {
                 <span className="px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-sm font-medium">Heavy Intensity</span>
               </div>
               <h1 className="heading-1 mb-6">Cybersecurity<br /><span className="gradient-text">Auditing</span></h1>
-              <p className="body-large text-gray-300 mb-8 max-w-2xl">Protect AI systems from cyber threats. Master security auditing, vulnerability assessment, and adversarial attack defenses for AI applications.</p>
+              <p className="body-large text-gray-300 mb-8 max-w-2xl">Audit AI systems for cybersecurity vulnerabilities comprehensively. Learn to identify AI-specific threats, design security tests, assess vulnerabilities, and create audit plans—ensuring AI systems are resilient against cyber attacks and secure for production deployment.</p>
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center gap-2 text-gray-300"><ClockNodeIcon className="w-5 h-5 text-teal" /><span>120 Contact Hours</span></div>
                 <div className="flex items-center gap-2 text-gray-300"><Calendar className="w-5 h-5 text-teal" /><span>4 Weeks Duration</span></div>
