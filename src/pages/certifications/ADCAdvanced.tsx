@@ -293,8 +293,160 @@ const ADCAdvanced = () => {
           </div>
         </section>
 
-        {/* Learning Outcomes */}
+        {/* Your Journey */}
         <section className="section-padding bg-background">
+          <div className="container-coad">
+            <div className="text-center mb-12">
+              <h2 className="heading-2 mb-4">Your ADC Journey</h2>
+              <p className="body-large text-muted-foreground max-w-3xl mx-auto">
+                The ADC (AI Development Certified) track follows a structured progression from foundational knowledge to advanced mastery, culminating in Charterholder status.
+              </p>
+            </div>
+
+            <div className="max-w-5xl mx-auto">
+              {/* Journey Path */}
+              <div className="relative">
+                {/* Connection Line */}
+                <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-teal to-primary transform -translate-x-1/2 hidden lg:block" />
+                
+                <div className="space-y-12">
+                  {/* Level 1: Professional */}
+                  <div className="relative flex flex-col lg:flex-row items-center gap-8">
+                    <div className="lg:w-1/2 lg:text-right">
+                      <div className="bg-card rounded-xl p-6 border border-border opacity-60">
+                        <div className="flex items-center justify-end gap-3 mb-4">
+                          <span className="px-3 py-1 bg-muted text-muted-foreground text-sm font-semibold rounded-full">Level 1</span>
+                          <span className="text-xl font-semibold text-muted-foreground">Professional</span>
+                        </div>
+                        <p className="text-muted-foreground text-sm">
+                          Foundation level - Build foundational knowledge in AI development compliance.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center flex-shrink-0 border-2 border-border z-10">
+                      <span className="text-lg font-semibold text-muted-foreground">1</span>
+                    </div>
+                    <div className="lg:w-1/2"></div>
+                  </div>
+
+                  {/* Level 2: Advanced Expert - CURRENT */}
+                  <div className="relative flex flex-col lg:flex-row items-center gap-8">
+                    <div className="lg:w-1/2"></div>
+                    <div className="w-16 h-16 rounded-full bg-teal flex items-center justify-center flex-shrink-0 border-4 border-background shadow-lg z-10">
+                      <span className="text-2xl font-bold text-primary-foreground">2</span>
+                    </div>
+                    <div className="lg:w-1/2 lg:text-left">
+                      <div className="bg-card rounded-xl p-6 border-2 border-teal shadow-lg">
+                        <div className="flex items-center gap-3 mb-4">
+                          <span className="text-2xl font-bold text-teal">Advanced Expert</span>
+                          <span className="px-3 py-1 bg-teal/10 text-teal text-sm font-semibold rounded-full">Level 2 • Current</span>
+                        </div>
+                        <h3 className="heading-4 mb-3">Intermediate Level</h3>
+                        <p className="text-muted-foreground text-sm mb-4">
+                          Deepen your expertise with advanced Agentic AI concepts, multi-agent systems, performance optimization, and production deployment. Build hands-on skills through practical projects and lead AI compliance initiatives.
+                        </p>
+                        <ul className="space-y-2 text-sm text-muted-foreground">
+                          <li className="flex items-start gap-2">
+                            <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                            <span>4 advanced modules (12-16 weeks)</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                            <span>Portfolio development with real-world projects</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                            <span>Mentored learning and expert guidance</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                            <span>€2,400 investment</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Level 3: Master */}
+                  <div className="relative flex flex-col lg:flex-row items-center gap-8">
+                    <div className="lg:w-1/2 lg:text-right">
+                      <div className="bg-card rounded-xl p-6 border-2 border-primary shadow-lg">
+                        <div className="flex items-center justify-end gap-3 mb-4">
+                          <span className="px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full">Level 3</span>
+                          <span className="text-2xl font-bold text-primary">Master</span>
+                        </div>
+                        <h3 className="heading-4 mb-3">Advanced Level</h3>
+                        <p className="text-muted-foreground text-sm mb-4">
+                          Master enterprise AI governance, strategic compliance architecture, and regulatory advisory. Design comprehensive governance frameworks and lead at the executive level.
+                        </p>
+                        <ul className="space-y-2 text-sm text-muted-foreground">
+                          <li className="flex items-start gap-2">
+                            <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                            <span>4 master modules (16-20 weeks)</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                            <span>Executive masterclasses and coaching</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                            <span>Oral defence and capstone examination</span>
+                          </li>
+                        </ul>
+                        <div className="mt-4">
+                          <Button variant="outline" size="sm" asChild>
+                            <Link to="/certifications/adc-master">View ADC Master →</Link>
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center flex-shrink-0 border-4 border-background shadow-lg z-10">
+                      <span className="text-2xl font-bold text-primary-foreground">3</span>
+                    </div>
+                    <div className="lg:w-1/2"></div>
+                  </div>
+
+                  {/* Level 4: Charterholder */}
+                  <div className="relative flex flex-col lg:flex-row items-center gap-8">
+                    <div className="lg:w-1/2"></div>
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-teal flex items-center justify-center flex-shrink-0 border-4 border-background shadow-lg z-10">
+                      <AwardNodeIcon className="w-8 h-8 text-primary-foreground" />
+                    </div>
+                    <div className="lg:w-1/2 lg:text-left">
+                      <div className="bg-gradient-to-br from-primary/10 to-teal/10 rounded-xl p-6 border-2 border-primary shadow-lg">
+                        <div className="flex items-center gap-3 mb-4">
+                          <span className="text-2xl font-bold gradient-text">Charterholder</span>
+                          <span className="px-3 py-1 bg-primary/20 text-primary text-sm font-semibold rounded-full">Highest Status</span>
+                        </div>
+                        <h3 className="heading-4 mb-3">Elite Recognition</h3>
+                        <p className="text-muted-foreground text-sm mb-4">
+                          Achieve the highest recognition in AI development compliance. Charterholders receive priority placement in the Accredited Experts Directory, exclusive community access, and speaking opportunities.
+                        </p>
+                        <ul className="space-y-2 text-sm text-muted-foreground">
+                          <li className="flex items-start gap-2">
+                            <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                            <span>Priority directory placement with Charterholder badge</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                            <span>Exclusive Charterholder community access</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                            <span>Speaking opportunities and advisory referrals</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Learning Outcomes */}
+        <section className="section-padding bg-muted/50">
           <div className="container-coad">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
