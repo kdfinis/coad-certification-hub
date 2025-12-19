@@ -274,10 +274,6 @@ const MultiAgentCoordination = () => {
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
-                      <span><strong className="text-foreground">Track Credit:</strong> Counts toward AAC track completion and Charterholder status</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
                       <span><strong className="text-foreground">EU AI Act Alignment:</strong> Design multi-agent systems with built-in oversight and compliance</span>
                     </li>
                   </ul>
@@ -449,62 +445,12 @@ const MultiAgentCoordination = () => {
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span><strong className="text-foreground">Track Credit:</strong> Counts toward AAC (Agentic AI Competency) track completion</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                         <span><strong className="text-foreground">Corporate:</strong> Bulk enrollment available for teams</span>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Track Integration */}
-        <section className="section-padding bg-navy text-primary-foreground">
-          <div className="container-coad">
-            <div className="max-w-4xl mx-auto text-center">
-              <GraduationNodeIcon className="w-16 h-16 mx-auto mb-6 text-primary" />
-              <h2 className="heading-2 mb-4">Part of the AAC Track</h2>
-              <p className="body-large text-gray-300 mb-6">
-                This module counts toward your Agentic AI Competency (AAC) Track certification. 
-                Complete all track modules to achieve Charterholder status and priority 
-                listing in the COAD Expert Directory.
-              </p>
-              <p className="text-sm text-gray-400 mb-8">
-                <strong>Track Integration:</strong> This module feeds into AAC Phase 3 (Multi-Agent & Advanced Agentic AI)
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="xl" asChild>
-                  <Link to="/auth">Enroll Now – €1,200</Link>
-                </Button>
-                <Button variant="outline" size="xl" className="border-gray-600 text-gray-300 hover:bg-white/10" asChild>
-                  <Link to="/certifications">Explore Full AAC Track</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="font-semibold text-lg mb-3">{week.title}</h3>
-                    <p className="text-muted-foreground text-sm mb-4">{week.description}</p>
-                    <ul className="space-y-2">
-                      {week.activities.map((activity, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm">
-                          <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-muted-foreground">{activity}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </section>
@@ -535,23 +481,60 @@ const MultiAgentCoordination = () => {
           </div>
         </section>
 
-        {/* Track Integration */}
-        <section className="section-padding bg-navy text-primary-foreground">
+        {/* Standalone Module Clarification */}
+        <section className="section-padding bg-muted/50">
           <div className="container-coad">
             <div className="max-w-4xl mx-auto text-center">
-              <GraduationNodeIcon className="w-16 h-16 mx-auto mb-6 text-primary" />
-              <h2 className="heading-2 mb-4">Part of the AAD Track</h2>
-              <p className="body-large text-gray-300 mb-8">
-                This module counts toward your Agentic AI Developer (AAD) Track certification. 
-                Complete all track modules to achieve Charterholder status.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="xl" asChild>
-                  <Link to="/auth">Enroll Now – €1,200</Link>
-                </Button>
-                <Button variant="outline" size="xl" className="border-gray-600 text-gray-300 hover:bg-white/10" asChild>
-                  <Link to="/certifications">Explore Full AAD Track</Link>
-                </Button>
+              <div className="bg-card rounded-xl p-8 border border-border">
+                <h2 className="heading-3 mb-4">Standalone Competency Module</h2>
+                <p className="body-large text-muted-foreground mb-6">
+                  This is a <strong>standalone competency module</strong> that is <strong>unrelated to certification tracks</strong>. 
+                  It can be taken independently and provides its own certificate of competency upon completion.
+                </p>
+                <div className="grid md:grid-cols-2 gap-6 mt-8 text-left">
+                  <div className="bg-muted/50 rounded-lg p-6">
+                    <h3 className="font-semibold mb-3">This Module</h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span>Standalone 4-week competency module</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span>Independent certificate of competency</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span>No track enrollment required</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="bg-muted/50 rounded-lg p-6">
+                    <h3 className="font-semibold mb-3">Certification Tracks</h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                        <span>Structured programs (ADC or ACOS)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                        <span>Progression to Charterholder status</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
+                        <span>Separate from competency modules</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button variant="hero" size="xl" asChild>
+                    <Link to="/auth">Enroll Now – €1,200</Link>
+                  </Button>
+                  <Button variant="outline" size="xl" asChild>
+                    <Link to="/certifications">Explore Certification Tracks</Link>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
