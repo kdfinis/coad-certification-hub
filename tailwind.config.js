@@ -8,36 +8,56 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          navy: '#1a1a1a',
-          teal: '#00d4aa',
-        },
+        primary: 'hsl(var(--primary))',
+        'primary-foreground': 'hsl(var(--primary-foreground))',
+        navy: 'hsl(var(--navy))',
+        teal: 'hsl(var(--teal))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        card: 'hsl(var(--card))',
+        'card-foreground': 'hsl(var(--card-foreground))',
+        muted: 'hsl(var(--muted))',
+        'muted-foreground': 'hsl(var(--muted-foreground))',
+        border: 'hsl(var(--border))',
+        success: 'hsl(var(--success))',
         gray: {
-          light: '#f5f5f5',
-          medium: '#4a4a4a',
-          dark: '#1a1a1a',
+          50: '#f9fafb',
+          100: '#f3f4f6',
+          400: '#9ca3af',
+          500: '#6b7280',
+          600: '#4b5563',
         },
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       spacing: {
+        '18': '4.5rem',
         'section': '100px',
         'section-mobile': '60px',
       },
       maxWidth: {
-        'container': '1200px',
+        'container': '1280px',
+      },
+      height: {
+        '18': '4.5rem',
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in-out',
         'fade-out': 'fadeOut 0.15s ease-in-out',
+        'fade-in-up': 'fadeInUp 0.6s ease-out',
         'slide-up': 'slideUp 0.3s ease-out',
         'slide-down': 'slideDown 0.3s ease-out',
+        'float': 'float 3s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
+        },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         fadeOut: {
           '0%': { opacity: '1' },
@@ -50,6 +70,10 @@ module.exports = {
         slideDown: {
           '0%': { transform: 'translateY(-20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-10px)' },
         },
       },
     },

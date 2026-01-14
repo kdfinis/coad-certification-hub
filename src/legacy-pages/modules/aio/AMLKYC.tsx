@@ -156,7 +156,7 @@ const AMLKYC = () => {
                     <ul className="space-y-2 text-sm text-muted-foreground">
                       <li className="flex items-start gap-2">
                         <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
-                        <span>Structured programs (ADC or ACOS)</span>
+                        <span>Structured programs (ACD or AIO)</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckNodeIcon className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />

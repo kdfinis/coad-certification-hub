@@ -69,8 +69,9 @@ All copywriting content is maintained in markdown files:
 ## Key Pages
 
 - `/` - Homepage
-- `/aac-track/` - AAC (Agentic AI Competency) Track
-- `/aio-track/` - AIO (AI Oversight) Track
+- `/tracks/amcd/` - AMCD (AI Media and Content Development) Track
+- `/tracks/acd/` - ACD (AI Code Development) Track
+- `/tracks/aio/` - AIO (AI Oversight) Track
 - `/certifications/` - Certifications overview
 - `/modules/` - Competency modules listing
 - `/contact/` - Contact form

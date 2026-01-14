@@ -10,7 +10,9 @@
     "lint": "next lint",
     "test": "jest",
     "test:watch": "jest --watch",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "update-visual-db": "ts-node scripts/update-visual-database.ts",
+    "download-photos": "python3 scripts/download-stock-photos.py"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
