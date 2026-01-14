@@ -8,11 +8,14 @@ const nextConfig = {
   },
   // Enable static exports if needed
   // output: 'export',
-  webpack: (config) => {
+  webpack: (config, { isServer }) => {
     // Exclude src/pages directory from webpack compilation (it's for React Router, not Next.js)
     config.module.rules.push({
       test: /src\/pages\/.*\.(tsx|ts|jsx|js)$/,
-      use: 'ignore-loader',
+      exclude: /node_modules/,
+      use: {
+        loader: 'null-loader',
+      },
     });
     return config;
   },

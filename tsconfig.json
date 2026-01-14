@@ -49,6 +49,9 @@
   ],
   "exclude": [
     "node_modules",
-    "src/pages"
+    "src/pages",
+    "src/pages.old",
+    "src/main.tsx.old",
+    "src/vite-env.d.ts.old"
   ]
 }

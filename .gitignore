@@ -47,3 +47,6 @@ next-env.d.ts
 # Cursor agent data (local backups)
 .cursor/agents/backups/
 .cursor/agents/transcripts/
+
+# Old React Router pages (not used in Next.js App Router)
+src/pages.old/
