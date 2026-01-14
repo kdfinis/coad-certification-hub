@@ -21,23 +21,28 @@ export default function Footer() {
               <li><Link href="/tracks/acd" className="text-gray-600 hover:text-primary-teal transition-colors">ACD Track</Link></li>
               <li><Link href="/tracks/aio" className="text-gray-600 hover:text-primary-teal transition-colors">AIO Track</Link></li>
               <li><Link href="/certifications" className="text-gray-600 hover:text-primary-teal transition-colors">All Certifications</Link></li>
+              <li><Link href="/about/instructors" className="text-gray-600 hover:text-primary-teal transition-colors">Instructors</Link></li>
+              <li><Link href="/about/outcomes" className="text-gray-600 hover:text-primary-teal transition-colors">Student Outcomes</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="mb-4 text-sm font-semibold text-gray-900">Resources</h4>
             <ul className="space-y-2 text-sm">
+              <li><Link href="/catalog" className="text-gray-600 hover:text-primary-teal transition-colors">Course Catalog</Link></li>
               <li><Link href="/modules" className="text-gray-600 hover:text-primary-teal transition-colors">Modules</Link></li>
-              <li><Link href="/corporate-training" className="text-gray-600 hover:text-primary-teal transition-colors">Corporate Training</Link></li>
+              <li><Link href="/corporate-services/executive" className="text-gray-600 hover:text-primary-teal transition-colors">Corporate Training</Link></li>
               <li><Link href="/ai-workforce" className="text-gray-600 hover:text-primary-teal transition-colors">AI Workforce</Link></li>
+              <li><Link href="/support" className="text-gray-600 hover:text-primary-teal transition-colors">Support & FAQ</Link></li>
               <li><Link href="/about" className="text-gray-600 hover:text-primary-teal transition-colors">About</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-gray-900">Info</h4>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>Serving Professionals Globally</li>
-              <li>EU AI Act Compliant</li>
-              <li>Premier AI Training Platform</li>
+            <h4 className="mb-4 text-sm font-semibold text-gray-900">Legal</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/legal/privacy-policy" className="text-gray-600 hover:text-primary-teal transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/legal/terms-of-service" className="text-gray-600 hover:text-primary-teal transition-colors">Terms of Service</Link></li>
+              <li><Link href="/legal/refund-policy" className="text-gray-600 hover:text-primary-teal transition-colors">Refund Policy</Link></li>
+              <li><Link href="/legal/cookie-policy" className="text-gray-600 hover:text-primary-teal transition-colors">Cookie Policy</Link></li>
             </ul>
           </div>
         </div>

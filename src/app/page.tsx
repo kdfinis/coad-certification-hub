@@ -1079,6 +1079,67 @@ export default function Home() {
           </div>
         </section>
 
+        {/* LMS Platform & Catalog Showcase */}
+        <section className="section-padding bg-background">
+          <div className="container-coad">
+            <div className="text-center max-w-4xl mx-auto mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm font-medium text-primary mb-6">
+                <GlobeIcon />
+                Canvas-like Learning Platform
+              </div>
+              <h2 className="university-heading-2 text-foreground mb-6">
+                Learn on a Professional LMS Platform
+              </h2>
+              <p className="body-large text-muted-foreground">
+                Access your courses through our Canvas-like LMS with assignments, quizzes, discussions, live Zoom sessions, and blockchain-verified certificates.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="rounded-2xl border border-border bg-card p-8">
+                <h3 className="university-heading-4 text-foreground mb-4">Course Catalog</h3>
+                <p className="text-sm text-muted-foreground mb-6">
+                  Browse our complete catalog of certification tracks and standalone modules. Filter by type, compare courses, and see detailed outcomes before enrolling.
+                </p>
+                <Link href="/catalog">
+                  <Button className="w-full">Explore Catalog</Button>
+                </Link>
+              </div>
+              <div className="rounded-2xl border border-border bg-card p-8">
+                <h3 className="university-heading-4 text-foreground mb-4">LMS Dashboard</h3>
+                <p className="text-sm text-muted-foreground mb-6">
+                  Access your courses, track progress, submit assignments, join live sessions, and download certificates—all in one Canvas-like platform.
+                </p>
+                <Link href="/lms">
+                  <Button className="w-full">Access LMS</Button>
+                </Link>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="rounded-xl border border-border bg-card p-6 text-center">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <AwardIcon />
+                </div>
+                <p className="text-sm font-semibold text-foreground mb-2">Blockchain Verified</p>
+                <p className="text-xs text-muted-foreground">All certificates are blockchain-verified for authenticity</p>
+              </div>
+              <div className="rounded-xl border border-border bg-card p-6 text-center">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <GlobeIcon />
+                </div>
+                <p className="text-sm font-semibold text-foreground mb-2">Live Zoom Sessions</p>
+                <p className="text-xs text-muted-foreground">Interactive live sessions integrated into courses</p>
+              </div>
+              <div className="rounded-xl border border-border bg-card p-6 text-center">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <ShieldIcon />
+                </div>
+                <p className="text-sm font-semibold text-foreground mb-2">EU AI Act Compliant</p>
+                <p className="text-xs text-muted-foreground">All courses meet EU AI Act requirements</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Final CTA - Exact Match */}
         <section className="relative py-24 md:py-32 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-hero"></div>
@@ -1121,10 +1182,10 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
                 <a
-                  href="https://app.coad.ai/signup"
+                  href="/catalog"
                   className="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:shadow-lg active:scale-[0.98] h-14 rounded-lg px-10 text-base bg-white text-navy hover:bg-white/90 hover:scale-[1.02] font-semibold shadow-lg group flex items-center gap-2"
                 >
-                  Start Your Transformation
+                  Browse Course Catalog
                   <svg viewBox="0 0 40 40" className="w-5 h-5 group-hover:translate-x-1 transition-transform">
                     <defs>
                       <linearGradient id="coadGradient-arrow-primary" x1="0%" y1="0%" x2="100%" y2="100%">

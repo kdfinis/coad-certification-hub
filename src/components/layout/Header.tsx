@@ -37,6 +37,11 @@ export default function Header() {
           </Link>
           <div className="hidden lg:flex items-center gap-1">
             <div className="relative group">
+              <Link href="/catalog" className="px-4 py-2 text-foreground/80 hover:text-foreground transition-colors font-medium">
+                Catalog
+              </Link>
+            </div>
+            <div className="relative group">
               <Link href="/certifications" className="px-4 py-2 text-foreground/80 hover:text-foreground transition-colors font-medium">
                 Certifications
               </Link>

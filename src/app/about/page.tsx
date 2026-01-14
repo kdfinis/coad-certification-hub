@@ -164,9 +164,14 @@ export default function AboutPage() {
                   Explore Certifications
                 </Button>
               </Link>
-              <Link href="/ai-workforce">
+              <Link href="/about/instructors">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                  Join AI Workforce
+                  Meet Our Instructors
+                </Button>
+              </Link>
+              <Link href="/about/outcomes">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                  View Student Outcomes
                 </Button>
               </Link>
             </div>

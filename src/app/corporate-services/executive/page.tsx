@@ -25,11 +25,11 @@ export default function ExecutiveCoachingPage() {
               Help leaders navigate AI transformation, governance, and strategic decision-making with personalized executive coaching from COAD's expert alliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="https://app.coad.ai/contact?service=executive" target="_blank" rel="noopener noreferrer">
+              <Link href="/corporate-services/contact?service=executive">
                 <Button size="lg" variant="outline" className="bg-white text-primary-navy hover:bg-gray-100">
                   Request Executive Coaching
                 </Button>
-              </a>
+              </Link>
               <Link href="/corporate-services">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
                   View All Corporate Services
@@ -117,11 +117,11 @@ export default function ExecutiveCoachingPage() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready for Strategic AI Guidance?</h2>
             <p className="text-xl text-white/90 mb-8">Connect with our executive coaching team.</p>
-            <a href="https://app.coad.ai/contact?service=executive" target="_blank" rel="noopener noreferrer">
+            <Link href="/corporate-services/contact?service=executive">
               <Button size="lg" variant="outline" className="bg-white text-primary-navy hover:bg-gray-100">
                 Request Executive Coaching
               </Button>
-            </a>
+            </Link>
           </div>
         </section>
       </main>
