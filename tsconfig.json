@@ -44,14 +44,17 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
+    "src/app/**/*.ts",
+    "src/app/**/*.tsx",
+    "src/components/**/*.ts",
+    "src/components/**/*.tsx",
+    "src/hooks/**/*.ts",
+    "src/lib/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    "src/pages",
-    "src/pages.old",
     "src/main.tsx.old",
-    "src/vite-env.d.ts.old"
+    "src/vite-env.d.ts.old",
+    "src/legacy-pages"
   ]
 }
