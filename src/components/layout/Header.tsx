@@ -37,13 +37,8 @@ export default function Header() {
           </Link>
           <div className="hidden lg:flex items-center gap-1">
             <div className="relative group">
-              <Link href="/catalog" className="px-4 py-2 text-foreground hover:text-primary transition-colors font-medium">
-                Catalog
-              </Link>
-            </div>
-            <div className="relative group">
-              <Link href="/certifications" className="px-4 py-2 text-foreground hover:text-primary transition-colors font-medium">
-                Certifications
+              <Link href="/courses" className="px-4 py-2 text-foreground hover:text-primary link-hover font-medium">
+                Courses
               </Link>
             </div>
             <div 
@@ -51,15 +46,15 @@ export default function Header() {
               onMouseEnter={() => setTracksOpen(true)}
               onMouseLeave={() => setTracksOpen(false)}
             >
-              <button className="flex items-center gap-1 px-4 py-2 text-foreground hover:text-primary transition-colors font-medium">
+              <button className="flex items-center gap-1 px-4 py-2 text-foreground hover:text-primary link-hover font-medium">
                 Tracks
                 <svg viewBox="0 0 40 40" className="w-4 h-4 transition-transform group-hover:rotate-180">
                   <path d="M10 15 L20 25 L30 15" fill="none" stroke="hsl(var(--primary))" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                   <circle cx="20" cy="25" r="2" fill="hsl(var(--primary))" opacity="0.4" />
                 </svg>
               </button>
-              <div className={`absolute top-full left-0 w-56 py-2 bg-card rounded-lg shadow-lg border border-border transition-all duration-200 z-50 ${tracksOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
-                <Link href="/tracks/amcd" className="block px-4 py-2 text-foreground hover:text-primary hover:bg-muted transition-colors">
+              <div className={`absolute top-full left-0 w-56 py-2 bg-card rounded-lg shadow-lg border border-border dropdown-transition z-50 ${tracksOpen ? 'dropdown-open' : 'dropdown-closed'}`}>
+                <Link href="/tracks/amcd" className="block px-4 py-2 text-foreground hover:text-primary hover:bg-muted link-hover">
                   AI Media and Content Development
                 </Link>
                 <Link href="/tracks/acd" className="block px-4 py-2 text-foreground hover:text-primary hover:bg-muted transition-colors">
@@ -73,24 +68,19 @@ export default function Header() {
                 </Link>
               </div>
             </div>
-            <div className="relative group">
-              <Link href="/competencies" className="px-4 py-2 text-foreground hover:text-primary transition-colors font-medium">
-                Competencies
-              </Link>
-            </div>
             <div 
               className="relative group"
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button className="flex items-center gap-1 px-4 py-2 text-foreground hover:text-primary transition-colors font-medium">
+              <button className="flex items-center gap-1 px-4 py-2 text-foreground hover:text-primary link-hover font-medium">
                 Corporate Services
                 <svg viewBox="0 0 40 40" className="w-4 h-4 transition-transform group-hover:rotate-180">
                   <path d="M10 15 L20 25 L30 15" fill="none" stroke="hsl(var(--primary))" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                   <circle cx="20" cy="25" r="2" fill="hsl(var(--primary))" opacity="0.4" />
                 </svg>
               </button>
-              <div className={`absolute top-full left-0 w-64 py-2 bg-card rounded-lg shadow-lg border border-border transition-all duration-200 z-50 ${servicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
+              <div className={`absolute top-full left-0 w-64 py-2 bg-card rounded-lg shadow-lg border border-border dropdown-transition z-50 ${servicesOpen ? 'dropdown-open' : 'dropdown-closed'}`}>
                 <Link href="/corporate-services/executive" className="block px-4 py-2 text-foreground hover:text-primary hover:bg-muted transition-colors">
                   Executive Coaching
                 </Link>
@@ -103,18 +93,18 @@ export default function Header() {
               </div>
             </div>
             <div className="relative group">
-              <Link href="/ai-workforce" className="px-4 py-2 text-foreground hover:text-primary transition-colors font-medium">
+              <Link href="/ai-workforce" className="px-4 py-2 text-foreground hover:text-primary link-hover font-medium">
                 AI Workforce Hub
               </Link>
             </div>
             <div className="relative group">
-              <Link href="/about" className="px-4 py-2 text-foreground hover:text-primary transition-colors font-medium">
+              <Link href="/about" className="px-4 py-2 text-foreground hover:text-primary link-hover font-medium">
                 About
               </Link>
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="/auth" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            <Link href="/auth" className="text-sm font-medium text-foreground hover:text-primary link-hover">
               Log in
             </Link>
             <Link href="/auth">

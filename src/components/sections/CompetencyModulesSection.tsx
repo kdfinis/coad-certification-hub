@@ -8,27 +8,28 @@ export default function CompetencyModulesSection() {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const aacModules = [
-    { name: "Task Decomposition", description: "Learn to break complex goals into structured, executable tasks", hours: "60 hours", ects: "2 ECTS", slug: "task-decomposition" },
-    { name: "Multi-Agent Systems", description: "Design and analyze systems where multiple agents coordinate", hours: "90 hours", ects: "3 ECTS", slug: "multi-agent-systems" },
-    { name: "Performance Optimization", description: "Optimize Agentic AI systems for latency, quality, cost, and reliability", hours: "60 hours", ects: "2 ECTS", slug: "performance-optimization" },
-    { name: "Human-AI Design", description: "Design human–agent interactions that are usable, trustworthy, and aligned", hours: "90 hours", ects: "3 ECTS", slug: "human-ai-design" },
-    { name: "Restricted Methods", description: "Advanced techniques for specialized Agentic AI applications", hours: "120 hours", ects: "4 ECTS", slug: "restricted-methods" },
-    { name: "Latest in AI 2025", description: "Cutting-edge developments and emerging trends in Agentic AI", hours: "90 hours", ects: "3 ECTS", slug: "latest-in-ai-2025" },
+    { name: "Task Decomposition", description: "Learn to break complex goals into structured, executable tasks", hours: "60 hours", ects: "Approx. 2 ECTS equivalent", slug: "task-decomposition" },
+    { name: "Multi-Agent Systems", description: "Design and analyze systems where multiple agents coordinate", hours: "90 hours", ects: "Approx. 3 ECTS equivalent", slug: "multi-agent-systems" },
+    { name: "Performance Optimization", description: "Optimize Agentic AI systems for latency, quality, cost, and reliability", hours: "60 hours", ects: "Approx. 2 ECTS equivalent", slug: "performance-optimization" },
+    { name: "Human-AI Design", description: "Design human–agent interactions that are usable, trustworthy, and aligned", hours: "90 hours", ects: "Approx. 3 ECTS equivalent", slug: "human-ai-design" },
+    { name: "Restricted Methods", description: "Advanced techniques for specialized Agentic AI applications", hours: "120 hours", ects: "Approx. 4 ECTS equivalent", slug: "restricted-methods" },
+    { name: "Latest in AI 2025", description: "Cutting-edge developments and emerging trends in Agentic AI", hours: "90 hours", ects: "Approx. 3 ECTS equivalent", slug: "latest-in-ai-2025" },
+    { name: "Token Efficiency in AI Development", description: "Reduce LLM costs with prompt optimization, routing, and caching", hours: "90 hours", ects: "Approx. 3 ECTS equivalent", slug: "token-efficiency" },
   ];
 
   const aioModules = [
-    { name: "Ethical Data Use", description: "Master ethical frameworks for AI data governance", hours: "60 hours", ects: "2 ECTS", slug: "ethical-data-use" },
-    { name: "Privacy Auditor", description: "Learn to audit and ensure privacy compliance in AI systems", hours: "80 hours", ects: "2.67 ECTS", slug: "privacy-auditor" },
-    { name: "Legal Auditor", description: "Ensure legal compliance and regulatory alignment", hours: "80 hours", ects: "2.67 ECTS", slug: "legal-auditor" },
-    { name: "Resource Management", description: "Optimize AI resource allocation and capacity planning", hours: "90 hours", ects: "3 ECTS", slug: "resource-management" },
-    { name: "Process Optimization", description: "Streamline processes with AI-driven optimization", hours: "90 hours", ects: "3 ECTS", slug: "process-optimization" },
-    { name: "Sustainability & AI", description: "Implement sustainable AI practices and ESG compliance", hours: "60 hours", ects: "2 ECTS", slug: "sustainability-ai" },
-    { name: "Crisis Prevention", description: "Develop crisis prevention and risk mitigation strategies", hours: "90 hours", ects: "3 ECTS", slug: "crisis-prevention" },
-    { name: "Financial Evaluations", description: "Evaluate AI investments and financial impact", hours: "90 hours", ects: "3 ECTS", slug: "financial-evaluations" },
-    { name: "AI for Government", description: "AI governance and implementation for public sector", hours: "120 hours", ects: "4 ECTS", slug: "ai-for-government" },
-    { name: "AI for Security", description: "Deploy AI in security operations with ethical oversight", hours: "120 hours", ects: "4 ECTS", slug: "ai-for-security" },
-    { name: "Cybersecurity Auditing", description: "Conduct comprehensive cybersecurity assessments of AI systems", hours: "120 hours", ects: "4 ECTS", slug: "cybersecurity-auditing" },
-    { name: "AML/KYC", description: "AI-enhanced Anti-Money Laundering and Know Your Customer compliance", hours: "120 hours", ects: "4 ECTS", slug: "aml-kyc" },
+    { name: "Ethical Data Use", description: "Master ethical frameworks for AI data governance", hours: "60 hours", ects: "Approx. 2 ECTS equivalent", slug: "ethical-data-use" },
+    { name: "Privacy Auditor", description: "Learn to audit and ensure privacy compliance in AI systems", hours: "80 hours", ects: "Approx. 2.67 ECTS equivalent", slug: "privacy-auditor" },
+    { name: "Legal Auditor", description: "Ensure legal compliance and regulatory alignment", hours: "80 hours", ects: "Approx. 2.67 ECTS equivalent", slug: "legal-auditor" },
+    { name: "Resource Management", description: "Optimize AI resource allocation and capacity planning", hours: "90 hours", ects: "Approx. 3 ECTS equivalent", slug: "resource-management" },
+    { name: "Process Optimization", description: "Streamline processes with AI-driven optimization", hours: "90 hours", ects: "Approx. 3 ECTS equivalent", slug: "process-optimization" },
+    { name: "Sustainability & AI", description: "Implement sustainable AI practices and ESG compliance", hours: "60 hours", ects: "Approx. 2 ECTS equivalent", slug: "sustainability-ai" },
+    { name: "Crisis Prevention", description: "Develop crisis prevention and risk mitigation strategies", hours: "90 hours", ects: "Approx. 3 ECTS equivalent", slug: "crisis-prevention" },
+    { name: "Financial Evaluations", description: "Evaluate AI investments and financial impact", hours: "90 hours", ects: "Approx. 3 ECTS equivalent", slug: "financial-evaluations" },
+    { name: "AI for Government", description: "AI governance and implementation for public sector", hours: "120 hours", ects: "Approx. 4 ECTS equivalent", slug: "ai-for-government" },
+    { name: "AI for Security", description: "Deploy AI in security operations with ethical oversight", hours: "120 hours", ects: "Approx. 4 ECTS equivalent", slug: "ai-for-security" },
+    { name: "Cybersecurity Auditing", description: "Conduct comprehensive cybersecurity assessments of AI systems", hours: "120 hours", ects: "Approx. 4 ECTS equivalent", slug: "cybersecurity-auditing" },
+    { name: "AML/KYC", description: "AI-enhanced Anti-Money Laundering and Know Your Customer compliance", hours: "120 hours", ects: "Approx. 4 ECTS equivalent", slug: "aml-kyc" },
   ];
 
   const allModules = [...aacModules.map(m => ({ ...m, track: 'aac' })), ...aioModules.map(m => ({ ...m, track: 'aio' }))];

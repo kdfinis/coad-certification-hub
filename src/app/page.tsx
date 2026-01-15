@@ -36,7 +36,7 @@ export default function Home() {
                 <h1 className="university-heading-1 text-foreground animate-fade-in-up stagger-1">
                   When You're Worried About Being Left Behind in AI,
                   <br />
-                  <span className="gradient-text">Transform Your Career Into AI Development</span>
+                  <span className="color-wave-text-animated">Transform Your Career Into AI Development</span>
                 </h1>
                 
                 {/* Description */}
@@ -488,10 +488,10 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <Button variant="outline" className="border-2 border-border hover:border-primary/40">
-                All Competencies (24)
+                All Competencies (25)
               </Button>
               <Button variant="outline" className="border-2 border-border hover:border-primary/40">
-                Build & Deploy (8)
+                Build & Deploy (9)
               </Button>
               <Button variant="outline" className="border-2 border-border hover:border-primary/40">
                 Govern & Comply (5)
@@ -813,9 +813,22 @@ export default function Home() {
                 delay="1150ms"
                 bubbleType="dark"
               />
+              <ModuleCard
+                titleFirst="TOKEN"
+                titleRest="EFFICIENCY"
+                description="Reduce AI costs with token-optimized prompts, routing, and caching"
+                hours="90h / 4 weeks"
+                price="€920"
+                priceColor="primary"
+                category="Build & Deploy"
+                categoryColor="primary"
+                href="/modules/token-efficiency"
+                delay="1200ms"
+                bubbleType="dark"
+              />
             </div>
             <div className="text-center">
-              <Link href="/competencies">
+              <Link href="/courses">
                 <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
                   Browse All Competencies
                 </Button>
@@ -884,7 +897,7 @@ export default function Home() {
               </div>
             </div>
             <div className="text-center">
-              <Link href="/certifications">
+              <Link href="/courses">
                 <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
                   Learn About Compliance
                 </Button>
@@ -1100,7 +1113,7 @@ export default function Home() {
                 <p className="text-sm text-muted-foreground mb-6">
                   Browse our complete catalog of certification tracks and standalone modules. Filter by type, compare courses, and see detailed outcomes before enrolling.
                 </p>
-                <Link href="/catalog">
+                <Link href="/courses">
                   <Button className="w-full">Explore Catalog</Button>
                 </Link>
               </div>
@@ -1182,7 +1195,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
                 <a
-                  href="/catalog"
+                  href="/courses"
                   className="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:shadow-lg active:scale-[0.98] h-14 rounded-lg px-10 text-base bg-white text-navy hover:bg-white/90 hover:scale-[1.02] font-semibold shadow-lg group flex items-center gap-2"
                 >
                   Browse Course Catalog

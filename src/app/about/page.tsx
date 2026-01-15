@@ -159,7 +159,7 @@ export default function AboutPage() {
               Whether you're looking to advance your career, upskill your team, or become part of the European AI governance community, COAD has a programme for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/certifications">
+              <Link href="/courses">
                 <Button size="lg" variant="outline" className="bg-white text-primary-navy hover:bg-gray-100">
                   Explore Certifications
                 </Button>

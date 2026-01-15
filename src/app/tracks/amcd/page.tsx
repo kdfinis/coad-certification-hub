@@ -96,6 +96,33 @@ export default function AMCDTrackPage() {
           </div>
         </section>
 
+        {/* Cross-Track Standalone Module */}
+        <section className="py-16 md:py-24 bg-white">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
+              Cross-Track Standalone Module
+            </h2>
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Token Efficiency in AI Development</h3>
+              <p className="text-gray-600 mb-4">
+                Build efficient AI workflows by reducing token usage with structured prompts, routing, caching, and context management.
+              </p>
+              <div className="flex flex-wrap gap-4 text-sm text-gray-500">
+                <span><strong>Price:</strong> €920</span>
+                <span>•</span>
+                <span><strong>ECTS equivalent (approx.):</strong> 3</span>
+                <span>•</span>
+                <span><strong>Hours:</strong> 90 hours</span>
+              </div>
+              <div className="mt-4">
+                <Link href="/modules/token-efficiency">
+                  <Button variant="outline">View Module Details</Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Career Outcomes */}
         <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">

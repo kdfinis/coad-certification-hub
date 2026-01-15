@@ -197,15 +197,15 @@ export default function CertificationsPage() {
                 This standalone certification covers 4 domains (Safety/Risk, Ethical Oversight, Legal Compliance, Corporate Digital & AI Transformation), tested through simulations and rubrics. It means gaining expert oversight competence for responsible AI use, recognized as an ESG 2015-compliant certificate of competency for compliance roles.
               </p>
               <div className="flex gap-6 text-sm text-gray-600 mb-4">
-                <span><strong>Duration:</strong> 6 months, 12 ECTS (360 hours total)</span>
+                <span><strong>Duration:</strong> 6 months, Approx. 12 ECTS equivalent (360 hours total)</span>
               </div>
               <div className="mb-4">
                 <h4 className="font-semibold text-gray-900 mb-3">Domain Structure:</h4>
                 <ul className="space-y-2 text-gray-700">
-                  <li><strong>Domain 1: Safety/Risk</strong> - €1,800 (2.67 ECTS, 80 hours)</li>
-                  <li><strong>Domain 2: Ethical Oversight</strong> - €1,800 (2.67 ECTS, 80 hours)</li>
-                  <li><strong>Domain 3: Legal Compliance</strong> - €1,600 (2.67 ECTS, 80 hours)</li>
-                  <li><strong>Domain 4: Corporate Digital & AI Transformation</strong> - €2,600 (4 ECTS, 120 hours)</li>
+                  <li><strong>Domain 1: Safety/Risk</strong> - €1,800 (Approx. 2.67 ECTS equivalent, 80 hours)</li>
+                  <li><strong>Domain 2: Ethical Oversight</strong> - €1,800 (Approx. 2.67 ECTS equivalent, 80 hours)</li>
+                  <li><strong>Domain 3: Legal Compliance</strong> - €1,600 (Approx. 2.67 ECTS equivalent, 80 hours)</li>
+                  <li><strong>Domain 4: Corporate Digital & AI Transformation</strong> - €2,600 (Approx. 4 ECTS equivalent, 120 hours)</li>
                 </ul>
               </div>
               <p className="text-gray-700 mb-2"><strong>What it means:</strong> You're certified to implement risk governance, ethical controls, Act alignment, and lead comprehensive digital transformation in AI systems.</p>

@@ -84,7 +84,7 @@ export default function CertificateVerifyPage({ params }: CertificateVerifyProps
           </div>
 
           <div className="mt-8 text-center">
-            <Link href="/catalog">
+            <Link href="/courses">
               <Button variant="outline">Browse Courses</Button>
             </Link>
           </div>

@@ -43,12 +43,13 @@ module.exports = {
         '18': '4.5rem',
       },
       animation: {
-        'fade-in': 'fadeIn 0.6s ease-in-out',
+        'fade-in': 'fadeIn 0.6s ease-out',
         'fade-out': 'fadeOut 0.15s ease-in-out',
         'fade-in-up': 'fadeInUp 0.6s ease-out',
         'slide-up': 'slideUp 0.3s ease-out',
         'slide-down': 'slideDown 0.3s ease-out',
         'float': 'float 3s ease-in-out infinite',
+        'scale-in': 'scaleIn 0.5s ease-out',
       },
       keyframes: {
         fadeIn: {

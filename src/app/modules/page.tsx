@@ -50,6 +50,14 @@ const modules = [
     duration: '80 hours',
     description: 'Legal compliance auditing for AI systems.',
   },
+  {
+    id: 'token-efficiency',
+    title: 'Token Efficiency in AI Development',
+    category: 'ACD',
+    price: '€920',
+    duration: '90 hours',
+    description: 'Reduce token usage with prompt optimization, routing, caching, and context management.',
+  },
 ];
 
 export default function ModulesPage() {

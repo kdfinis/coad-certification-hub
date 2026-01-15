@@ -20,7 +20,7 @@ export default function Footer() {
               <li><Link href="/tracks/amcd" className="text-gray-600 hover:text-primary-teal transition-colors">AMCD Track</Link></li>
               <li><Link href="/tracks/acd" className="text-gray-600 hover:text-primary-teal transition-colors">ACD Track</Link></li>
               <li><Link href="/tracks/aio" className="text-gray-600 hover:text-primary-teal transition-colors">AIO Track</Link></li>
-              <li><Link href="/certifications" className="text-gray-600 hover:text-primary-teal transition-colors">All Certifications</Link></li>
+              <li><Link href="/courses" className="text-gray-600 hover:text-primary-teal transition-colors">All Courses</Link></li>
               <li><Link href="/about/instructors" className="text-gray-600 hover:text-primary-teal transition-colors">Instructors</Link></li>
               <li><Link href="/about/outcomes" className="text-gray-600 hover:text-primary-teal transition-colors">Student Outcomes</Link></li>
             </ul>
@@ -28,7 +28,7 @@ export default function Footer() {
           <div>
             <h4 className="mb-4 text-sm font-semibold text-gray-900">Resources</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/catalog" className="text-gray-600 hover:text-primary-teal transition-colors">Course Catalog</Link></li>
+              <li><Link href="/courses" className="text-gray-600 hover:text-primary-teal transition-colors">Course Catalog</Link></li>
               <li><Link href="/modules" className="text-gray-600 hover:text-primary-teal transition-colors">Modules</Link></li>
               <li><Link href="/corporate-services/executive" className="text-gray-600 hover:text-primary-teal transition-colors">Corporate Training</Link></li>
               <li><Link href="/ai-workforce" className="text-gray-600 hover:text-primary-teal transition-colors">AI Workforce</Link></li>

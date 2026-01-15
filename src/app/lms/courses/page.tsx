@@ -37,7 +37,7 @@ export default function CoursesPage() {
             {searchQuery ? 'No courses found matching your search.' : 'You are not enrolled in any courses yet.'}
           </p>
           {!searchQuery && (
-            <Link href="/catalog">
+            <Link href="/courses">
               <Button>Browse Course Catalog</Button>
             </Link>
           )}

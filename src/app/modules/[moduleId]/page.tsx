@@ -10,7 +10,7 @@ const moduleDetails: Record<string, {
   category: string;
   price: string;
   duration: string;
-  ects: string;
+  ectsEquivalent: string;
   description: string;
   outcomes: string[];
   curriculum: string[];
@@ -20,7 +20,7 @@ const moduleDetails: Record<string, {
     category: 'AAC Module',
     price: '€1,800',
     duration: '40 hours',
-    ects: '1.33 ECTS',
+    ectsEquivalent: '1.33',
     description: 'Master task decomposition techniques for building effective agentic AI systems.',
     outcomes: [
       'Break down complex problems into manageable tasks',
@@ -40,7 +40,7 @@ const moduleDetails: Record<string, {
     category: 'AIO Module',
     price: '€1,800',
     duration: '80 hours',
-    ects: '2.67 ECTS',
+    ectsEquivalent: '2.67',
     description: 'EU AI Act compliance and privacy auditing skills for AI systems.',
     outcomes: [
       'Conduct privacy impact assessments',
@@ -53,6 +53,26 @@ const moduleDetails: Record<string, {
       'Privacy impact assessment methodologies',
       'Data minimization and purpose limitation',
       'Audit project: Privacy assessment of AI system',
+    ],
+  },
+  'token-efficiency': {
+    title: 'Token Efficiency in AI Development',
+    category: 'Cross-Track Module',
+    price: '€920',
+    duration: '90 hours',
+    ectsEquivalent: '3',
+    description: 'Optimize token usage to reduce costs and latency while maintaining model quality.',
+    outcomes: [
+      'Measure token usage and identify waste in prompts and contexts',
+      'Apply prompt compression and structured prompting techniques',
+      'Design routing and caching strategies for cost-efficient LLM use',
+      'Implement RAG chunking and context management for token control',
+    ],
+    curriculum: [
+      'Tokenization fundamentals and cost drivers',
+      'Prompt design patterns for brevity and reliability',
+      'Context management, summaries, and compression workflows',
+      'Caching, routing, and evaluation for token efficiency',
     ],
   },
 };
@@ -108,7 +128,7 @@ export default function ModuleDetailPage({ params }: ModuleDetailProps) {
               <div className="mb-6">
                 <p className="text-3xl font-bold text-primary mb-2">{module.price}</p>
                 <p className="text-sm text-muted-foreground">Duration: {module.duration}</p>
-                <p className="text-sm text-muted-foreground">ECTS: {module.ects}</p>
+                <p className="text-sm text-muted-foreground">Approx. {module.ectsEquivalent} ECTS equivalent</p>
               </div>
               <Link href={`/checkout?course=${params.moduleId}`}>
                 <Button className="w-full mb-3" size="lg">

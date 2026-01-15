@@ -15,7 +15,7 @@ export default function AIOTrackSection() {
       competencies: ["Risk assessment", "Security controls", "Threat modeling", "Safety frameworks"],
       useCases: ["High-risk AI oversight", "Security audits", "Risk mitigation"],
       price: "€1,800",
-      ects: "2.67 ECTS",
+      ects: "Approx. 2.67 ECTS equivalent",
       hours: "80 hours",
     },
     {
@@ -25,7 +25,7 @@ export default function AIOTrackSection() {
       competencies: ["Ethical frameworks", "Bias detection", "Human rights", "Fairness assessments"],
       useCases: ["Ethical audits", "Bias mitigation", "Human rights compliance"],
       price: "€1,800",
-      ects: "2.67 ECTS",
+      ects: "Approx. 2.67 ECTS equivalent",
       hours: "80 hours",
     },
     {
@@ -35,7 +35,7 @@ export default function AIOTrackSection() {
       competencies: ["EU AI Act compliance", "Data governance", "Regulatory frameworks", "Article 13 & 15"],
       useCases: ["Compliance audits", "Regulatory alignment", "Data governance"],
       price: "€1,600",
-      ects: "2.67 ECTS",
+      ects: "Approx. 2.67 ECTS equivalent",
       hours: "80 hours",
     },
     {
@@ -45,7 +45,7 @@ export default function AIOTrackSection() {
       competencies: ["Digital transformation", "Organizational change", "AI integration", "Strategic planning"],
       useCases: ["Digital transformation", "Organizational change", "AI strategy"],
       price: "€2,600",
-      ects: "4 ECTS",
+      ects: "Approx. 4 ECTS equivalent",
       hours: "120 hours",
     },
   ];

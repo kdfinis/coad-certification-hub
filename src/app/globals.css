@@ -52,6 +52,39 @@ body {
     color: transparent;
   }
   
+  /* Color wave text effect using the font graphic */
+  .color-wave-text {
+    background-image: url('/images/font-color-wave.jpg');
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-attachment: fixed;
+  }
+  
+  /* Alternative animated color wave text */
+  .color-wave-text-animated {
+    background-image: url('/images/font-color-wave.jpg');
+    background-size: 200% auto;
+    background-position: 0% center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: colorWaveShift 30s ease-in-out infinite;
+  }
+  
+  @keyframes colorWaveShift {
+    0%, 100% {
+      background-position: 0% center;
+    }
+    50% {
+      background-position: 100% center;
+    }
+  }
+  
   .bg-gradient-hero {
     background-image: var(--gradient-hero);
   }
@@ -70,6 +103,78 @@ body {
   
   .animate-fade-in-up {
     animation: slideUp 0.6s ease-out forwards, fadeIn 0.6s ease-out forwards;
+  }
+  
+  /* Scroll animations - matches specification */
+  .animate-fade-in-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .animate-fade-in-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .animate-scale-in-scroll {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  .animate-scale-in-scroll.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Link hover transitions - matches specification */
+  .link-hover {
+    transition: color 0.2s ease-out;
+  }
+  
+  .link-hover:hover {
+    color: hsl(var(--primary));
+  }
+  
+  /* Tab transitions - matches specification */
+  .tab-content-transition {
+    transition: opacity 0.15s ease-in-out;
+  }
+  
+  .tab-content-fade-out {
+    opacity: 0;
+  }
+  
+  .tab-content-fade-in {
+    opacity: 1;
+  }
+  
+  .tab-indicator-transition {
+    transition: all 0.2s ease-out;
+  }
+  
+  /* Image cross-fade - matches specification */
+  .image-cross-fade {
+    transition: opacity 0.15s ease-in-out;
+  }
+  
+  /* Dropdown transitions - matches specification */
+  .dropdown-transition {
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out, transform 0.3s ease-out;
+    overflow: hidden;
+  }
+  
+  .dropdown-closed {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  
+  .dropdown-open {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
   }
   
   .stagger-1 {
@@ -125,16 +230,16 @@ body {
     @apply text-xl md:text-2xl font-bold tracking-tight;
   }
   
-  /* Card hover effect */
+  /* Card hover effect - Updated to match specification */
   .card-hover {
-    transition-property: all;
+    transition-property: transform, box-shadow;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
   }
   
   .card-hover:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
   
   /* Image overlay effects */
@@ -259,6 +364,18 @@ body {
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+/* Scroll animation - fade in on scroll (matches specification) */
+@keyframes fadeInOnScroll {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

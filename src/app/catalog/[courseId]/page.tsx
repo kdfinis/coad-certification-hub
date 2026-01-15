@@ -69,8 +69,8 @@ export default function CourseDetailPage({ params }: CourseDetailProps) {
     <div className="min-h-screen bg-background">
       <div className="container-coad py-16">
         <div className="mb-8">
-          <Link href="/catalog" className="text-sm text-primary hover:underline">
-            ← Back to catalog
+          <Link href="/courses" className="text-sm text-primary hover:underline">
+            ← Back to courses
           </Link>
         </div>
 
