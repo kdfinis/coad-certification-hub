@@ -1202,7 +1202,7 @@ export default function Home() {
                 </a>
                 <a
                   href="/#pricing"
-                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-background hover:text-accent-foreground h-14 rounded-lg px-10 text-base border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50"
+                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-white/10 backdrop-blur-sm hover:bg-white/20 h-14 rounded-lg px-10 text-base border-2 border-white/30 text-white hover:border-white/50"
                 >
                   Explore Corporate Training
                 </a>

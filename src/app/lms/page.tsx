@@ -88,7 +88,7 @@ export default function LmsDashboardPage() {
           <div className="mt-4 flex gap-3">
             <Link
               href="/lms/inbox"
-              className="rounded-md border border-border px-3 py-2 text-sm text-foreground/80 hover:bg-muted"
+              className="rounded-md border border-border px-3 py-2 text-sm text-foreground hover:bg-muted"
             >
               Open inbox
             </Link>

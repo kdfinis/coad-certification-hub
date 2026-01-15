@@ -61,7 +61,7 @@ export default function EnrollmentsAdminPage() {
           <h3 className="text-base font-semibold text-foreground">Export</h3>
           <p className="text-sm text-muted-foreground">Download all enrollments as CSV</p>
           <button
-            className="rounded-md border border-border px-4 py-2 text-sm text-foreground/80 hover:bg-muted"
+            className="rounded-md border border-border px-4 py-2 text-sm text-foreground hover:bg-muted"
             type="button"
             onClick={async () => {
               try {

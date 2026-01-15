@@ -52,13 +52,13 @@ export default function CourseHomePage({ params }: CoursePageProps) {
           </Link>
           <Link
             href={`/lms/courses/${params.courseId}/assignments`}
-            className="rounded-md border border-border px-4 py-2 text-sm text-foreground/80 hover:bg-muted"
+            className="rounded-md border border-border px-4 py-2 text-sm text-foreground hover:bg-muted"
           >
             View assignments
           </Link>
           <Link
             href={`/lms/courses/${params.courseId}/certificate`}
-            className="rounded-md border border-border px-4 py-2 text-sm text-foreground/80 hover:bg-muted"
+            className="rounded-md border border-border px-4 py-2 text-sm text-foreground hover:bg-muted"
           >
             View Certificate
           </Link>

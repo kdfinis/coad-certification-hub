@@ -74,7 +74,7 @@ export default function LmsLayout({ children }: { children: ReactNode }) {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block rounded-md px-3 py-2 text-sm text-foreground/80 hover:bg-muted hover:text-foreground"
+                  className="block rounded-md px-3 py-2 text-sm text-foreground hover:bg-muted"
                 >
                   {item.label}
                 </Link>
@@ -85,7 +85,7 @@ export default function LmsLayout({ children }: { children: ReactNode }) {
                 <Link
                   key={item.label}
                   href={item.href('sample-course')}
-                  className="block rounded-md px-3 py-2 text-sm text-foreground/70 hover:bg-muted hover:text-foreground"
+                  className="block rounded-md px-3 py-2 text-sm text-foreground hover:bg-muted"
                 >
                   {item.label}
                 </Link>
@@ -97,7 +97,7 @@ export default function LmsLayout({ children }: { children: ReactNode }) {
                   <Link
                     key={item.label}
                     href={item.href('sample-course')}
-                    className="block rounded-md px-3 py-2 text-sm text-foreground/70 hover:bg-muted hover:text-foreground"
+                    className="block rounded-md px-3 py-2 text-sm text-foreground hover:bg-muted"
                   >
                     {item.label}
                   </Link>
@@ -163,7 +163,7 @@ export default function LmsLayout({ children }: { children: ReactNode }) {
                 </div>
                 <Link
                   href="/lms/account"
-                  className="text-sm font-medium text-foreground/80 hover:text-foreground"
+                  className="text-sm font-medium text-foreground hover:text-primary"
                 >
                   Account
                 </Link>
