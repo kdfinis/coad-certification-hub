@@ -78,7 +78,7 @@ const moduleDetails: Record<string, {
 };
 
 export default function ModuleDetailPage({ params }: ModuleDetailProps) {
-  const module = moduleDetails[params.moduleId] || moduleDetails['task-decomposition'];
+  const moduleDetail = moduleDetails[params.moduleId] || moduleDetails['task-decomposition'];
 
   return (
     <div className="min-h-screen bg-background">
@@ -93,16 +93,16 @@ export default function ModuleDetailPage({ params }: ModuleDetailProps) {
           <div className="space-y-8">
             <div>
               <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4">
-                {module.category}
+                {moduleDetail.category}
               </span>
-              <h1 className="university-heading-1 text-foreground mb-4">{module.title}</h1>
-              <p className="body-large text-muted-foreground">{module.description}</p>
+              <h1 className="university-heading-1 text-foreground mb-4">{moduleDetail.title}</h1>
+              <p className="body-large text-muted-foreground">{moduleDetail.description}</p>
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-6">
               <h2 className="university-heading-3 text-foreground mb-4">Learning Outcomes</h2>
               <ul className="space-y-2">
-                {module.outcomes.map((outcome, index) => (
+                {moduleDetail.outcomes.map((outcome, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center shrink-0 mt-0.5">
                       <div className="w-2 h-2 rounded-full bg-success" />
@@ -116,7 +116,7 @@ export default function ModuleDetailPage({ params }: ModuleDetailProps) {
             <div className="rounded-2xl border border-border bg-card p-6">
               <h2 className="university-heading-3 text-foreground mb-4">Curriculum</h2>
               <ul className="space-y-2">
-                {module.curriculum.map((item, index) => (
+                {moduleDetail.curriculum.map((item, index) => (
                   <li key={index} className="text-foreground">{item}</li>
                 ))}
               </ul>
@@ -126,9 +126,9 @@ export default function ModuleDetailPage({ params }: ModuleDetailProps) {
           <div className="lg:sticky lg:top-24">
             <div className="rounded-2xl border-2 border-primary bg-card p-6 shadow-xl">
               <div className="mb-6">
-                <p className="text-3xl font-bold text-primary mb-2">{module.price}</p>
-                <p className="text-sm text-muted-foreground">Duration: {module.duration}</p>
-                <p className="text-sm text-muted-foreground">Approx. {module.ectsEquivalent} ECTS equivalent</p>
+                <p className="text-3xl font-bold text-primary mb-2">{moduleDetail.price}</p>
+                <p className="text-sm text-muted-foreground">Duration: {moduleDetail.duration}</p>
+                <p className="text-sm text-muted-foreground">Approx. {moduleDetail.ectsEquivalent} ECTS equivalent</p>
               </div>
               <Link href={`/checkout?course=${params.moduleId}`}>
                 <Button className="w-full mb-3" size="lg">

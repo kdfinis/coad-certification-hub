@@ -62,6 +62,7 @@ export const ENROLLMENT_STATUS = {
 export const USER_ROLES = {
   student: 'Student',
   instructor: 'Instructor',
+  ta: 'TA',
   admin: 'Admin',
   observer: 'Observer',
 } as const;

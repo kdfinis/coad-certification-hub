@@ -2,10 +2,71 @@
 
 import { useState } from 'react';
 
-const messages = [
-  { sender: 'COAD Faculty', subject: 'Welcome to AAC', time: '2h ago' },
-  { sender: 'Student Support', subject: 'Zoom link updated', time: '1d ago' },
+const threads = [
+  {
+    id: 'thread-1',
+    subject: 'Welcome to AAC',
+    status: 'Unread',
+    participants: ['COAD Faculty', 'You'],
+    updatedAt: '2h ago',
+    messages: [
+      {
+        id: 'msg-1',
+        sender: 'COAD Faculty',
+        time: 'Today · 09:12',
+        body: 'Welcome to the AAC cohort. We will kick off with a live session on Wednesday.',
+      },
+    ],
+  },
+  {
+    id: 'thread-2',
+    subject: 'Zoom link updated',
+    status: 'Needs response',
+    participants: ['Student Support', 'You'],
+    updatedAt: '1d ago',
+    messages: [
+      {
+        id: 'msg-2',
+        sender: 'Student Support',
+        time: 'Yesterday · 14:30',
+        body: 'We updated the Zoom link for Friday. Please confirm you can access it.',
+      },
+      {
+        id: 'msg-3',
+        sender: 'You',
+        time: 'Yesterday · 16:05',
+        body: 'Thanks! I will test it this afternoon.',
+      },
+    ],
+  },
+  {
+    id: 'thread-3',
+    subject: 'Module 2 feedback',
+    status: 'Replied',
+    participants: ['COAD Faculty', 'You'],
+    updatedAt: '3d ago',
+    messages: [
+      {
+        id: 'msg-4',
+        sender: 'COAD Faculty',
+        time: 'Mon · 11:20',
+        body: 'Your Module 2 reflections are strong. Please expand on the risk analysis section.',
+      },
+      {
+        id: 'msg-5',
+        sender: 'You',
+        time: 'Mon · 12:04',
+        body: 'Will do. I will submit the revision by tomorrow.',
+      },
+    ],
+  },
 ];
+
+const statusStyles: Record<string, string> = {
+  Unread: 'bg-primary/10 text-primary',
+  'Needs response': 'bg-amber-500/10 text-amber-700',
+  Replied: 'bg-emerald-500/10 text-emerald-700',
+};
 
 export default function InboxPage() {
   const [recipient, setRecipient] = useState('');
@@ -74,13 +135,37 @@ export default function InboxPage() {
         </button>
       </div>
       <div className="space-y-4">
-        {messages.map((message) => (
-          <div key={message.subject} className="rounded-xl border border-border bg-card p-4">
-            <div className="flex items-center justify-between">
-              <p className="text-sm font-semibold text-foreground">{message.subject}</p>
-              <span className="text-xs text-muted-foreground">{message.time}</span>
+        {threads.map((thread) => (
+          <div key={thread.id} className="rounded-xl border border-border bg-card p-4 space-y-3">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <p className="text-sm font-semibold text-foreground">{thread.subject}</p>
+                <p className="text-xs text-muted-foreground">
+                  Participants: {thread.participants.join(', ')}
+                </p>
+              </div>
+              <div className="flex items-center gap-2">
+                <span
+                  className={`rounded-full px-2 py-1 text-xs font-semibold ${
+                    statusStyles[thread.status] ?? 'bg-muted text-foreground'
+                  }`}
+                >
+                  {thread.status}
+                </span>
+                <span className="text-xs text-muted-foreground">{thread.updatedAt}</span>
+              </div>
             </div>
-            <p className="text-xs text-muted-foreground">From: {message.sender}</p>
+            <div className="space-y-2">
+              {thread.messages.map((message) => (
+                <div key={message.id} className="rounded-lg border border-border/70 bg-background p-3">
+                  <div className="flex items-center justify-between">
+                    <p className="text-xs font-semibold text-foreground">{message.sender}</p>
+                    <span className="text-xs text-muted-foreground">{message.time}</span>
+                  </div>
+                  <p className="text-sm text-foreground/90">{message.body}</p>
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>

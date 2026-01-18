@@ -3,9 +3,16 @@
 import { useState } from 'react';
 
 const initialEvents = [
-  { title: 'AAC Live Session', date: 'Apr 10 · 10:00 CET' },
-  { title: 'Assignment Due: Risk Memo', date: 'Apr 12 · 23:59 CET' },
-  { title: 'Office Hours', date: 'Apr 15 · 14:00 CET' },
+  { title: 'AAC Live Session', date: 'Apr 10 · 10:00 CET', scope: 'Global' },
+  { title: 'Assignment Due: Risk Memo', date: 'Apr 12 · 23:59 CET', scope: 'AAC Foundations' },
+  { title: 'Office Hours', date: 'Apr 15 · 14:00 CET', scope: 'Global' },
+  { title: 'AIO Oversight Clinic', date: 'Apr 16 · 09:00 CET', scope: 'AIO Oversight Core' },
+];
+
+const upcomingItems = [
+  { title: 'Submit risk memo draft', detail: 'AAC Foundations · Apr 12' },
+  { title: 'Attend live clinic', detail: 'AIO Oversight Core · Apr 16' },
+  { title: 'Peer review check-in', detail: 'Global · Apr 18' },
 ];
 
 export default function CalendarPage() {
@@ -50,7 +57,10 @@ export default function CalendarPage() {
               //   }),
               // });
               
-              setEvents((prev) => [{ title: title.trim(), date: date || 'TBD' }, ...prev]);
+              setEvents((prev) => [
+                { title: title.trim(), date: date || 'TBD', scope: 'Global' },
+                ...prev,
+              ]);
               setTitle('');
               setDate('');
             } catch (error) {
@@ -62,13 +72,50 @@ export default function CalendarPage() {
           Add event
         </button>
       </div>
-      <div className="space-y-4">
-        {events.map((event) => (
-          <div key={event.title} className="rounded-xl border border-border bg-card p-4">
-            <p className="text-sm font-semibold text-foreground">{event.title}</p>
-            <p className="text-xs text-muted-foreground">{event.date}</p>
+      <div className="grid gap-4 lg:grid-cols-[2fr_1fr]">
+        <div className="space-y-4">
+          <div className="rounded-2xl border border-border bg-card p-4 space-y-3">
+            <div className="flex items-center justify-between">
+              <p className="text-sm font-semibold text-foreground">Global events</p>
+              <span className="text-xs text-muted-foreground">All courses</span>
+            </div>
+            {events
+              .filter((event) => event.scope === 'Global')
+              .map((event) => (
+                <div key={event.title} className="rounded-xl border border-border/70 bg-background p-3">
+                  <p className="text-sm font-semibold text-foreground">{event.title}</p>
+                  <p className="text-xs text-muted-foreground">{event.date}</p>
+                </div>
+              ))}
           </div>
-        ))}
+          <div className="rounded-2xl border border-border bg-card p-4 space-y-3">
+            <div className="flex items-center justify-between">
+              <p className="text-sm font-semibold text-foreground">Course events</p>
+              <span className="text-xs text-muted-foreground">Per course</span>
+            </div>
+            {events
+              .filter((event) => event.scope !== 'Global')
+              .map((event) => (
+                <div key={event.title} className="rounded-xl border border-border/70 bg-background p-3">
+                  <p className="text-sm font-semibold text-foreground">{event.title}</p>
+                  <p className="text-xs text-muted-foreground">{event.date}</p>
+                  <p className="text-xs text-muted-foreground">{event.scope}</p>
+                </div>
+              ))}
+          </div>
+        </div>
+        <div className="rounded-2xl border border-border bg-card p-4 space-y-3">
+          <div className="flex items-center justify-between">
+            <p className="text-sm font-semibold text-foreground">Upcoming items</p>
+            <span className="text-xs text-muted-foreground">Next 7 days</span>
+          </div>
+          {upcomingItems.map((item) => (
+            <div key={item.title} className="rounded-xl border border-border/70 bg-background p-3">
+              <p className="text-sm font-semibold text-foreground">{item.title}</p>
+              <p className="text-xs text-muted-foreground">{item.detail}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

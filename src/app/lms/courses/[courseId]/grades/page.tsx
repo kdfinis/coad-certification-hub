@@ -5,9 +5,9 @@ type GradesPageProps = {
 import Link from 'next/link';
 
 const grades = [
-  { item: 'Project Brief', score: '92%', status: 'Graded' },
-  { item: 'Risk Memo', score: 'Pending', status: 'Submitted' },
-  { item: 'Quiz 1', score: '88%', status: 'Graded' },
+  { item: 'Project Brief', score: 92, status: 'Graded', due: 'Apr 12' },
+  { item: 'Risk Memo', score: null, status: 'Submitted', due: 'Apr 19' },
+  { item: 'Quiz 1', score: 88, status: 'Graded', due: 'Apr 18' },
 ];
 
 export default function GradesPage({ params }: GradesPageProps) {
@@ -17,16 +17,35 @@ export default function GradesPage({ params }: GradesPageProps) {
         <h2 className="text-2xl font-semibold text-foreground">Grades</h2>
         <p className="text-sm text-muted-foreground">Course: {params.courseId}</p>
       </div>
+      <div className="grid gap-4 md:grid-cols-3">
+        <div className="rounded-2xl border border-border bg-card p-4">
+          <p className="text-xs uppercase tracking-wide text-muted-foreground">Current grade</p>
+          <p className="mt-2 text-2xl font-semibold text-foreground">90%</p>
+          <p className="text-xs text-muted-foreground">Based on graded items only</p>
+        </div>
+        <div className="rounded-2xl border border-border bg-card p-4">
+          <p className="text-xs uppercase tracking-wide text-muted-foreground">Missing work</p>
+          <p className="mt-2 text-2xl font-semibold text-foreground">1</p>
+          <p className="text-xs text-muted-foreground">Risk Memo pending grade</p>
+        </div>
+        <div className="rounded-2xl border border-border bg-card p-4">
+          <p className="text-xs uppercase tracking-wide text-muted-foreground">Feedback</p>
+          <p className="mt-2 text-2xl font-semibold text-foreground">2</p>
+          <p className="text-xs text-muted-foreground">New rubric comments</p>
+        </div>
+      </div>
       <div className="overflow-hidden rounded-xl border border-border bg-card">
-        <div className="grid grid-cols-[2fr_1fr_1fr] gap-4 border-b border-border px-4 py-3 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+        <div className="grid grid-cols-[2fr_1fr_1fr_1fr] gap-4 border-b border-border px-4 py-3 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
           <span>Item</span>
           <span>Score</span>
+          <span>Due</span>
           <span>Status</span>
         </div>
         {grades.map((grade) => (
-          <div key={grade.item} className="grid grid-cols-[2fr_1fr_1fr] gap-4 px-4 py-3 text-sm text-foreground">
+          <div key={grade.item} className="grid grid-cols-[2fr_1fr_1fr_1fr] gap-4 px-4 py-3 text-sm text-foreground">
             <span>{grade.item}</span>
-            <span>{grade.score}</span>
+            <span>{grade.score !== null ? `${grade.score}%` : 'Pending'}</span>
+            <span className="text-muted-foreground">{grade.due}</span>
             <span className="text-muted-foreground">{grade.status}</span>
           </div>
         ))}

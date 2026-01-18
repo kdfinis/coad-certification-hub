@@ -2,7 +2,7 @@
  * Shared TypeScript types and interfaces
  */
 
-export type UserRole = 'Student' | 'Instructor' | 'Admin' | 'Observer';
+export type UserRole = 'Student' | 'Instructor' | 'TA' | 'Admin' | 'Observer';
 
 export type CourseStatus = 'Active' | 'Completed' | 'Pending' | 'Archived';
 

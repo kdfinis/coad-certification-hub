@@ -41,20 +41,34 @@ export default function QuizzesPage({ params }: QuizzesPageProps) {
           Add quiz
         </button>
       </div>
-      <div className="space-y-4">
-        {localQuizzes.map((quiz) => (
-          <div key={quiz.id} className="rounded-xl border border-border bg-card p-4">
-            <p className="text-sm font-semibold text-foreground">{quiz.title}</p>
-            <p className="text-xs text-muted-foreground">Status: {quiz.status}</p>
-            <Link
-              href={`/lms/courses/${params.courseId}/quizzes/${quiz.id}`}
-              className="mt-2 inline-flex text-sm font-medium text-primary hover:text-primary/80"
-            >
-              Open quiz
-            </Link>
-          </div>
-        ))}
-      </div>
+      {localQuizzes.length === 0 ? (
+        <div className="rounded-2xl border border-border bg-card p-8 text-center text-sm text-muted-foreground">
+          No quizzes yet. Create one to get started.
+        </div>
+      ) : (
+        <div className="space-y-4">
+          {localQuizzes.map((quiz) => (
+            <div key={quiz.id} className="rounded-xl border border-border bg-card p-4">
+              <div className="flex items-center justify-between">
+                <p className="text-sm font-semibold text-foreground">{quiz.title}</p>
+                <span className="rounded-full bg-muted px-2 py-1 text-xs text-muted-foreground">{quiz.status}</span>
+              </div>
+              <div className="mt-2 flex flex-wrap gap-3 text-xs text-muted-foreground">
+                <span>Due {quiz.due ?? 'TBD'}</span>
+                <span>{quiz.timeLimit ?? 'No time limit'}</span>
+                <span>{quiz.questions ?? 0} questions</span>
+                <span>{quiz.attempts ?? 'Unlimited'} attempts</span>
+              </div>
+              <Link
+                href={`/lms/courses/${params.courseId}/quizzes/${quiz.id}`}
+                className="mt-3 inline-flex text-sm font-medium text-primary hover:text-primary/80"
+              >
+                Open quiz
+              </Link>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

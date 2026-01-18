@@ -12,6 +12,13 @@ const files = [
   { name: 'Project-Brief.docx', size: '640 KB' },
 ];
 
+const folders = [
+  { name: 'Course Materials', details: 'Syllabus, readings, lecture decks' },
+  { name: 'Assignments', details: 'Templates, datasets, rubrics' },
+  { name: 'Student Submissions', details: 'Uploads by learners' },
+  { name: 'Media', details: 'Recorded sessions, images, audio' },
+];
+
 export default function FilesPage({ params }: FilesPageProps) {
   const [uploadedFiles, setUploadedFiles] = useState<string[]>([]);
 
@@ -56,6 +63,32 @@ export default function FilesPage({ params }: FilesPageProps) {
             ))}
           </div>
         )}
+      </div>
+      <div className="rounded-2xl border border-border bg-card p-4">
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-sm font-semibold text-foreground">Folder structure</p>
+            <p className="text-xs text-muted-foreground">Organize files by module and audience.</p>
+          </div>
+          <button
+            className="rounded-md border border-border px-3 py-1 text-xs text-muted-foreground"
+            type="button"
+            disabled
+          >
+            New folder
+          </button>
+        </div>
+        <div className="mt-3 space-y-2">
+          {folders.map((folder) => (
+            <div key={folder.name} className="flex items-center justify-between rounded-lg border border-dashed border-border px-3 py-2">
+              <div>
+                <p className="text-sm font-medium text-foreground">{folder.name}</p>
+                <p className="text-xs text-muted-foreground">{folder.details}</p>
+              </div>
+              <span className="text-xs text-muted-foreground">Empty</span>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="space-y-3">
         {files.map((file) => (

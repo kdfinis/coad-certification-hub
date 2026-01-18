@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { validateEmail, validateRequired, validateVATId } from '@/lib/validation';
 import Loading from '@/components/ui/loading';

@@ -32,27 +32,42 @@ export default function DiscussionsPage({ params }: DiscussionsPageProps) {
           onClick={() => {
             if (!newTitle.trim()) return;
             const id = newTitle.toLowerCase().replace(/\s+/g, '-');
-            setLocalThreads((prev) => [{ id, title: newTitle.trim(), replies: 0 }, ...prev]);
+            setLocalThreads((prev) => [
+              { id, title: newTitle.trim(), replies: 0, lastActivity: 'Just now' },
+              ...prev,
+            ]);
             setNewTitle('');
           }}
         >
           Create discussion
         </button>
       </div>
-      <div className="space-y-4">
-        {localThreads.map((thread) => (
-          <div key={thread.id} className="rounded-xl border border-border bg-card p-4">
-            <p className="text-sm font-semibold text-foreground">{thread.title}</p>
-            <p className="text-xs text-muted-foreground">Replies: {thread.replies}</p>
-            <Link
-              href={`/lms/courses/${params.courseId}/discussions/${thread.id}`}
-              className="mt-2 inline-flex text-sm font-medium text-primary hover:text-primary/80"
-            >
-              Open discussion
-            </Link>
-          </div>
-        ))}
-      </div>
+      {localThreads.length === 0 ? (
+        <div className="rounded-2xl border border-border bg-card p-8 text-center text-sm text-muted-foreground">
+          No discussions yet. Start the first thread to engage the cohort.
+        </div>
+      ) : (
+        <div className="space-y-4">
+          {localThreads.map((thread) => (
+            <div key={thread.id} className="rounded-xl border border-border bg-card p-4">
+              <div className="flex items-center justify-between">
+                <p className="text-sm font-semibold text-foreground">{thread.title}</p>
+                <span className="text-xs text-muted-foreground">{thread.lastActivity}</span>
+              </div>
+              <p className="mt-1 text-xs text-muted-foreground">
+                Started by {thread.author ?? 'COAD Faculty'} · Replies {thread.replies}
+              </p>
+              {thread.excerpt && <p className="mt-2 text-sm text-muted-foreground">{thread.excerpt}</p>}
+              <Link
+                href={`/lms/courses/${params.courseId}/discussions/${thread.id}`}
+                className="mt-2 inline-flex text-sm font-medium text-primary hover:text-primary/80"
+              >
+                Open discussion
+              </Link>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

@@ -1,6 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
+import Link from 'next/link';
+import { lmsDiscussions } from '@/lib/lms-data';
 
 type DiscussionDetailProps = {
   params: { courseId: string; threadId: string };
@@ -14,12 +16,39 @@ const initialReplies = [
 export default function DiscussionDetailPage({ params }: DiscussionDetailProps) {
   const [replyText, setReplyText] = useState('');
   const [replies, setReplies] = useState(initialReplies);
+  const thread = useMemo(
+    () => (lmsDiscussions[params.courseId] ?? []).find((item) => item.id === params.threadId),
+    [params.courseId, params.threadId]
+  );
+
+  if (!thread) {
+    return (
+      <div className="space-y-6">
+        <div>
+          <h2 className="text-2xl font-semibold text-foreground">Discussion not found</h2>
+          <p className="text-sm text-muted-foreground">We could not locate that thread.</p>
+        </div>
+        <Link
+          href={`/lms/courses/${params.courseId}/discussions`}
+          className="inline-flex rounded-md border border-border px-4 py-2 text-sm text-foreground hover:bg-muted"
+        >
+          Back to discussions
+        </Link>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-2xl font-semibold text-foreground">Discussion: {params.threadId}</h2>
-        <p className="text-sm text-muted-foreground">Course: {params.courseId}</p>
+        <h2 className="text-2xl font-semibold text-foreground">{thread.title}</h2>
+        <p className="text-sm text-muted-foreground">
+          Course: {params.courseId} · Started by {thread.author ?? 'COAD Faculty'} · Last activity {thread.lastActivity}
+        </p>
+      </div>
+      <div className="rounded-2xl border border-border bg-card p-6">
+        <p className="text-sm font-semibold text-foreground">Prompt</p>
+        <p className="mt-2 text-sm text-muted-foreground">{thread.excerpt}</p>
       </div>
       <div className="space-y-4">
         {replies.map((reply, index) => (

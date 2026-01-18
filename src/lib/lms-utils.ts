@@ -31,6 +31,7 @@ export function getRoleDisplayName(role: LmsRole): string {
   const roleNames: Record<LmsRole, string> = {
     Student: 'Student',
     Instructor: 'Instructor',
+    TA: 'Teaching Assistant',
     Admin: 'Administrator',
     Observer: 'Observer',
   };

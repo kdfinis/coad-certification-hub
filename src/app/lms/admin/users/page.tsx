@@ -6,6 +6,7 @@ const initialUsers = [
   { name: 'Student A', role: 'Student', status: 'Active' },
   { name: 'Student B', role: 'Student', status: 'Active' },
   { name: 'COAD Faculty', role: 'Instructor', status: 'Active' },
+  { name: 'COAD TA', role: 'TA', status: 'Active' },
 ];
 
 export default function UsersAdminPage() {
@@ -35,6 +36,7 @@ export default function UsersAdminPage() {
           >
             <option>Student</option>
             <option>Instructor</option>
+            <option>TA</option>
             <option>Admin</option>
             <option>Observer</option>
           </select>

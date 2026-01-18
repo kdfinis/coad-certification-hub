@@ -14,6 +14,7 @@ export default function NewAssignmentPage({ params }: NewAssignmentProps) {
   const [dueDate, setDueDate] = useState('');
   const [submissionType, setSubmissionType] = useState('file');
   const [description, setDescription] = useState('');
+  const [rubricTitle, setRubricTitle] = useState('Capstone Rubric');
 
   return (
     <div className="space-y-6">
@@ -73,6 +74,63 @@ export default function NewAssignmentPage({ params }: NewAssignmentProps) {
             onChange={(event) => setDescription(event.target.value)}
             placeholder="Assignment instructions and requirements..."
           />
+        </div>
+        <div className="grid gap-4 lg:grid-cols-[1.2fr_1fr]">
+          <div className="rounded-xl border border-dashed border-border p-4 space-y-3">
+            <div className="flex items-center justify-between">
+              <p className="text-sm font-semibold text-foreground">Rubric placeholder</p>
+              <span className="text-xs text-muted-foreground">Draft</span>
+            </div>
+            <div>
+              <label className="text-xs uppercase tracking-wide text-muted-foreground">Rubric title</label>
+              <input
+                className="mt-2 w-full rounded-md border border-border px-3 py-2 text-sm"
+                value={rubricTitle}
+                onChange={(event) => setRubricTitle(event.target.value)}
+                placeholder="Select or create rubric"
+              />
+            </div>
+            <div className="space-y-2 text-sm text-muted-foreground">
+              <div className="flex items-center justify-between rounded-lg border border-border bg-background px-3 py-2">
+                <span>Critical thinking</span>
+                <span>30 pts</span>
+              </div>
+              <div className="flex items-center justify-between rounded-lg border border-border bg-background px-3 py-2">
+                <span>Technical depth</span>
+                <span>40 pts</span>
+              </div>
+              <div className="flex items-center justify-between rounded-lg border border-border bg-background px-3 py-2">
+                <span>Clarity & formatting</span>
+                <span>30 pts</span>
+              </div>
+            </div>
+            <button
+              className="w-full rounded-md border border-border px-4 py-2 text-sm text-foreground/80 hover:bg-muted"
+              type="button"
+            >
+              + Attach rubric
+            </button>
+          </div>
+          <div className="rounded-xl border border-border bg-background p-4 space-y-3">
+            <p className="text-sm font-semibold text-foreground">Points & grading</p>
+            <div className="space-y-2 text-sm text-muted-foreground">
+              <div className="flex items-center justify-between">
+                <span>Total points</span>
+                <span className="text-foreground">{points || '0'} pts</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span>Grading scheme</span>
+                <span>Points</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span>Submission attempts</span>
+                <span>Unlimited</span>
+              </div>
+            </div>
+            <div className="rounded-lg border border-dashed border-border p-3 text-xs text-muted-foreground">
+              Rubric scoring placeholder. Link outcomes and scoring ranges here.
+            </div>
+          </div>
         </div>
         <div className="flex gap-3">
           <button

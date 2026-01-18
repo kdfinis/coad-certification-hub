@@ -41,6 +41,11 @@ export default function Header() {
                 Courses
               </Link>
             </div>
+            <div className="relative group">
+              <Link href="/lms" className="px-4 py-2 text-foreground hover:text-primary link-hover font-medium">
+                COAD Canvas
+              </Link>
+            </div>
             <div 
               className="relative group"
               onMouseEnter={() => setTracksOpen(true)}

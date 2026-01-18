@@ -54,6 +54,49 @@ export default function CourseSettingsPage({ params }: CourseSettingsProps) {
           Save settings
         </button>
       </div>
+      <div className="grid gap-4 lg:grid-cols-2">
+        <div className="rounded-2xl border border-border bg-card p-6 space-y-4">
+          <div className="flex items-center justify-between">
+            <h3 className="text-base font-semibold text-foreground">Roster</h3>
+            <button className="rounded-md border border-border px-3 py-1 text-xs text-foreground/80 hover:bg-muted" type="button">
+              Invite learner
+            </button>
+          </div>
+          <div className="space-y-2 text-sm text-muted-foreground">
+            <div className="flex items-center justify-between rounded-lg border border-border bg-background px-3 py-2">
+              <span>Student A</span>
+              <span>Section 01</span>
+            </div>
+            <div className="flex items-center justify-between rounded-lg border border-border bg-background px-3 py-2">
+              <span>Student B</span>
+              <span>Section 02</span>
+            </div>
+            <div className="flex items-center justify-between rounded-lg border border-border bg-background px-3 py-2">
+              <span>Student C</span>
+              <span>Section 01</span>
+            </div>
+          </div>
+          <div className="rounded-lg border border-dashed border-border p-3 text-xs text-muted-foreground">
+            Roster management placeholder. Filter by role, status, and last activity.
+          </div>
+        </div>
+        <div className="rounded-2xl border border-border bg-card p-6 space-y-4">
+          <h3 className="text-base font-semibold text-foreground">Sections</h3>
+          <div className="space-y-2 text-sm text-muted-foreground">
+            <div className="flex items-center justify-between rounded-lg border border-border bg-background px-3 py-2">
+              <span>Section 01</span>
+              <span>Mon/Wed · 18 learners</span>
+            </div>
+            <div className="flex items-center justify-between rounded-lg border border-border bg-background px-3 py-2">
+              <span>Section 02</span>
+              <span>Tue/Thu · 16 learners</span>
+            </div>
+          </div>
+          <div className="rounded-lg border border-dashed border-border p-3 text-xs text-muted-foreground">
+            Section settings placeholder. Add meeting times, TA assignments, and capacity.
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

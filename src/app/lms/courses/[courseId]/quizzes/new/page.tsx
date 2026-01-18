@@ -19,6 +19,9 @@ export default function NewQuizPage({ params }: NewQuizProps) {
   const [title, setTitle] = useState('');
   const [timeLimit, setTimeLimit] = useState('');
   const [questions, setQuestions] = useState<Question[]>([]);
+  const [shuffleQuestions, setShuffleQuestions] = useState(true);
+  const [showCorrectAnswers, setShowCorrectAnswers] = useState(false);
+  const [attemptsAllowed, setAttemptsAllowed] = useState('2');
 
   const addQuestion = () => {
     setQuestions((prev) => [
@@ -53,8 +56,55 @@ export default function NewQuizPage({ params }: NewQuizProps) {
             placeholder="Leave blank for no limit"
           />
         </div>
+        <div className="grid gap-4 lg:grid-cols-[1.2fr_1fr]">
+          <div className="rounded-xl border border-border bg-background p-4 space-y-3">
+            <p className="text-sm font-semibold text-foreground">Quiz settings</p>
+            <div className="grid gap-3 md:grid-cols-2">
+              <div>
+                <label className="text-xs uppercase tracking-wide text-muted-foreground">Attempts allowed</label>
+                <input
+                  className="mt-2 w-full rounded-md border border-border px-3 py-2 text-sm"
+                  type="number"
+                  value={attemptsAllowed}
+                  onChange={(event) => setAttemptsAllowed(event.target.value)}
+                  placeholder="Unlimited"
+                />
+              </div>
+              <div>
+                <label className="text-xs uppercase tracking-wide text-muted-foreground">Access code</label>
+                <input className="mt-2 w-full rounded-md border border-border px-3 py-2 text-sm" placeholder="Optional" />
+              </div>
+            </div>
+            <div className="space-y-2 text-sm text-muted-foreground">
+              <label className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={shuffleQuestions}
+                  onChange={(event) => setShuffleQuestions(event.target.checked)}
+                />
+                Shuffle questions
+              </label>
+              <label className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={showCorrectAnswers}
+                  onChange={(event) => setShowCorrectAnswers(event.target.checked)}
+                />
+                Show correct answers after submission
+              </label>
+            </div>
+          </div>
+          <div className="rounded-xl border border-dashed border-border p-4 text-sm text-muted-foreground">
+            Availability placeholder. Set publish dates, time windows, and accommodations.
+          </div>
+        </div>
         <div>
           <p className="text-xs uppercase tracking-wide text-muted-foreground mb-3">Questions</p>
+          {questions.length === 0 && (
+            <div className="mb-4 rounded-xl border border-dashed border-border bg-background p-4 text-sm text-muted-foreground">
+              No questions yet. Use the button below to add quiz items.
+            </div>
+          )}
           {questions.map((question) => (
             <div key={question.id} className="mb-4 rounded-xl border border-border bg-background p-4 space-y-3">
               <div className="grid gap-3 md:grid-cols-2">

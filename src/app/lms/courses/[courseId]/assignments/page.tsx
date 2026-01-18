@@ -52,23 +52,31 @@ export default function AssignmentsPage({ params }: AssignmentsPageProps) {
           Add assignment
         </button>
       </div>
-      <div className="space-y-4">
-        {localAssignments.map((assignment) => (
-          <div key={assignment.id} className="rounded-xl border border-border bg-card p-4">
-            <div className="flex items-center justify-between">
-              <p className="text-sm font-semibold text-foreground">{assignment.title}</p>
-              <span className="text-xs text-muted-foreground">Due {assignment.due}</span>
+      {localAssignments.length === 0 ? (
+        <div className="rounded-2xl border border-border bg-card p-8 text-center text-sm text-muted-foreground">
+          No assignments yet. Create one to get started.
+        </div>
+      ) : (
+        <div className="space-y-4">
+          {localAssignments.map((assignment) => (
+            <div key={assignment.id} className="rounded-xl border border-border bg-card p-4">
+              <div className="flex items-center justify-between">
+                <p className="text-sm font-semibold text-foreground">{assignment.title}</p>
+                <span className="text-xs text-muted-foreground">Due {assignment.due}</span>
+              </div>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Status: {assignment.status} · {assignment.points ?? 0} pts · {assignment.submissionType ?? 'File upload'}
+              </p>
+              <Link
+                href={`/lms/courses/${params.courseId}/assignments/${assignment.id}`}
+                className="mt-2 inline-flex text-sm font-medium text-primary hover:text-primary/80"
+              >
+                Open assignment
+              </Link>
             </div>
-            <p className="mt-2 text-sm text-muted-foreground">Status: {assignment.status}</p>
-            <Link
-              href={`/lms/courses/${params.courseId}/assignments/${assignment.id}`}
-              className="mt-2 inline-flex text-sm font-medium text-primary hover:text-primary/80"
-            >
-              Open assignment
-            </Link>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

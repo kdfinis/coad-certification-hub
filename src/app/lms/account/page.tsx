@@ -6,7 +6,7 @@ export default function AccountPage() {
     <div className="space-y-6">
       <div>
         <h2 className="text-2xl font-semibold text-foreground">Account Settings</h2>
-        <p className="text-sm text-muted-foreground">Manage your profile, billing, security, and data.</p>
+        <p className="text-sm text-muted-foreground">Manage your COAD Canvas profile, billing, security, and data.</p>
       </div>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         <Link href="/lms/account/profile">
