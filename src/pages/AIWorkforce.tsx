@@ -11,32 +11,6 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { cn } from '@/lib/utils';
-import {
-  Award,
-  Briefcase,
-  CheckCircle2,
-  CreditCard,
-  FileText,
-  Filter,
-  Handshake,
-  Shield,
-  Star,
-  Target,
-  User,
-  Users,
-  Wallet,
-  Clock,
-  Building2,
-  FolderOpen,
-  HeadphonesIcon,
-} from 'lucide-react';
-import {
-  CredentialIcon,
-  NetworkNodesIcon,
-  ShieldNodeIcon,
-  NeuralBrainIcon,
-  CheckNodeIcon,
-} from '@/components/ui/custom-icons';
 
 const AIWorkforce = () => {
   const [selectedTrack, setSelectedTrack] = useState<'all' | 'aad' | 'aio'>('all');
@@ -44,99 +18,97 @@ const AIWorkforce = () => {
 
   const professionalSteps = [
     {
-      icon: Award,
-      title: 'Step 1: Get Certified',
-      description: 'Complete COAD certifications (tracks or modules) to become eligible for AI Workforce. Track completion gives you full access. Charterholder status unlocks priority placement and premium rates.',
+      number: 'I',
+      title: 'Attain Certification',
+      description: 'Complete COAD certifications to demonstrate mastery of AI competencies. Track completion grants comprehensive access, whilst Charterholder status confers priority placement and premium engagement rates.',
       details: [
         'Automatic eligibility upon certification completion',
-        'Track completion = Full access to all opportunities',
-        'Module completion = Access to module-specific projects',
-        'Charterholder status = Priority placement + Premium rates',
+        'Track completion grants full access to all engagements',
+        'Module completion enables domain-specific projects',
+        'Charterholder status confers priority placement',
       ],
     },
     {
-      icon: User,
-      title: 'Step 2: Create Your Profile',
-      description: 'Build your professional profile showcasing your competencies, certifications, and portfolio. Set your availability and rate preferences. Your profile becomes your professional showcase.',
+      number: 'II',
+      title: 'Establish Your Profile',
+      description: 'Construct your professional dossier showcasing competencies, credentials, and portfolio of work. Define availability and rate expectations to attract suitable engagements.',
       details: [
-        'Showcase certifications and competencies',
-        'Upload portfolio and case studies',
-        'Set availability (full-time, part-time, project-based)',
-        'Define rate preferences',
-        'Add professional summary and bio',
+        'Present certifications and demonstrated competencies',
+        'Include portfolio and case studies',
+        'Specify availability preferences',
+        'Define engagement rate expectations',
+        'Compose professional biography',
       ],
     },
     {
-      icon: Target,
-      title: 'Step 3: Get Matched to Projects',
-      description: 'Receive project opportunities that match your competencies. Review project details, client requirements, and timelines. Accept projects that align with your goals.',
+      number: 'III',
+      title: 'Receive Engagement Matches',
+      description: 'Review project opportunities aligned with your certified competencies. Examine engagement particulars, client requirements, and timelines before accepting assignments.',
       details: [
-        'Competency-based matching',
-        'Project notifications via email and dashboard',
-        'Review project details before accepting',
-        'Accept or decline opportunities',
-        'Charterholders see opportunities first',
+        'Competency-aligned matching',
+        'Notifications via correspondence and portal',
+        'Full engagement details prior to acceptance',
+        'Charterholders receive priority consideration',
       ],
     },
     {
-      icon: Wallet,
-      title: 'Step 4: Get Paid Through COAD',
-      description: 'COAD handles all invoicing and payment processing. Transparent payment terms, regular payouts, and secure transactions. Focus on your work, not paperwork.',
+      number: 'IV',
+      title: 'Secure Remuneration',
+      description: 'COAD administers all invoicing and payment processing. Transparent terms, regular disbursements, and secure transactions allow you to focus entirely on your professional obligations.',
       details: [
-        'COAD handles client invoicing',
-        'Transparent payment terms',
-        'Regular payouts (bi-weekly or monthly)',
-        'Secure payment processing',
-        'No payment collection hassle',
+        'COAD manages client invoicing',
+        'Clear and transparent payment terms',
+        'Regular disbursement schedule',
+        'Secure transaction processing',
       ],
     },
   ];
 
   const clientSteps = [
     {
-      icon: FileText,
-      title: 'Step 1: Submit Your Project Request',
-      description: 'Describe your project scope, required competencies, timeline, and budget. Specify if you need Charterholders or have specific professional requests.',
+      number: 'I',
+      title: 'Submit Your Requirements',
+      description: 'Articulate your project scope, required competencies, timeline, and budget parameters. Specify preferences for Charterholder engagement or particular professional expertise.',
       details: [
-        'Project description and scope',
-        'Required competencies (tracks, modules, skills)',
-        'Timeline and deadlines',
-        'Budget range',
-        'Preferred professional tier',
+        'Comprehensive project description',
+        'Required competencies and specialisations',
+        'Timeline and milestone expectations',
+        'Budget parameters',
+        'Professional tier preferences',
       ],
     },
     {
-      icon: Users,
-      title: 'Step 2: Review Matched Professionals',
-      description: 'COAD matches 3-5 qualified professionals based on your requirements. Review profiles, portfolios, certifications, and previous client ratings.',
+      number: 'II',
+      title: 'Review Matched Professionals',
+      description: 'COAD presents three to five qualified professionals matched to your requirements. Review credentials, portfolios, and prior engagement assessments.',
       details: [
-        'Competency-based matching',
-        '3-5 professional recommendations',
-        'Detailed profiles and portfolios',
-        'Previous client ratings and reviews',
-        'Request additional matches if needed',
+        'Competency-aligned matching',
+        'Three to five professional recommendations',
+        'Comprehensive profiles and portfolios',
+        'Prior client assessments',
+        'Request additional matches as needed',
       ],
     },
     {
-      icon: Handshake,
-      title: 'Step 3: Select Professionals & Start',
-      description: 'Choose the professional(s) for your project. COAD facilitates contract creation and onboarding. Begin your project with vetted, certified talent.',
+      number: 'III',
+      title: 'Select and Commence',
+      description: 'Designate professionals for your engagement. COAD facilitates contract execution and onboarding. Begin your project with vetted, certified expertise.',
       details: [
         'Select one or more professionals',
-        'COAD facilitates contract creation',
-        'Project onboarding and kickoff',
+        'COAD facilitates contract execution',
+        'Structured project onboarding',
         'Communication channels established',
-        'Project management support',
+        'Ongoing project management support',
       ],
     },
     {
-      icon: CreditCard,
-      title: 'Step 4: Pay Through COAD',
-      description: 'Single invoice from COAD simplifies payment processing. Quality assurance backed by certifications. Secure, transparent transactions.',
+      number: 'IV',
+      title: 'Remit Through COAD',
+      description: 'A single invoice from COAD streamlines payment administration. Quality assurance through certification standards ensures professional excellence.',
       details: [
-        'Single invoice from COAD',
-        'Simplified payment processing',
-        'Quality assurance through certifications',
+        'Consolidated invoicing through COAD',
+        'Simplified payment administration',
+        'Quality assurance via certification',
         'Secure payment handling',
         'Dispute resolution support',
       ],
@@ -144,52 +116,52 @@ const AIWorkforce = () => {
   ];
 
   const professionalBenefits = [
-    { icon: Briefcase, title: 'Access to Vetted Opportunities', description: 'Work with quality clients pre-screened by COAD. Projects aligned with your certified competencies.' },
-    { icon: Target, title: 'Competency-Based Matching', description: 'Get matched to projects that align with your skills. Build your portfolio with relevant experience.' },
-    { icon: Star, title: 'Priority for Charterholders', description: 'Charterholders get first access to opportunities, premium rates, and featured profile placement.' },
-    { icon: Wallet, title: 'Streamlined Payments', description: 'COAD handles all invoicing and payments. Transparent terms, regular payouts, secure transactions.' },
-    { icon: FolderOpen, title: 'Build Your Portfolio', description: 'Work on real-world projects that showcase your skills. Advance your career with AI consulting experience.' },
+    { title: 'Access to Vetted Engagements', description: 'Engage with discerning clients pre-qualified by COAD. Projects aligned with your demonstrated competencies.' },
+    { title: 'Competency-Aligned Matching', description: 'Receive engagements that correspond precisely with your certified expertise and professional development goals.' },
+    { title: 'Charterholder Priority', description: 'Charterholders receive first consideration for engagements, premium rates, and distinguished profile placement.' },
+    { title: 'Streamlined Remuneration', description: 'COAD administers all invoicing and payments with transparent terms and regular, secure disbursements.' },
+    { title: 'Portfolio Development', description: 'Build a distinguished portfolio through substantive engagements that demonstrate your professional excellence.' },
   ];
 
   const clientBenefits = [
-    { icon: CheckCircle2, title: 'Pre-Vetted Professionals', description: 'All professionals are COAD-certified and pre-vetted. Quality assurance through certification standards.' },
-    { icon: Target, title: 'Right Skills for Your Needs', description: 'Get matched to professionals with the exact competencies you need. AAD for development, AIO for oversight.' },
-    { icon: Shield, title: 'Quality Assurance', description: 'COAD certifications ensure quality. Professionals meet competency standards. EU AI Act-aligned expertise.' },
-    { icon: HeadphonesIcon, title: 'Single Point of Contact', description: 'Work with COAD for all your AI talent needs. Simplified sourcing, contract management, and payment.' },
-    { icon: ShieldNodeIcon, title: 'EU AI Act Expertise', description: 'Professionals trained in EU AI Act compliance. Ensure your AI projects meet regulatory requirements.' },
+    { title: 'Pre-Vetted Professionals', description: 'All professionals hold COAD certification and undergo rigorous vetting. Quality assured through established standards.' },
+    { title: 'Precise Competency Matching', description: 'Engage professionals with exact competencies required. AAD for development, AIO for governance and oversight.' },
+    { title: 'Quality Assurance', description: 'COAD certifications establish professional standards. EU AI Act-aligned expertise ensures regulatory compliance.' },
+    { title: 'Unified Point of Contact', description: 'COAD serves as your comprehensive partner for AI talent requirements, from sourcing through payment.' },
+    { title: 'Regulatory Expertise', description: 'Professionals trained in EU AI Act compliance ensure your AI initiatives meet regulatory requirements.' },
   ];
 
   const eligibilityTiers = [
     {
-      tier: 'Tier 1',
+      tier: 'First Class',
       title: 'Charterholders',
-      description: 'Complete full track (AAD or AIO) → Charterholder status',
+      description: 'Complete full track (AAD or AIO) to attain Charterholder standing',
       features: [
-        'Priority placement in all matching',
-        'Premium rate opportunities (20% higher)',
-        'Featured profile placement',
-        'Direct client requests',
-        'Reduced margin (20% vs 25-30%)',
+        'Priority consideration in all matching',
+        'Premium rate engagements (20% enhancement)',
+        'Distinguished profile placement',
+        'Direct client engagement requests',
+        'Reduced administrative margin',
       ],
       featured: true,
     },
     {
-      tier: 'Tier 2',
+      tier: 'Second Class',
       title: 'Track Completers',
-      description: 'Complete AAD or AIO track (all phases/domains)',
+      description: 'Complete AAD or AIO track in its entirety',
       features: [
-        'Full access to all opportunities',
-        'Standard rates',
+        'Full access to all engagements',
+        'Standard rate structure',
         'Standard matching priority',
       ],
     },
     {
-      tier: 'Tier 3',
+      tier: 'Third Class',
       title: 'Module Completers',
       description: 'Complete at least one competency module',
       features: [
-        'Access to projects matching module competencies',
-        'Entry-level rates',
+        'Access to module-aligned engagements',
+        'Entry-level rate structure',
         'Standard matching priority',
       ],
     },
@@ -197,81 +169,80 @@ const AIWorkforce = () => {
 
   const testimonials = [
     {
-      quote: "Completing my AAD track opened doors to consulting opportunities I never had before. The competency-based matching means I only get projects I'm qualified for, and the payment processing is seamless.",
-      author: 'Sarah Chen',
-      role: 'AAD Charterholder, AI Engineer',
-      stats: '8 projects, €45,000 earned',
+      quote: "Attaining my AAD credentials opened doors to consulting engagements previously inaccessible. The competency-aligned matching ensures I receive only those projects for which I am demonstrably qualified.",
+      author: 'Dr Sarah Chen',
+      credentials: 'AAD Charterholder',
+      position: 'Senior AI Engineer',
       type: 'professional',
     },
     {
-      quote: "As an ACOS Charterholder, I get priority placement and premium rates. The hub has become my primary source of consulting work. COAD's certification investment paid off immediately.",
-      author: 'Marcus Weber',
-      role: 'ACOS Charterholder, AI Governance Consultant',
-      stats: '12 projects, €85,000 earned',
+      quote: "As an ACOS Charterholder, I benefit from priority consideration and premium rates. The network has become my principal source of professional engagements. The investment in certification has yielded substantial returns.",
+      author: 'Marcus Weber, MSc',
+      credentials: 'ACOS Charterholder',
+      position: 'AI Governance Consultant',
       type: 'professional',
     },
     {
-      quote: "Finding certified AI professionals used to be a challenge. COAD's hub made it easy—we got matched to exactly the right professionals for our EU AI Act compliance project. Quality was exceptional.",
-      company: 'TechCorp Europe',
-      project: 'EU AI Act Compliance Audit',
-      result: 'Completed on time, met all requirements',
+      quote: "Identifying certified AI professionals had been a considerable challenge. COAD's network matched us precisely with the expertise required for our EU AI Act compliance initiative. The quality of work exceeded expectations.",
+      organisation: 'European Technology Partners',
+      engagement: 'EU AI Act Compliance Assessment',
+      outcome: 'Completed within schedule, all requirements satisfied',
       type: 'client',
     },
     {
-      quote: "The competency-based matching saved us weeks of searching. We needed a Privacy Auditor, and COAD matched us with three qualified professionals. We selected one and the project was flawless.",
-      company: 'FinanceAI Solutions',
-      project: 'Privacy Audit for AI System',
-      result: 'Comprehensive audit, regulatory compliance achieved',
+      quote: "The competency-aligned matching reduced our search from weeks to days. We required a Privacy Auditor, and COAD presented three superbly qualified professionals. Our selected candidate delivered exemplary work.",
+      organisation: 'Continental Financial Services',
+      engagement: 'AI System Privacy Assessment',
+      outcome: 'Comprehensive audit, regulatory compliance achieved',
       type: 'client',
     },
   ];
 
   const stats = [
-    { number: '150+', label: 'Certified Professionals', description: 'Active professionals in the hub' },
-    { number: '500+', label: 'Projects Completed', description: 'Successful project completions' },
-    { number: '€2.5M+', label: 'Total Project Value', description: 'Combined value of completed projects' },
-    { number: '95%', label: 'Client Satisfaction', description: 'Clients satisfied with matches' },
+    { number: '150+', label: 'Certified Professionals', description: 'Active members of the network' },
+    { number: '500+', label: 'Engagements Completed', description: 'Successful project completions' },
+    { number: '€2.5M+', label: 'Total Engagement Value', description: 'Combined value of completed work' },
+    { number: '95%', label: 'Client Satisfaction', description: 'Clients satisfied with engagements' },
   ];
 
   const professionalFaqs = [
     {
-      question: 'Do I need to complete a full track to join?',
-      answer: 'No, completing at least one module makes you eligible. However, track completion gives you full access, and Charterholder status provides priority placement.',
+      question: 'Must I complete a full track to join the network?',
+      answer: 'Completing at least one module qualifies you for entry. However, track completion grants full access to all engagements, and Charterholder standing provides priority consideration.',
     },
     {
-      question: 'How are projects matched to me?',
-      answer: 'Projects are matched based on your certified competencies, availability, and rate preferences. Charterholders see opportunities first.',
+      question: 'How are engagements matched to my profile?',
+      answer: 'Engagements are matched based upon your certified competencies, stated availability, and rate expectations. Charterholders receive priority consideration for all opportunities.',
     },
     {
-      question: 'How does payment work?',
-      answer: 'COAD handles all invoicing and payment processing. You receive 70-80% of the project fee (depending on your tier), with regular payouts.',
+      question: 'What are the remuneration arrangements?',
+      answer: 'COAD administers all invoicing and payment processing. Professionals receive 70-80% of the engagement fee (dependent upon tier), with regular disbursements.',
     },
     {
-      question: 'Can I request specific projects?',
-      answer: 'Yes, you can browse available projects and request ones that interest you, or wait for matching notifications.',
+      question: 'May I request particular engagements?',
+      answer: 'Indeed. You may review available engagements and express interest in those aligned with your objectives, or await matching notifications.',
     },
   ];
 
   const clientFaqs = [
     {
-      question: 'How quickly can I get matched to professionals?',
-      answer: 'Typically within 24-48 hours of submitting your project request. Charterholder requests may be matched faster.',
+      question: 'How expeditiously can professionals be matched?',
+      answer: 'Typically within 24-48 hours of submission. Charterholder engagements may be matched more rapidly.',
     },
     {
-      question: 'Can I request specific professionals?',
-      answer: 'Yes, if you know a specific professional you would like to work with, you can request them directly.',
+      question: 'May I request specific professionals?',
+      answer: 'Certainly. If you have identified a particular professional with whom you wish to engage, direct requests are accommodated.',
     },
     {
-      question: "What if I'm not satisfied with a professional?",
-      answer: 'COAD provides dispute resolution and quality assurance. We work with you to resolve any issues.',
+      question: 'What recourse exists if expectations are not met?',
+      answer: 'COAD provides comprehensive dispute resolution and quality assurance. We work diligently with all parties to resolve any matters satisfactorily.',
     },
     {
-      question: 'How does payment work?',
-      answer: 'You pay COAD a single invoice for the project. COAD handles payment to the professional, simplifying the process.',
+      question: 'How is payment administered?',
+      answer: 'You remit a single invoice to COAD for the engagement. COAD then administers payment to the professional, simplifying your administrative burden.',
     },
   ];
 
-  // Mock professional count based on filters
   const getProfessionalCount = () => {
     let base = 150;
     if (selectedTrack !== 'all') base = Math.floor(base * 0.5);
@@ -283,127 +254,144 @@ const AIWorkforce = () => {
     <>
       <Helmet>
         <title>AI Workforce - Connect Certified AI Professionals with Opportunities | COAD</title>
-        <meta name="description" content="Join COAD's AI Workforce hub to access vetted consulting opportunities. Complete certifications to become eligible. Clients get pre-qualified AI talent matched to their needs." />
+        <meta name="description" content="Join COAD's AI Workforce network to access vetted consulting engagements. Complete certifications to become eligible. Clients receive pre-qualified AI expertise matched to requirements." />
       </Helmet>
 
       <Header />
 
       <main className="pt-20">
-        {/* Hero Section */}
-        <section className="bg-navy text-primary-foreground py-20 md:py-28 relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-20 left-20 w-96 h-96 bg-primary rounded-full blur-3xl" />
-            <div className="absolute bottom-20 right-20 w-80 h-80 bg-teal rounded-full blur-3xl" />
+        {/* Hero Section - Academic/Distinguished */}
+        <section className="bg-navy text-primary-foreground py-24 md:py-32 relative overflow-hidden">
+          {/* Subtle geometric pattern - like university heraldry */}
+          <div className="absolute inset-0 opacity-[0.03]">
+            <div className="absolute inset-0" style={{
+              backgroundImage: `repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 100px,
+                hsl(var(--primary-foreground)) 100px,
+                hsl(var(--primary-foreground)) 101px
+              ),
+              repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 100px,
+                hsl(var(--primary-foreground)) 100px,
+                hsl(var(--primary-foreground)) 101px
+              )`
+            }} />
           </div>
 
           <div className="container-coad relative z-10">
-            <div className="max-w-4xl mx-auto text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary mb-8">
-                <NetworkNodesIcon className="w-5 h-5" />
-                <span className="text-sm font-medium">COAD AI Talent Network</span>
+            <div className="max-w-4xl mx-auto text-center">
+              {/* Academic crest/emblem placeholder */}
+              <div className="mb-8">
+                <div className="inline-flex items-center justify-center w-20 h-20 border-2 border-primary/40 rounded-full">
+                  <span className="text-2xl font-serif font-bold text-primary tracking-wider">AI</span>
+                </div>
               </div>
 
-              <h1 className="heading-1 mb-6">
-                AI Workforce: Connect Certified Professionals with{' '}
-                <span className="gradient-text">Opportunities</span>
+              <p className="text-sm tracking-[0.3em] uppercase text-primary/80 mb-6 font-medium">
+                The Certified Order of AI Developers
+              </p>
+
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6">
+                Professional Network
               </h1>
 
-              <p className="body-large text-gray-300 max-w-3xl mx-auto mb-10">
-                Complete COAD certifications to unlock access to vetted AI consulting projects. 
-                Clients get pre-qualified AI talent matched to their needs. Charterholders get 
-                priority placement and premium rates.
+              <div className="w-24 h-0.5 bg-primary/40 mx-auto mb-8" />
+
+              <p className="text-lg md:text-xl leading-relaxed text-gray-300 max-w-3xl mx-auto mb-12 font-light">
+                A distinguished network connecting certified AI professionals with organisations 
+                seeking expertise of the highest calibre. Charterholders receive priority placement 
+                and premium engagement rates.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="xl" asChild>
-                  <Link to="/auth">Join AI Workforce</Link>
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all px-8 py-6 text-base font-medium tracking-wide"
+                  asChild
+                >
+                  <Link to="/auth">Apply for Membership</Link>
                 </Button>
-                <Button variant="outline" size="xl" className="border-primary/40 text-primary-foreground hover:bg-primary/10" asChild>
-                  <Link to="/auth">Hire AI Talent</Link>
+                <Button 
+                  variant="ghost" 
+                  size="lg" 
+                  className="text-gray-300 hover:text-primary-foreground hover:bg-primary/10 px-8 py-6 text-base font-medium tracking-wide border border-gray-600 hover:border-primary/40"
+                  asChild
+                >
+                  <Link to="/auth">Engage Professionals</Link>
                 </Button>
               </div>
             </div>
+          </div>
 
-            {/* Split Dashboard Preview */}
-            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-              <div className="bg-card/10 backdrop-blur-sm rounded-2xl border border-primary/20 p-6 group hover:border-primary/40 transition-all">
-                <h3 className="text-primary font-semibold mb-4 flex items-center gap-2">
-                  <User className="w-5 h-5" />
-                  Professional Dashboard
-                </h3>
-                <div className="space-y-3">
-                  <div className="bg-background/10 rounded-lg p-3 flex items-center justify-between">
-                    <span className="text-sm text-gray-300">Active Projects</span>
-                    <span className="font-semibold text-primary">3</span>
-                  </div>
-                  <div className="bg-background/10 rounded-lg p-3 flex items-center justify-between">
-                    <span className="text-sm text-gray-300">New Matches</span>
-                    <span className="font-semibold text-teal">5</span>
-                  </div>
-                  <div className="bg-background/10 rounded-lg p-3 flex items-center justify-between">
-                    <span className="text-sm text-gray-300">Earnings This Month</span>
-                    <span className="font-semibold gradient-text">€8,500</span>
-                  </div>
-                </div>
+          {/* Decorative corner elements */}
+          <div className="absolute top-8 left-8 w-16 h-16 border-l-2 border-t-2 border-primary/20" />
+          <div className="absolute top-8 right-8 w-16 h-16 border-r-2 border-t-2 border-primary/20" />
+          <div className="absolute bottom-8 left-8 w-16 h-16 border-l-2 border-b-2 border-primary/20" />
+          <div className="absolute bottom-8 right-8 w-16 h-16 border-r-2 border-b-2 border-primary/20" />
+        </section>
+
+        {/* Two Columns - Mission Statement Style */}
+        <section className="py-20 bg-background border-b border-border">
+          <div className="container-coad">
+            <div className="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto">
+              <div className="text-center md:text-left">
+                <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4 text-foreground">
+                  For Professionals
+                </h2>
+                <div className="w-16 h-0.5 bg-primary/60 mb-6 mx-auto md:mx-0" />
+                <p className="text-muted-foreground leading-relaxed">
+                  Transform your COAD certifications into substantive consulting engagements. 
+                  Our network connects you with organisations seeking precisely your demonstrated 
+                  competencies, whilst handling all administrative matters from matching through remuneration.
+                </p>
               </div>
-
-              <div className="bg-card/10 backdrop-blur-sm rounded-2xl border border-teal/20 p-6 group hover:border-teal/40 transition-all">
-                <h3 className="text-teal font-semibold mb-4 flex items-center gap-2">
-                  <Building2 className="w-5 h-5" />
-                  Client Dashboard
-                </h3>
-                <div className="space-y-3">
-                  <div className="bg-background/10 rounded-lg p-3 flex items-center justify-between">
-                    <span className="text-sm text-gray-300">Active Projects</span>
-                    <span className="font-semibold text-teal">2</span>
-                  </div>
-                  <div className="bg-background/10 rounded-lg p-3 flex items-center justify-between">
-                    <span className="text-sm text-gray-300">Matched Professionals</span>
-                    <span className="font-semibold text-primary">8</span>
-                  </div>
-                  <div className="bg-background/10 rounded-lg p-3 flex items-center justify-between">
-                    <span className="text-sm text-gray-300">Projects Completed</span>
-                    <span className="font-semibold gradient-text">12</span>
-                  </div>
-                </div>
+              <div className="text-center md:text-left">
+                <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4 text-foreground">
+                  For Organisations
+                </h2>
+                <div className="w-16 h-0.5 bg-primary/60 mb-6 mx-auto md:mx-0" />
+                <p className="text-muted-foreground leading-relaxed">
+                  Access a curated network of pre-vetted, certified AI professionals. 
+                  Each member has demonstrated competency through rigorous examination. 
+                  Quality assured through established certification standards.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
         {/* How It Works - Professionals */}
-        <section className="section-padding bg-background">
+        <section className="py-20 md:py-28 bg-muted/30">
           <div className="container-coad">
             <div className="text-center mb-16">
-              <h2 className="heading-2 mb-4">
-                How It Works for <span className="gradient-text">Professionals</span>
+              <p className="text-sm tracking-[0.2em] uppercase text-primary mb-4 font-medium">The Process</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
+                For Professionals
               </h2>
-              <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-                From certification to getting paid—a streamlined journey to consulting success.
-              </p>
+              <div className="w-16 h-0.5 bg-primary/40 mx-auto" />
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
               {professionalSteps.map((step, index) => (
-                <div key={index} className="relative">
-                  {index < professionalSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-primary/50 to-transparent z-0" />
-                  )}
-                  <div className="bg-card rounded-2xl border border-border p-6 card-hover relative z-10">
-                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-teal/20 flex items-center justify-center mb-4">
-                      <step.icon className="w-7 h-7 text-primary" />
-                    </div>
-                    <h3 className="font-semibold text-lg mb-3">{step.title}</h3>
-                    <p className="text-sm text-muted-foreground mb-4">{step.description}</p>
-                    <ul className="space-y-2">
-                      {step.details.slice(0, 3).map((detail, i) => (
-                        <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
-                          <CheckNodeIcon className="w-3.5 h-3.5 text-teal flex-shrink-0 mt-0.5" />
-                          <span>{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 mx-auto mb-6 border-2 border-foreground/20 rounded-full flex items-center justify-center">
+                    <span className="font-serif text-2xl font-bold text-foreground">{step.number}</span>
                   </div>
+                  <h3 className="font-serif text-lg font-semibold mb-3">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">{step.description}</p>
+                  <ul className="text-left space-y-2 bg-background/50 rounded-lg p-4 border border-border">
+                    {step.details.slice(0, 3).map((detail, i) => (
+                      <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
+                        <span className="text-primary mt-0.5">—</span>
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
@@ -411,107 +399,104 @@ const AIWorkforce = () => {
         </section>
 
         {/* How It Works - Clients */}
-        <section className="section-padding bg-muted/50">
+        <section className="py-20 md:py-28 bg-background border-b border-border">
           <div className="container-coad">
             <div className="text-center mb-16">
-              <h2 className="heading-2 mb-4">
-                How It Works for <span className="gradient-text">Clients</span>
+              <p className="text-sm tracking-[0.2em] uppercase text-primary mb-4 font-medium">The Process</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
+                For Organisations
               </h2>
-              <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-                From project submission to completion—find the right AI talent quickly.
-              </p>
+              <div className="w-16 h-0.5 bg-primary/40 mx-auto" />
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
               {clientSteps.map((step, index) => (
-                <div key={index} className="relative">
-                  {index < clientSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-teal/50 to-transparent z-0" />
-                  )}
-                  <div className="bg-card rounded-2xl border border-border p-6 card-hover relative z-10">
-                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-teal/20 to-primary/20 flex items-center justify-center mb-4">
-                      <step.icon className="w-7 h-7 text-teal" />
-                    </div>
-                    <h3 className="font-semibold text-lg mb-3">{step.title}</h3>
-                    <p className="text-sm text-muted-foreground mb-4">{step.description}</p>
-                    <ul className="space-y-2">
-                      {step.details.slice(0, 3).map((detail, i) => (
-                        <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
-                          <CheckNodeIcon className="w-3.5 h-3.5 text-primary flex-shrink-0 mt-0.5" />
-                          <span>{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 mx-auto mb-6 border-2 border-foreground/20 rounded-full flex items-center justify-center">
+                    <span className="font-serif text-2xl font-bold text-foreground">{step.number}</span>
                   </div>
+                  <h3 className="font-serif text-lg font-semibold mb-3">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">{step.description}</p>
+                  <ul className="text-left space-y-2 bg-muted/30 rounded-lg p-4 border border-border">
+                    {step.details.slice(0, 3).map((detail, i) => (
+                      <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
+                        <span className="text-primary mt-0.5">—</span>
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="section-padding bg-background">
+        {/* Benefits - Two Column Academic Layout */}
+        <section className="py-20 md:py-28 bg-muted/30">
           <div className="container-coad">
-            {/* Professional Benefits */}
-            <div className="mb-20">
-              <div className="text-center mb-12">
-                <h2 className="heading-3 mb-4">Benefits for Professionals</h2>
-                <p className="body text-muted-foreground max-w-2xl mx-auto">
-                  Turn your certifications into consulting opportunities.
-                </p>
-              </div>
-
-              <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
-                {professionalBenefits.map((benefit, index) => (
-                  <div key={index} className="bg-card rounded-xl border border-border p-5 card-hover text-center">
-                    <div className="w-12 h-12 mx-auto rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                      <benefit.icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <h4 className="font-semibold text-sm mb-2">{benefit.title}</h4>
-                    <p className="text-xs text-muted-foreground">{benefit.description}</p>
-                  </div>
-                ))}
-              </div>
+            <div className="text-center mb-16">
+              <p className="text-sm tracking-[0.2em] uppercase text-primary mb-4 font-medium">Advantages</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
+                Membership Benefits
+              </h2>
+              <div className="w-16 h-0.5 bg-primary/40 mx-auto" />
             </div>
 
-            {/* Client Benefits */}
-            <div>
-              <div className="text-center mb-12">
-                <h2 className="heading-3 mb-4">Benefits for Clients</h2>
-                <p className="body text-muted-foreground max-w-2xl mx-auto">
-                  Access pre-vetted, certified AI talent for your projects.
-                </p>
+            <div className="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto">
+              {/* Professional Benefits */}
+              <div>
+                <h3 className="font-serif text-xl font-semibold mb-6 text-center md:text-left border-b border-border pb-4">
+                  For Professionals
+                </h3>
+                <div className="space-y-6">
+                  {professionalBenefits.map((benefit, index) => (
+                    <div key={index} className="flex gap-4">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                        <span className="font-serif text-sm font-bold text-primary">{index + 1}</span>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-sm mb-1">{benefit.title}</h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{benefit.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
 
-              <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
-                {clientBenefits.map((benefit, index) => (
-                  <div key={index} className="bg-card rounded-xl border border-border p-5 card-hover text-center">
-                    <div className="w-12 h-12 mx-auto rounded-lg bg-teal/10 flex items-center justify-center mb-4">
-                      <benefit.icon className="w-6 h-6 text-teal" />
+              {/* Client Benefits */}
+              <div>
+                <h3 className="font-serif text-xl font-semibold mb-6 text-center md:text-left border-b border-border pb-4">
+                  For Organisations
+                </h3>
+                <div className="space-y-6">
+                  {clientBenefits.map((benefit, index) => (
+                    <div key={index} className="flex gap-4">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                        <span className="font-serif text-sm font-bold text-primary">{index + 1}</span>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-sm mb-1">{benefit.title}</h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{benefit.description}</p>
+                      </div>
                     </div>
-                    <h4 className="font-semibold text-sm mb-2">{benefit.title}</h4>
-                    <p className="text-xs text-muted-foreground">{benefit.description}</p>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Eligibility Tiers */}
-        <section className="section-padding bg-navy text-primary-foreground relative overflow-hidden">
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute inset-0" style={{
-              backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--primary)) 1px, transparent 0)`,
-              backgroundSize: '40px 40px'
-            }} />
-          </div>
-
+        {/* Eligibility Tiers - Academic Honour Roll Style */}
+        <section className="py-20 md:py-28 bg-navy text-primary-foreground relative">
           <div className="container-coad relative z-10">
-            <div className="text-center mb-12">
-              <h2 className="heading-2 mb-4">Eligibility for Professionals</h2>
-              <p className="body-large text-gray-300 max-w-2xl mx-auto">
-                Your certification level determines your access and benefits.
+            <div className="text-center mb-16">
+              <p className="text-sm tracking-[0.2em] uppercase text-primary/80 mb-4 font-medium">Membership Tiers</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
+                Professional Standing
+              </h2>
+              <div className="w-16 h-0.5 bg-primary/40 mx-auto mb-6" />
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Your certification achievement determines your standing within the network and corresponding privileges.
               </p>
             </div>
 
@@ -520,25 +505,24 @@ const AIWorkforce = () => {
                 <div
                   key={index}
                   className={cn(
-                    'rounded-2xl p-6 border transition-all',
+                    'rounded-lg p-8 border-2 transition-all text-center',
                     tier.featured
-                      ? 'bg-card/20 border-primary shadow-glow'
-                      : 'bg-card/10 border-primary/20'
+                      ? 'bg-primary/10 border-primary'
+                      : 'bg-white/5 border-white/10'
                   )}
                 >
                   {tier.featured && (
-                    <div className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-medium mb-4">
-                      <Star className="w-3 h-3" />
-                      Priority Access
+                    <div className="inline-block px-4 py-1 bg-primary text-primary-foreground text-xs font-medium tracking-wider uppercase mb-4 rounded">
+                      Highest Standing
                     </div>
                   )}
-                  <div className="text-xs text-gray-400 mb-1">{tier.tier}</div>
-                  <h3 className="text-xl font-bold mb-2">{tier.title}</h3>
-                  <p className="text-sm text-gray-300 mb-4">{tier.description}</p>
-                  <ul className="space-y-2">
+                  <p className="text-xs tracking-[0.2em] uppercase text-gray-400 mb-2">{tier.tier}</p>
+                  <h3 className="font-serif text-xl font-bold mb-3">{tier.title}</h3>
+                  <p className="text-sm text-gray-300 mb-6 pb-6 border-b border-white/10">{tier.description}</p>
+                  <ul className="space-y-3 text-left">
                     {tier.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
-                        <CheckNodeIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                      <li key={i} className="flex items-start gap-3 text-sm text-gray-300">
+                        <span className="text-primary">—</span>
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -549,22 +533,24 @@ const AIWorkforce = () => {
           </div>
         </section>
 
-        {/* Professional Segmentation / Filter Tool */}
-        <section className="section-padding bg-muted/50">
+        {/* Professional Directory - Scholarly Register Style */}
+        <section className="py-20 md:py-28 bg-background">
           <div className="container-coad">
-            <div className="text-center mb-12">
-              <h2 className="heading-2 mb-4">
-                Find the Right <span className="gradient-text">Professional</span>
+            <div className="text-center mb-16">
+              <p className="text-sm tracking-[0.2em] uppercase text-primary mb-4 font-medium">Professional Register</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
+                Member Directory
               </h2>
-              <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-                Filter by track, competency, and experience level to find your perfect match.
+              <div className="w-16 h-0.5 bg-primary/40 mx-auto mb-6" />
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Filter by track, competency, and professional standing to identify suitable expertise.
               </p>
             </div>
 
-            <div className="bg-card rounded-2xl border border-border p-6 md:p-8">
-              <div className="flex flex-wrap gap-4 mb-8">
+            <div className="bg-muted/30 rounded-lg border border-border p-6 md:p-8 max-w-5xl mx-auto">
+              <div className="flex flex-wrap gap-6 mb-8 pb-6 border-b border-border">
                 <div>
-                  <label className="text-sm font-medium text-muted-foreground mb-2 block">By Track</label>
+                  <label className="text-xs font-medium text-muted-foreground mb-2 block tracking-wide uppercase">By Track</label>
                   <div className="flex gap-2">
                     {[
                       { value: 'all', label: 'All' },
@@ -575,10 +561,10 @@ const AIWorkforce = () => {
                         key={option.value}
                         onClick={() => setSelectedTrack(option.value as typeof selectedTrack)}
                         className={cn(
-                          'px-4 py-2 rounded-lg text-sm font-medium transition-all',
+                          'px-4 py-2 text-sm font-medium transition-all border',
                           selectedTrack === option.value
-                            ? 'bg-primary text-primary-foreground'
-                            : 'bg-muted text-muted-foreground hover:bg-muted/80'
+                            ? 'bg-foreground text-background border-foreground'
+                            : 'bg-background text-muted-foreground border-border hover:border-foreground/50'
                         )}
                       >
                         {option.label}
@@ -588,7 +574,7 @@ const AIWorkforce = () => {
                 </div>
 
                 <div>
-                  <label className="text-sm font-medium text-muted-foreground mb-2 block">By Experience</label>
+                  <label className="text-xs font-medium text-muted-foreground mb-2 block tracking-wide uppercase">By Standing</label>
                   <div className="flex gap-2">
                     {[
                       { value: 'all', label: 'All' },
@@ -600,10 +586,10 @@ const AIWorkforce = () => {
                         key={option.value}
                         onClick={() => setSelectedLevel(option.value as typeof selectedLevel)}
                         className={cn(
-                          'px-4 py-2 rounded-lg text-sm font-medium transition-all',
+                          'px-4 py-2 text-sm font-medium transition-all border',
                           selectedLevel === option.value
-                            ? 'bg-teal text-primary-foreground'
-                            : 'bg-muted text-muted-foreground hover:bg-muted/80'
+                            ? 'bg-foreground text-background border-foreground'
+                            : 'bg-background text-muted-foreground border-border hover:border-foreground/50'
                         )}
                       >
                         {option.label}
@@ -613,53 +599,51 @@ const AIWorkforce = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-2 text-lg font-semibold mb-6">
-                <Filter className="w-5 h-5 text-primary" />
-                <span>{getProfessionalCount()} professionals match your criteria</span>
-              </div>
+              <p className="text-sm text-muted-foreground mb-6">
+                <span className="font-semibold text-foreground">{getProfessionalCount()}</span> professionals match your criteria
+              </p>
 
-              {/* Sample Professional Cards */}
+              {/* Sample Professional Cards - Academic Style */}
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {[
-                  { name: 'Sarah Chen', title: 'AI Engineer', track: 'AAD', level: 'Charterholder', rate: '€150-200/hr', available: true },
-                  { name: 'Marcus Weber', title: 'AI Governance Consultant', track: 'AIO', level: 'Charterholder', rate: '€175-225/hr', available: true },
+                  { name: 'Dr Sarah Chen', title: 'Senior AI Engineer', track: 'AAD', level: 'Charterholder', rate: '€150-200/hr', available: true },
+                  { name: 'Marcus Weber, MSc', title: 'AI Governance Consultant', track: 'AIO', level: 'Charterholder', rate: '€175-225/hr', available: true },
                   { name: 'Elena Rodriguez', title: 'Privacy Auditor', track: 'AIO', level: 'Track Completer', rate: '€120-160/hr', available: false },
                 ].map((professional, index) => (
-                  <div key={index} className="bg-muted/50 rounded-xl p-4 border border-border">
-                    <div className="flex items-start justify-between mb-3">
-                      <div>
-                        <h4 className="font-semibold">{professional.name}</h4>
-                        <p className="text-sm text-muted-foreground">{professional.title}</p>
+                  <div key={index} className="bg-background border border-border p-5">
+                    <div className="mb-4 pb-4 border-b border-border">
+                      <h4 className="font-serif font-semibold text-base">{professional.name}</h4>
+                      <p className="text-sm text-muted-foreground">{professional.title}</p>
+                    </div>
+                    <div className="space-y-2 mb-4">
+                      <div className="flex justify-between text-sm">
+                        <span className="text-muted-foreground">Track</span>
+                        <span className="font-medium">{professional.track}</span>
                       </div>
-                      {professional.level === 'Charterholder' && (
-                        <span className="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-medium flex items-center gap-1">
-                          <Star className="w-3 h-3" /> Charterholder
+                      <div className="flex justify-between text-sm">
+                        <span className="text-muted-foreground">Standing</span>
+                        <span className={cn(
+                          "font-medium",
+                          professional.level === 'Charterholder' && "text-primary"
+                        )}>{professional.level}</span>
+                      </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-muted-foreground">Rate</span>
+                        <span className="font-medium">{professional.rate}</span>
+                      </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-muted-foreground">Status</span>
+                        <span className={cn(
+                          "font-medium",
+                          professional.available ? "text-teal" : "text-muted-foreground"
+                        )}>
+                          {professional.available ? 'Available' : 'Engaged'}
                         </span>
-                      )}
+                      </div>
                     </div>
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      <span className={cn(
-                        'px-2 py-0.5 rounded text-xs font-medium',
-                        professional.track === 'AAD' ? 'bg-primary/10 text-primary' : 'bg-teal/10 text-teal'
-                      )}>
-                        {professional.track}
-                      </span>
-                      <span className="px-2 py-0.5 rounded bg-muted text-muted-foreground text-xs">
-                        {professional.rate}
-                      </span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className={cn(
-                        'text-xs flex items-center gap-1',
-                        professional.available ? 'text-teal' : 'text-muted-foreground'
-                      )}>
-                        <Clock className="w-3 h-3" />
-                        {professional.available ? 'Available' : 'Busy'}
-                      </span>
-                      <Button variant="ghost" size="sm" className="text-primary">
-                        View Profile
-                      </Button>
-                    </div>
+                    <Button variant="outline" size="sm" className="w-full text-sm">
+                      View Profile
+                    </Button>
                   </div>
                 ))}
               </div>
@@ -667,50 +651,50 @@ const AIWorkforce = () => {
           </div>
         </section>
 
-        {/* Statistics */}
-        <section className="section-padding-sm bg-background">
+        {/* Statistics - Formal Display */}
+        <section className="py-16 bg-muted/30 border-y border-border">
           <div className="container-coad">
-            <div className="text-center mb-12">
-              <h2 className="heading-3 mb-4">AI Workforce by the Numbers</h2>
-            </div>
-
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center p-6 bg-card rounded-xl border border-border">
-                  <div className="text-4xl font-bold gradient-text mb-2">{stat.number}</div>
-                  <div className="font-semibold mb-1">{stat.label}</div>
-                  <div className="text-sm text-muted-foreground">{stat.description}</div>
+                <div key={index} className="text-center">
+                  <div className="font-serif text-4xl md:text-5xl font-bold text-primary mb-2">{stat.number}</div>
+                  <div className="font-semibold text-sm mb-1">{stat.label}</div>
+                  <div className="text-xs text-muted-foreground">{stat.description}</div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Testimonials */}
-        <section className="section-padding bg-muted/50">
+        {/* Testimonials - Formal Quotations */}
+        <section className="py-20 md:py-28 bg-background">
           <div className="container-coad">
-            <div className="text-center mb-12">
-              <h2 className="heading-2 mb-4">Success Stories</h2>
-              <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-                Hear from professionals and clients who've found success through AI Workforce.
-              </p>
+            <div className="text-center mb-16">
+              <p className="text-sm tracking-[0.2em] uppercase text-primary mb-4 font-medium">Testimonials</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
+                Member Experiences
+              </h2>
+              <div className="w-16 h-0.5 bg-primary/40 mx-auto" />
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-card rounded-2xl border border-border p-6 card-hover">
-                  <p className="text-lg italic text-muted-foreground mb-6">"{testimonial.quote}"</p>
+                <div key={index} className="bg-muted/30 border border-border p-8">
+                  <div className="text-4xl font-serif text-primary/30 mb-4">"</div>
+                  <p className="text-muted-foreground leading-relaxed mb-6 italic">
+                    {testimonial.quote}
+                  </p>
                   {testimonial.type === 'professional' ? (
-                    <div>
-                      <div className="font-semibold">{testimonial.author}</div>
-                      <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                      <div className="text-sm text-primary mt-1">{testimonial.stats}</div>
+                    <div className="pt-4 border-t border-border">
+                      <div className="font-serif font-semibold">{testimonial.author}</div>
+                      <div className="text-sm text-primary">{testimonial.credentials}</div>
+                      <div className="text-sm text-muted-foreground">{testimonial.position}</div>
                     </div>
                   ) : (
-                    <div>
-                      <div className="font-semibold">{testimonial.company}</div>
-                      <div className="text-sm text-muted-foreground">{testimonial.project}</div>
-                      <div className="text-sm text-teal mt-1">{testimonial.result}</div>
+                    <div className="pt-4 border-t border-border">
+                      <div className="font-serif font-semibold">{testimonial.organisation}</div>
+                      <div className="text-sm text-muted-foreground">{testimonial.engagement}</div>
+                      <div className="text-sm text-primary mt-1">{testimonial.outcome}</div>
                     </div>
                   )}
                 </div>
@@ -719,45 +703,69 @@ const AIWorkforce = () => {
           </div>
         </section>
 
-        {/* CTA Sections */}
-        <section className="section-padding bg-navy text-primary-foreground relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-10 right-10 w-64 h-64 bg-primary rounded-full blur-3xl" />
-            <div className="absolute bottom-10 left-10 w-48 h-48 bg-teal rounded-full blur-3xl" />
-          </div>
+        {/* CTA Section - Formal Invitation */}
+        <section className="py-20 md:py-28 bg-navy text-primary-foreground relative">
+          <div className="absolute top-8 left-8 w-16 h-16 border-l-2 border-t-2 border-primary/20" />
+          <div className="absolute top-8 right-8 w-16 h-16 border-r-2 border-t-2 border-primary/20" />
+          <div className="absolute bottom-8 left-8 w-16 h-16 border-l-2 border-b-2 border-primary/20" />
+          <div className="absolute bottom-8 right-8 w-16 h-16 border-r-2 border-b-2 border-primary/20" />
 
           <div className="container-coad relative z-10">
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 gap-16 max-w-4xl mx-auto">
               {/* For Professionals */}
               <div className="text-center">
-                <CredentialIcon className="w-12 h-12 mx-auto mb-4 text-primary" />
-                <h3 className="heading-3 mb-4">Ready to Join AI Workforce?</h3>
-                <p className="text-gray-300 mb-6">
-                  Complete COAD certifications to become eligible for consulting opportunities.
+                <p className="text-xs tracking-[0.2em] uppercase text-primary/80 mb-4">For Professionals</p>
+                <h3 className="font-serif text-2xl font-bold mb-4">Apply for Membership</h3>
+                <div className="w-12 h-0.5 bg-primary/40 mx-auto mb-6" />
+                <p className="text-gray-300 mb-8 text-sm leading-relaxed">
+                  Complete COAD certifications to qualify for membership in the Professional Network 
+                  and access consulting engagements commensurate with your expertise.
                 </p>
-                <div className="flex flex-col gap-3">
-                  <Button variant="hero" size="lg" asChild>
-                    <Link to="/certifications">Complete Certifications</Link>
+                <div className="space-y-3">
+                  <Button 
+                    variant="outline" 
+                    size="lg" 
+                    className="w-full border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                    asChild
+                  >
+                    <Link to="/certifications">View Certifications</Link>
                   </Button>
-                  <Button variant="outline" size="lg" className="border-primary/40 text-primary-foreground hover:bg-primary/10" asChild>
-                    <Link to="/auth">Already Certified? Join Now</Link>
+                  <Button 
+                    variant="ghost" 
+                    size="lg" 
+                    className="w-full text-gray-300 hover:text-primary-foreground border border-gray-600 hover:border-primary/40"
+                    asChild
+                  >
+                    <Link to="/auth">Already Certified? Apply Now</Link>
                   </Button>
                 </div>
               </div>
 
               {/* For Clients */}
               <div className="text-center">
-                <NeuralBrainIcon className="w-12 h-12 mx-auto mb-4 text-teal" />
-                <h3 className="heading-3 mb-4">Need Certified AI Talent?</h3>
-                <p className="text-gray-300 mb-6">
-                  Submit your project request and get matched to qualified professionals.
+                <p className="text-xs tracking-[0.2em] uppercase text-primary/80 mb-4">For Organisations</p>
+                <h3 className="font-serif text-2xl font-bold mb-4">Engage Professionals</h3>
+                <div className="w-12 h-0.5 bg-primary/40 mx-auto mb-6" />
+                <p className="text-gray-300 mb-8 text-sm leading-relaxed">
+                  Submit your project requirements and receive matched recommendations from our 
+                  network of certified AI professionals with demonstrated expertise.
                 </p>
-                <div className="flex flex-col gap-3">
-                  <Button variant="hero" size="lg" asChild>
-                    <Link to="/auth">Hire Certified AI Talent</Link>
+                <div className="space-y-3">
+                  <Button 
+                    variant="outline" 
+                    size="lg" 
+                    className="w-full border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                    asChild
+                  >
+                    <Link to="/auth">Submit Requirements</Link>
                   </Button>
-                  <Button variant="outline" size="lg" className="border-teal/40 text-primary-foreground hover:bg-teal/10" asChild>
-                    <Link to="/auth">View Available Professionals</Link>
+                  <Button 
+                    variant="ghost" 
+                    size="lg" 
+                    className="w-full text-gray-300 hover:text-primary-foreground border border-gray-600 hover:border-primary/40"
+                    asChild
+                  >
+                    <Link to="/ai-workforce">Browse Directory</Link>
                   </Button>
                 </div>
               </div>
@@ -765,27 +773,34 @@ const AIWorkforce = () => {
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section className="section-padding bg-background">
+        {/* FAQ Section - Formal Q&A */}
+        <section className="py-20 md:py-28 bg-background">
           <div className="container-coad">
-            <div className="text-center mb-12">
-              <h2 className="heading-2 mb-4">Frequently Asked Questions</h2>
+            <div className="text-center mb-16">
+              <p className="text-sm tracking-[0.2em] uppercase text-primary mb-4 font-medium">Enquiries</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
+                Frequently Asked Questions
+              </h2>
+              <div className="w-16 h-0.5 bg-primary/40 mx-auto" />
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
               {/* Professional FAQs */}
               <div>
-                <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
-                  <User className="w-5 h-5 text-primary" />
+                <h3 className="font-serif text-lg font-semibold mb-6 pb-4 border-b border-border">
                   For Professionals
                 </h3>
                 <Accordion type="single" collapsible className="space-y-2">
                   {professionalFaqs.map((faq, index) => (
-                    <AccordionItem key={index} value={`pro-${index}`} className="bg-card rounded-lg border border-border px-4">
-                      <AccordionTrigger className="text-left text-sm font-medium hover:no-underline">
+                    <AccordionItem 
+                      key={index} 
+                      value={`prof-${index}`} 
+                      className="border border-border bg-muted/20 px-4"
+                    >
+                      <AccordionTrigger className="text-sm font-medium text-left hover:no-underline py-4">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-sm text-muted-foreground">
+                      <AccordionContent className="text-sm text-muted-foreground pb-4">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
@@ -795,17 +810,20 @@ const AIWorkforce = () => {
 
               {/* Client FAQs */}
               <div>
-                <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
-                  <Building2 className="w-5 h-5 text-teal" />
-                  For Clients
+                <h3 className="font-serif text-lg font-semibold mb-6 pb-4 border-b border-border">
+                  For Organisations
                 </h3>
                 <Accordion type="single" collapsible className="space-y-2">
                   {clientFaqs.map((faq, index) => (
-                    <AccordionItem key={index} value={`client-${index}`} className="bg-card rounded-lg border border-border px-4">
-                      <AccordionTrigger className="text-left text-sm font-medium hover:no-underline">
+                    <AccordionItem 
+                      key={index} 
+                      value={`client-${index}`} 
+                      className="border border-border bg-muted/20 px-4"
+                    >
+                      <AccordionTrigger className="text-sm font-medium text-left hover:no-underline py-4">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-sm text-muted-foreground">
+                      <AccordionContent className="text-sm text-muted-foreground pb-4">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
