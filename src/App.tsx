@@ -8,6 +8,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import ErrorBoundary from "./components/ErrorBoundary";
 import SkipToContent from "./components/SkipToContent";
 import Index from "./pages/Index";
+import IndexAlt from "./pages/IndexAlt";
 import About from "./pages/About";
 import Auth from "./pages/Auth";
 import Certifications from "./pages/Certifications";
@@ -66,6 +67,7 @@ const App = () => (
             <ScrollToTop />
             <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/alt" element={<IndexAlt />} />
             <Route path="/about" element={<About />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/certifications" element={<Certifications />} />
